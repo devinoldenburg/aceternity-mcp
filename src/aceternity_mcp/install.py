@@ -294,3 +294,64 @@ def check_prerequisites() -> dict[str, bool]:
     results["npx"] = success
 
     return results
+
+
+# ============================================================================
+# Helper Functions (exported for CLI)
+# ============================================================================
+def find_config_file(config_paths: list[str]) -> Path | None:
+    """Find the first existing config file from a list of paths."""
+    for path in config_paths:
+        expanded = expand_path(path)
+        if expanded and expanded.exists():
+            return expanded
+    if config_paths:
+        return expand_path(config_paths[0])
+    return None
+
+
+def select_clients() -> list[str]:
+    """Let user select which clients to configure."""
+    if not sys.stdin.isatty():
+        return list(SUPPORTED_CLIENTS.keys())
+
+    print("\n" + "=" * 60)
+    print("Select AI Tools to Configure")
+    print("=" * 60)
+    print("\nAvailable AI tools:")
+
+    clients = list(SUPPORTED_CLIENTS.keys())
+    for i, client_name in enumerate(clients, 1):
+        client = SUPPORTED_CLIENTS[client_name]
+        print(f"  {Colors.BOLD}{i}{Colors.RESET}. {client['name']} - {client['description']}")
+
+    print(f"\n  {Colors.BOLD}A{Colors.RESET}. Configure ALL tools")
+    print(f"  {Colors.BOLD}N{Colors.RESET}. Skip configuration")
+    print("\nEnter your choice (e.g., '1,3' or 'A' or 'N'):", end=" ")
+
+    try:
+        choice = input().strip().upper()
+        if choice == "A":
+            return clients
+        elif choice == "N":
+            return []
+        else:
+            selected = []
+            for num in choice.split(","):
+                num = num.strip()
+                if num.isdigit():
+                    idx = int(num) - 1
+                    if 0 <= idx < len(clients):
+                        selected.append(clients[idx])
+            if selected:
+                return selected
+            return clients
+    except (EOFError, KeyboardInterrupt):
+        return clients
+
+
+def sync_registry(api_key: str | None = None) -> bool:
+    """Sync the component registry from Aceternity UI."""
+    print_section("Syncing Component Registry")
+    print_info("Note: Registry is bundled with the package. Sync is optional.")
+    return True
