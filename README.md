@@ -4,7 +4,7 @@
 
 **A Model Context Protocol server for Aceternity UI components**
 
-Discover, explore, and install 100+ Aceternity UI components directly from your AI assistant. Get intelligent recommendations, detailed metadata, and one-command installations.
+Discover, explore, and install 106 Aceternity UI components directly from your AI assistant. Get intelligent recommendations, detailed metadata, and installation instructions.
 
 [![PyPI - Version](https://img.shields.io/pypi/v/aceternity-mcp.svg)](https://pypi.org/project/aceternity-mcp/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aceternity-mcp.svg)](https://www.python.org/downloads/)
@@ -17,13 +17,13 @@ Discover, explore, and install 100+ Aceternity UI components directly from your 
 
 ## What is Aceternity MCP?
 
-Aceternity MCP is a **pipx application** that brings the entire Aceternity UI component library to your AI assistant. Instead of just knowing component names, your AI gets rich metadata including:
+Aceternity MCP is a **pipx application** that brings the Aceternity UI component library to your AI assistant through the Model Context Protocol. Your AI gets access to rich metadata including:
 
-- **Detailed descriptions** (60+ words per component)
+- **Detailed descriptions** for each component
 - **Visual characteristics** and behavior patterns
 - **Use case recommendations** and compatibility info
 - **Installation commands** and dependencies
-- **Scoring metrics** for animation, customization, performance impact
+- **Scoring metrics** for animation intensity, customization level, and performance impact
 
 This helps your AI make informed decisions about which components fit your design needs.
 
@@ -45,7 +45,7 @@ aceternity-mcp install
 
 ## 🎯 CLI Commands
 
-Aceternity MCP provides a powerful command-line interface:
+Aceternity MCP provides a command-line interface for management:
 
 | Command | Description |
 |---------|-------------|
@@ -54,8 +54,17 @@ Aceternity MCP provides a powerful command-line interface:
 | `aceternity-mcp repair` | Fix common installation issues |
 | `aceternity-mcp status` | Show installation health |
 | `aceternity-mcp diagnose` | Run diagnostics (JSON output) |
+| `aceternity-mcp uninstall` | Remove from all AI tools |
 | `aceternity-mcp --version` | Show version |
 | `aceternity-mcp --help` | Show help |
+
+**Command aliases:**
+- Update: `update`, `upgrade`, `up`
+- Repair: `repair`, `fix`
+- Install: `install`, `setup`, `init`, `post-install`
+- Status: `status`, `info`, `health`
+- Diagnose: `diagnose`, `check`
+- Uninstall: `uninstall`, `remove`
 
 ### Examples
 
@@ -74,6 +83,9 @@ aceternity-mcp diagnose
 
 # Repair only the registry
 aceternity-mcp repair --registry
+
+# Remove from all AI tools
+aceternity-mcp uninstall
 ```
 
 ## 🤖 Configure Your AI Tool
@@ -178,7 +190,6 @@ Try these with your AI assistant:
 ### Prerequisites
 
 - **Python 3.10+** (required)
-- **Node.js** (optional, for registry sync from Aceternity UI)
 - **pipx** (recommended installation method)
 
 ### Step 1: Install pipx
@@ -215,10 +226,12 @@ aceternity-mcp install --non-interactive
 
 ### What the Installer Does
 
-1. ✅ Syncs 100+ components from Aceternity UI
-2. ✅ Configures your AI tools automatically
-3. ✅ Verifies the installation
-4. ✅ Shows you next steps
+1. ✅ Configures all supported AI tools automatically
+2. ✅ Verifies the MCP server installation
+3. ✅ Provides restart instructions for each tool
+4. ✅ Shows next steps and usage examples
+
+The component registry (106 components) is bundled with the package during installation via pipx.
 
 ## 🔧 Management Commands
 
@@ -232,7 +245,7 @@ Shows:
 - Current version and update availability
 - System information (platform, Python version)
 - Health checks (registry, MCP command, Python)
-- Client configuration status
+- Client configuration status for supported AI tools
 
 ### Update
 
@@ -260,6 +273,11 @@ aceternity-mcp repair --configs
 aceternity-mcp repair --permissions
 ```
 
+**Repair options:**
+- `--registry` or `-r`: Repair only the component registry
+- `--configs` or `-c`: Repair only AI tool configurations
+- `--permissions` or `-p`: Fix file permissions
+
 ### Diagnostics
 
 ```bash
@@ -270,25 +288,68 @@ aceternity-mcp diagnose
 aceternity-mcp status --verbose
 ```
 
+### Uninstall
+
+```bash
+# Remove from all AI tools
+aceternity-mcp uninstall
+```
+
+Removes MCP server configuration from all supported AI tools. Note: This does not uninstall the pipx package itself. To completely remove:
+
+```bash
+pipx uninstall aceternity-mcp
+```
+
 ## 📚 Architecture
 
+**Package installation location** (pipx):
 ```
 ~/.local/pipx/venvs/aceternity-mcp/
 ├── bin/
-│   ├── aceternity-mcp        # CLI management commands
-│   ├── aceternity-mcp-server # MCP server
-│   └── aceternity-mcp-install # Legacy installer
-├── lib/python3.X/site-packages/aceternity_mcp/
-│   ├── cli.py                # CLI implementation
-│   ├── server.py             # MCP server
-│   ├── install.py            # Installer
-│   ├── registry.py           # Registry loader
-│   ├── search.py             # Search engine
-│   └── recommender.py        # Recommendation engine
-└── share/aceternity-mcp/registry/
-    ├── index.json            # Master index
-    ├── components/           # Component metadata (106 components)
-    └── categories/           # Category definitions (17 categories)
+│   ├── aceternity-mcp         # CLI management commands
+│   ├── aceternity-mcp-server  # MCP server executable
+│   └── aceternity-mcp-install # Legacy installer script
+└── lib/python3.X/site-packages/aceternity_mcp/
+    ├── __init__.py            # Package initialization
+    ├── cli.py                 # CLI implementation (677 lines)
+    ├── server.py              # MCP server with tools (469 lines)
+    ├── install.py             # Installation wizard
+    ├── uninstall.py           # Uninstallation utility
+    ├── models.py              # Data models
+    ├── registry.py            # Registry loader
+    ├── search.py              # Search engine
+    └── recommender.py         # Recommendation engine
+```
+
+**Bundled registry** (installed to):
+```
+~/.local/pipx/venvs/aceternity-mcp/share/aceternity-mcp/registry/
+├── index.json                 # Master component index
+├── components/                # 106 component metadata files
+│   ├── 3d-globe.json
+│   ├── 3d-pin.json
+│   ├── animated-tooltip.json
+│   └── ... (103 more)
+└── categories/                # 17 category definitions
+    ├── backgrounds.json
+    ├── cards.json
+    └── ... (15 more)
+```
+
+**Source repository structure**:
+```
+aceternity-mcp/
+├── src/aceternity_mcp/        # Python package source
+├── registry/                  # Component registry (source)
+│   ├── components/            # 106 component JSON files
+│   ├── categories/            # 17 category JSON files
+│   └── index.json             # Generated index
+├── scripts/                   # Maintenance scripts
+│   ├── sync_registry.py       # Sync from Aceternity UI
+│   └── validate_registry.py   # Validate registry schema
+├── tests/                     # Test suite
+└── pyproject.toml             # Package configuration
 ```
 
 ## 🧑‍💻 Development
@@ -302,8 +363,8 @@ cd aceternity-mcp
 # Install your local version with pipx
 pipx install .
 
-# Or install with editable mode for development
-pipx inject aceternity-mcp -e .
+# Or install in editable mode for development
+pipx inject aceternity-mcp --pip-args "-e ."
 ```
 
 ### Validate Registry
@@ -322,46 +383,69 @@ python scripts/validate_registry.py
 # Sync latest components from Aceternity UI
 python scripts/sync_registry.py
 
-# With API key (optional)
-python scripts/sync_registry.py --api-key "$ACETERNITY_API_KEY"
-
 # Reinstall to bundle updated registry
 pipx reinstall aceternity-mcp
 ```
 
+The `sync_registry.py` script fetches component data from the Aceternity UI website and generates the registry JSON files. No API key is required.
+
 ### Run Tests
 
 ```bash
-# Test CLI commands
+# Run test suite
+python -m pytest tests/
+
+# Or use the test runner script
+python scripts/run_tests.py
+
+# Test CLI commands manually
 aceternity-mcp --help
 aceternity-mcp status
 aceternity-mcp diagnose
 
-# Test server
+# Test MCP server
 aceternity-mcp-server
-
-# Test installer
-aceternity-mcp-install
 ```
+
+### Package Structure
+
+- **src/aceternity_mcp/**: Main Python package
+  - `server.py`: MCP server exposing tools to AI assistants
+  - `cli.py`: Command-line interface for management
+  - `install.py`: Interactive installation wizard
+  - `uninstall.py`: Removal utility
+  - `registry.py`: Registry loading and management
+  - `search.py`: Component search engine
+  - `recommender.py`: Recommendation logic
+  - `models.py`: Data models for components
+
+- **registry/**: Component metadata (106 components, 17 categories)
+- **scripts/**: Maintenance and sync utilities
+- **tests/**: Test suite for all functionality
 
 ## 🌐 Supported AI Tools
 
-| Tool | Config File | Status |
-|------|-------------|--------|
-| Cursor | `~/.cursor/mcp.json` | ✅ Supported |
-| Claude Desktop | Platform-specific | ✅ Supported |
-| Claude Code | `~/.claude/mcp.json` | ✅ Supported |
-| Cline | VS Code extension | ✅ Supported |
-| Windsurf | `~/.codeium/windsurf/mcp_config.json` | ✅ Supported |
-| OpenCode | `~/.opencode/mcp.json` | ✅ Supported |
+| Tool | Config File | Configuration Key |
+|------|-------------|-------------------|
+| Cursor | `~/.cursor/mcp.json` | `mcpServers` |
+| Claude Code CLI | `~/.claude/mcp.json` | `mcpServers` |
+| Cline (VS Code) | `~/.vscode/extensions/saoudrizwan.claude-dev-*/settings/cline_mcp_settings.json` | `mcpServers` |
+| Windsurf | `~/.codeium/windsurf/mcp_config.json` | `mcp_servers` |
+| OpenCode | `~/.opencode/mcp.json` or `~/.config/opencode/opencode.jsonc` | `mcpServers` |
+
+**Notes:**
+- All tools use the same MCP server command: `aceternity-mcp-server`
+- Windsurf uses snake_case (`mcp_servers`) instead of camelCase (`mcpServers`)
+- OpenCode supports both user-level and global configuration files
+- Cline configuration is managed through VS Code extension settings
 
 ## 🔒 Security
 
-- No secrets are committed to the repository
-- API keys are optional and used only during sync operations
-- Keys are not stored on disk
-- The repository stores metadata descriptions, not component source files
-- pipx provides isolated environment for security
+- **No secrets in repository**: No API keys, credentials, or sensitive data committed
+- **Optional API usage**: Registry sync operations don't require authentication
+- **Isolated execution**: pipx provides sandboxed virtual environments
+- **Metadata only**: Repository contains component descriptions and metadata, not source code
+- **Local configuration**: AI tool configs stored in user's home directory (~/.config/)
 
 ## ❓ Troubleshooting
 
