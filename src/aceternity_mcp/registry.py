@@ -26,6 +26,7 @@ def _find_registry_dir() -> Path:
       1. Sibling of the package directory (source checkout)
       2. ``$PWD/registry``
       3. Installed shared-data location (hatch installs to share/)
+      4. pipx shared-data location
     """
     # Source checkout: repo_root/registry
     pkg_dir = Path(__file__).resolve().parent  # src/aceternity_mcp/
@@ -38,6 +39,12 @@ def _find_registry_dir() -> Path:
     cwd_candidate = Path.cwd() / "registry"
     if cwd_candidate.is_dir():
         return cwd_candidate
+
+    # pipx shared-data location: <venv>/share/aceternity-mcp/registry
+    venv_dir = pkg_dir.parent.parent.parent  # pipx venv root
+    pipx_candidate = venv_dir / "share" / "aceternity-mcp" / "registry"
+    if pipx_candidate.is_dir():
+        return pipx_candidate
 
     raise FileNotFoundError(
         "Cannot locate the registry/ directory.  "

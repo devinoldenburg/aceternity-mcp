@@ -53,7 +53,7 @@ aceternity-mcp-install --non-interactive
 ```
 
 **What the installer does:**
-1. Syncs 100+ components from Aceternity UI
+1. Syncs 100+ components from Aceternity UI (or uses bundled registry)
 2. Configures your AI tools automatically
 3. Verifies the installation
 4. Shows you next steps
@@ -68,7 +68,7 @@ cd aceternity-mcp
 # Install in development mode
 pip install -e .
 
-# Sync the component registry
+# Sync the component registry (optional - registry is included in package)
 python scripts/sync_registry.py
 
 # Configure your AI tools
@@ -85,8 +85,7 @@ Add to your AI tool's MCP configuration:
   "mcpServers": {
     "aceternity-ui": {
       "command": "aceternity-mcp",
-      "args": [],
-      "cwd": "/absolute/path/to/aceternity-mcp"
+      "args": []
     }
   }
 }
@@ -98,8 +97,7 @@ Add to your AI tool's MCP configuration:
   "mcpServers": {
     "aceternity-ui": {
       "command": "aceternity-mcp",
-      "args": [],
-      "cwd": "/absolute/path/to/aceternity-mcp"
+      "args": []
     }
   }
 }
@@ -111,8 +109,7 @@ Add to your AI tool's MCP configuration:
   "mcpServers": {
     "aceternity-ui": {
       "command": "aceternity-mcp",
-      "args": [],
-      "cwd": "/absolute/path/to/aceternity-mcp"
+      "args": []
     }
   }
 }
@@ -124,8 +121,7 @@ Add to your AI tool's MCP configuration:
   "mcp_servers": {
     "aceternity_ui": {
       "command": "aceternity-mcp",
-      "args": [],
-      "cwd": "/absolute/path/to/aceternity-mcp"
+      "args": []
     }
   }
 }
@@ -137,12 +133,13 @@ Add to your AI tool's MCP configuration:
   "mcpServers": {
     "aceternity-ui": {
       "command": "aceternity-mcp",
-      "args": [],
-      "cwd": "/absolute/path/to/aceternity-mcp"
+      "args": []
     }
   }
 }
 ```
+
+> **Note**: When installed via pipx (recommended), the `aceternity-mcp` command is available in your PATH and no `cwd` is needed. The registry is bundled with the package.
 
 ## Available Tools
 
@@ -179,22 +176,27 @@ Try these with your AI assistant:
 
 ```
 aceternity-mcp/
-├── registry/              # Component metadata registry
+├── registry/              # Component metadata registry (bundled with package)
 │   ├── index.json        # Master index
 │   ├── raw/              # Raw data from Aceternity UI
 │   ├── components/       # Enriched component metadata
 │   └── categories/       # Category definitions
 ├── scripts/              # Utility scripts
-│   ├── sync_registry.py  # Sync from Aceternity UI
+│   ├── sync_registry.py  # Sync from Aceternity UI (optional)
 │   └── validate_registry.py
 ├── src/aceternity_mcp/   # MCP server source
 │   ├── server.py         # MCP server implementation
 │   ├── install.py        # Universal installer
 │   ├── models.py         # Data models
-│   ├── registry.py       # Registry loader
+│   ├── registry.py       # Registry loader (finds registry in pipx share/)
 │   ├── search.py         # Search functionality
 │   └── recommender.py    # Recommendation engine
-└── pyproject.toml        # Package configuration
+└── pyproject.toml        # Package configuration (includes registry in shared-data)
+```
+
+When installed via pipx, the registry is automatically available at:
+```
+~/.local/pipx/venvs/aceternity-mcp/share/aceternity-mcp/registry/
 ```
 
 ## Development
@@ -212,12 +214,17 @@ python scripts/validate_registry.py
 ### Update Component Registry
 
 ```bash
-# Sync latest components from Aceternity UI
+# Sync latest components from Aceternity UI (optional)
 python scripts/sync_registry.py
 
 # With API key (optional)
 python scripts/sync_registry.py --api-key "$ACETERNITY_API_KEY"
+
+# Reinstall to bundle updated registry
+pipx reinstall aceternity-mcp
 ```
+
+> **Note**: The registry is bundled with the package, so running `sync_registry.py` is only needed if you want to update to the latest components from Aceternity UI.
 
 ## Supported AI Tools
 
