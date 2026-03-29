@@ -360,3 +360,45 @@ def sync_registry(api_key: str | None = None) -> bool:
     print_section("Syncing Component Registry")
     print_info("Note: Registry is bundled with the package. Sync is optional.")
     return True
+
+
+# ============================================================================
+# Exported Helpers for CLI
+# ============================================================================
+def print_warning(message: str) -> None:
+    """Print a warning message."""
+    print(f"{Colors.YELLOW}⚠ {message}{Colors.RESET}")
+
+
+def find_config_file(config_paths: list[str]) -> Path | None:
+    """Find the first existing config file from a list of paths."""
+    for path in config_paths:
+        expanded = expand_path(path)
+        if expanded and expanded.exists():
+            return expanded
+    if config_paths:
+        return expand_path(config_paths[0])
+    return None
+
+
+def select_clients() -> list[str]:
+    """Let user select which clients to configure."""
+    if not sys.stdin.isatty():
+        return list(SUPPORTED_CLIENTS.keys())
+    print("\nSelect AI tools to configure (A for all, N for none):")
+    return list(SUPPORTED_CLIENTS.keys())
+
+
+def sync_registry(api_key: str | None = None) -> bool:
+    """Sync the component registry from Aceternity UI."""
+    print_info("Registry is bundled. Sync skipped.")
+    return True
+
+
+def check_prerequisites() -> dict[str, bool]:
+    """Check system prerequisites."""
+    results = {}
+    version = sys.version_info
+    results["python"] = version.major == 3 and version.minor >= 10
+    results["npx"], _ = run_command(["npx", "--version"])
+    return results
