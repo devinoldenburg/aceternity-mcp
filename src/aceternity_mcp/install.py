@@ -277,3 +277,40 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+# Exported for CLI
+def print_warning(message: str) -> None:
+    print(f"{Colors.YELLOW}⚠ {message}{Colors.RESET}")
+
+def run_command(command: list[str], cwd: Path | None = None, capture: bool = True) -> tuple[bool, str]:
+    try:
+        result = subprocess.run(command, cwd=cwd, capture_output=capture, text=True, check=False)
+        return result.returncode == 0, (result.stdout + result.stderr) if capture else ""
+    except FileNotFoundError as e:
+        return False, f"Command not found: {e}"
+    except Exception as e:
+        return False, str(e)
+
+def check_prerequisites() -> dict[str, bool]:
+    results = {}
+    version = sys.version_info
+    results["python"] = version.major == 3 and version.minor >= 10
+    results["npx"], _ = run_command(["npx", "--version"])
+    return results
+
+def find_config_file(config_paths: list[str]) -> Path | None:
+    for path in config_paths:
+        expanded = expand_path(path)
+        if expanded and expanded.exists():
+            return expanded
+    return expand_path(config_paths[0]) if config_paths else None
+
+def select_clients() -> list[str]:
+    if not sys.stdin.isatty():
+        return list(SUPPORTED_CLIENTS.keys())
+    return list(SUPPORTED_CLIENTS.keys())
+
+def sync_registry(api_key: str | None = None) -> bool:
+    print_info("Registry is bundled. Sync skipped.")
+    return True
