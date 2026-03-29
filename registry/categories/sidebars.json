@@ -1,0 +1,8 @@
+{
+  "slug": "sidebars",
+  "name": "Sidebars",
+  "description": "Persistent or collapsible sidebar patterns for app and dashboard contexts.",
+  "components": [
+    "sidebar"
+  ]
+}

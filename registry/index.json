@@ -1,0 +1,1031 @@
+{
+  "name": "aceternity-registry",
+  "version": "1.0.0",
+  "generatedAt": "2026-03-29T13:51:49.625979+00:00",
+  "componentCount": 106,
+  "categoryCount": 17,
+  "layers": {
+    "raw": "registry/raw/components.json",
+    "enriched": "registry/components/*.json",
+    "runtime": "served via MCP tools"
+  },
+  "components": [
+    {
+      "slug": "3d-card",
+      "name": "3D Card Effect",
+      "category": [
+        "3d-effects",
+        "cards"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/3d-card-effect"
+    },
+    {
+      "slug": "3d-globe",
+      "name": "3D Globe",
+      "category": [
+        "3d-effects",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/3d-globe"
+    },
+    {
+      "slug": "3d-marquee",
+      "name": "3D Marquee",
+      "category": [
+        "3d-effects",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/3d-marquee"
+    },
+    {
+      "slug": "3d-pin",
+      "name": "3D Pin",
+      "category": [
+        "3d-effects",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/3d-pin"
+    },
+    {
+      "slug": "animated-modal",
+      "name": "Animated Modal",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/animated-modal"
+    },
+    {
+      "slug": "animated-testimonials",
+      "name": "Animated Testimonials",
+      "category": [
+        "layout",
+        "testimonials"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/animated-testimonials"
+    },
+    {
+      "slug": "animated-tooltip",
+      "name": "Animated Tooltip",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/animated-tooltip"
+    },
+    {
+      "slug": "apple-cards-carousel",
+      "name": "Apple Cards Carousel",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/apple-cards-carousel"
+    },
+    {
+      "slug": "ascii-art",
+      "name": "ASCII Art",
+      "category": [
+        "layout",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/ascii-art"
+    },
+    {
+      "slug": "aurora-background",
+      "name": "Aurora Background",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/aurora-background"
+    },
+    {
+      "slug": "background-beams",
+      "name": "Background Beams",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/background-beams"
+    },
+    {
+      "slug": "background-beams-with-collision",
+      "name": "Background Beams With Collision",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/background-beams-with-collision"
+    },
+    {
+      "slug": "background-boxes",
+      "name": "Background Boxes",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/background-boxes"
+    },
+    {
+      "slug": "background-gradient",
+      "name": "Background Gradient",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/background-gradient"
+    },
+    {
+      "slug": "background-gradient-animation",
+      "name": "Background Gradient Animation",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/background-gradient-animation"
+    },
+    {
+      "slug": "background-lines",
+      "name": "Background Lines",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/background-lines"
+    },
+    {
+      "slug": "background-ripple-effect",
+      "name": "Background Ripple Effect",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/background-ripple-effect"
+    },
+    {
+      "slug": "bento-grid",
+      "name": "Bento Grid",
+      "category": [
+        "cards",
+        "feature-sections"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/bento-grid"
+    },
+    {
+      "slug": "canvas-reveal-effect",
+      "name": "Canvas Reveal Effect",
+      "category": [
+        "scroll-effects",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/canvas-reveal-effect"
+    },
+    {
+      "slug": "canvas-text",
+      "name": "Canvas Text",
+      "category": [
+        "text-effects",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/canvas-text"
+    },
+    {
+      "slug": "card-hover-effect",
+      "name": "Card Hover Effect",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/card-hover-effect"
+    },
+    {
+      "slug": "card-spotlight",
+      "name": "Card Spotlight",
+      "category": [
+        "cards",
+        "hero-sections"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/card-spotlight"
+    },
+    {
+      "slug": "card-stack",
+      "name": "Card Stack",
+      "category": [
+        "cards",
+        "testimonials"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/card-stack"
+    },
+    {
+      "slug": "carousel",
+      "name": "Carousel",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/carousel"
+    },
+    {
+      "slug": "code-block",
+      "name": "Code Block",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/code-block"
+    },
+    {
+      "slug": "colourful-text",
+      "name": "Colourful Text",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/colourful-text"
+    },
+    {
+      "slug": "comet-card",
+      "name": "Comet Card",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/comet-card"
+    },
+    {
+      "slug": "compare",
+      "name": "Compare",
+      "category": [
+        "feature-sections",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/compare"
+    },
+    {
+      "slug": "container-scroll-animation",
+      "name": "Container Scroll Animation",
+      "category": [
+        "layout",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/container-scroll-animation"
+    },
+    {
+      "slug": "container-text-flip",
+      "name": "Container Text Flip",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/container-text-flip"
+    },
+    {
+      "slug": "cover",
+      "name": "Cover",
+      "category": [
+        "cta",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/container-cover"
+    },
+    {
+      "slug": "direction-aware-hover",
+      "name": "Direction Aware Hover",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/direction-aware-hover"
+    },
+    {
+      "slug": "dither-shader",
+      "name": "Dither Shader",
+      "category": [
+        "layout",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/dither-shader"
+    },
+    {
+      "slug": "dotted-glow-background",
+      "name": "Dotted Glow Background",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/dotted-glow-background"
+    },
+    {
+      "slug": "draggable-card",
+      "name": "Draggable Card",
+      "category": [
+        "3d-effects",
+        "cards"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/draggable-card"
+    },
+    {
+      "slug": "encrypted-text",
+      "name": "Encrypted Text",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/encrypted-text"
+    },
+    {
+      "slug": "evervault-card",
+      "name": "Evervault Card",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/evervault-card"
+    },
+    {
+      "slug": "file-upload",
+      "name": "File Upload",
+      "category": [
+        "forms",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/file-upload"
+    },
+    {
+      "slug": "flip-words",
+      "name": "Flip Words",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/flip-words"
+    },
+    {
+      "slug": "floating-dock",
+      "name": "Floating Dock",
+      "category": [
+        "navigation"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/floating-dock"
+    },
+    {
+      "slug": "floating-navbar",
+      "name": "Floating Navbar",
+      "category": [
+        "navbars",
+        "navigation"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/floating-navbar"
+    },
+    {
+      "slug": "focus-cards",
+      "name": "Focus Cards",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/focus-cards"
+    },
+    {
+      "slug": "following-pointer",
+      "name": "Following Pointer",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/following-pointer"
+    },
+    {
+      "slug": "glare-card",
+      "name": "Glare Card",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/glare-card"
+    },
+    {
+      "slug": "globe",
+      "name": "Globe",
+      "category": [
+        "layout",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/github-globe"
+    },
+    {
+      "slug": "glowing-effect",
+      "name": "Glowing Effect",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/glowing-effect"
+    },
+    {
+      "slug": "glowing-stars",
+      "name": "Glowing Stars",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/glowing-stars"
+    },
+    {
+      "slug": "gooey-input",
+      "name": "Gooey Input",
+      "category": [
+        "forms",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/gooey-input"
+    },
+    {
+      "slug": "google-gemini-effect",
+      "name": "Google Gemini Effect",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/google-gemini-effect"
+    },
+    {
+      "slug": "grid",
+      "name": "Grid",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/grid"
+    },
+    {
+      "slug": "hero-highlight",
+      "name": "Hero Highlight",
+      "category": [
+        "cta",
+        "hero-sections"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/hero-highlight"
+    },
+    {
+      "slug": "hero-parallax",
+      "name": "Hero Parallax",
+      "category": [
+        "hero-sections",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/hero-parallax"
+    },
+    {
+      "slug": "hover-border-gradient",
+      "name": "Hover Border Gradient",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/hover-border-gradient"
+    },
+    {
+      "slug": "images-badge",
+      "name": "Images Badge",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/images-badge"
+    },
+    {
+      "slug": "images-slider",
+      "name": "Images Slider",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/images-slider"
+    },
+    {
+      "slug": "infinite-moving-cards",
+      "name": "Infinite Moving Cards",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/infinite-moving-cards"
+    },
+    {
+      "slug": "input",
+      "name": "Input",
+      "category": [
+        "forms",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/input"
+    },
+    {
+      "slug": "keyboard",
+      "name": "Keyboard",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/keyboard"
+    },
+    {
+      "slug": "label",
+      "name": "Label",
+      "category": [
+        "forms",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/label"
+    },
+    {
+      "slug": "lamp",
+      "name": "Lamp",
+      "category": [
+        "hero-sections"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/lamp-effect"
+    },
+    {
+      "slug": "layout-grid",
+      "name": "Layout Grid",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/layout-grid"
+    },
+    {
+      "slug": "layout-text-flip",
+      "name": "Layout Text Flip",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/layout-text-flip"
+    },
+    {
+      "slug": "lens",
+      "name": "Lens",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/lens"
+    },
+    {
+      "slug": "link-preview",
+      "name": "Link Preview",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/link-preview"
+    },
+    {
+      "slug": "loader",
+      "name": "Loader",
+      "category": [
+        "layout",
+        "loaders"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/loader"
+    },
+    {
+      "slug": "macbook-scroll",
+      "name": "Macbook Scroll",
+      "category": [
+        "layout",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/macbook-scroll"
+    },
+    {
+      "slug": "meteors",
+      "name": "Meteors",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/meteors"
+    },
+    {
+      "slug": "moving-border",
+      "name": "Moving Border",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/moving-border"
+    },
+    {
+      "slug": "moving-line",
+      "name": "Moving Line",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/moving-line"
+    },
+    {
+      "slug": "multi-step-loader",
+      "name": "Multi Step Loader",
+      "category": [
+        "layout",
+        "loaders"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/multi-step-loader"
+    },
+    {
+      "slug": "navbar-menu",
+      "name": "Navbar Menu",
+      "category": [
+        "navbars",
+        "navigation"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/navbar-menu"
+    },
+    {
+      "slug": "noise-background",
+      "name": "Noise Background",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/noise-background"
+    },
+    {
+      "slug": "parallax-hero-images",
+      "name": "Parallax Hero Images",
+      "category": [
+        "hero-sections",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/parallax-hero-images"
+    },
+    {
+      "slug": "parallax-scroll",
+      "name": "Parallax Scroll",
+      "category": [
+        "layout",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/parallax-scroll"
+    },
+    {
+      "slug": "parallax-scroll-2",
+      "name": "Parallax Scroll 2",
+      "category": [
+        "layout",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/parallax-scroll-2"
+    },
+    {
+      "slug": "pixelated-canvas",
+      "name": "Pixelated Canvas",
+      "category": [
+        "layout",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/pixelated-canvas"
+    },
+    {
+      "slug": "placeholders-and-vanish-input",
+      "name": "Placeholders And Vanish Input",
+      "category": [
+        "forms",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/placeholders-and-vanish-input"
+    },
+    {
+      "slug": "pointer-highlight",
+      "name": "Pointer Highlight",
+      "category": [
+        "hero-sections"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/pointer-highlight"
+    },
+    {
+      "slug": "resizable-navbar",
+      "name": "Resizable Navbar",
+      "category": [
+        "navbars",
+        "navigation"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/resizable-navbar"
+    },
+    {
+      "slug": "scales",
+      "name": "Scales",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/scales"
+    },
+    {
+      "slug": "shooting-stars",
+      "name": "Shooting Stars",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/shooting-stars-and-stars-background"
+    },
+    {
+      "slug": "sidebar",
+      "name": "Sidebar",
+      "category": [
+        "navigation",
+        "sidebars"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/sidebar"
+    },
+    {
+      "slug": "sparkles",
+      "name": "Sparkles",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/sparkles"
+    },
+    {
+      "slug": "spotlight",
+      "name": "Spotlight",
+      "category": [
+        "hero-sections"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/spotlight"
+    },
+    {
+      "slug": "spotlight-new",
+      "name": "Spotlight New",
+      "category": [
+        "hero-sections"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/spotlight-new"
+    },
+    {
+      "slug": "stars-background",
+      "name": "Stars Background",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/shooting-stars-and-stars-background"
+    },
+    {
+      "slug": "stateful-button",
+      "name": "Stateful Button",
+      "category": [
+        "cta",
+        "forms"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/stateful-button"
+    },
+    {
+      "slug": "sticky-banner",
+      "name": "Sticky Banner",
+      "category": [
+        "navigation"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/sticky-banner"
+    },
+    {
+      "slug": "sticky-scroll-reveal",
+      "name": "Sticky Scroll Reveal",
+      "category": [
+        "layout",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/sticky-scroll-reveal"
+    },
+    {
+      "slug": "svg-mask-effect",
+      "name": "SVG Mask Effect",
+      "category": [
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/svg-mask-effect"
+    },
+    {
+      "slug": "tabs",
+      "name": "Tabs",
+      "category": [
+        "navigation"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/tabs"
+    },
+    {
+      "slug": "tailwindcss-buttons",
+      "name": "Tailwind CSS Buttons",
+      "category": [
+        "cta",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/tailwindcss-buttons"
+    },
+    {
+      "slug": "terminal",
+      "name": "Terminal",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/terminal"
+    },
+    {
+      "slug": "text-flipping-board",
+      "name": "Text Flipping Board",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/text-flipping-board"
+    },
+    {
+      "slug": "text-generate-effect",
+      "name": "Text Generate Effect",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/text-generate-effect"
+    },
+    {
+      "slug": "text-hover-effect",
+      "name": "Text Hover Effect",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/text-hover-effect"
+    },
+    {
+      "slug": "text-reveal-card",
+      "name": "Text Reveal Card",
+      "category": [
+        "cards",
+        "scroll-effects",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/text-reveal-card"
+    },
+    {
+      "slug": "timeline",
+      "name": "Timeline",
+      "category": [
+        "feature-sections",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/timeline"
+    },
+    {
+      "slug": "tooltip-card",
+      "name": "Tooltip Card",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/tooltip-card"
+    },
+    {
+      "slug": "tracing-beam",
+      "name": "Tracing Beam",
+      "category": [
+        "layout",
+        "scroll-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/tracing-beam"
+    },
+    {
+      "slug": "typewriter-effect",
+      "name": "Typewriter Effect",
+      "category": [
+        "layout",
+        "text-effects"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/typewriter-effect"
+    },
+    {
+      "slug": "vortex",
+      "name": "Vortex",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/vortex"
+    },
+    {
+      "slug": "wavy-background",
+      "name": "Wavy Background",
+      "category": [
+        "backgrounds",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/wavy-background"
+    },
+    {
+      "slug": "webcam-pixel-grid",
+      "name": "Webcam Pixel Grid",
+      "category": [
+        "layout",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/webcam-pixel-grid"
+    },
+    {
+      "slug": "wobble-card",
+      "name": "Wobble Card",
+      "category": [
+        "cards",
+        "layout"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/wobble-card"
+    },
+    {
+      "slug": "world-map",
+      "name": "World Map",
+      "category": [
+        "layout",
+        "visualization"
+      ],
+      "docsUrl": "https://ui.aceternity.com/components/world-map"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "3d-effects",
+      "name": "3D Effects",
+      "componentCount": 5
+    },
+    {
+      "slug": "backgrounds",
+      "name": "Backgrounds",
+      "componentCount": 18
+    },
+    {
+      "slug": "cards",
+      "name": "Cards",
+      "componentCount": 15
+    },
+    {
+      "slug": "cta",
+      "name": "Cta",
+      "componentCount": 4
+    },
+    {
+      "slug": "feature-sections",
+      "name": "Feature Sections",
+      "componentCount": 3
+    },
+    {
+      "slug": "forms",
+      "name": "Forms",
+      "componentCount": 6
+    },
+    {
+      "slug": "hero-sections",
+      "name": "Hero Sections",
+      "componentCount": 8
+    },
+    {
+      "slug": "layout",
+      "name": "Layout",
+      "componentCount": 81
+    },
+    {
+      "slug": "loaders",
+      "name": "Loaders",
+      "componentCount": 2
+    },
+    {
+      "slug": "navbars",
+      "name": "Navbars",
+      "componentCount": 3
+    },
+    {
+      "slug": "navigation",
+      "name": "Navigation",
+      "componentCount": 7
+    },
+    {
+      "slug": "pricing",
+      "name": "Pricing",
+      "componentCount": 0
+    },
+    {
+      "slug": "scroll-effects",
+      "name": "Scroll Effects",
+      "componentCount": 11
+    },
+    {
+      "slug": "sidebars",
+      "name": "Sidebars",
+      "componentCount": 1
+    },
+    {
+      "slug": "testimonials",
+      "name": "Testimonials",
+      "componentCount": 2
+    },
+    {
+      "slug": "text-effects",
+      "name": "Text Effects",
+      "componentCount": 13
+    },
+    {
+      "slug": "visualization",
+      "name": "Visualization",
+      "componentCount": 9
+    }
+  ]
+}

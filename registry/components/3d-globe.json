@@ -1,0 +1,64 @@
+{
+  "slug": "3d-globe",
+  "name": "3D Globe",
+  "category": [
+    "3d-effects",
+    "visualization"
+  ],
+  "tags": [
+    "3d",
+    "data-viz",
+    "globe"
+  ],
+  "summary": "A reusable 3D Globe component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "3D Globe is a reusable visualization component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for 3d-effects, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
+  ],
+  "behavior": [
+    "Provides composable UI behavior with optional animation and styling controls"
+  ],
+  "visualCharacteristics": [
+    "Visually dominant"
+  ],
+  "difficulty": "advanced",
+  "designTone": [
+    "modern",
+    "premium"
+  ],
+  "layoutRole": "supporting",
+  "recommendations": [
+    "Use where moderate motion and reusable composition improve UX and clarity."
+  ],
+  "dependencies": [
+    "clsx",
+    "cobe",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/3d-globe",
+  "registryUrl": "https://ui.aceternity.com/registry/3d-globe.json",
+  "docsUrl": "https://ui.aceternity.com/components/3d-globe",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/3d-globe"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 7,
+    "animationIntensity": 7,
+    "layoutImportance": 5,
+    "customizationEase": 7,
+    "landingPageFit": 6,
+    "dashboardFit": 5,
+    "performanceImpact": 7
+  }
+}

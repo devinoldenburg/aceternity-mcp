@@ -1,0 +1,15 @@
+{
+  "slug": "hero-sections",
+  "name": "Hero Sections",
+  "description": "Primary above-the-fold components that shape first impression and conversion direction.",
+  "components": [
+    "card-spotlight",
+    "hero-highlight",
+    "hero-parallax",
+    "lamp",
+    "parallax-hero-images",
+    "pointer-highlight",
+    "spotlight",
+    "spotlight-new"
+  ]
+}

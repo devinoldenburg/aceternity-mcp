@@ -1,0 +1,25 @@
+{
+  "slug": "backgrounds",
+  "name": "Backgrounds",
+  "description": "Decorative and atmospheric background effects for hero sections, CTAs, and thematic surfaces.",
+  "components": [
+    "aurora-background",
+    "background-beams",
+    "background-beams-with-collision",
+    "background-boxes",
+    "background-gradient",
+    "background-gradient-animation",
+    "background-lines",
+    "background-ripple-effect",
+    "dotted-glow-background",
+    "glowing-stars",
+    "meteors",
+    "noise-background",
+    "scales",
+    "shooting-stars",
+    "sparkles",
+    "stars-background",
+    "vortex",
+    "wavy-background"
+  ]
+}

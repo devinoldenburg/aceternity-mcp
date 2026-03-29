@@ -1,0 +1,10 @@
+{
+  "slug": "navbars",
+  "name": "Navbars",
+  "description": "Top navigation patterns for global site structure and orientation.",
+  "components": [
+    "floating-navbar",
+    "navbar-menu",
+    "resizable-navbar"
+  ]
+}

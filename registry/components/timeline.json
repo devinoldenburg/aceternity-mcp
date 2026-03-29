@@ -1,0 +1,61 @@
+{
+  "slug": "timeline",
+  "name": "Timeline",
+  "category": [
+    "feature-sections",
+    "scroll-effects"
+  ],
+  "tags": [
+    "timeline"
+  ],
+  "summary": "A reusable Timeline component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Timeline is a reusable scroll interaction component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for feature-sections, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
+  ],
+  "behavior": [
+    "Reacts to scroll progress with transition or reveal effects"
+  ],
+  "visualCharacteristics": [
+    "Subtle"
+  ],
+  "difficulty": "advanced",
+  "designTone": [
+    "modern",
+    "technical"
+  ],
+  "layoutRole": "layout-critical",
+  "recommendations": [
+    "Use where moderate motion and reusable composition improve UX and clarity."
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/timeline",
+  "registryUrl": "https://ui.aceternity.com/registry/timeline.json",
+  "docsUrl": "https://ui.aceternity.com/components/timeline",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/timeline"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 5,
+    "animationIntensity": 5,
+    "layoutImportance": 5,
+    "customizationEase": 8,
+    "landingPageFit": 6,
+    "dashboardFit": 5,
+    "performanceImpact": 5
+  }
+}

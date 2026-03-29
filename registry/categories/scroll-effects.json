@@ -1,0 +1,18 @@
+{
+  "slug": "scroll-effects",
+  "name": "Scroll Effects",
+  "description": "Components that react to scroll position for reveal, timeline, and parallax storytelling.",
+  "components": [
+    "canvas-reveal-effect",
+    "container-scroll-animation",
+    "hero-parallax",
+    "macbook-scroll",
+    "parallax-hero-images",
+    "parallax-scroll",
+    "parallax-scroll-2",
+    "sticky-scroll-reveal",
+    "text-reveal-card",
+    "timeline",
+    "tracing-beam"
+  ]
+}

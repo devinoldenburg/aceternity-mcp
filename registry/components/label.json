@@ -1,0 +1,62 @@
+{
+  "slug": "label",
+  "name": "Label",
+  "category": [
+    "forms",
+    "layout"
+  ],
+  "tags": [
+    "label"
+  ],
+  "summary": "A Label form component that improves data entry UX with clear states and modern interactions.",
+  "detailedDescription": "Label is a reusable form/input component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for forms, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Improve clarity and confidence while entering information",
+    "Provide interactive feedback during form completion",
+    "Increase conversion for signup and contact flows"
+  ],
+  "behavior": [
+    "Provides composable UI behavior with optional animation and styling controls"
+  ],
+  "visualCharacteristics": [
+    "Utility-first",
+    "Conversion-oriented",
+    "State-driven",
+    "Subtle"
+  ],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern"
+  ],
+  "layoutRole": "layout-critical",
+  "recommendations": [
+    "Suitable for performance-sensitive pages that still need polished visuals."
+  ],
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/label",
+  "registryUrl": "https://ui.aceternity.com/registry/label.json",
+  "docsUrl": "https://ui.aceternity.com/components/label",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/label"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": false,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 5,
+    "animationIntensity": 3,
+    "layoutImportance": 7,
+    "customizationEase": 9,
+    "landingPageFit": 6,
+    "dashboardFit": 7,
+    "performanceImpact": 4
+  }
+}

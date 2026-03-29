@@ -1,0 +1,9 @@
+{
+  "slug": "loaders",
+  "name": "Loaders",
+  "description": "Loading and progress indicators for asynchronous operations and transitional states.",
+  "components": [
+    "loader",
+    "multi-step-loader"
+  ]
+}

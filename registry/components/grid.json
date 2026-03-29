@@ -1,0 +1,59 @@
+{
+  "slug": "grid",
+  "name": "Grid",
+  "category": [
+    "layout"
+  ],
+  "tags": [
+    "grid"
+  ],
+  "summary": "A reusable Grid component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Grid is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
+  ],
+  "behavior": [
+    "Provides composable UI behavior with optional animation and styling controls"
+  ],
+  "visualCharacteristics": [
+    "Subtle"
+  ],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern",
+    "technical"
+  ],
+  "layoutRole": "supporting",
+  "recommendations": [
+    "Use where moderate motion and reusable composition improve UX and clarity."
+  ],
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/grid",
+  "registryUrl": "https://ui.aceternity.com/registry/grid.json",
+  "docsUrl": "https://ui.aceternity.com/components/grid",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/grid"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": false,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 5,
+    "animationIntensity": 5,
+    "layoutImportance": 5,
+    "customizationEase": 8,
+    "landingPageFit": 6,
+    "dashboardFit": 5,
+    "performanceImpact": 5
+  }
+}

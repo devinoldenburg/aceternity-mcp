@@ -1,0 +1,22 @@
+{
+  "slug": "cards",
+  "name": "Cards",
+  "description": "Content grouping components for features, testimonials, product highlights, and interactive showcases.",
+  "components": [
+    "3d-card",
+    "apple-cards-carousel",
+    "bento-grid",
+    "card-hover-effect",
+    "card-spotlight",
+    "card-stack",
+    "comet-card",
+    "draggable-card",
+    "evervault-card",
+    "focus-cards",
+    "glare-card",
+    "infinite-moving-cards",
+    "text-reveal-card",
+    "tooltip-card",
+    "wobble-card"
+  ]
+}

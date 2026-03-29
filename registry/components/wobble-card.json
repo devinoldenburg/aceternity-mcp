@@ -1,0 +1,66 @@
+{
+  "slug": "wobble-card",
+  "name": "Wobble Card",
+  "category": [
+    "cards",
+    "layout"
+  ],
+  "tags": [
+    "card",
+    "content",
+    "showcase",
+    "wobble"
+  ],
+  "summary": "A Wobble Card card component for showcasing features, testimonials, and product content with visual polish.",
+  "detailedDescription": "Wobble Card is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Group related content into digestible visual blocks",
+    "Highlight features, testimonials, or product capabilities",
+    "Increase engagement through interaction and motion"
+  ],
+  "behavior": [
+    "Responds to pointer hover and movement with visual feedback"
+  ],
+  "visualCharacteristics": [
+    "Structured",
+    "Content-focused",
+    "Interactive"
+  ],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern",
+    "playful"
+  ],
+  "layoutRole": "supporting",
+  "recommendations": [
+    "Pairs well with testimonials, feature grids, and product highlight sections."
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/wobble-card",
+  "registryUrl": "https://ui.aceternity.com/registry/wobble-card.json",
+  "docsUrl": "https://ui.aceternity.com/components/wobble-card",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/wobble-card"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 6,
+    "animationIntensity": 6,
+    "layoutImportance": 5,
+    "customizationEase": 7,
+    "landingPageFit": 7,
+    "dashboardFit": 6,
+    "performanceImpact": 5
+  }
+}

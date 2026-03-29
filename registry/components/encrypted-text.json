@@ -1,0 +1,65 @@
+{
+  "slug": "encrypted-text",
+  "name": "Encrypted Text",
+  "category": [
+    "layout",
+    "text-effects"
+  ],
+  "tags": [
+    "animated",
+    "encrypted",
+    "text",
+    "typography"
+  ],
+  "summary": "A Encrypted Text text effect for expressive headings, highlights, and animated content emphasis.",
+  "detailedDescription": "Encrypted Text is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Draw attention to key headlines and supporting copy",
+    "Communicate brand tone through animated typography",
+    "Increase visual rhythm in content-heavy sections"
+  ],
+  "behavior": [
+    "Provides composable UI behavior with optional animation and styling controls"
+  ],
+  "visualCharacteristics": [
+    "Expressive",
+    "Typographic",
+    "Attention-guiding"
+  ],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern"
+  ],
+  "layoutRole": "decorative",
+  "recommendations": [
+    "Use where moderate motion and reusable composition improve UX and clarity."
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/encrypted-text",
+  "registryUrl": "https://ui.aceternity.com/registry/encrypted-text.json",
+  "docsUrl": "https://ui.aceternity.com/components/encrypted-text",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/encrypted-text"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 5,
+    "animationIntensity": 5,
+    "layoutImportance": 5,
+    "customizationEase": 7,
+    "landingPageFit": 6,
+    "dashboardFit": 5,
+    "performanceImpact": 5
+  }
+}

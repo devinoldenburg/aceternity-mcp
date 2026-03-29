@@ -1,0 +1,14 @@
+{
+  "slug": "navigation",
+  "name": "Navigation",
+  "description": "Navigation and wayfinding components including navbars, sidebars, docks, menus, and tabs.",
+  "components": [
+    "floating-dock",
+    "floating-navbar",
+    "navbar-menu",
+    "resizable-navbar",
+    "sidebar",
+    "sticky-banner",
+    "tabs"
+  ]
+}

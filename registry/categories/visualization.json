@@ -1,0 +1,16 @@
+{
+  "slug": "visualization",
+  "name": "Visualization",
+  "description": "Visual and media-driven components including maps, globes, shaders, canvas, and image effects.",
+  "components": [
+    "3d-globe",
+    "ascii-art",
+    "canvas-reveal-effect",
+    "canvas-text",
+    "dither-shader",
+    "globe",
+    "pixelated-canvas",
+    "webcam-pixel-grid",
+    "world-map"
+  ]
+}

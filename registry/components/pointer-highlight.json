@@ -1,0 +1,63 @@
+{
+  "slug": "pointer-highlight",
+  "name": "Pointer Highlight",
+  "category": [
+    "hero-sections"
+  ],
+  "tags": [
+    "headline",
+    "highlight",
+    "landing",
+    "pointer"
+  ],
+  "summary": "A reusable Pointer Highlight component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Pointer Highlight is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
+  ],
+  "behavior": [
+    "Provides composable UI behavior with optional animation and styling controls"
+  ],
+  "visualCharacteristics": [
+    "Landing-page friendly"
+  ],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern",
+    "premium"
+  ],
+  "layoutRole": "supporting",
+  "recommendations": [
+    "Best for premium landing page sections and hero compositions."
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/pointer-highlight",
+  "registryUrl": "https://ui.aceternity.com/registry/pointer-highlight.json",
+  "docsUrl": "https://ui.aceternity.com/components/pointer-highlight",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/pointer-highlight"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 7,
+    "animationIntensity": 6,
+    "layoutImportance": 6,
+    "customizationEase": 7,
+    "landingPageFit": 9,
+    "dashboardFit": 3,
+    "performanceImpact": 6
+  }
+}

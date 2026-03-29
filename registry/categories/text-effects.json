@@ -1,0 +1,20 @@
+{
+  "slug": "text-effects",
+  "name": "Text Effects",
+  "description": "Animated or expressive typography components for headlines, highlights, and messaging emphasis.",
+  "components": [
+    "canvas-text",
+    "code-block",
+    "colourful-text",
+    "container-text-flip",
+    "encrypted-text",
+    "flip-words",
+    "layout-text-flip",
+    "terminal",
+    "text-flipping-board",
+    "text-generate-effect",
+    "text-hover-effect",
+    "text-reveal-card",
+    "typewriter-effect"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "tabs",
+  "name": "Tabs",
+  "category": [
+    "navigation"
+  ],
+  "tags": [
+    "layout",
+    "menu",
+    "tabs"
+  ],
+  "summary": "A reusable Tabs component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Tabs is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
+  ],
+  "behavior": [
+    "Handles navigation state changes with responsive layout behavior"
+  ],
+  "visualCharacteristics": [],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern",
+    "minimal"
+  ],
+  "layoutRole": "layout-critical",
+  "recommendations": [
+    "Good fit for dashboards, admin panels, and data-dense application layouts.",
+    "Suitable for performance-sensitive pages that still need polished visuals.",
+    "Combine with hero and feature sections to establish clear top-level page flow."
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/tabs",
+  "registryUrl": "https://ui.aceternity.com/registry/tabs.json",
+  "docsUrl": "https://ui.aceternity.com/components/tabs",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/tabs"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 4,
+    "animationIntensity": 4,
+    "layoutImportance": 8,
+    "customizationEase": 7,
+    "landingPageFit": 6,
+    "dashboardFit": 8,
+    "performanceImpact": 4
+  }
+}

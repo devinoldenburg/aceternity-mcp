@@ -1,0 +1,10 @@
+{
+  "slug": "feature-sections",
+  "name": "Feature Sections",
+  "description": "Structured blocks for presenting capabilities, comparisons, and value propositions.",
+  "components": [
+    "bento-grid",
+    "compare",
+    "timeline"
+  ]
+}

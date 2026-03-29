@@ -1,0 +1,1469 @@
+{
+  "source": {
+    "registry": "@aceternity",
+    "command": "npx shadcn@latest list @aceternity",
+    "fetchedAt": "2026-03-29T13:51:49.625429+00:00",
+    "apiKeyProvided": false,
+    "apiKeyStored": false,
+    "note": "No source component file contents are stored in this layer."
+  },
+  "components": [
+    {
+      "slug": "3d-card",
+      "name": "3D Card Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/3d-card",
+      "registryUrl": "https://ui.aceternity.com/registry/3d-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/3d-card-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "3d-globe",
+      "name": "3D Globe",
+      "installCommand": "npx shadcn@latest add @aceternity/3d-globe",
+      "registryUrl": "https://ui.aceternity.com/registry/3d-globe.json",
+      "docsUrl": "https://ui.aceternity.com/components/3d-globe",
+      "dependencies": [
+        "clsx",
+        "cobe",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "3d-marquee",
+      "name": "3D Marquee",
+      "installCommand": "npx shadcn@latest add @aceternity/3d-marquee",
+      "registryUrl": "https://ui.aceternity.com/registry/3d-marquee.json",
+      "docsUrl": "https://ui.aceternity.com/components/3d-marquee",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "3d-pin",
+      "name": "3D Pin",
+      "installCommand": "npx shadcn@latest add @aceternity/3d-pin",
+      "registryUrl": "https://ui.aceternity.com/registry/3d-pin.json",
+      "docsUrl": "https://ui.aceternity.com/components/3d-pin",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "animated-modal",
+      "name": "Animated Modal",
+      "installCommand": "npx shadcn@latest add @aceternity/animated-modal",
+      "registryUrl": "https://ui.aceternity.com/registry/animated-modal.json",
+      "docsUrl": "https://ui.aceternity.com/components/animated-modal",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "animated-testimonials",
+      "name": "Animated Testimonials",
+      "installCommand": "npx shadcn@latest add @aceternity/animated-testimonials",
+      "registryUrl": "https://ui.aceternity.com/registry/animated-testimonials.json",
+      "docsUrl": "https://ui.aceternity.com/components/animated-testimonials",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "animated-tooltip",
+      "name": "Animated Tooltip",
+      "installCommand": "npx shadcn@latest add @aceternity/animated-tooltip",
+      "registryUrl": "https://ui.aceternity.com/registry/animated-tooltip.json",
+      "docsUrl": "https://ui.aceternity.com/components/animated-tooltip",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "apple-cards-carousel",
+      "name": "Apple Cards Carousel",
+      "installCommand": "npx shadcn@latest add @aceternity/apple-cards-carousel",
+      "registryUrl": "https://ui.aceternity.com/registry/apple-cards-carousel.json",
+      "docsUrl": "https://ui.aceternity.com/components/apple-cards-carousel",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "ascii-art",
+      "name": "ASCII Art",
+      "installCommand": "npx shadcn@latest add @aceternity/ascii-art",
+      "registryUrl": "https://ui.aceternity.com/registry/ascii-art.json",
+      "docsUrl": "https://ui.aceternity.com/components/ascii-art",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "aurora-background",
+      "name": "Aurora Background",
+      "installCommand": "npx shadcn@latest add @aceternity/aurora-background",
+      "registryUrl": "https://ui.aceternity.com/registry/aurora-background.json",
+      "docsUrl": "https://ui.aceternity.com/components/aurora-background",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "background-beams",
+      "name": "Background Beams",
+      "installCommand": "npx shadcn@latest add @aceternity/background-beams",
+      "registryUrl": "https://ui.aceternity.com/registry/background-beams.json",
+      "docsUrl": "https://ui.aceternity.com/components/background-beams",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "background-beams-with-collision",
+      "name": "Background Beams With Collision",
+      "installCommand": "npx shadcn@latest add @aceternity/background-beams-with-collision",
+      "registryUrl": "https://ui.aceternity.com/registry/background-beams-with-collision.json",
+      "docsUrl": "https://ui.aceternity.com/components/background-beams-with-collision",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "background-boxes",
+      "name": "Background Boxes",
+      "installCommand": "npx shadcn@latest add @aceternity/background-boxes",
+      "registryUrl": "https://ui.aceternity.com/registry/background-boxes.json",
+      "docsUrl": "https://ui.aceternity.com/components/background-boxes",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "background-gradient",
+      "name": "Background Gradient",
+      "installCommand": "npx shadcn@latest add @aceternity/background-gradient",
+      "registryUrl": "https://ui.aceternity.com/registry/background-gradient.json",
+      "docsUrl": "https://ui.aceternity.com/components/background-gradient",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "background-gradient-animation",
+      "name": "Background Gradient Animation",
+      "installCommand": "npx shadcn@latest add @aceternity/background-gradient-animation",
+      "registryUrl": "https://ui.aceternity.com/registry/background-gradient-animation.json",
+      "docsUrl": "https://ui.aceternity.com/components/background-gradient-animation",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "background-lines",
+      "name": "Background Lines",
+      "installCommand": "npx shadcn@latest add @aceternity/background-lines",
+      "registryUrl": "https://ui.aceternity.com/registry/background-lines.json",
+      "docsUrl": "https://ui.aceternity.com/components/background-lines",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "background-ripple-effect",
+      "name": "Background Ripple Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/background-ripple-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/background-ripple-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/background-ripple-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "bento-grid",
+      "name": "Bento Grid",
+      "installCommand": "npx shadcn@latest add @aceternity/bento-grid",
+      "registryUrl": "https://ui.aceternity.com/registry/bento-grid.json",
+      "docsUrl": "https://ui.aceternity.com/components/bento-grid",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "canvas-reveal-effect",
+      "name": "Canvas Reveal Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/canvas-reveal-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/canvas-reveal-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/canvas-reveal-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "canvas-text",
+      "name": "Canvas Text",
+      "installCommand": "npx shadcn@latest add @aceternity/canvas-text",
+      "registryUrl": "https://ui.aceternity.com/registry/canvas-text.json",
+      "docsUrl": "https://ui.aceternity.com/components/canvas-text",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "card-hover-effect",
+      "name": "Card Hover Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/card-hover-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/card-hover-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/card-hover-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "card-spotlight",
+      "name": "Card Spotlight",
+      "installCommand": "npx shadcn@latest add @aceternity/card-spotlight",
+      "registryUrl": "https://ui.aceternity.com/registry/card-spotlight.json",
+      "docsUrl": "https://ui.aceternity.com/components/card-spotlight",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "card-stack",
+      "name": "Card Stack",
+      "installCommand": "npx shadcn@latest add @aceternity/card-stack",
+      "registryUrl": "https://ui.aceternity.com/registry/card-stack.json",
+      "docsUrl": "https://ui.aceternity.com/components/card-stack",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "carousel",
+      "name": "Carousel",
+      "installCommand": "npx shadcn@latest add @aceternity/carousel",
+      "registryUrl": "https://ui.aceternity.com/registry/carousel.json",
+      "docsUrl": "https://ui.aceternity.com/components/carousel",
+      "dependencies": [
+        "clsx",
+        "embla-carousel-react",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "code-block",
+      "name": "Code Block",
+      "installCommand": "npx shadcn@latest add @aceternity/code-block",
+      "registryUrl": "https://ui.aceternity.com/registry/code-block.json",
+      "docsUrl": "https://ui.aceternity.com/components/code-block",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "react-syntax-highlighter",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "colourful-text",
+      "name": "Colourful Text",
+      "installCommand": "npx shadcn@latest add @aceternity/colourful-text",
+      "registryUrl": "https://ui.aceternity.com/registry/colourful-text.json",
+      "docsUrl": "https://ui.aceternity.com/components/colourful-text",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "comet-card",
+      "name": "Comet Card",
+      "installCommand": "npx shadcn@latest add @aceternity/comet-card",
+      "registryUrl": "https://ui.aceternity.com/registry/comet-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/comet-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "compare",
+      "name": "Compare",
+      "installCommand": "npx shadcn@latest add @aceternity/compare",
+      "registryUrl": "https://ui.aceternity.com/registry/compare.json",
+      "docsUrl": "https://ui.aceternity.com/components/compare",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "container-scroll-animation",
+      "name": "Container Scroll Animation",
+      "installCommand": "npx shadcn@latest add @aceternity/container-scroll-animation",
+      "registryUrl": "https://ui.aceternity.com/registry/container-scroll-animation.json",
+      "docsUrl": "https://ui.aceternity.com/components/container-scroll-animation",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "container-text-flip",
+      "name": "Container Text Flip",
+      "installCommand": "npx shadcn@latest add @aceternity/container-text-flip",
+      "registryUrl": "https://ui.aceternity.com/registry/container-text-flip.json",
+      "docsUrl": "https://ui.aceternity.com/components/container-text-flip",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "cover",
+      "name": "Cover",
+      "installCommand": "npx shadcn@latest add @aceternity/cover",
+      "registryUrl": "https://ui.aceternity.com/registry/cover.json",
+      "docsUrl": "https://ui.aceternity.com/components/container-cover",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "direction-aware-hover",
+      "name": "Direction Aware Hover",
+      "installCommand": "npx shadcn@latest add @aceternity/direction-aware-hover",
+      "registryUrl": "https://ui.aceternity.com/registry/direction-aware-hover.json",
+      "docsUrl": "https://ui.aceternity.com/components/direction-aware-hover",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "dither-shader",
+      "name": "Dither Shader",
+      "installCommand": "npx shadcn@latest add @aceternity/dither-shader",
+      "registryUrl": "https://ui.aceternity.com/registry/dither-shader.json",
+      "docsUrl": "https://ui.aceternity.com/components/dither-shader",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "dotted-glow-background",
+      "name": "Dotted Glow Background",
+      "installCommand": "npx shadcn@latest add @aceternity/dotted-glow-background",
+      "registryUrl": "https://ui.aceternity.com/registry/dotted-glow-background.json",
+      "docsUrl": "https://ui.aceternity.com/components/dotted-glow-background",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "draggable-card",
+      "name": "Draggable Card",
+      "installCommand": "npx shadcn@latest add @aceternity/draggable-card",
+      "registryUrl": "https://ui.aceternity.com/registry/draggable-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/draggable-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "encrypted-text",
+      "name": "Encrypted Text",
+      "installCommand": "npx shadcn@latest add @aceternity/encrypted-text",
+      "registryUrl": "https://ui.aceternity.com/registry/encrypted-text.json",
+      "docsUrl": "https://ui.aceternity.com/components/encrypted-text",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "evervault-card",
+      "name": "Evervault Card",
+      "installCommand": "npx shadcn@latest add @aceternity/evervault-card",
+      "registryUrl": "https://ui.aceternity.com/registry/evervault-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/evervault-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "file-upload",
+      "name": "File Upload",
+      "installCommand": "npx shadcn@latest add @aceternity/file-upload",
+      "registryUrl": "https://ui.aceternity.com/registry/file-upload.json",
+      "docsUrl": "https://ui.aceternity.com/components/file-upload",
+      "dependencies": [
+        "clsx",
+        "react-dropzone",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "flip-words",
+      "name": "Flip Words",
+      "installCommand": "npx shadcn@latest add @aceternity/flip-words",
+      "registryUrl": "https://ui.aceternity.com/registry/flip-words.json",
+      "docsUrl": "https://ui.aceternity.com/components/flip-words",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "floating-dock",
+      "name": "Floating Dock",
+      "installCommand": "npx shadcn@latest add @aceternity/floating-dock",
+      "registryUrl": "https://ui.aceternity.com/registry/floating-dock.json",
+      "docsUrl": "https://ui.aceternity.com/components/floating-dock",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "floating-navbar",
+      "name": "Floating Navbar",
+      "installCommand": "npx shadcn@latest add @aceternity/floating-navbar",
+      "registryUrl": "https://ui.aceternity.com/registry/floating-navbar.json",
+      "docsUrl": "https://ui.aceternity.com/components/floating-navbar",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "focus-cards",
+      "name": "Focus Cards",
+      "installCommand": "npx shadcn@latest add @aceternity/focus-cards",
+      "registryUrl": "https://ui.aceternity.com/registry/focus-cards.json",
+      "docsUrl": "https://ui.aceternity.com/components/focus-cards",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "following-pointer",
+      "name": "Following Pointer",
+      "installCommand": "npx shadcn@latest add @aceternity/following-pointer",
+      "registryUrl": "https://ui.aceternity.com/registry/following-pointer.json",
+      "docsUrl": "https://ui.aceternity.com/components/following-pointer",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "glare-card",
+      "name": "Glare Card",
+      "installCommand": "npx shadcn@latest add @aceternity/glare-card",
+      "registryUrl": "https://ui.aceternity.com/registry/glare-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/glare-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "globe",
+      "name": "Globe",
+      "installCommand": "npx shadcn@latest add @aceternity/globe",
+      "registryUrl": "https://ui.aceternity.com/registry/globe.json",
+      "docsUrl": "https://ui.aceternity.com/components/github-globe",
+      "dependencies": [
+        "clsx",
+        "cobe",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "glowing-effect",
+      "name": "Glowing Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/glowing-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/glowing-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/glowing-effect",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "glowing-stars",
+      "name": "Glowing Stars",
+      "installCommand": "npx shadcn@latest add @aceternity/glowing-stars",
+      "registryUrl": "https://ui.aceternity.com/registry/glowing-stars.json",
+      "docsUrl": "https://ui.aceternity.com/components/glowing-stars",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "gooey-input",
+      "name": "Gooey Input",
+      "installCommand": "npx shadcn@latest add @aceternity/gooey-input",
+      "registryUrl": "https://ui.aceternity.com/registry/gooey-input.json",
+      "docsUrl": "https://ui.aceternity.com/components/gooey-input",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "google-gemini-effect",
+      "name": "Google Gemini Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/google-gemini-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/google-gemini-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/google-gemini-effect",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "grid",
+      "name": "Grid",
+      "installCommand": "npx shadcn@latest add @aceternity/grid",
+      "registryUrl": "https://ui.aceternity.com/registry/grid.json",
+      "docsUrl": "https://ui.aceternity.com/components/grid",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "hero-highlight",
+      "name": "Hero Highlight",
+      "installCommand": "npx shadcn@latest add @aceternity/hero-highlight",
+      "registryUrl": "https://ui.aceternity.com/registry/hero-highlight.json",
+      "docsUrl": "https://ui.aceternity.com/components/hero-highlight",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "hero-parallax",
+      "name": "Hero Parallax",
+      "installCommand": "npx shadcn@latest add @aceternity/hero-parallax",
+      "registryUrl": "https://ui.aceternity.com/registry/hero-parallax.json",
+      "docsUrl": "https://ui.aceternity.com/components/hero-parallax",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "hover-border-gradient",
+      "name": "Hover Border Gradient",
+      "installCommand": "npx shadcn@latest add @aceternity/hover-border-gradient",
+      "registryUrl": "https://ui.aceternity.com/registry/hover-border-gradient.json",
+      "docsUrl": "https://ui.aceternity.com/components/hover-border-gradient",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "images-badge",
+      "name": "Images Badge",
+      "installCommand": "npx shadcn@latest add @aceternity/images-badge",
+      "registryUrl": "https://ui.aceternity.com/registry/images-badge.json",
+      "docsUrl": "https://ui.aceternity.com/components/images-badge",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "images-slider",
+      "name": "Images Slider",
+      "installCommand": "npx shadcn@latest add @aceternity/images-slider",
+      "registryUrl": "https://ui.aceternity.com/registry/images-slider.json",
+      "docsUrl": "https://ui.aceternity.com/components/images-slider",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "infinite-moving-cards",
+      "name": "Infinite Moving Cards",
+      "installCommand": "npx shadcn@latest add @aceternity/infinite-moving-cards",
+      "registryUrl": "https://ui.aceternity.com/registry/infinite-moving-cards.json",
+      "docsUrl": "https://ui.aceternity.com/components/infinite-moving-cards",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "input",
+      "name": "Input",
+      "installCommand": "npx shadcn@latest add @aceternity/input",
+      "registryUrl": "https://ui.aceternity.com/registry/input.json",
+      "docsUrl": "https://ui.aceternity.com/components/input",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "keyboard",
+      "name": "Keyboard",
+      "installCommand": "npx shadcn@latest add @aceternity/keyboard",
+      "registryUrl": "https://ui.aceternity.com/registry/keyboard.json",
+      "docsUrl": "https://ui.aceternity.com/components/keyboard",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "label",
+      "name": "Label",
+      "installCommand": "npx shadcn@latest add @aceternity/label",
+      "registryUrl": "https://ui.aceternity.com/registry/label.json",
+      "docsUrl": "https://ui.aceternity.com/components/label",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "lamp",
+      "name": "Lamp",
+      "installCommand": "npx shadcn@latest add @aceternity/lamp",
+      "registryUrl": "https://ui.aceternity.com/registry/lamp.json",
+      "docsUrl": "https://ui.aceternity.com/components/lamp-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "layout-grid",
+      "name": "Layout Grid",
+      "installCommand": "npx shadcn@latest add @aceternity/layout-grid",
+      "registryUrl": "https://ui.aceternity.com/registry/layout-grid.json",
+      "docsUrl": "https://ui.aceternity.com/components/layout-grid",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "layout-text-flip",
+      "name": "Layout Text Flip",
+      "installCommand": "npx shadcn@latest add @aceternity/layout-text-flip",
+      "registryUrl": "https://ui.aceternity.com/registry/layout-text-flip.json",
+      "docsUrl": "https://ui.aceternity.com/components/layout-text-flip",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "lens",
+      "name": "Lens",
+      "installCommand": "npx shadcn@latest add @aceternity/lens",
+      "registryUrl": "https://ui.aceternity.com/registry/lens.json",
+      "docsUrl": "https://ui.aceternity.com/components/lens",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "link-preview",
+      "name": "Link Preview",
+      "installCommand": "npx shadcn@latest add @aceternity/link-preview",
+      "registryUrl": "https://ui.aceternity.com/registry/link-preview.json",
+      "docsUrl": "https://ui.aceternity.com/components/link-preview",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "loader",
+      "name": "Loader",
+      "installCommand": "npx shadcn@latest add @aceternity/loader",
+      "registryUrl": "https://ui.aceternity.com/registry/loader.json",
+      "docsUrl": "https://ui.aceternity.com/components/loader",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "macbook-scroll",
+      "name": "Macbook Scroll",
+      "installCommand": "npx shadcn@latest add @aceternity/macbook-scroll",
+      "registryUrl": "https://ui.aceternity.com/registry/macbook-scroll.json",
+      "docsUrl": "https://ui.aceternity.com/components/macbook-scroll",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "meteors",
+      "name": "Meteors",
+      "installCommand": "npx shadcn@latest add @aceternity/meteors",
+      "registryUrl": "https://ui.aceternity.com/registry/meteors.json",
+      "docsUrl": "https://ui.aceternity.com/components/meteors",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "moving-border",
+      "name": "Moving Border",
+      "installCommand": "npx shadcn@latest add @aceternity/moving-border",
+      "registryUrl": "https://ui.aceternity.com/registry/moving-border.json",
+      "docsUrl": "https://ui.aceternity.com/components/moving-border",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "moving-line",
+      "name": "Moving Line",
+      "installCommand": "npx shadcn@latest add @aceternity/moving-line",
+      "registryUrl": "https://ui.aceternity.com/registry/moving-line.json",
+      "docsUrl": "https://ui.aceternity.com/components/moving-line",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "multi-step-loader",
+      "name": "Multi Step Loader",
+      "installCommand": "npx shadcn@latest add @aceternity/multi-step-loader",
+      "registryUrl": "https://ui.aceternity.com/registry/multi-step-loader.json",
+      "docsUrl": "https://ui.aceternity.com/components/multi-step-loader",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "navbar-menu",
+      "name": "Navbar Menu",
+      "installCommand": "npx shadcn@latest add @aceternity/navbar-menu",
+      "registryUrl": "https://ui.aceternity.com/registry/navbar-menu.json",
+      "docsUrl": "https://ui.aceternity.com/components/navbar-menu",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "noise-background",
+      "name": "Noise Background",
+      "installCommand": "npx shadcn@latest add @aceternity/noise-background",
+      "registryUrl": "https://ui.aceternity.com/registry/noise-background.json",
+      "docsUrl": "https://ui.aceternity.com/components/noise-background",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "parallax-hero-images",
+      "name": "Parallax Hero Images",
+      "installCommand": "npx shadcn@latest add @aceternity/parallax-hero-images",
+      "registryUrl": "https://ui.aceternity.com/registry/parallax-hero-images.json",
+      "docsUrl": "https://ui.aceternity.com/components/parallax-hero-images",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "parallax-scroll",
+      "name": "Parallax Scroll",
+      "installCommand": "npx shadcn@latest add @aceternity/parallax-scroll",
+      "registryUrl": "https://ui.aceternity.com/registry/parallax-scroll.json",
+      "docsUrl": "https://ui.aceternity.com/components/parallax-scroll",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "parallax-scroll-2",
+      "name": "Parallax Scroll 2",
+      "installCommand": "npx shadcn@latest add @aceternity/parallax-scroll-2",
+      "registryUrl": "https://ui.aceternity.com/registry/parallax-scroll-2.json",
+      "docsUrl": "https://ui.aceternity.com/components/parallax-scroll-2",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "pixelated-canvas",
+      "name": "Pixelated Canvas",
+      "installCommand": "npx shadcn@latest add @aceternity/pixelated-canvas",
+      "registryUrl": "https://ui.aceternity.com/registry/pixelated-canvas.json",
+      "docsUrl": "https://ui.aceternity.com/components/pixelated-canvas",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "placeholders-and-vanish-input",
+      "name": "Placeholders And Vanish Input",
+      "installCommand": "npx shadcn@latest add @aceternity/placeholders-and-vanish-input",
+      "registryUrl": "https://ui.aceternity.com/registry/placeholders-and-vanish-input.json",
+      "docsUrl": "https://ui.aceternity.com/components/placeholders-and-vanish-input",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "pointer-highlight",
+      "name": "Pointer Highlight",
+      "installCommand": "npx shadcn@latest add @aceternity/pointer-highlight",
+      "registryUrl": "https://ui.aceternity.com/registry/pointer-highlight.json",
+      "docsUrl": "https://ui.aceternity.com/components/pointer-highlight",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "resizable-navbar",
+      "name": "Resizable Navbar",
+      "installCommand": "npx shadcn@latest add @aceternity/resizable-navbar",
+      "registryUrl": "https://ui.aceternity.com/registry/resizable-navbar.json",
+      "docsUrl": "https://ui.aceternity.com/components/resizable-navbar",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "scales",
+      "name": "Scales",
+      "installCommand": "npx shadcn@latest add @aceternity/scales",
+      "registryUrl": "https://ui.aceternity.com/registry/scales.json",
+      "docsUrl": "https://ui.aceternity.com/components/scales",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "shooting-stars",
+      "name": "Shooting Stars",
+      "installCommand": "npx shadcn@latest add @aceternity/shooting-stars",
+      "registryUrl": "https://ui.aceternity.com/registry/shooting-stars.json",
+      "docsUrl": "https://ui.aceternity.com/components/shooting-stars-and-stars-background",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "sidebar",
+      "name": "Sidebar",
+      "installCommand": "npx shadcn@latest add @aceternity/sidebar",
+      "registryUrl": "https://ui.aceternity.com/registry/sidebar.json",
+      "docsUrl": "https://ui.aceternity.com/components/sidebar",
+      "dependencies": [
+        "@tabler/icons-react",
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "sparkles",
+      "name": "Sparkles",
+      "installCommand": "npx shadcn@latest add @aceternity/sparkles",
+      "registryUrl": "https://ui.aceternity.com/registry/sparkles.json",
+      "docsUrl": "https://ui.aceternity.com/components/sparkles",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "spotlight",
+      "name": "Spotlight",
+      "installCommand": "npx shadcn@latest add @aceternity/spotlight",
+      "registryUrl": "https://ui.aceternity.com/registry/spotlight.json",
+      "docsUrl": "https://ui.aceternity.com/components/spotlight",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "spotlight-new",
+      "name": "Spotlight New",
+      "installCommand": "npx shadcn@latest add @aceternity/spotlight-new",
+      "registryUrl": "https://ui.aceternity.com/registry/spotlight-new.json",
+      "docsUrl": "https://ui.aceternity.com/components/spotlight-new",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "stars-background",
+      "name": "Stars Background",
+      "installCommand": "npx shadcn@latest add @aceternity/stars-background",
+      "registryUrl": "https://ui.aceternity.com/registry/stars-background.json",
+      "docsUrl": "https://ui.aceternity.com/components/shooting-stars-and-stars-background",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "stateful-button",
+      "name": "Stateful Button",
+      "installCommand": "npx shadcn@latest add @aceternity/stateful-button",
+      "registryUrl": "https://ui.aceternity.com/registry/stateful-button.json",
+      "docsUrl": "https://ui.aceternity.com/components/stateful-button",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "sticky-banner",
+      "name": "Sticky Banner",
+      "installCommand": "npx shadcn@latest add @aceternity/sticky-banner",
+      "registryUrl": "https://ui.aceternity.com/registry/sticky-banner.json",
+      "docsUrl": "https://ui.aceternity.com/components/sticky-banner",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "sticky-scroll-reveal",
+      "name": "Sticky Scroll Reveal",
+      "installCommand": "npx shadcn@latest add @aceternity/sticky-scroll-reveal",
+      "registryUrl": "https://ui.aceternity.com/registry/sticky-scroll-reveal.json",
+      "docsUrl": "https://ui.aceternity.com/components/sticky-scroll-reveal",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "svg-mask-effect",
+      "name": "SVG Mask Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/svg-mask-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/svg-mask-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/svg-mask-effect",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "tabs",
+      "name": "Tabs",
+      "installCommand": "npx shadcn@latest add @aceternity/tabs",
+      "registryUrl": "https://ui.aceternity.com/registry/tabs.json",
+      "docsUrl": "https://ui.aceternity.com/components/tabs",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "tailwindcss-buttons",
+      "name": "Tailwind CSS Buttons",
+      "installCommand": "npx shadcn@latest add @aceternity/tailwindcss-buttons",
+      "registryUrl": "https://ui.aceternity.com/registry/tailwindcss-buttons.json",
+      "docsUrl": "https://ui.aceternity.com/components/tailwindcss-buttons",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "terminal",
+      "name": "Terminal",
+      "installCommand": "npx shadcn@latest add @aceternity/terminal",
+      "registryUrl": "https://ui.aceternity.com/registry/terminal.json",
+      "docsUrl": "https://ui.aceternity.com/components/terminal",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "react-syntax-highlighter",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "text-flipping-board",
+      "name": "Text Flipping Board",
+      "installCommand": "npx shadcn@latest add @aceternity/text-flipping-board",
+      "registryUrl": "https://ui.aceternity.com/registry/text-flipping-board.json",
+      "docsUrl": "https://ui.aceternity.com/components/text-flipping-board",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "text-generate-effect",
+      "name": "Text Generate Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/text-generate-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/text-generate-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/text-generate-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "text-hover-effect",
+      "name": "Text Hover Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/text-hover-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/text-hover-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/text-hover-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "text-reveal-card",
+      "name": "Text Reveal Card",
+      "installCommand": "npx shadcn@latest add @aceternity/text-reveal-card",
+      "registryUrl": "https://ui.aceternity.com/registry/text-reveal-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/text-reveal-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "timeline",
+      "name": "Timeline",
+      "installCommand": "npx shadcn@latest add @aceternity/timeline",
+      "registryUrl": "https://ui.aceternity.com/registry/timeline.json",
+      "docsUrl": "https://ui.aceternity.com/components/timeline",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "tooltip-card",
+      "name": "Tooltip Card",
+      "installCommand": "npx shadcn@latest add @aceternity/tooltip-card",
+      "registryUrl": "https://ui.aceternity.com/registry/tooltip-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/tooltip-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "tracing-beam",
+      "name": "Tracing Beam",
+      "installCommand": "npx shadcn@latest add @aceternity/tracing-beam",
+      "registryUrl": "https://ui.aceternity.com/registry/tracing-beam.json",
+      "docsUrl": "https://ui.aceternity.com/components/tracing-beam",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "typewriter-effect",
+      "name": "Typewriter Effect",
+      "installCommand": "npx shadcn@latest add @aceternity/typewriter-effect",
+      "registryUrl": "https://ui.aceternity.com/registry/typewriter-effect.json",
+      "docsUrl": "https://ui.aceternity.com/components/typewriter-effect",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "vortex",
+      "name": "Vortex",
+      "installCommand": "npx shadcn@latest add @aceternity/vortex",
+      "registryUrl": "https://ui.aceternity.com/registry/vortex.json",
+      "docsUrl": "https://ui.aceternity.com/components/vortex",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "wavy-background",
+      "name": "Wavy Background",
+      "installCommand": "npx shadcn@latest add @aceternity/wavy-background",
+      "registryUrl": "https://ui.aceternity.com/registry/wavy-background.json",
+      "docsUrl": "https://ui.aceternity.com/components/wavy-background",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "webcam-pixel-grid",
+      "name": "Webcam Pixel Grid",
+      "installCommand": "npx shadcn@latest add @aceternity/webcam-pixel-grid",
+      "registryUrl": "https://ui.aceternity.com/registry/webcam-pixel-grid.json",
+      "docsUrl": "https://ui.aceternity.com/components/webcam-pixel-grid",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "wobble-card",
+      "name": "Wobble Card",
+      "installCommand": "npx shadcn@latest add @aceternity/wobble-card",
+      "registryUrl": "https://ui.aceternity.com/registry/wobble-card.json",
+      "docsUrl": "https://ui.aceternity.com/components/wobble-card",
+      "dependencies": [
+        "clsx",
+        "motion",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    },
+    {
+      "slug": "world-map",
+      "name": "World Map",
+      "installCommand": "npx shadcn@latest add @aceternity/world-map",
+      "registryUrl": "https://ui.aceternity.com/registry/world-map.json",
+      "docsUrl": "https://ui.aceternity.com/components/world-map",
+      "dependencies": [
+        "clsx",
+        "dotted-map",
+        "next-themes",
+        "tailwind-merge"
+      ],
+      "discoverySource": "npx shadcn@latest list @aceternity",
+      "containsSourceFiles": false
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "resizable-navbar",
+  "name": "Resizable Navbar",
+  "category": [
+    "navbars",
+    "navigation"
+  ],
+  "tags": [
+    "layout",
+    "menu",
+    "navbar",
+    "navigation",
+    "resizable"
+  ],
+  "summary": "A Resizable Navbar navigation component for responsive headers, sidebars, and interaction-friendly layout flows.",
+  "detailedDescription": "Resizable Navbar is a reusable navigation component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navbars, navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Provide clear wayfinding across pages and sections",
+    "Support responsive navigation patterns on desktop and mobile",
+    "Improve information architecture and scanning"
+  ],
+  "behavior": [
+    "Handles navigation state changes with responsive layout behavior"
+  ],
+  "visualCharacteristics": [
+    "Layout-critical",
+    "Functional",
+    "Adaptive"
+  ],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern",
+    "minimal"
+  ],
+  "layoutRole": "layout-critical",
+  "recommendations": [
+    "Good fit for dashboards, admin panels, and data-dense application layouts.",
+    "Suitable for performance-sensitive pages that still need polished visuals.",
+    "Combine with hero and feature sections to establish clear top-level page flow."
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/resizable-navbar",
+  "registryUrl": "https://ui.aceternity.com/registry/resizable-navbar.json",
+  "docsUrl": "https://ui.aceternity.com/components/resizable-navbar",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/resizable-navbar"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 4,
+    "animationIntensity": 4,
+    "layoutImportance": 8,
+    "customizationEase": 7,
+    "landingPageFit": 6,
+    "dashboardFit": 8,
+    "performanceImpact": 4
+  }
+}

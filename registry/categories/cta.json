@@ -1,0 +1,11 @@
+{
+  "slug": "cta",
+  "name": "Cta",
+  "description": "Call-to-action focused elements that drive user conversion and next-step actions.",
+  "components": [
+    "cover",
+    "hero-highlight",
+    "stateful-button",
+    "tailwindcss-buttons"
+  ]
+}

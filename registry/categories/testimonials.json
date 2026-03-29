@@ -1,0 +1,9 @@
+{
+  "slug": "testimonials",
+  "name": "Testimonials",
+  "description": "Social proof components focused on quotes, credibility signals, and trust-building content.",
+  "components": [
+    "animated-testimonials",
+    "card-stack"
+  ]
+}

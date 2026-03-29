@@ -1,0 +1,13 @@
+{
+  "slug": "forms",
+  "name": "Forms",
+  "description": "Input and conversion-focused components for signup, upload, stateful actions, and data collection.",
+  "components": [
+    "file-upload",
+    "gooey-input",
+    "input",
+    "label",
+    "placeholders-and-vanish-input",
+    "stateful-button"
+  ]
+}

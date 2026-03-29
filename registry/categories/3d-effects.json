@@ -1,0 +1,12 @@
+{
+  "slug": "3d-effects",
+  "name": "3D Effects",
+  "description": "Three-dimensional or perspective-based effects for premium, interactive visual experiences.",
+  "components": [
+    "3d-card",
+    "3d-globe",
+    "3d-marquee",
+    "3d-pin",
+    "draggable-card"
+  ]
+}

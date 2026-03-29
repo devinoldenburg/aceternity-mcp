@@ -1,0 +1,66 @@
+{
+  "slug": "hero-parallax",
+  "name": "Hero Parallax",
+  "category": [
+    "hero-sections",
+    "scroll-effects"
+  ],
+  "tags": [
+    "animated",
+    "headline",
+    "hero",
+    "landing",
+    "parallax",
+    "scroll"
+  ],
+  "summary": "A reusable Hero Parallax component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Hero Parallax is a reusable hero/section component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
+  ],
+  "behavior": [
+    "Reacts to scroll progress with transition or reveal effects"
+  ],
+  "visualCharacteristics": [
+    "Landing-page friendly"
+  ],
+  "difficulty": "advanced",
+  "designTone": [
+    "modern",
+    "premium"
+  ],
+  "layoutRole": "supporting",
+  "recommendations": [
+    "Best for premium landing page sections and hero compositions."
+  ],
+  "dependencies": [
+    "clsx",
+    "motion",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/hero-parallax",
+  "registryUrl": "https://ui.aceternity.com/registry/hero-parallax.json",
+  "docsUrl": "https://ui.aceternity.com/components/hero-parallax",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/hero-parallax"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": true,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 7,
+    "animationIntensity": 6,
+    "layoutImportance": 6,
+    "customizationEase": 7,
+    "landingPageFit": 9,
+    "dashboardFit": 3,
+    "performanceImpact": 6
+  }
+}

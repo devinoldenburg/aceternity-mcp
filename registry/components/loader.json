@@ -1,0 +1,58 @@
+{
+  "slug": "loader",
+  "name": "Loader",
+  "category": [
+    "layout",
+    "loaders"
+  ],
+  "tags": [
+    "loader",
+    "loading"
+  ],
+  "summary": "A Loader loader component for communicating progress and improving perceived responsiveness.",
+  "detailedDescription": "Loader is a reusable loader component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, loaders contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "purpose": [
+    "Set user expectations during asynchronous operations",
+    "Reduce perceived waiting time with meaningful feedback",
+    "Maintain visual continuity between loading and loaded states"
+  ],
+  "behavior": [
+    "Uses timed animation sequences for dynamic visual presence"
+  ],
+  "visualCharacteristics": [],
+  "difficulty": "beginner",
+  "designTone": [
+    "modern"
+  ],
+  "layoutRole": "supporting",
+  "recommendations": [
+    "Use as a focal animated accent and pair with calmer surrounding components."
+  ],
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "installCommand": "npx shadcn@latest add @aceternity/loader",
+  "registryUrl": "https://ui.aceternity.com/registry/loader.json",
+  "docsUrl": "https://ui.aceternity.com/components/loader",
+  "previewAvailable": true,
+  "examples": [
+    "https://ui.aceternity.com/components/loader"
+  ],
+  "compatibility": {
+    "react": true,
+    "nextjs": true,
+    "tailwind": true,
+    "framerMotion": false,
+    "shadcn": true
+  },
+  "scores": {
+    "visualIntensity": 5,
+    "animationIntensity": 8,
+    "layoutImportance": 3,
+    "customizationEase": 7,
+    "landingPageFit": 6,
+    "dashboardFit": 7,
+    "performanceImpact": 5
+  }
+}
