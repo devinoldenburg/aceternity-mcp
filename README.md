@@ -17,7 +17,7 @@ Discover, explore, and install 100+ Aceternity UI components directly from your 
 
 ## What is Aceternity MCP?
 
-Aceternity MCP is a Model Context Protocol server that brings the entire Aceternity UI component library to your AI assistant. Instead of just knowing component names, your AI gets rich metadata including:
+Aceternity MCP is a **pipx application** that brings the entire Aceternity UI component library to your AI assistant. Instead of just knowing component names, your AI gets rich metadata including:
 
 - **Detailed descriptions** (60+ words per component)
 - **Visual characteristics** and behavior patterns
@@ -27,130 +27,65 @@ Aceternity MCP is a Model Context Protocol server that brings the entire Acetern
 
 This helps your AI make informed decisions about which components fit your design needs.
 
-## Features
+## ⚡ Quick Start (60 seconds)
 
-- **Complete Registry**: Access to 100+ Aceternity UI components with full metadata
-- **Intelligent Search**: Filter by category, visual intensity, animation level, use case
-- **Smart Recommendations**: Get component suggestions based on your project type
-- **Combination Planning**: Recommend complementary components (navbar + hero + CTA)
-- **One-Command Install**: Install components directly through your AI assistant
-- **Cross-Platform**: Works on macOS, Linux, and Windows
-- **Universal Support**: Configures Cursor, Claude Desktop, Claude Code, Cline, Windsurf, OpenCode
-
-## Quick Start
-
-### Install from PyPI (Recommended)
-
-**Option 1: Using pipx (Recommended - isolated environment)**
 ```bash
-# Install pipx if you don't have it
+# 1. Install pipx (one-time setup)
 brew install pipx
 pipx ensurepath
 
-# Install aceternity-mcp
+# 2. Install Aceternity MCP
 pipx install aceternity-mcp
 
-# Run the interactive setup wizard
-aceternity-mcp install
-
-# Or configure all tools automatically
-aceternity-mcp install --non-interactive
-```
-
-**Option 2: Using pip (with virtual environment)**
-```bash
-# Create a virtual environment
-python3 -m venv ~/.local/aceternity-mcp
-source ~/.local/aceternity-mcp/bin/activate
-
-# Install the package
-pip install aceternity-mcp
-
-# Run the interactive setup wizard
+# 3. Run the interactive setup
 aceternity-mcp install
 ```
 
-**What the installer does:**
-1. Syncs 100+ components from Aceternity UI (or uses bundled registry)
-2. Configures your AI tools automatically
-3. Verifies the installation
-4. Shows you next steps
+**That's it!** You're ready to use Aceternity MCP with your AI assistant.
 
-## CLI Commands
+## 🎯 CLI Commands
 
-The `aceternity-mcp` command provides a powerful CLI for managing your installation:
+Aceternity MCP provides a powerful command-line interface:
 
 | Command | Description |
 |---------|-------------|
 | `aceternity-mcp install` | Run interactive setup wizard |
 | `aceternity-mcp update` | Check for and install updates |
 | `aceternity-mcp repair` | Fix common installation issues |
-| `aceternity-mcp status` | Show installation health and status |
+| `aceternity-mcp status` | Show installation health |
 | `aceternity-mcp diagnose` | Run diagnostics (JSON output) |
-| `aceternity-mcp --version` | Show version information |
-| `aceternity-mcp --help` | Show help message |
+| `aceternity-mcp --version` | Show version |
+| `aceternity-mcp --help` | Show help |
 
-**Examples:**
+### Examples
 
 ```bash
-# Check for updates
-aceternity-mcp update
-
-# Fix installation issues
-aceternity-mcp repair
-
-# Repair only registry
-aceternity-mcp repair --registry
-
 # Check installation status
 aceternity-mcp status
 
-# Detailed status with client configs
-aceternity-mcp status --verbose
+# Update to latest version
+aceternity-mcp update
 
-# Run diagnostics
+# Fix issues with registry or configs
+aceternity-mcp repair
+
+# Get detailed diagnostics
 aceternity-mcp diagnose
+
+# Repair only the registry
+aceternity-mcp repair --registry
 ```
 
-### Development Installation
+## 🤖 Configure Your AI Tool
 
-```bash
-# Clone the repository
-git clone https://github.com/devinoldenburg/aceternity-mcp.git
-cd aceternity-mcp
-
-# Install in development mode
-pip install -e .
-
-# Sync the component registry (optional - registry is included in package)
-python scripts/sync_registry.py
-
-# Configure your AI tools
-python -m aceternity_mcp.install
-```
-
-### Running the MCP Server
-
-To run the MCP server directly (for manual configuration):
-
-```bash
-# Using the server command
-aceternity-mcp-server
-
-# Or using the legacy command
-aceternity-mcp-server
-```
-
-### Manual Configuration
-
-Add to your AI tool's MCP configuration:
+After running `aceternity-mcp install`, the tool automatically configures your AI assistants. Manual configuration is also supported:
 
 **Cursor** (`~/.cursor/mcp.json`):
 ```json
 {
   "mcpServers": {
     "aceternity-ui": {
-      "command": "aceternity-mcp",
+      "command": "aceternity-mcp-server",
       "args": []
     }
   }
@@ -162,7 +97,7 @@ Add to your AI tool's MCP configuration:
 {
   "mcpServers": {
     "aceternity-ui": {
-      "command": "aceternity-mcp",
+      "command": "aceternity-mcp-server",
       "args": []
     }
   }
@@ -174,7 +109,7 @@ Add to your AI tool's MCP configuration:
 {
   "mcpServers": {
     "aceternity-ui": {
-      "command": "aceternity-mcp",
+      "command": "aceternity-mcp-server",
       "args": []
     }
   }
@@ -186,7 +121,7 @@ Add to your AI tool's MCP configuration:
 {
   "mcp_servers": {
     "aceternity_ui": {
-      "command": "aceternity-mcp",
+      "command": "aceternity-mcp-server",
       "args": []
     }
   }
@@ -198,16 +133,16 @@ Add to your AI tool's MCP configuration:
 {
   "mcpServers": {
     "aceternity-ui": {
-      "command": "aceternity-mcp",
+      "command": "aceternity-mcp-server",
       "args": []
     }
   }
 }
 ```
 
-> **Note**: When installed via pipx (recommended), the `aceternity-mcp` command is available in your PATH and no `cwd` is needed. The registry is bundled with the package.
+> **Note**: After configuration, restart your AI tool to load the new MCP server.
 
-## Available Tools
+## 🛠️ Available MCP Tools
 
 Once configured, your AI assistant can use these tools:
 
@@ -224,7 +159,7 @@ Once configured, your AI assistant can use these tools:
 | `install_component` | Install a component with dependencies |
 | `filter_by_scores` | Filter by visual/animation intensity |
 
-## Example Prompts
+## 💬 Example Prompts
 
 Try these with your AI assistant:
 
@@ -238,36 +173,140 @@ Try these with your AI assistant:
 "Show me animated text effects that aren't too distracting"
 ```
 
-## Architecture
+## 📦 Installation
 
-```
-aceternity-mcp/
-├── registry/              # Component metadata registry (bundled with package)
-│   ├── index.json        # Master index
-│   ├── raw/              # Raw data from Aceternity UI
-│   ├── components/       # Enriched component metadata
-│   └── categories/       # Category definitions
-├── scripts/              # Utility scripts
-│   ├── sync_registry.py  # Sync from Aceternity UI (optional)
-│   └── validate_registry.py
-├── src/aceternity_mcp/   # MCP server source
-│   ├── server.py         # MCP server implementation
-│   ├── install.py        # Universal installer
-│   ├── models.py         # Data models
-│   ├── registry.py       # Registry loader (finds registry in pipx share/)
-│   ├── search.py         # Search functionality
-│   └── recommender.py    # Recommendation engine
-└── pyproject.toml        # Package configuration (includes registry in shared-data)
-```
+### Prerequisites
 
-When installed via pipx, the registry is automatically available at:
-```
-~/.local/pipx/venvs/aceternity-mcp/share/aceternity-mcp/registry/
+- **Python 3.10+** (required)
+- **Node.js** (optional, for registry sync from Aceternity UI)
+- **pipx** (recommended installation method)
+
+### Step 1: Install pipx
+
+```bash
+# macOS
+brew install pipx
+pipx ensurepath
+
+# Linux
+python3 -m pip install --user pipx
+pipx ensurepath
+
+# Windows
+pip install pipx
+pipx ensurepath
 ```
 
-## Development
+### Step 2: Install Aceternity MCP
 
-### Validate Registry Quality
+```bash
+pipx install aceternity-mcp
+```
+
+### Step 3: Run Setup
+
+```bash
+# Interactive setup (recommended)
+aceternity-mcp install
+
+# Or configure all tools automatically
+aceternity-mcp install --non-interactive
+```
+
+### What the Installer Does
+
+1. ✅ Syncs 100+ components from Aceternity UI
+2. ✅ Configures your AI tools automatically
+3. ✅ Verifies the installation
+4. ✅ Shows you next steps
+
+## 🔧 Management Commands
+
+### Check Status
+
+```bash
+aceternity-mcp status
+```
+
+Shows:
+- Current version and update availability
+- System information (platform, Python version)
+- Health checks (registry, MCP command, Python)
+- Client configuration status
+
+### Update
+
+```bash
+# Check and install updates
+aceternity-mcp update
+
+# Non-interactive update
+aceternity-mcp update --non-interactive
+```
+
+### Repair
+
+```bash
+# Fix all common issues
+aceternity-mcp repair
+
+# Repair only registry
+aceternity-mcp repair --registry
+
+# Repair only client configs
+aceternity-mcp repair --configs
+
+# Fix file permissions
+aceternity-mcp repair --permissions
+```
+
+### Diagnostics
+
+```bash
+# Get JSON diagnostics
+aceternity-mcp diagnose
+
+# Verbose output
+aceternity-mcp status --verbose
+```
+
+## 📚 Architecture
+
+```
+~/.local/pipx/venvs/aceternity-mcp/
+├── bin/
+│   ├── aceternity-mcp        # CLI management commands
+│   ├── aceternity-mcp-server # MCP server
+│   └── aceternity-mcp-install # Legacy installer
+├── lib/python3.X/site-packages/aceternity_mcp/
+│   ├── cli.py                # CLI implementation
+│   ├── server.py             # MCP server
+│   ├── install.py            # Installer
+│   ├── registry.py           # Registry loader
+│   ├── search.py             # Search engine
+│   └── recommender.py        # Recommendation engine
+└── share/aceternity-mcp/registry/
+    ├── index.json            # Master index
+    ├── components/           # Component metadata (106 components)
+    └── categories/           # Category definitions (17 categories)
+```
+
+## 🧑‍💻 Development
+
+### Clone and Install Locally
+
+```bash
+git clone https://github.com/devinoldenburg/aceternity-mcp.git
+cd aceternity-mcp
+
+# Install your local version with pipx
+pipx install .
+
+# Or install with editable mode for development
+pipx inject aceternity-mcp -e .
+```
+
+### Validate Registry
 
 ```bash
 # Compile check
@@ -280,7 +319,7 @@ python scripts/validate_registry.py
 ### Update Component Registry
 
 ```bash
-# Sync latest components from Aceternity UI (optional)
+# Sync latest components from Aceternity UI
 python scripts/sync_registry.py
 
 # With API key (optional)
@@ -290,11 +329,7 @@ python scripts/sync_registry.py --api-key "$ACETERNITY_API_KEY"
 pipx reinstall aceternity-mcp
 ```
 
-> **Note**: The registry is bundled with the package, so running `sync_registry.py` is only needed if you want to update to the latest components from Aceternity UI.
-
-### CLI Development
-
-The CLI provides management commands for end users:
+### Run Tests
 
 ```bash
 # Test CLI commands
@@ -302,14 +337,14 @@ aceternity-mcp --help
 aceternity-mcp status
 aceternity-mcp diagnose
 
-# Test update check
-aceternity-mcp update --non-interactive
+# Test server
+aceternity-mcp-server
 
-# Test repair functionality
-aceternity-mcp repair --non-interactive
+# Test installer
+aceternity-mcp-install
 ```
 
-## Supported AI Tools
+## 🌐 Supported AI Tools
 
 | Tool | Config File | Status |
 |------|-------------|--------|
@@ -320,33 +355,75 @@ aceternity-mcp repair --non-interactive
 | Windsurf | `~/.codeium/windsurf/mcp_config.json` | ✅ Supported |
 | OpenCode | `~/.opencode/mcp.json` | ✅ Supported |
 
-## Requirements
-
-- **Python**: 3.10 or higher
-- **Node.js**: Required for registry sync (npx command)
-- **MCP Client**: One of the supported AI tools listed above
-
-## Security
+## 🔒 Security
 
 - No secrets are committed to the repository
 - API keys are optional and used only during sync operations
 - Keys are not stored on disk
 - The repository stores metadata descriptions, not component source files
+- pipx provides isolated environment for security
 
-## Contributing
+## ❓ Troubleshooting
+
+### Command Not Found
+
+```bash
+# Ensure pipx is in your PATH
+pipx ensurepath
+
+# Restart your terminal
+# Or reload shell configuration
+source ~/.zshrc  # or ~/.bashrc
+```
+
+### Registry Not Found
+
+```bash
+# Repair the installation
+aceternity-mcp repair
+
+# Or reinstall
+pipx reinstall aceternity-mcp
+```
+
+### MCP Server Not Working
+
+```bash
+# Check status
+aceternity-mcp status
+
+# Get diagnostics
+aceternity-mcp diagnose
+
+# Repair configs
+aceternity-mcp repair --configs
+```
+
+### Update Issues
+
+```bash
+# Force upgrade
+pipx upgrade aceternity-mcp
+
+# Or reinstall
+pipx reinstall aceternity-mcp
+```
+
+## 📝 Contributing
 
 Contributions are welcome! Please see:
 - [Contributing Guide](./CONTRIBUTING.md)
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Security Policy](./SECURITY.md)
 
-## License
+## 📄 License
 
 MIT License - see [LICENSE](./LICENSE) for details.
 
-## Links
+## 🔗 Links
 
 - [PyPI Package](https://pypi.org/project/aceternity-mcp/)
 - [GitHub Repository](https://github.com/devinoldenburg/aceternity-mcp)
 - [Issue Tracker](https://github.com/devinoldenburg/aceternity-mcp/issues)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
+- [Aceternity UI](https://ui.aceternity.com/)
