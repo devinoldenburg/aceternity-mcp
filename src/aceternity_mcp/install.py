@@ -373,14 +373,18 @@ def configure_client(
         return False
 
 
-def configure_all_clients(mcp_command: str = "aceternity-mcp") -> dict[str, bool]:
+def configure_all_clients(
+    mcp_command: str = "aceternity-mcp-server",
+) -> dict[str, bool]:
     """Configure all supported MCP clients.
 
+    Uses aceternity-mcp-server (the MCP server) by default, not the CLI.
     When installed via pipx, no cwd is needed as the command is on PATH.
     """
     results = {}
 
     print_section("Configuring AI Tools")
+    print_info(f"Configuring MCP server: {mcp_command}")
 
     # No cwd needed when installed via pipx - command is on PATH
     # Configure each client
