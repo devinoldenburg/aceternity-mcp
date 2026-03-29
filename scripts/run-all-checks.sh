@@ -59,7 +59,7 @@ run_check "Code Formatting (Ruff Format)" "ruff format src/ tests/ scripts/ --ch
 run_check "Code Linting (Ruff Check)" "ruff check src/ tests/ scripts/"
 
 # 3. Type Checking
-run_check "Type Checking (MyPy Strict)" "mypy src/aceternity_mcp/ --strict --no-implicit-any --disallow-untyped-defs" false
+run_check "Type Checking (MyPy Strict)" "mypy src/aceternity_mcp/ scripts/ tests/" false
 
 # 4. Unit Tests
 run_check "Unit Tests (Pytest)" "pytest tests/ -v --tb=short"
