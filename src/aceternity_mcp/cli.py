@@ -438,7 +438,14 @@ def post_install_wizard(interactive: bool = True) -> int:
 
     # Step 5: Show next steps
     print_section("You're All Set!")
-    print("\nTry these example prompts with your AI assistant:\n")
+    print("\n⚠️  IMPORTANT: Restart your AI tools to load the MCP server!")
+    print("\nRestart these tools now:")
+    print("  • OpenCode - Quit and reopen")
+    print("  • Cursor - Restart the application")
+    print("  • Claude Code - Restart or run: claude")
+    print("  • Cline - Reload VS Code window")
+    print("  • Windsurf - Restart the application")
+    print("\nAfter restarting, try these prompts:\n")
     print("  • 'Show me subtle background effects for landing pages'")
     print("  • 'Recommend a navbar + hero combination for a SaaS site'")
     print("  • 'Install Spotlight component and show dependencies'")
