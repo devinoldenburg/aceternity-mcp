@@ -10,29 +10,17 @@
     "menu",
     "sticky"
   ],
-  "summary": "A sticky top banner that slides away on scroll with close button and smooth Framer Motion animations.",
-  "detailedDescription": "Sticky Banner creates a dismissible announcement bar fixed at top of viewport. The component uses useScroll hook tracking scrollY position. When scroll exceeds 40px (configurable via hideOnScroll), banner animates up (-100px y) with opacity 0. Scrolling back down brings banner back (y: 0, opacity: 1). Close button (X icon) toggles open state, hiding banner until page refresh. Initial state starts off-screen (y: -100, opacity: 0), animating in on mount. Transitions use 0.3s easeInOut. Banner has min-h-14, full width, centered content with px-4 py-1 padding. Background is transparent by default, customizable via className. The close button scales from 0 to 1 on mount, positioned absolute top-1/2 right-2. This creates non-intrusive announcement system ideal for promotions, alerts, or site-wide messages that should be visible initially then recede as users engage with content.",
+  "summary": "A reusable Sticky Banner component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Sticky Banner is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display sticky top announcements",
-    "Hide banner on scroll down",
-    "Allow manual close with X button"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks scrollY position",
-    "Hides when scroll > 40px",
-    "Shows when scroll <= 40px",
-    "Close button toggles visibility",
-    "Animates y and opacity together",
-    "Starts off-screen on mount"
+    "Reacts to scroll progress with transition or reveal effects"
   ],
-  "visualCharacteristics": [
-    "Sticky top positioning",
-    "14px minimum height",
-    "Centered content layout",
-    "Close button at top-right",
-    "Smooth slide up/down",
-    "Transparent background"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern",

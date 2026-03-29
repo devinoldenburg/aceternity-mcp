@@ -9,31 +9,17 @@
     "art",
     "ascii"
   ],
-  "summary": "A nostalgic ASCII art component that renders text-based artwork using monospace characters, perfect for retro-themed designs, developer-focused products, or creative visual statements.",
-  "detailedDescription": "The ASCII Art component brings the classic aesthetic of text-based artwork to modern web interfaces, creating unique visual interest through the arrangement of monospace characters. This component renders images, logos, or decorative elements entirely using ASCII characters - letters, numbers, and symbols - arranged to create shapes, patterns, and visual representations. The effect evokes nostalgia for early computing, terminal interfaces, and the creative constraints that birthed this art form. Perfect for developer-focused products, tech brands, retro-themed designs, or any context where a distinctive, unconventional visual approach adds value. The component supports both static ASCII art display and dynamic generation from images, allowing conversion of logos or photos into character-based representations. Styling options include customizable fonts, colors, character density, and animation effects like typing reveals or character scrambling. The monospace requirement ensures proper character alignment and visual integrity across different browsers and platforms. This component works particularly well in combination with terminal themes, code-focused designs, or as an unexpected creative element in otherwise conventional interfaces. The ASCII approach also provides excellent performance since it's purely text-based with no image assets required.",
+  "summary": "A reusable ASCII Art component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "ASCII Art is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create distinctive retro-themed visuals using classic text-based artwork",
-    "Appeal to developer and technical audiences with terminal-inspired aesthetics",
-    "Provide lightweight, performant visual elements without image assets",
-    "Add creative, unexpected visual interest through unconventional art style",
-    "Support brand identity for tech-focused or developer-centric products"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Renders pre-defined ASCII art strings with proper monospace alignment",
-    "Optionally converts images to ASCII character representations dynamically",
-    "Supports animation effects including typing reveals and character transitions",
-    "Maintains character alignment and proportions across different screen sizes",
-    "Allows customization of character sets, density, and visual styling",
-    "Preserves aspect ratio and visual integrity during responsive scaling"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Distinctive text-based aesthetic using arranged ASCII characters",
-    "Monospace typography ensuring proper character alignment and spacing",
-    "Retro, nostalgic feel reminiscent of early computing and terminals",
-    "High contrast visual style typically using light text on dark backgrounds",
-    "Customizable color schemes while maintaining character-based appearance",
-    "Unique, conversation-starting visual that stands out from conventional imagery"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "intermediate",
   "designTone": [
     "modern"

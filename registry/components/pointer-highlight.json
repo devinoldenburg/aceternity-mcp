@@ -10,28 +10,18 @@
     "landing",
     "pointer"
   ],
-  "summary": "A wrapper component that draws an animated border rectangle and cursor pointer around children on scroll into view.",
-  "detailedDescription": "Pointer Highlight wraps content with an animated highlight effect using Framer Motion. On scroll into view (whileInView), the component draws a border rectangle that expands from 0x0 to full container dimensions over 1s easeInOut. Simultaneously, a cursor pointer icon (h-5 w-5, default blue-500) animates from opacity 0 to 1, positioning at bottom-right corner (width + 4px, height + 4px) with -90deg rotation. The container uses ResizeObserver for responsive dimension tracking, updating on resize. Initial animation scales from 0.95 to 1 over 0.5s easeOut. The pointer uses custom SVG component with configurable className. Border defaults to neutral-800 (light) or neutral-200 (dark). This creates a 'click here' or 'focus area' visual cue ideal for feature highlights, callout sections, tutorial steps, or any context where drawing attention to specific content area enhances user guidance and interaction discovery.",
+  "summary": "A reusable Pointer Highlight component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Pointer Highlight is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Draw animated border around content on scroll",
-    "Add cursor pointer indicator to highlight areas",
-    "Guide user attention to specific content regions"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks container dimensions via ResizeObserver",
-    "Animates border from 0 to full size on view",
-    "Fades in cursor pointer at corner position",
-    "Rotates pointer -90 degrees",
-    "Scales container from 0.95 to 1",
-    "Updates on responsive resize"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Expanding border rectangle",
-    "Blue cursor pointer icon",
-    "Positioned at bottom-right corner",
-    "1 second easeInOut animation",
-    "Neutral border colors",
-    "Scale entrance effect"
+    "Landing-page friendly"
   ],
   "difficulty": "beginner",
   "designTone": [

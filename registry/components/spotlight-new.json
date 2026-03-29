@@ -10,28 +10,18 @@
     "new",
     "spotlight"
   ],
-  "summary": "An animated hero spotlight with three layered radial gradients that oscillate horizontally for ethereal lighting effect.",
-  "detailedDescription": "Spotlight New creates a subtle animated background using three layered radial gradients that oscillate horizontally. The component uses Framer Motion for x-axis animation (0 to xOffset to 0) with configurable duration (default 7s), infinite reverse repeat, and easeInOut easing. Three gradient layers: first (largest, 560x1380px) uses hsla(210, 100%, 85%, .08) to .02 to 0 gradient at -45deg rotation with translateY (-350px default); second (240x1380px) uses .06 to .02 to transparent at 5% translate; third (240x1380px) uses .04 to .02 to transparent at -180% translate. All gradients rotate -45deg for diagonal orientation. Component fades in over 1.5s on mount. Configurable via gradientFirst/Second/Third props for custom colors. This creates ethereal, moving light effect ideal for hero backgrounds where subtle motion adds depth without distracting from foreground content.",
+  "summary": "A reusable Spotlight New component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Spotlight New is a reusable hero/section component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create subtle animated gradient spotlight",
-    "Add horizontal oscillation to background layers",
-    "Provide ethereal lighting for hero sections"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Animates x-position in reverse loop",
-    "Layers three radial gradients",
-    "Rotates all layers -45 degrees",
-    "Fades in over 1.5 seconds",
-    "Uses 7 second default cycle",
-    "Configurable gradient colors"
+    "Responds to pointer hover and movement with visual feedback"
   ],
   "visualCharacteristics": [
-    "Three layered blue radial gradients",
-    "Diagonal -45deg orientation",
-    "Horizontal oscillating motion",
-    "Subtle 8% max opacity",
-    "Large 560x1380px primary gradient",
-    "Ethereal atmospheric effect"
+    "Landing-page friendly"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -12,28 +12,20 @@
     "text",
     "typography"
   ],
-  "summary": "A text component that reveals words sequentially with blur-to-clear transitions using staggered animations.",
-  "detailedDescription": "Text Generate Effect creates a smooth text reveal animation where words appear one by one with a blur effect that transitions to sharp focus. The component splits a text string into individual words and wraps each in a motion span that animates from blurred (blur(10px)) and transparent to clear and fully opaque. Using Framer Motion's useAnimate hook with stagger timing, each word appears with a 0.2 second delay, creating a flowing sequential reveal. The animation triggers automatically when the component mounts, with configurable duration and optional blur filter. Text displays in a large, bold typography (2xl with generous line-height and tracking) that works well for hero headings or prominent statements. The component supports both light and dark modes with appropriate text colors. This effect is perfect for introducing key messages, value propositions, or any text content where a gradual, cinematic reveal enhances impact and draws reader attention through the progression of words.",
+  "summary": "A Text Generate Effect text effect for expressive headings, highlights, and animated content emphasis.",
+  "detailedDescription": "Text Generate Effect is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create cinematic text reveals with sequential word animations",
-    "Emphasize important messaging through gradual disclosure",
-    "Add visual polish to hero headings and key statements"
+    "Draw attention to key headlines and supporting copy",
+    "Communicate brand tone through animated typography",
+    "Increase visual rhythm in content-heavy sections"
   ],
   "behavior": [
-    "Splits text string into word array for individual animation",
-    "Animates each word from blurred/transparent to clear/visible",
-    "Applies staggered 0.2s delay between word animations",
-    "Triggers animation automatically on component mount",
-    "Supports optional blur filter toggle and duration control",
-    "Uses Framer Motion's useAnimate for coordinated sequencing"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Large bold typography (2xl with wide tracking)",
-    "Words blur in sequentially with smooth transitions",
-    "Dark text on light or light text on dark backgrounds",
-    "Generous line-height for readability",
-    "Clean sans-serif appearance",
-    "Subtle fade and blur convergence effect"
+    "Expressive",
+    "Typographic",
+    "Attention-guiding"
   ],
   "difficulty": "beginner",
   "designTone": [

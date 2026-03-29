@@ -8,29 +8,17 @@
     "border",
     "moving"
   ],
-  "summary": "A button component with an animated border that continuously moves around the edge using SVG path animation.",
-  "detailedDescription": "Moving Border creates a button with an animated glowing border that travels continuously around the button edge. The component uses an SVG path with rounded corners (rx/ry configurable, default 30%) as the border track. Framer Motion's useAnimationFrame updates a progress motion value from 0 to path length, creating continuous motion. The progress drives x/y transforms via getPointAtLength(), positioning a gradient blob (default cyan radial gradient) along the path. The blob has 0.8 opacity with configurable bg-[radial-gradient(#0ea5e9_40%,transparent_60%)]. Button dimensions are fixed (h-16 w-40) with transparent background and configurable border radius (default 1.75rem). Inner content sits in a relative div with slate-900 background (80% opacity), border, backdrop-blur-xl, and white text. The moving border div is absolute inset-0 with slightly smaller radius (0.96x) for proper fit. Duration defaults to 3000ms for smooth continuous motion. This creates an eye-catching CTA button ideal for primary actions, signup buttons, or any context where an animated border draws attention without overwhelming the design.",
+  "summary": "A reusable Moving Border component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Moving Border is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create attention-grabbing animated border buttons",
-    "Continuously move gradient along button edge",
-    "Enhance CTAs with subtle motion accent"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Animates progress along SVG path continuously",
-    "Updates x/y position using getPointAtLength()",
-    "Positions gradient blob at progress point",
-    "Loops animation infinitely via modulo operator",
-    "Uses requestAnimationFrame for smooth updates",
-    "Configurable duration and corner radius"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Fixed size button (16x40)",
-    "Cyan gradient moving along border",
-    "Rounded corners (1.75rem default)",
-    "Slate-900 inner with backdrop blur",
-    "Continuous clockwise motion",
-    "Glowing border effect"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

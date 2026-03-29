@@ -11,31 +11,21 @@
     "background",
     "decorative"
   ],
-  "summary": "A mesmerizing aurora borealis-inspired background effect featuring flowing, animated color gradients that create an atmospheric, ethereal backdrop for hero sections and key content areas.",
-  "detailedDescription": "The Aurora Background component recreates the natural beauty of the northern lights through sophisticated animated gradient effects that flow and shift across the screen. This stunning visual effect uses multiple layered gradient meshes that move independently, creating the organic, undulating motion characteristic of real aurora phenomena. The component generates a sense of depth and atmosphere without overwhelming foreground content, making it ideal for hero sections, landing pages, or any context requiring an impressive yet non-distracting background. Color customization is extensive, allowing designers to match brand palettes while maintaining the natural, flowing quality of the effect. The animation is carefully tuned to feel organic and meditative rather than mechanical, with slow, continuous motion that creates visual interest without demanding attention. Performance is optimized through CSS-based animations and GPU acceleration, ensuring smooth 60fps playback even on mid-range devices. The effect works particularly well in dark mode contexts where the luminous colors stand out dramatically against dark backgrounds. Perfect for SaaS landing pages, creative portfolios, product launches, or any context where creating an emotional, atmospheric connection enhances the user experience.",
+  "summary": "A reusable Aurora Background background effect that adds depth, focus, and atmosphere to modern UI sections.",
+  "detailedDescription": "Aurora Background is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create stunning, atmospheric backgrounds that evoke emotion and wonder",
-    "Provide visually impressive hero sections without distracting from content",
-    "Establish premium, polished aesthetic that elevates brand perception",
-    "Add dynamic visual interest through subtle, continuous motion",
-    "Support dark mode designs with luminous, glowing color effects"
+    "Create visual atmosphere around hero and CTA content",
+    "Guide user attention without changing structural layout",
+    "Improve perceived polish for premium landing pages"
   ],
   "behavior": [
-    "Animates multiple gradient layers with independent movement patterns",
-    "Creates organic, flowing motion that mimics natural aurora phenomena",
-    "Continuously loops seamlessly without visible breaks or resets",
-    "Maintains smooth 60fps animation through GPU-accelerated CSS",
-    "Responds to color configuration for brand-specific customization",
-    "Adapts opacity and intensity based on content requirements",
-    "Scales responsively to different viewport sizes without quality loss"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Flowing, organic gradient motion creating ethereal atmosphere",
-    "Multiple color layers blending smoothly for natural appearance",
-    "Luminous, glowing quality particularly effective in dark contexts",
-    "Subtle, meditative animation that enhances without overwhelming",
-    "Premium, polished aesthetic conveying quality and sophistication",
-    "Versatile color customization supporting various brand identities"
+    "Atmospheric",
+    "Layered",
+    "Decorative",
+    "Landing-page friendly"
   ],
   "difficulty": "beginner",
   "designTone": [

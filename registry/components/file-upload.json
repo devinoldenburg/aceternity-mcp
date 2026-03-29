@@ -10,31 +10,20 @@
     "form",
     "upload"
   ],
-  "summary": "A modern file upload component with drag-and-drop support, visual feedback, progress indication, and micro-interactions that transform a functional necessity into an engaging user experience.",
-  "detailedDescription": "The File Upload component elevates the mundane task of file selection into a polished, engaging interaction through thoughtful design and smooth animations. This component supports both traditional click-to-browse and modern drag-and-drop file selection, providing multiple interaction paths for user convenience. Visual feedback is comprehensive - the drop zone highlights attractively when files are dragged over it, selected files are displayed with previews (for images) or icons (for documents), upload progress is shown with animated progress bars, and success/error states are clearly communicated. Micro-interactions throughout make the experience feel responsive and alive - buttons provide satisfying feedback on click, progress animations are smooth, and state transitions are choreographed. The component includes file type validation, size limit enforcement, and multi-file support. Perfect for forms requiring document uploads, profile picture selection, content submission interfaces, or any context where file upload is part of the user journey. The polished treatment reduces friction and increases completion rates for upload-dependent flows.",
+  "summary": "A File Upload form component that improves data entry UX with clear states and modern interactions.",
+  "detailedDescription": "File Upload is a reusable form/input component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for forms, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Transform file upload from functional necessity into engaging experience",
-    "Provide intuitive drag-and-drop with comprehensive visual feedback",
-    "Communicate upload progress and status clearly to users",
-    "Support multiple file types with appropriate previews and icons",
-    "Reduce upload friction increasing form completion rates"
+    "Improve clarity and confidence while entering information",
+    "Provide interactive feedback during form completion",
+    "Increase conversion for signup and contact flows"
   ],
   "behavior": [
-    "Supports both click-to-browse and drag-and-drop file selection",
-    "Highlights drop zone attractively when files dragged over",
-    "Displays file previews for images and icons for documents",
-    "Shows animated progress bars during upload process",
-    "Validates file types and sizes with clear error messaging",
-    "Communicates success and error states distinctly",
-    "Supports single and multi-file upload scenarios"
+    "Supports interaction states for typing, focus, submit, or upload"
   ],
   "visualCharacteristics": [
-    "Clean, modern drop zone with clear interaction affordances",
-    "Attractive highlight states during drag operations",
-    "File previews and icons providing visual confirmation",
-    "Smooth progress animations indicating upload status",
-    "Clear state differentiation (idle, uploading, success, error)",
-    "Professional appearance suitable for any form context"
+    "Utility-first",
+    "Conversion-oriented",
+    "State-driven"
   ],
   "difficulty": "beginner",
   "designTone": [

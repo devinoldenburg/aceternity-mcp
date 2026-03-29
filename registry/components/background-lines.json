@@ -11,31 +11,22 @@
     "decorative",
     "lines"
   ],
-  "summary": "An elegant background effect featuring thin, animated lines that create subtle movement and visual texture for clean, modern interfaces.",
-  "detailedDescription": "The Background Lines component creates a refined, minimalist background effect through the strategic placement and animation of thin linear elements. These lines move subtly across the background, creating a sense of gentle motion and visual texture without overwhelming foreground content. The effect is particularly well-suited for clean, modern interfaces where subtlety and sophistication are priorities. Lines can be configured in various orientations - horizontal, vertical, diagonal, or mixed - and animation patterns include slow drifting, fading, and occasional repositioning. The thin nature of the lines ensures they add visual interest without creating visual noise or competing with primary content. Color and opacity are carefully balanced to maintain readability of overlaid text and elements. The component uses efficient CSS animations for smooth performance, maintaining the delicate, refined quality of the effect. Perfect for professional websites, portfolios, documentation sites, or any context where adding subtle motion enhances the experience without becoming a distraction. The minimalist aesthetic works particularly well in light mode contexts and pairs beautifully with ample white space and clean typography.",
+  "summary": "A reusable Background Lines background effect that adds depth, focus, and atmosphere to modern UI sections.",
+  "detailedDescription": "Background Lines is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Add subtle motion and visual texture to clean, minimalist interfaces",
-    "Create refined backgrounds that enhance without overwhelming content",
-    "Support professional and documentation contexts with understated elegance",
-    "Provide gentle visual interest through delicate linear elements",
-    "Maintain readability and focus while adding dynamic background quality"
+    "Create visual atmosphere around hero and CTA content",
+    "Guide user attention without changing structural layout",
+    "Improve perceived polish for premium landing pages"
   ],
   "behavior": [
-    "Renders thin linear elements in configurable orientations",
-    "Animates lines with slow, subtle drifting and fading patterns",
-    "Maintains continuous motion without repetitive mechanical feel",
-    "Balances line opacity for visibility without content interference",
-    "Uses efficient CSS animations for smooth 60fps performance",
-    "Supports customization of line density, speed, and styling",
-    "Adapts responsively to different container sizes"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Thin, delicate lines creating subtle visual texture",
-    "Minimalist, refined aesthetic suitable for professional contexts",
-    "Gentle, understated motion that enhances without distracting",
-    "Clean appearance that pairs well with white space",
-    "Configurable orientations for varied visual patterns",
-    "Balanced opacity maintaining foreground content readability"
+    "Atmospheric",
+    "Layered",
+    "Decorative",
+    "Subtle",
+    "Landing-page friendly"
   ],
   "difficulty": "beginner",
   "designTone": [

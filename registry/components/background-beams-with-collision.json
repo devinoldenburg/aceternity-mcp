@@ -14,31 +14,21 @@
     "decorative",
     "with"
   ],
-  "summary": "An advanced background effect featuring animated light beams that dynamically collide and interact, creating an engaging visual spectacle perfect for modern, tech-focused designs.",
-  "detailedDescription": "Background Beams With Collision takes the classic light beam effect and adds sophisticated physics-based interactions where beams dynamically collide, bounce, and intersect in real-time. This creates a living, breathing background that feels algorithmically generated rather than pre-animated. Each beam behaves as an independent entity with its own trajectory, speed, and visual properties, and when beams meet, they create interaction effects including color blending, brightness changes, or particle bursts. The component uses canvas-based rendering for optimal performance with multiple simultaneous beams, ensuring smooth animation even with complex collision scenarios. Visual customization includes beam count, speed, color palettes, collision behavior, glow intensity, and trail effects. The result is a dynamic, ever-changing background that maintains visual interest over extended viewing periods without becoming repetitive. Perfect for tech product launches, SaaS landing pages, gaming interfaces, or any context where conveying innovation and technical sophistication is important. The effect works particularly well in dark mode contexts where the luminous beams create dramatic contrast. Despite its visual complexity, the component is optimized to run at 60fps on modern devices through efficient collision detection and GPU-accelerated rendering.",
+  "summary": "A reusable Background Beams With Collision background effect that adds depth, focus, and atmosphere to modern UI sections.",
+  "detailedDescription": "Background Beams With Collision is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create dynamic, algorithmically-generated backgrounds that feel alive and unique",
-    "Convey technical sophistication and innovation through physics-based visuals",
-    "Provide engaging visual interest that maintains appeal over extended viewing",
-    "Support tech-focused brand identities with futuristic, cutting-edge aesthetics",
-    "Differentiate interfaces through distinctive, memorable visual effects"
+    "Create visual atmosphere around hero and CTA content",
+    "Guide user attention without changing structural layout",
+    "Improve perceived polish for premium landing pages"
   ],
   "behavior": [
-    "Generates multiple light beams with independent trajectories and properties",
-    "Detects and responds to beam collisions with realistic interaction effects",
-    "Applies physics-based motion including velocity, direction changes, and bouncing",
-    "Creates visual interaction effects at collision points (blending, bursts, etc.)",
-    "Continuously generates new beams while removing old ones for sustained effect",
-    "Maintains smooth 60fps canvas rendering with optimized collision detection",
-    "Responds to configuration for beam count, speed, colors, and behavior"
+    "Uses timed animation sequences for dynamic visual presence"
   ],
   "visualCharacteristics": [
-    "Dynamic, ever-changing visual patterns from real-time beam interactions",
-    "Luminous light beams with glowing edges and soft gradients",
-    "Visible collision effects creating moments of visual interest",
-    "Futuristic, tech-forward aesthetic suitable for innovation-focused brands",
-    "Deep, rich colors particularly effective against dark backgrounds",
-    "Complex, algorithmic appearance that feels computationally generated"
+    "Atmospheric",
+    "Layered",
+    "Decorative",
+    "Landing-page friendly"
   ],
   "difficulty": "beginner",
   "designTone": [

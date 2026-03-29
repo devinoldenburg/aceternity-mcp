@@ -8,29 +8,17 @@
     "badge",
     "images"
   ],
-  "summary": "A folder badge component displaying fanned image thumbnails that expand and rotate on hover.",
-  "detailedDescription": "Images Badge creates an interactive folder icon with up to 3 image thumbnails that fan out on hover. The folder uses amber gradient backgrounds (amber-400 to 500 light, 500 to 600 dark) with a tab at top-left (37.5% width, 25% height). Images are positioned in staggered stack, translating upward (-35px default) and spreading horizontally (±20px) with rotation (±15deg) on hover. The component uses Framer Motion for smooth transitions, with configurable dimensions for folder (32x24px default), teaser images (20x14px), and hover images (48x32px). Perspective (1000px) and preserve-3d transform create depth effect. Component can be div or anchor tag based on href prop, with target and rel attributes for external links. Text label displays beside folder. This creates engaging visual indicator for image galleries, photo collections, or media folders where preview thumbnails enhance click-through.",
+  "summary": "A reusable Images Badge component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Images Badge is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display image collection preview in folder badge",
-    "Animate thumbnails fanning out on hover",
-    "Link to image galleries or collections"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Shows up to 3 stacked image thumbnails",
-    "Translates images up on hover",
-    "Rotates images outward for fan effect",
-    "Spreads images horizontally on hover",
-    "Applies 3D perspective transforms",
-    "Supports optional link functionality"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Amber gradient folder icon",
-    "Folder tab at top-left",
-    "3 fanned image thumbnails",
-    "Hover expansion animation",
-    "3D perspective depth",
-    "Text label beside folder"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

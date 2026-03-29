@@ -10,32 +10,17 @@
     "direction",
     "hover"
   ],
-  "summary": "An intelligent hover effect component that detects cursor approach direction and animates content reveal or overlay from that direction, creating contextually-aware interactive feedback.",
-  "detailedDescription": "The Direction Aware Hover component adds sophisticated interactivity by detecting which direction the cursor approaches from and animating reveals, overlays, or effects accordingly. This creates a contextually-aware interaction that feels intelligent and responsive. When users hover over an element, the component calculates the cursor's entry point relative to the element's center and triggers animations that originate from that direction - for example, an overlay might slide in from the top if the cursor approaches from above, or from the left if approaching from that side. This directional awareness creates a more natural, physical feeling interaction compared to standard hover effects that always animate the same way. The component supports various animation types including overlay slides, content reveals, image transitions, and effect triggers. Perfect for portfolio grids, product cards, image galleries, or any card-based layout where adding intelligent, directional hover responses enhances the interactive experience and perceived polish.",
+  "summary": "A reusable Direction Aware Hover component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Direction Aware Hover is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create intelligent hover effects that respond to cursor approach direction",
-    "Add contextually-aware interactivity feeling natural and physical",
-    "Enhance perceived polish through sophisticated interaction design",
-    "Support various animation types triggered by directional detection",
-    "Differentiate interfaces through clever, unexpected hover behaviors"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Detects cursor approach direction relative to element center",
-    "Calculates entry point from top, bottom, left, or right",
-    "Triggers directional animations originating from approach side",
-    "Supports overlay slides, reveals, and transitions",
-    "Maintains smooth 60fps animations during hover interactions",
-    "Returns smoothly to rest state when cursor exits",
-    "Works with touch interactions using last touch position"
+    "Responds to pointer hover and movement with visual feedback"
   ],
-  "visualCharacteristics": [
-    "Directional animations responding to cursor approach",
-    "Natural, physical feeling interactions",
-    "Smooth, polished hover transitions",
-    "Intelligent behavior creating delightful moments",
-    "Versatile styling supporting various content types",
-    "Professional execution enhancing interactive quality"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

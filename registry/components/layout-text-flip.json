@@ -12,28 +12,20 @@
     "text",
     "typography"
   ],
-  "summary": "A text component cycling through words with blur transitions and layout animations using Framer Motion.",
-  "detailedDescription": "Layout Text Flip displays a static text label alongside cycling words that animate with blur and y-axis transitions. The component uses AnimatePresence with mode:'popLayout' for smooth word swaps. Words cycle at configurable interval (default 3000ms) using setInterval. Each word animates from y:-40 with blur(10px) to y:0 with blur(0px) over 0.5s duration. Exit animation moves to y:50 with blur(10px) and opacity 0. The cycling word container has rounded-md border, white/dark background, shadow, and ring styling. Text size is 2xl (4xl on md+) with bold weight and tracking-tight. Drop-shadow enhances readability. This creates engaging headline component where secondary text rotates through options (e.g., 'Build Amazing' + ['Landing Pages', 'Components', 'Sections']). Ideal for hero headlines, value proposition rotators, or any context where cycling keywords add dynamism without overwhelming layout.",
+  "summary": "A Layout Text Flip text effect for expressive headings, highlights, and animated content emphasis.",
+  "detailedDescription": "Layout Text Flip is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display static text with cycling dynamic words",
-    "Animate word transitions with blur and slide",
-    "Create engaging headline compositions"
+    "Draw attention to key headlines and supporting copy",
+    "Communicate brand tone through animated typography",
+    "Increase visual rhythm in content-heavy sections"
   ],
   "behavior": [
-    "Cycles through words array at interval",
-    "Animates y-position and blur filter",
-    "Uses AnimatePresence for smooth transitions",
-    "Applies popLayout mode for layout shifts",
-    "Clears interval on unmount",
-    "Responsive text sizing"
+    "Uses timed animation sequences for dynamic visual presence"
   ],
   "visualCharacteristics": [
-    "Static + dynamic text pairing",
-    "Blur and slide word transitions",
-    "Rounded container with border",
-    "Shadow and ring styling",
-    "Bold 2xl/4xl typography",
-    "Drop-shadow for depth"
+    "Expressive",
+    "Typographic",
+    "Attention-guiding"
   ],
   "difficulty": "beginner",
   "designTone": [

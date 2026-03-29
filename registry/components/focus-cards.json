@@ -12,31 +12,20 @@
     "focus",
     "showcase"
   ],
-  "summary": "An interactive card grid where hovering over any card brings it into sharp focus while subtly blurring and dimming surrounding cards, creating a spotlight effect that guides user attention.",
-  "detailedDescription": "The Focus Cards component creates an elegant, interactive card grid experience where user hover triggers a sophisticated focus effect. When users hover over any card in the grid, that card scales up slightly, increases in brightness and sharpness, while all surrounding cards subtly blur and dim. This creates a natural spotlight effect that immediately draws attention to the hovered content while de-emphasizing everything else. The effect uses CSS filters (blur, brightness) combined with transform scales to achieve the focus state. Transitions are smooth and choreographed, with the focus card animating in while others animate out simultaneously. The blur intensity, dim amount, and scale factors are all configurable to achieve anything from subtle enhancement to dramatic focus. Perfect for portfolio grids, product showcases, feature comparisons, or any card-based layout where guiding user attention to individual items enhances the browsing experience. The effect creates a premium, polished feel that makes interfaces more engaging and intuitive to explore.",
+  "summary": "A Focus Cards card component for showcasing features, testimonials, and product content with visual polish.",
+  "detailedDescription": "Focus Cards is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create spotlight focus effect highlighting hovered cards",
-    "Guide user attention through visual hierarchy manipulation",
-    "Enhance card grid exploration with interactive feedback",
-    "Add premium, polished feel to card-based interfaces",
-    "Support intuitive content browsing through visual cues"
+    "Group related content into digestible visual blocks",
+    "Highlight features, testimonials, or product capabilities",
+    "Increase engagement through interaction and motion"
   ],
   "behavior": [
-    "Detects hover on any card in the grid",
-    "Scales up and brightens hovered card for emphasis",
-    "Applies blur and dim filters to surrounding cards",
-    "Animates focus transitions smoothly and simultaneously",
-    "Configurable blur intensity, dim amount, and scale factors",
-    "Returns all cards to neutral state when hover ends",
-    "Maintains performance with efficient CSS filter usage"
+    "Responds to pointer hover and movement with visual feedback"
   ],
   "visualCharacteristics": [
-    "Spotlight effect creating clear focus on hovered card",
-    "Surrounding cards blur and dim for contrast",
-    "Smooth, choreographed transitions between states",
-    "Premium, polished interactive quality",
-    "Intuitive visual hierarchy guiding attention",
-    "Configurable from subtle to dramatic focus intensity"
+    "Structured",
+    "Content-focused",
+    "Interactive"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -9,31 +9,18 @@
     "data-viz",
     "globe"
   ],
-  "summary": "An interactive 3D globe visualization powered by Cobe library featuring rotating Earth with customizable markers, connections, and visual styling for geographical data presentation.",
-  "detailedDescription": "The Globe component provides an interactive 3D Earth visualization using the Cobe rendering library, creating stunning geographical displays for global data, user distributions, or international presence. The globe rotates smoothly with user-controlled interaction allowing visitors to spin and explore different regions. Customizable markers can be placed at specific latitude/longitude coordinates representing offices, users, data centers, or geographically distributed information. Animated connection lines visualize routes, relationships, or data flow across continents. WebGL rendering ensures smooth 60fps performance even with multiple markers and connections. Visual customization includes globe color, marker styles, line colors, rotation speed, and size controls. Perfect for SaaS companies showing global reach, logistics platforms displaying routes, or applications requiring geographical context. The component is responsive and scales appropriately across screen sizes while maintaining visual fidelity.",
+  "summary": "A reusable Globe component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Globe is a reusable visualization component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Visualize global data and user distributions in engaging 3D format",
-    "Display geographical connections and networks between locations",
-    "Create impressive hero sections for companies with global operations",
-    "Provide interactive geographical context for location-based analytics",
-    "Enhance credibility with professional globe visualization"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Automatically rotates on Y-axis with configurable speed",
-    "Responds to mouse drag and touch for manual rotation",
-    "Renders markers at specified latitude/longitude coordinates",
-    "Draws animated connection lines between marker points",
-    "Adjusts marker sizes based on data values",
-    "Maintains smooth 60fps WebGL rendering",
-    "Scales responsively to container size"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Three-dimensional spherical Earth with depth perception",
-    "Smooth continuous rotation creating dynamic visualization",
-    "Customizable color schemes matching brand identity",
-    "Clean, modern aesthetic with minimal visual clutter",
-    "Professional appearance suitable for enterprise contexts",
-    "Interactive elements responding to user exploration"
+    "Visually dominant"
   ],
   "difficulty": "intermediate",
   "designTone": [

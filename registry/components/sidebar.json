@@ -11,28 +11,20 @@
     "navigation",
     "sidebar"
   ],
-  "summary": "A responsive sidebar component with collapsible desktop navigation and slide-out mobile drawer.",
-  "detailedDescription": "Sidebar provides a dual-mode navigation component that adapts between desktop and mobile experiences. On desktop, it renders a collapsible sidebar that animates between 300px expanded and 60px collapsed widths, with hover-based open/close triggers. On mobile, it transforms into a hamburger menu button that opens a full-screen drawer with slide-in animation from the left. The component uses React Context (SidebarContext) to share open/close state across subcomponents, with support for both controlled (prop-based) and uncontrolled (internal state) modes. The DesktopSidebar uses Framer Motion for smooth width animations, while the MobileSidebar uses AnimatePresence for enter/exit transitions. The mobile drawer includes a close button (X icon) positioned at top-right and displays the navigation content in a full-height, full-width overlay. The sidebar features neutral backgrounds (light gray in light mode, dark gray in dark mode) and uses Tabler Icons for menu/hamburger controls. This component is ideal for dashboards, admin panels, documentation sites, or any application requiring responsive navigation with consistent behavior across device sizes.",
+  "summary": "A Sidebar navigation component for responsive headers, sidebars, and interaction-friendly layout flows.",
+  "detailedDescription": "Sidebar is a reusable navigation component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navigation, sidebars contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Provide responsive navigation that adapts to screen size",
-    "Offer collapsible sidebar for space-efficient desktop layouts",
-    "Deliver full-screen mobile navigation with smooth transitions"
+    "Provide clear wayfinding across pages and sections",
+    "Support responsive navigation patterns on desktop and mobile",
+    "Improve information architecture and scanning"
   ],
   "behavior": [
-    "Desktop: Expands/collapses width on hover with smooth animation",
-    "Mobile: Shows hamburger menu that triggers full-screen drawer",
-    "Context-based state management for nested components",
-    "Supports both controlled and uncontrolled open states",
-    "Mobile drawer slides in from left with fade animation",
-    "Auto-hides desktop sidebar on mobile breakpoints"
+    "Handles navigation state changes with responsive layout behavior"
   ],
   "visualCharacteristics": [
-    "Desktop: 300px expanded, 60px collapsed width",
-    "Mobile: Full-screen overlay drawer",
-    "Neutral gradient backgrounds",
-    "Hamburger menu icon on mobile header",
-    "X close button in mobile drawer top-right",
-    "Smooth Framer Motion width transitions"
+    "Layout-critical",
+    "Functional",
+    "Adaptive"
   ],
   "difficulty": "beginner",
   "designTone": [

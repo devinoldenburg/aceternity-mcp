@@ -11,31 +11,20 @@
     "draggable",
     "showcase"
   ],
-  "summary": "An interactive 3D card component that responds to drag gestures with realistic physics-based motion, allowing users to grab, tilt, and manipulate cards in three-dimensional space.",
-  "detailedDescription": "The Draggable Card component transforms static cards into interactive 3D objects that users can physically manipulate through drag gestures. This component creates an engaging, tactile experience where cards respond to mouse or touch drag with realistic physics-based motion. As users drag the card, it tilts and rotates in 3D space following the cursor position, creating a convincing illusion of holding a physical object. The effect uses CSS 3D transforms combined with spring physics for natural, weighty motion that feels responsive without being mechanical. Cards can be configured to return to center when released, stay in their dragged position, or trigger actions based on drag distance (like swipe-to-dismiss patterns). Visual feedback includes dynamic shadows that shift with card angle, enhancing the 3D illusion. Perfect for interactive portfolios, product showcases, card-based interfaces, or any context where adding physical, tactile interaction enhances engagement. The component supports both mouse and touch input, ensuring consistent behavior across desktop and mobile devices.",
+  "summary": "A Draggable Card card component for showcasing features, testimonials, and product content with visual polish.",
+  "detailedDescription": "Draggable Card is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for 3d-effects, cards contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create tactile, physical card interactions through drag-based manipulation",
-    "Engage users with responsive 3D motion that feels natural and weighty",
-    "Support swipe gestures for card dismissal or action triggering",
-    "Add memorable interactive moments to card-based interfaces",
-    "Bridge digital and physical through realistic physics simulation"
+    "Group related content into digestible visual blocks",
+    "Highlight features, testimonials, or product capabilities",
+    "Increase engagement through interaction and motion"
   ],
   "behavior": [
-    "Tracks mouse or touch drag gestures in real-time",
-    "Applies 3D rotateX and rotateY transforms based on drag position",
-    "Uses spring physics for natural, weighty motion response",
-    "Dynamically adjusts shadows to match card tilt angle",
-    "Supports configurable release behavior (return, stay, or dismiss)",
-    "Triggers actions based on drag distance thresholds",
-    "Works consistently across mouse and touch input methods"
+    "Responds to pointer hover and movement with visual feedback"
   ],
   "visualCharacteristics": [
-    "Interactive 3D card responding to drag with realistic motion",
-    "Dynamic tilting and rotation following cursor position",
-    "Shifting shadows enhancing three-dimensional illusion",
-    "Natural, physics-based movement feeling weighty and responsive",
-    "Tactile quality bridging digital and physical interaction",
-    "Engaging, playful aesthetic inviting user exploration"
+    "Structured",
+    "Content-focused",
+    "Interactive"
   ],
   "difficulty": "intermediate",
   "designTone": [

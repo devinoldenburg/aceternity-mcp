@@ -9,29 +9,17 @@
     "beam",
     "tracing"
   ],
-  "summary": "A scroll-following SVG beam with gradient stroke that traces alongside content as users scroll.",
-  "detailedDescription": "Tracing Beam creates a decorative SVG beam that follows scroll progress alongside content. The component renders a vertical SVG path with a zigzag pattern (down 36px, diagonal up-right 24px, down 80% of height, diagonal down-left 24px, to bottom). Two paths are drawn: a faint gray background path and a vibrant gradient path on top. The gradient uses animated y1/y2 positions controlled by spring physics (stiffness: 500, damping: 90) that follow scroll position, creating a smooth trailing effect. A circular marker at the top changes from green to white when scrolling starts, with boxShadow that disappears on scroll. The gradient transitions from transparent through cyan (#18CCFC), purple (#6344F5), to magenta (#AE48FF) with transparent end, creating a glowing beam effect. The SVG width is fixed at 20px and positioned left of content. Spring animations smooth the gradient position updates for fluid motion. This component adds visual interest to long-form content, documentation, or narrative sections where a trailing accent enhances the reading experience.",
+  "summary": "A reusable Tracing Beam component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Tracing Beam is a reusable scroll interaction component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Add decorative scroll-following accent to content sections",
-    "Create visual continuity through long-form content",
-    "Enhance scrolling experience with gradient beam animation"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks scroll progress with spring-smoothed animations",
-    "Animates gradient y-positions to follow scroll",
-    "Changes top marker color on scroll initiation",
-    "Renders zigzag SVG path alongside content",
-    "Uses spring physics for smooth gradient movement",
-    "Measures content height for SVG sizing"
+    "Reacts to scroll progress with transition or reveal effects"
   ],
-  "visualCharacteristics": [
-    "20px wide vertical SVG beam",
-    "Zigzag path pattern with diagonal turns",
-    "Cyan to purple to magenta gradient",
-    "Circular marker at beam top",
-    "Faint gray background path",
-    "Smooth spring-animated gradient position"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "intermediate",
   "designTone": [
     "modern"

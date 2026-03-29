@@ -12,27 +12,20 @@
     "text",
     "typography"
   ],
-  "summary": "A text component that cycles through words with smooth width transitions and blur-to-clear letter animations.",
-  "detailedDescription": "Container Text Flip displays a rotating sequence of words with animated transitions between each word change. The component uses Framer Motion's layout animations to smoothly resize the container width based on the current word's measured width. Each word cycles automatically at a configurable interval, with letters animating in sequentially using a blur effect that transitions from blurred/transparent to sharp/visible. The container features a distinctive pill-shaped design with gradient backgrounds (light gray to white in light mode, dark gray tones in dark mode), inset shadows, and outer drop shadows. The text size is large by default (4xl on mobile, 7xl on desktop) with bold typography. Each letter animates independently with staggered delays, creating a wave-like reveal effect. This component is perfect for hero headings, value proposition rotators, or any context where you want to emphasize multiple related terms in sequence.",
+  "summary": "A Container Text Flip text effect for expressive headings, highlights, and animated content emphasis.",
+  "detailedDescription": "Container Text Flip is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display rotating keywords or phrases in a compact space",
-    "Create engaging word transitions with blur animations",
-    "Emphasize multiple value propositions or features sequentially"
+    "Draw attention to key headlines and supporting copy",
+    "Communicate brand tone through animated typography",
+    "Increase visual rhythm in content-heavy sections"
   ],
   "behavior": [
-    "Automatically cycles through provided words array at set interval",
-    "Animates container width to fit each new word using layout animations",
-    "Reveals each letter with sequential blur-to-clear transition",
-    "Measures text width to calculate appropriate container size",
-    "Supports customizable interval, animation duration, and word list"
+    "Uses timed animation sequences for dynamic visual presence"
   ],
   "visualCharacteristics": [
-    "Pill-shaped container with gradient background",
-    "Large bold typography (4xl to 7xl responsive)",
-    "Inset and outer shadows for depth",
-    "Letters blur in sequentially with stagger timing",
-    "Smooth width expansion/contraction between words",
-    "Light and dark mode gradient variations"
+    "Expressive",
+    "Typographic",
+    "Attention-guiding"
   ],
   "difficulty": "beginner",
   "designTone": [

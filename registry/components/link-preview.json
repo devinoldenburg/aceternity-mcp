@@ -8,29 +8,17 @@
     "link",
     "preview"
   ],
-  "summary": "A hover card component that displays link preview screenshots using Radix UI HoverCard with spring animations.",
-  "detailedDescription": "Link Preview creates interactive link previews that display website screenshots on hover using Radix UI's HoverCard primitive. The component generates screenshot URLs via Microlink API (when not static), encoding parameters for viewport size, device scale factor, and color scheme. Preview images are preloaded in a hidden div to ensure instant display. The hover card uses Framer Motion for enter animations - starting at opacity 0, y: 20, scale 0.6 and animating to full visibility with spring physics (stiffness: 100, damping: 15). Mouse movement triggers subtle horizontal sway using motion values - the card translates left/right based on cursor position within the trigger, creating a parallax effect. Card dimensions are configurable (default 200x125px), with quality and layout options. The component supports both dynamic screenshots and static images via isStatic prop. Open/close delays are set to 50ms/100ms for responsive feel. Transform origin is set to Radix's calculated value for natural animation. This creates polished link previews ideal for blogrolls, resource pages, or any context where visual link context enhances user experience.",
+  "summary": "A reusable Link Preview component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Link Preview is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display visual previews of linked websites on hover",
-    "Generate screenshots dynamically via Microlink API",
-    "Add subtle parallax motion to hover interactions"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Generates screenshot URL via Microlink API encoding",
-    "Preloads preview image for instant display",
-    "Animates card with spring physics on hover",
-    "Applies subtle x-axis sway on mouse movement",
-    "Uses Radix UI HoverCard for accessibility",
-    "Supports both dynamic and static image modes"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Screenshot preview card (200x125px default)",
-    "Spring-animated enter/exit",
-    "Subtle horizontal sway on mouse move",
-    "Top-positioned with 10px offset",
-    "Scale animation from 0.6 to 1",
-    "Transform origin based on trigger position"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

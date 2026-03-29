@@ -11,31 +11,20 @@
     "evervault",
     "showcase"
   ],
-  "summary": "A premium card component featuring a distinctive rotating 3D vault-like effect with metallic sheen and dynamic lighting that creates an impression of security, value, and sophistication.",
-  "detailedDescription": "The Evervault Card component creates a distinctive, premium card effect inspired by secure vaults and high-value containers. The signature effect features a rotating 3D element that resembles a vault door or secure mechanism, combined with metallic gradients and dynamic lighting that shifts as the effect rotates. This creates an immediate visual association with security, value, and trustworthiness. The card typically includes a subtle glow effect, metallic border treatments, and smooth animations that feel weighty and substantial. The rotating vault element can be continuous or triggered on hover, creating an engaging focal point that draws the eye. Visual polish includes careful attention to lighting angles, gradient transitions, and shadow behavior that reinforces the 3D illusion. Perfect for security-focused products, financial services, premium offerings, or any context where conveying trust, value, and protection is important. The effect creates a memorable visual signature that differentiates cards from standard treatments while communicating specific brand attributes around security and quality.",
+  "summary": "A Evervault Card card component for showcasing features, testimonials, and product content with visual polish.",
+  "detailedDescription": "Evervault Card is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create premium card effects evoking security and value",
-    "Communicate trust and protection through vault-inspired visuals",
-    "Differentiate cards with distinctive rotating 3D elements",
-    "Support financial, security, and premium brand positioning",
-    "Add sophisticated, high-value aesthetic to card presentations"
+    "Group related content into digestible visual blocks",
+    "Highlight features, testimonials, or product capabilities",
+    "Increase engagement through interaction and motion"
   ],
   "behavior": [
-    "Renders rotating 3D vault-like element on card surface",
-    "Applies metallic gradients with dynamic lighting shifts",
-    "Animates continuously or on hover with smooth motion",
-    "Creates 3D illusion through careful lighting and shadows",
-    "Includes subtle glow effects enhancing premium appearance",
-    "Maintains smooth 60fps animation performance",
-    "Returns to rest state smoothly when hover ends"
+    "Responds to pointer hover and movement with visual feedback"
   ],
   "visualCharacteristics": [
-    "Rotating vault-inspired 3D element creating focal point",
-    "Metallic gradients with dynamic, shifting lighting",
-    "Premium, high-value aesthetic suggesting security",
-    "Smooth, weighty animation feeling substantial",
-    "Sophisticated appearance suitable for financial contexts",
-    "Distinctive visual signature differentiating from standard cards"
+    "Structured",
+    "Content-focused",
+    "Interactive"
   ],
   "difficulty": "beginner",
   "designTone": [

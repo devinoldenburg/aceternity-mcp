@@ -13,28 +13,21 @@
     "effect",
     "ripple"
   ],
-  "summary": "An interactive grid background where clicked cells trigger expanding ripple animations across neighboring cells.",
-  "detailedDescription": "Background Ripple Effect creates an interactive grid of cells (default 8 rows x 27 cols, 56px each) that respond to clicks with ripple animations. When a cell is clicked, the effect propagates outward based on Euclidean distance from click point. Each cell calculates delay and duration CSS variables based on distance, creating expanding wave effect. The component uses CSS mask-image (radial-from-20% at top) and opacity for visual containment. Dark mode support via CSS custom properties for border (neutral-700), fill (neutral-900), and shadow (neutral-800) colors. Light mode uses neutral-300/100/500. Grid renders via CSS grid with explicit cellSize dimensions. Interactive mode enables click handlers that trigger rippleKey state update, forcing grid re-render with new clickedCell reference. This creates engaging, tactile background where user interactions create visible ripple patterns across the grid surface, ideal for interactive installations, playful backgrounds, or any context where click-responsive surfaces enhance engagement.",
+  "summary": "A reusable Background Ripple Effect background effect that adds depth, focus, and atmosphere to modern UI sections.",
+  "detailedDescription": "Background Ripple Effect is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create click-responsive grid with ripple propagation",
-    "Animate cells based on distance from click point",
-    "Provide interactive tactile background feedback"
+    "Create visual atmosphere around hero and CTA content",
+    "Guide user attention without changing structural layout",
+    "Improve perceived polish for premium landing pages"
   ],
   "behavior": [
-    "Tracks clicked cell coordinates",
-    "Calculates Euclidean distance per cell",
-    "Applies delay/duration based on distance",
-    "Re-renders grid on each click",
-    "Uses CSS mask for containment",
-    "Supports dark/light color theming"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Grid of square cells (56px default)",
-    "Expanding ripple from click point",
-    "Distance-based animation timing",
-    "Neutral color scheme",
-    "Radial mask containment",
-    "Interactive click response"
+    "Atmospheric",
+    "Layered",
+    "Decorative",
+    "Landing-page friendly"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -10,31 +10,18 @@
     "data-viz",
     "globe"
   ],
-  "summary": "An interactive 3D globe visualization component powered by Cobe library that renders a rotating Earth with customizable markers, connections, and visual styling for global data presentation.",
-  "detailedDescription": "The 3D Globe component brings geographical data to life through an interactive, rotating three-dimensional Earth visualization. Built on top of the Cobe rendering library, this component creates a visually stunning representation of global connections, user distributions, or international presence. The globe features smooth auto-rotation with user-controlled interaction, allowing visitors to spin and explore different regions. Customizable markers can be placed at specific latitude and longitude coordinates to represent offices, users, data centers, or any geographically-distributed information. Animated connection lines can be drawn between points to visualize routes, relationships, or data flow across continents. The component uses WebGL rendering for optimal performance, ensuring smooth 60fps animation even with multiple markers and connections. Visual customization includes globe color, marker styles, line colors, rotation speed, and size controls. Perfect for SaaS companies showing global reach, logistics platforms displaying routes, or any application requiring geographical context. The component is responsive and scales appropriately across different screen sizes while maintaining visual fidelity and interaction quality.",
+  "summary": "A reusable 3D Globe component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "3D Globe is a reusable visualization component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for 3d-effects, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Visualize global data, user distributions, or international presence in an engaging 3D format",
-    "Display geographical connections, routes, or networks between different locations",
-    "Create impressive hero sections for companies with global operations or reach",
-    "Provide interactive geographical context for location-based data and analytics",
-    "Enhance credibility and visual appeal with professional globe visualization"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Automatically rotates on Y-axis with configurable speed for continuous motion",
-    "Responds to mouse drag and touch gestures for manual globe rotation",
-    "Renders markers at specified latitude/longitude coordinates on globe surface",
-    "Draws animated connection lines between marker points when configured",
-    "Adjusts marker sizes and line widths based on data values or importance",
-    "Maintains smooth 60fps WebGL rendering with optimized draw calls",
-    "Scales responsively to container size while preserving aspect ratio"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Three-dimensional spherical Earth representation with depth perception",
-    "Smooth continuous rotation creating dynamic, living visualization",
-    "Customizable color schemes matching brand identity or data categories",
-    "Clean, modern aesthetic with minimal visual clutter",
-    "Professional and impressive appearance suitable for enterprise contexts",
-    "Interactive elements that respond to user exploration and manipulation"
+    "Visually dominant"
   ],
   "difficulty": "advanced",
   "designTone": [

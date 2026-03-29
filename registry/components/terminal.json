@@ -10,29 +10,17 @@
     "terminal",
     "typography"
   ],
-  "summary": "A terminal-style code display component with syntax highlighting using react-syntax-highlighter.",
-  "detailedDescription": "Terminal renders code snippets in a terminal-like interface with syntax highlighting. The component uses react-syntax-highlighter for language-aware code coloring, supporting multiple programming languages. Terminal styling includes monospace font, dark background (typically black or dark gray), and light text for high contrast. The component may include terminal window decorations (close/minimize/maximize buttons) for authentic appearance. Code displays with proper indentation, line numbers optional. Syntax highlighting uses color schemes matching popular terminal themes (e.g., Tomorrow Night, Atom One Dark). The component accepts code string and language props, rendering pre-formatted code blocks. Ideal for documentation, developer portfolios, or any context where displaying code snippets in authentic terminal aesthetic enhances technical credibility and readability.",
+  "summary": "A reusable Terminal component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Terminal is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display code with syntax highlighting",
-    "Create authentic terminal aesthetic",
-    "Support multiple programming languages"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Uses react-syntax-highlighter for highlighting",
-    "Applies monospace terminal font",
-    "Renders code with proper formatting",
-    "Supports language detection",
-    "Optional line number display",
-    "Dark theme by default"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Terminal window appearance",
-    "Monospace code font",
-    "Dark background with light text",
-    "Syntax-colored code tokens",
-    "Optional window decorations",
-    "High contrast readability"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern",

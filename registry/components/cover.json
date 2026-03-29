@@ -8,32 +8,17 @@
   "tags": [
     "cover"
   ],
-  "summary": "A container cover component featuring particle effects, beams, and space-inspired visuals that create an immersive, atmospheric backdrop for hero sections and key content areas.",
-  "detailedDescription": "The Cover component creates stunning atmospheric backdrops through a combination of particle effects, light beams, and space-inspired visuals that evoke depth and wonder. This component wraps any content in an immersive visual environment that transforms ordinary sections into memorable experiences. The effect typically includes floating particles that drift slowly, creating a sense of being in space or underwater, combined with subtle light beams that add depth and directional interest. The particles can vary in size, opacity, and speed for natural, organic motion. Color customization allows matching to brand palettes while maintaining the ethereal, atmospheric quality. The component uses canvas or CSS-based rendering for smooth performance with many simultaneous particles. Perfect for hero sections, product launches, creative portfolios, or any context where creating an emotional, atmospheric connection enhances the message. The effect works particularly well in dark mode where particles and beams achieve maximum luminosity and contrast.",
+  "summary": "A reusable Cover component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Cover is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cta, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create immersive, atmospheric backdrops with particle and beam effects",
-    "Transform ordinary sections into memorable visual experiences",
-    "Evoke wonder and depth through space-inspired visual elements",
-    "Support emotional connections through atmospheric design",
-    "Provide engaging hero treatments that capture attention immediately"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Generates floating particles with varied sizes and opacities",
-    "Animates particles with slow, organic drifting motion",
-    "Renders light beams adding depth and directional interest",
-    "Maintains smooth performance with many simultaneous elements",
-    "Supports color customization for brand alignment",
-    "Wraps content while maintaining readability and focus",
-    "Creates continuous motion without repetitive patterns"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Ethereal, atmospheric quality with floating particles",
-    "Space-inspired aesthetic evoking depth and wonder",
-    "Subtle light beams creating dimensional interest",
-    "Organic, natural motion feeling non-mechanical",
-    "Luminous elements particularly effective in dark contexts",
-    "Immersive backdrop that enhances without overwhelming content"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

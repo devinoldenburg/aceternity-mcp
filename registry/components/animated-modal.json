@@ -8,33 +8,17 @@
     "animated",
     "modal"
   ],
-  "summary": "A polished modal dialog component with smooth entrance and exit animations, backdrop blur effects, and customizable content areas for focused user interactions.",
-  "detailedDescription": "The Animated Modal component provides a sophisticated dialog solution that combines functional overlay behavior with elegant motion design. This component creates focused interaction contexts by dimming and blurring the background while smoothly animating the modal content into view. The entrance animation typically combines scale, opacity, and subtle rotation transforms to create a natural, organic appearance that feels less mechanical than simple fade-ins. The backdrop features an optional blur effect that adds visual depth and helps separate the modal from underlying content, improving focus and readability. Exit animations are equally refined, ensuring the modal doesn't simply disappear but transitions out smoothly to maintain visual continuity. The component includes proper focus trapping for accessibility, keyboard navigation support with Escape key dismissal, and click-outside-to-close functionality. Content areas are fully customizable, supporting headers, body content, footers with action buttons, and close buttons. Perfect for confirmation dialogs, forms, detailed content views, notifications, or any context requiring focused user attention without page navigation. The modal is responsive and adjusts sizing appropriately for different screen sizes, with optional mobile-specific behaviors like full-screen display on smaller devices.",
+  "summary": "A reusable Animated Modal component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Animated Modal is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create focused interaction contexts that demand user attention without navigation",
-    "Present confirmation dialogs, forms, or detailed content in an overlay format",
-    "Maintain page context while allowing temporary focused interactions",
-    "Provide accessible dialog functionality with proper focus management",
-    "Enhance UX with smooth, polished animations that feel premium and intentional"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Animates into view with configurable scale, opacity, and rotation transforms",
-    "Applies backdrop blur and opacity to de-emphasize background content",
-    "Traps keyboard focus within modal for accessibility compliance",
-    "Supports keyboard navigation with Escape key to dismiss",
-    "Detects clicks outside modal area to trigger dismissal",
-    "Animates out smoothly on close to maintain visual continuity",
-    "Optionally prevents body scroll while modal is open",
-    "Adjusts sizing and positioning responsively for different screen sizes"
+    "Uses timed animation sequences for dynamic visual presence"
   ],
-  "visualCharacteristics": [
-    "Smooth entrance and exit animations with natural easing curves",
-    "Backdrop blur creating depth separation from background content",
-    "Clean, focused appearance with clear visual hierarchy",
-    "Customizable sizing from compact dialogs to large content areas",
-    "Professional, polished aesthetic suitable for any application context",
-    "Responsive design adapting to mobile and desktop contexts appropriately"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

@@ -11,31 +11,20 @@
     "menu",
     "navigation"
   ],
-  "summary": "A macOS-style floating dock navigation component featuring icons that scale and magnify on hover with smooth spring animations, providing an elegant, interactive navigation experience for desktop and mobile.",
-  "detailedDescription": "The Floating Dock component recreates the iconic macOS dock navigation pattern where icons magnify smoothly as your cursor approaches them. This component provides both desktop and mobile versions - the desktop version features a curved magnification effect where icons scale based on cursor proximity, while the mobile version collapses into a hamburger menu that expands into a vertical stack. The desktop dock uses motion values to track mouse position and applies spring-based scaling to create the signature magnification curve. Icons closer to the cursor grow larger while those further away remain at base size. The effect uses Framer Motion for smooth, physics-based animations that feel natural and responsive. Perfect for app launchers, portfolio navigation, product showcases, or any context where an elegant, interactive dock-style navigation enhances the user experience. The component supports custom icons, titles, and links for each dock item.",
+  "summary": "A Floating Dock navigation component for responsive headers, sidebars, and interaction-friendly layout flows.",
+  "detailedDescription": "Floating Dock is a reusable navigation component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create macOS-style magnifying dock navigation with smooth animations",
-    "Provide elegant, interactive navigation for desktop and mobile contexts",
-    "Support app launcher, portfolio, or product showcase navigation patterns",
-    "Deliver physics-based magnification that feels natural and responsive",
-    "Offer responsive design with separate desktop and mobile implementations"
+    "Provide clear wayfinding across pages and sections",
+    "Support responsive navigation patterns on desktop and mobile",
+    "Improve information architecture and scanning"
   ],
   "behavior": [
-    "Tracks mouse position to calculate icon magnification",
-    "Applies spring-based scaling creating smooth magnification curve",
-    "Shows larger icons near cursor, smaller icons further away",
-    "Provides separate mobile version with hamburger menu expansion",
-    "Uses Framer Motion for physics-based smooth animations",
-    "Supports custom icons, titles, and links for each item",
-    "Maintains performance with efficient motion value tracking"
+    "Handles navigation state changes with responsive layout behavior"
   ],
   "visualCharacteristics": [
-    "macOS-style curved magnification effect on hover",
-    "Smooth, spring-based icon scaling animations",
-    "Elegant floating dock appearance",
-    "Responsive design with mobile hamburger alternative",
-    "Clean, minimal aesthetic suitable for modern interfaces",
-    "Interactive navigation feeling polished and premium"
+    "Layout-critical",
+    "Functional",
+    "Adaptive"
   ],
   "difficulty": "beginner",
   "designTone": [

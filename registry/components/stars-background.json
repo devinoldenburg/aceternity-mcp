@@ -11,28 +11,21 @@
     "decorative",
     "stars"
   ],
-  "summary": "A canvas-based starfield background with configurable density and twinkling animation for individual stars.",
-  "detailedDescription": "Stars Background renders a dynamic starfield on an HTML5 canvas element, with each star having randomized position, size, opacity, and optional twinkling behavior. The component calculates the number of stars based on canvas area multiplied by a configurable density factor (default 0.00015 stars per pixel). Each star has a radius between 0.5 and 0.55 pixels, with random opacity between 0.5 and 1.0. Stars can optionally twinkle using sine wave oscillation - either all stars twinkle or a percentage based on configurable probability (default 70%). Twinkle speed varies randomly between min and max values (default 0.5 to 1.0). The canvas automatically resizes using ResizeObserver to match its container dimensions, regenerating stars when size changes. The animation loop updates star opacity using Math.sin() with time-based calculations, creating smooth pulsing effects. This creates a peaceful, cosmic background suitable for hero sections, dark-themed interfaces, or any context where a subtle starry atmosphere enhances the visual design without distracting from foreground content.",
+  "summary": "A reusable Stars Background background effect that adds depth, focus, and atmosphere to modern UI sections.",
+  "detailedDescription": "Stars Background is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create immersive starfield backgrounds",
-    "Add subtle twinkling motion to dark backgrounds",
-    "Provide configurable cosmic atmosphere"
+    "Create visual atmosphere around hero and CTA content",
+    "Guide user attention without changing structural layout",
+    "Improve perceived polish for premium landing pages"
   ],
   "behavior": [
-    "Generates random star positions on canvas mount/resize",
-    "Animates star opacity using sine wave oscillation",
-    "Auto-resizes canvas to match container dimensions",
-    "Configures twinkling for all or percentage of stars",
-    "Randomizes star radius and base opacity",
-    "Uses ResizeObserver for responsive canvas sizing"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Small white dots scattered across canvas",
-    "Gentle twinkling/pulsing opacity changes",
-    "Responsive to container size changes",
-    "High density creates dense starfield",
-    "Subtle 0.5-0.55px star radius",
-    "Works best on dark backgrounds"
+    "Atmospheric",
+    "Layered",
+    "Decorative",
+    "Landing-page friendly"
   ],
   "difficulty": "beginner",
   "designTone": [

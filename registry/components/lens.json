@@ -7,29 +7,17 @@
   "tags": [
     "lens"
   ],
-  "summary": "A magnifying lens component that uses CSS mask-image to create a zoomed circular region following the cursor.",
-  "detailedDescription": "Lens creates a magnifying glass effect over any content using CSS radial gradient masks. The component tracks mouse position within its container and applies a circular mask (default 170px diameter) that reveals a zoomed version of the content underneath. The zoom is achieved by scaling the content (default 1.5x) with transformOrigin set to the mouse position. The mask uses radial-gradient with black at 100% transitioning to transparent, creating a sharp circular boundary. Framer Motion handles enter/exit animations with opacity and scale transitions (0.58 to 1, duration 0.3s). The component supports two modes: interactive mode follows cursor position, while static mode uses fixed x/y coordinates. Hover state management supports both internal state and external control via hovering/setHovering props. The container has overflow-hidden and rounded-lg styling. This creates an elegant magnification effect ideal for product detail views, image inspection, data visualization zoom, or any context where users need to examine content at higher magnification without losing context.",
+  "summary": "A reusable Lens component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Lens is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Provide magnified view of content under cursor",
-    "Create circular zoom lens following mouse",
-    "Enable detail inspection without losing context"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks mouse position within container",
-    "Applies radial gradient mask at cursor position",
-    "Scales content with transform at mouse origin",
-    "Animates lens enter/exit with opacity and scale",
-    "Supports static fixed-position mode",
-    "Handles both internal and external hover state"
+    "Responds to pointer hover and movement with visual feedback"
   ],
-  "visualCharacteristics": [
-    "Circular magnified region (170px default)",
-    "Sharp mask boundary with gradient edge",
-    "Content scaled 1.5x (configurable)",
-    "Smooth scale/opacity animations",
-    "Follows cursor or fixed position",
-    "Rounded container with overflow hidden"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

@@ -11,31 +11,21 @@
     "content",
     "showcase"
   ],
-  "summary": "An immersive 3D card component that creates depth and perspective transformations on hover using mouse-tracking technology and CSS 3D transforms for modern, interactive interfaces.",
-  "detailedDescription": "The 3D Card Effect component transforms static card interfaces into dynamic, interactive experiences that respond to user mouse movements with realistic three-dimensional transformations. This sophisticated component calculates the cursor position relative to the card's center point and applies corresponding rotateX and rotateY CSS transforms, creating a convincing illusion of depth and physical presence. The effect mimics how a real object would tilt when viewed from different angles, making digital interfaces feel more tangible and engaging. Perfect for product showcases, portfolio displays, feature grids, and testimonial cards, this component adds a premium layer of interactivity that captures user attention and creates memorable moments. The implementation leverages GPU-accelerated CSS transforms for smooth 60fps performance, ensuring the effect feels fluid and responsive across devices. Visual realism is enhanced through dynamic shadow effects that shift with the card's angle, simulating realistic light interaction. The component includes configurable rotation intensity limits, smooth transition easing, and automatic reset behavior when the cursor exits the card area. Built with accessibility in mind, it respects reduced-motion preferences and degrades gracefully to static cards when animations are disabled.",
+  "summary": "A 3D Card Effect card component for showcasing features, testimonials, and product content with visual polish.",
+  "detailedDescription": "3D Card Effect is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for 3d-effects, cards contexts where clear visual hierarchy matters. Visually, it feels visually dominant and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Transform flat card interfaces into immersive 3D experiences that respond to user interaction",
-    "Increase user engagement and time-on-page through novel hover-based interactions",
-    "Add premium visual polish to product showcases, portfolios, and feature highlights",
-    "Create memorable micro-interactions that differentiate your interface from competitors",
-    "Provide tactile feedback that makes digital content feel more physical and tangible"
+    "Group related content into digestible visual blocks",
+    "Highlight features, testimonials, or product capabilities",
+    "Increase engagement through interaction and motion"
   ],
   "behavior": [
-    "Continuously tracks mouse cursor position relative to card center coordinates",
-    "Calculates rotation angles for rotateX and rotateY transforms based on cursor offset",
-    "Applies smooth CSS 3D transforms with configurable maximum rotation degrees",
-    "Dynamically adjusts shadow position and intensity to match card tilt angle",
-    "Transitions smoothly between states using cubic-bezier easing functions",
-    "Automatically returns to neutral 0-degree position when cursor leaves card boundaries",
-    "Respects prefers-reduced-motion media query for accessibility compliance"
+    "Responds to pointer hover and movement with visual feedback"
   ],
   "visualCharacteristics": [
-    "Three-dimensional depth with realistic perspective transformation",
-    "Interactive and responsive to real-time mouse movement",
-    "Dynamic shadow casting that shifts with card angle",
-    "Premium and polished appearance with smooth motion",
-    "Engaging and attention-grabbing without overwhelming content",
-    "Modern aesthetic that conveys technical sophistication"
+    "Structured",
+    "Content-focused",
+    "Interactive",
+    "Visually dominant"
   ],
   "difficulty": "intermediate",
   "designTone": [

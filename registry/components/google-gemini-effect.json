@@ -9,32 +9,17 @@
     "gemini",
     "google"
   ],
-  "summary": "A scroll-triggered SVG animation featuring multiple colorful wavy paths that draw themselves progressively as users scroll, creating a mesmerizing visual effect inspired by Google's Gemini AI presentation.",
-  "detailedDescription": "The Google Gemini Effect component creates a stunning scroll-based animation where multiple colorful SVG paths progressively draw themselves as users scroll down the page. The component features 5 distinct wavy paths in different colors (pink, orange, light blue, medium blue, and deep blue) that animate their pathLength from 0 to 1 based on scroll position. Each path has a corresponding blurred duplicate underneath that creates a soft glow effect using SVG Gaussian blur filters. The animation is sticky, staying in viewport while the paths draw, creating a hypnotic effect that keeps users engaged. The component includes placeholder title and description text that can be customized. This effect is perfect for hero sections, feature showcases, or any context where you want to create a memorable, technical visual that rewards scrolling. The smooth linear transition creates a continuous drawing effect that feels magical and polished.",
+  "summary": "A reusable Google Gemini Effect component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Google Gemini Effect is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create mesmerizing scroll-triggered SVG path animations",
-    "Reward user scrolling with progressive visual reveals",
-    "Add technical, magical aesthetic to hero or feature sections",
-    "Keep users engaged through hypnotic drawing animations",
-    "Showcase technical sophistication through SVG animation"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Animates 5 colorful SVG paths based on scroll position",
-    "Uses motion pathLength values to control draw progress",
-    "Applies Gaussian blur to duplicate paths for glow effects",
-    "Sticky positioning keeps animation in viewport during scroll",
-    "Linear transition timing creates smooth continuous drawing",
-    "Customizable title and description text overlays",
-    "Paths draw progressively from 0 to 1 as user scrolls"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Multiple colorful wavy paths in gradient colors",
-    "Progressive drawing animation revealing paths on scroll",
-    "Soft glow effects from blurred duplicate paths",
-    "Hypnotic, mesmerizing visual quality",
-    "Technical, sophisticated appearance",
-    "Sticky scroll-triggered presentation"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

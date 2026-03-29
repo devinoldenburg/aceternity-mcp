@@ -9,31 +9,18 @@
     "3d",
     "pin"
   ],
-  "summary": "An interactive 3D pin component that creates a parallax perspective effect on hover, making content appear to tilt and follow the cursor with realistic depth and shadow dynamics.",
-  "detailedDescription": "The 3D Pin component creates an engaging parallax effect that makes flat content appear to have physical depth and dimension. When users hover over the component, it calculates cursor position and applies corresponding 3D transforms that make the content tilt and rotate as if pinned in physical space. The effect creates multiple visual layers - typically a foreground content layer and background container - that move at different rates to produce convincing parallax depth. This layered approach makes text, images, or other elements appear to float above the card surface, creating a tangible, interactive quality. The component uses advanced CSS 3D transforms including rotateX, rotateY, and translateZ to achieve the effect, all GPU-accelerated for smooth performance. Shadow effects dynamically adjust based on tilt angle to enhance the illusion of depth and realistic lighting. Perfect for feature cards, product highlights, portfolio items, or any content that benefits from added dimensionality and interaction. The intensity of the effect is configurable, allowing designers to choose from subtle depth to dramatic perspective. The component respects accessibility preferences and gracefully degrades to static content when reduced-motion settings are enabled.",
+  "summary": "A reusable 3D Pin component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "3D Pin is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for 3d-effects, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Add dimensional depth to flat cards through interactive parallax effects",
-    "Create engaging hover states that reward user exploration",
-    "Establish visual hierarchy through layered content that responds to interaction",
-    "Enhance perceived quality and polish of card-based interfaces",
-    "Draw attention to important content through novel 3D interaction"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks mouse cursor position relative to component center",
-    "Calculates differential movement for foreground and background layers",
-    "Applies rotateX, rotateY, and translateZ transforms for 3D parallax effect",
-    "Dynamically adjusts shadow position and opacity based on tilt angle",
-    "Smoothly transitions between states with configurable easing curves",
-    "Returns to neutral position when cursor exits component area",
-    "Respects prefers-reduced-motion for accessibility compliance"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Multi-layered depth with foreground content appearing to float",
-    "Interactive parallax that responds to cursor position in real-time",
-    "Dynamic shadows that shift with tilt for realistic lighting simulation",
-    "Smooth, fluid motion that feels responsive and premium",
-    "Configurable intensity from subtle enhancement to dramatic effect",
-    "Modern, sophisticated appearance that elevates content presentation"
+    "Visually dominant"
   ],
   "difficulty": "intermediate",
   "designTone": [

@@ -8,29 +8,17 @@
     "images",
     "slider"
   ],
-  "summary": "A full-screen image slider with scale/rotate transitions, keyboard navigation, and autoplay functionality.",
-  "detailedDescription": "Images Slider creates an immersive full-screen image carousel with AnimatePresence transitions. Images preload on mount using Promise.all, storing loaded images array. Current index state tracks active image, with next/previous functions cycling through array (wrapping at boundaries). Keyboard navigation listens for ArrowRight/ArrowLeft events. Autoplay triggers handleNext every 5 seconds when enabled. Slide variants use Framer Motion: initial state (scale 0, opacity 0, rotateX 45deg), visible state (scale 1, rotateX 0, opacity 1) with 0.5s duration and easing [0.645, 0.045, 0.355, 1.0]. Direction prop controls 'up' or 'down' slide animation. Overlay option renders children content over images with configurable className. The component creates cinematic image presentation ideal for hero sections, portfolios, or any context where full-screen image transitions with smooth scale/rotate effects enhance visual storytelling.",
+  "summary": "A reusable Images Slider component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Images Slider is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display full-screen image carousels",
-    "Animate images with scale/rotate transitions",
-    "Support keyboard and autoplay navigation"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Preloads all images before display",
-    "Cycles through images with wrap-around",
-    "Responds to arrow key navigation",
-    "Autoplays every 5 seconds when enabled",
-    "Animates scale from 0 to 1 on enter",
-    "Rotates X-axis from 45deg to 0"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Full-screen image display",
-    "Scale and rotate entrance animation",
-    "Smooth 0.5s transitions",
-    "Optional overlay content",
-    "Keyboard navigable",
-    "Direction-controlled sliding"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

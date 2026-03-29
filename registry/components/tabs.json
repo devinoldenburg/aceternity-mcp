@@ -9,29 +9,17 @@
     "menu",
     "tabs"
   ],
-  "summary": "A tab navigation component with animated background pill that moves selected tab to top with spring transitions.",
-  "detailedDescription": "Tabs creates an interactive tab navigation system where clicking a tab animates it to the front position while displaying associated content below. The component maintains two state arrays: the original propTabs and a mutable tabs array where the selected tab moves to index 0. When a tab is clicked, it's spliced from its position and unshifted to the front, triggering a re-render. A motion.div with layoutId='clickedbutton' creates a shared layout animation - the gray background pill smoothly transitions between tab positions using a spring animation (bounce: 0.3, duration: 0.6). The active tab's value determines which content displays in the FadeInDiv below. Tabs are styled as rounded-full buttons with relative positioning, supporting custom className props for container, active tab, individual tabs, and content areas. The component uses 3D transform-style for potential depth effects and handles horizontal scrolling with hidden scrollbars. Content fades in/out based on active state, with hover detection for potential additional effects. This creates a polished tab experience ideal for content organization, feature comparisons, or multi-view interfaces.",
+  "summary": "A reusable Tabs component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Tabs is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Organize content into switchable tabbed views",
-    "Animate selected tab with shared layout transitions",
-    "Reorder tabs dynamically on selection"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Moves clicked tab to first position in array",
-    "Animates background pill between tab positions",
-    "Updates active tab state on selection",
-    "Displays corresponding content for active tab",
-    "Uses spring physics for smooth transitions",
-    "Tracks hover state for potential effects"
+    "Handles navigation state changes with responsive layout behavior"
   ],
-  "visualCharacteristics": [
-    "Rounded pill background for active tab",
-    "Spring-animated tab transitions",
-    "Horizontal scrollable tab row",
-    "Gray/dark gray active state background",
-    "Content area below tab navigation",
-    "Clean minimal button styling"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern",

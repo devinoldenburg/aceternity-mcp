@@ -8,32 +8,17 @@
     "following",
     "pointer"
   ],
-  "summary": "A custom cursor enhancement component where a decorative element smoothly follows the mouse pointer with delayed motion, creating fluid trails and interactive highlights that elevate cursor presence.",
-  "detailedDescription": "The Following Pointer component transforms the standard mouse cursor into an engaging interactive element by adding a decorative follower that trails smoothly behind the actual pointer. This creates a fluid, organic motion that makes cursor movement feel more deliberate and visually interesting. The follower element can be a dot, circle, glow, or custom shape that maintains a slight delay behind the actual cursor position, creating smooth interpolation that feels weighty and natural. The effect uses requestAnimationFrame for smooth 60fps motion tracking. Visual options include size variations, color treatments, blend modes for interesting interactions with underlying content, and scale effects that respond to hover states over interactive elements. Perfect for creative portfolios, design-focused sites, or any interface where elevating the cursor from functional to feature enhances the overall aesthetic. The component includes touch device detection to disable the effect where inappropriate, ensuring consistent UX across input methods.",
+  "summary": "A reusable Following Pointer component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Following Pointer is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Enhance standard cursor with decorative following element",
-    "Create fluid, organic cursor motion with delayed trailing",
-    "Elevate cursor from functional to featured design element",
-    "Add interactive visual interest to cursor movement",
-    "Support creative, design-forward interface aesthetics"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks mouse position with smooth following element",
-    "Applies slight delay creating natural trailing motion",
-    "Uses requestAnimationFrame for smooth 60fps updates",
-    "Supports customizable follower shapes and styles",
-    "Optionally scales or changes on hover over interactive elements",
-    "Detects touch devices to disable appropriately",
-    "Maintains performance with efficient position tracking"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Decorative element smoothly trailing cursor position",
-    "Fluid, organic motion feeling weighty and natural",
-    "Customizable shapes from dots to glows to custom designs",
-    "Interactive responses over clickable elements",
-    "Creative, design-forward aesthetic enhancement",
-    "Subtle elevation of standard cursor functionality"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

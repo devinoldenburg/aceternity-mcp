@@ -7,32 +7,17 @@
   "tags": [
     "carousel"
   ],
-  "summary": "A flexible, touch-enabled carousel component powered by Embla Carousel for displaying sequential content with smooth scrolling, responsive breakpoints, and customizable navigation.",
-  "detailedDescription": "The Carousel component provides a robust, production-ready solution for displaying sequential content in a horizontally scrolling format. Built on the lightweight Embla Carousel library, this component offers excellent performance and flexibility without bloated dependencies. The carousel supports various content types including images, cards, testimonials, product showcases, and media galleries. Touch-enabled swipe gestures work flawlessly on mobile devices while mouse drag and keyboard navigation provide desktop accessibility. Responsive breakpoints allow different slide counts and layouts at various screen sizes, ensuring optimal presentation across devices. Navigation options include arrow buttons, pagination dots, thumbnail strips, or custom controls. The component supports auto-scroll with configurable intervals, loop mode for infinite cycling, and variable slide widths for mixed content. Performance optimizations include lazy loading for images and efficient DOM management. Perfect for image galleries, product carousels, testimonial sliders, featured content sections, or any context requiring sequential content presentation with professional polish and reliable behavior.",
+  "summary": "A reusable Carousel component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Carousel is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display sequential content in horizontally scrolling format",
-    "Provide touch-friendly carousel experience for mobile and desktop",
-    "Support various content types from images to cards to testimonials",
-    "Enable responsive layouts with different slide configurations per breakpoint",
-    "Deliver reliable, performant carousel functionality with Embla Carousel engine"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Enables horizontal scrolling through content slides with smooth motion",
-    "Supports touch swipe gestures on mobile and drag on desktop",
-    "Provides keyboard navigation with arrow keys for accessibility",
-    "Offers multiple navigation options including arrows, dots, and thumbnails",
-    "Optionally auto-scrolls at configurable intervals with pause controls",
-    "Supports loop mode for infinite cycling and variable slide widths",
-    "Implements responsive breakpoints for different layouts per screen size"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Clean, professional carousel appearance with smooth transitions",
-    "Touch-friendly interface with visible drag/swipe affordances",
-    "Configurable navigation elements matching design preferences",
-    "Responsive layouts adapting to available screen space",
-    "Polished, production-ready aesthetic suitable for any context",
-    "Accessible design with clear focus states and keyboard support"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

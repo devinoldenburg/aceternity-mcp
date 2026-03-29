@@ -8,28 +8,21 @@
   "tags": [
     "label"
   ],
-  "summary": "A form label component built on Radix UI LabelPrimitive with dark mode support and disabled states.",
-  "detailedDescription": "Label provides accessible form labels using Radix UI's LabelPrimitive.Root. The component applies text-sm size with medium font-weight for clear readability. Colors adapt to theme - black text in light mode, white in dark mode. Leading-none line-height ensures tight vertical spacing. Disabled state support via peer-disabled selector shows not-allowed cursor and 70% opacity when associated input is disabled. The component uses React.forwardRef for proper ref forwarding, enabling focus management from parent components. ClassName merging via cn() utility allows custom styling overrides. This is a foundational form primitive that pairs with Input, Select, Textarea, and other form components to create accessible, properly-associated label-input pairs. Essential for forms requiring WCAG compliance and proper semantic HTML structure.",
+  "summary": "A Label form component that improves data entry UX with clear states and modern interactions.",
+  "detailedDescription": "Label is a reusable form/input component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for forms, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Provide accessible form label associations",
-    "Support disabled state styling",
-    "Enable theme-aware color adaptation"
+    "Improve clarity and confidence while entering information",
+    "Provide interactive feedback during form completion",
+    "Increase conversion for signup and contact flows"
   ],
   "behavior": [
-    "Forwards refs for focus management",
-    "Applies disabled styles via peer selector",
-    "Merges custom className with defaults",
-    "Uses Radix UI for accessibility",
-    "Adapts colors to light/dark theme",
-    "Maintains medium font-weight"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Small text size (text-sm)",
-    "Medium font-weight",
-    "Black/white theme colors",
-    "No line-height (leading-none)",
-    "Reduced opacity when disabled",
-    "Clean minimal styling"
+    "Utility-first",
+    "Conversion-oriented",
+    "State-driven",
+    "Subtle"
   ],
   "difficulty": "beginner",
   "designTone": [

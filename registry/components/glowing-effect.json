@@ -8,29 +8,17 @@
     "effect",
     "glowing"
   ],
-  "summary": "A mouse-reactive border glow that rotates around element edges based on cursor position with smooth animation.",
-  "detailedDescription": "Glowing Effect creates an interactive border highlight that follows mouse position around element edges. The component uses requestAnimationFrame for smooth pointer tracking, calculating angle from element center to cursor using Math.atan2. An inactive zone (default 70% of min dimension) disables glow when cursor is near center. Proximity detection (configurable) enables glow when cursor approaches element. The glow uses CSS custom properties: --start for rotation angle, --active for enabled state. Framer Motion's animate function smoothly interpolates angle changes over configurable duration (default 2s) with ease [0.16, 1, 0.3, 1]. Blur prop controls glow softness, spread controls intensity. Variant 'white' uses white glow, 'default' uses blue (#3275F8). Border width defaults to 1px. Disabled prop prevents listener attachment. This creates premium interactive border effect ideal for cards, buttons, or any element where mouse-following glow enhances perceived quality and draws attention.",
+  "summary": "A reusable Glowing Effect component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Glowing Effect is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Track mouse position around element edges",
-    "Rotate glow highlight to cursor angle",
-    "Create premium interactive border effect"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Uses requestAnimationFrame for smooth tracking",
-    "Calculates angle from center to cursor",
-    "Disables glow in center inactive zone",
-    "Animates angle with Framer Motion",
-    "Applies ease [0.16, 1, 0.3, 1] smoothing",
-    "Supports proximity-based activation"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Rotating border glow following mouse",
-    "Blue or white gradient highlight",
-    "Smooth 2 second angle transitions",
-    "Inactive center zone",
-    "Configurable blur and spread",
-    "1px default border width"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

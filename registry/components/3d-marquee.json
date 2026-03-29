@@ -10,31 +10,18 @@
     "animated",
     "marquee"
   ],
-  "summary": "A dynamic 3D marquee component that creates an infinite scrolling carousel with perspective transforms and depth effects for showcasing logos, testimonials, or content in motion.",
-  "detailedDescription": "The 3D Marquee component creates a mesmerizing infinite scrolling display that combines traditional marquee functionality with three-dimensional perspective transforms. This component excels at showcasing client logos, partner badges, testimonials, product features, or any repeating content in a visually engaging format. The signature effect comes from applying CSS 3D transforms to create depth perception as items scroll across the screen, making content appear to move through physical space rather than simply sliding horizontally. The marquee supports both single and dual-direction scrolling, with the dual mode creating a more dynamic effect by having rows move in opposite directions simultaneously. Content is automatically duplicated to ensure seamless infinite looping without visible breaks or jumps. The component uses GPU-accelerated CSS animations for smooth, performant motion that maintains 60fps even with numerous items. Customization options include scroll speed, direction, gap between items, pause on hover, and perspective intensity. The 3D effect can be adjusted from subtle depth to dramatic perspective depending on design requirements. Perfect for social proof sections, partner showcases, or any context where continuous content display adds value without requiring user interaction.",
+  "summary": "A reusable 3D Marquee component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "3D Marquee is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for 3d-effects, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display continuous streams of logos, testimonials, or content in an engaging scrolling format",
-    "Create dynamic social proof sections that showcase clients, partners, or achievements",
-    "Add visual motion and energy to otherwise static page sections",
-    "Maximize content visibility by continuously cycling through items automatically",
-    "Provide ambient information display that doesn't require active user engagement"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Continuously scrolls content horizontally with seamless infinite looping",
-    "Applies 3D perspective transforms to create depth during motion",
-    "Automatically duplicates content to eliminate visible loop points",
-    "Supports both single-direction and dual-direction (opposing rows) scrolling",
-    "Optionally pauses animation on hover for user inspection of content",
-    "Maintains smooth 60fps animation through GPU-accelerated CSS transforms",
-    "Adjusts item spacing, scroll speed, and perspective intensity via props"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Infinite horizontal scrolling creating continuous motion",
-    "Three-dimensional perspective with depth perception during movement",
-    "Smooth, fluid animation that feels premium and polished",
-    "Customizable density and pacing to match content and context",
-    "Modern, dynamic aesthetic that draws attention without overwhelming",
-    "Versatile appearance suitable for both subtle and bold design statements"
+    "Visually dominant"
   ],
   "difficulty": "intermediate",
   "designTone": [

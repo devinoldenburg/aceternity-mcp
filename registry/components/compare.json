@@ -8,32 +8,17 @@
   "tags": [
     "compare"
   ],
-  "summary": "A before/after comparison component with interactive slider that allows users to drag and reveal differences between two images, states, or versions for compelling visual comparisons.",
-  "detailedDescription": "The Compare component provides an interactive before/after comparison experience through a draggable slider that reveals the difference between two images or content states. This powerful visual tool is perfect for showcasing transformations, improvements, or feature differences in an engaging, hands-on way. Users grab a handle and drag horizontally (or vertically) to reveal more of one image while concealing the other, creating an intuitive comparison experience. The component includes a visible slider handle with optional labels indicating 'before' and 'after' states. Smooth transitions and responsive tracking ensure the comparison feels fluid and natural. The component supports any image content including product photos, design mockups, edited vs original photos, UI redesigns, or data visualizations. Perfect for portfolios showing design work, fitness transformations, photo editing showcases, product improvement demonstrations, or any context where visual comparison tells a compelling story. The interactive nature increases engagement as users actively explore the differences rather than passively viewing static images.",
+  "summary": "A reusable Compare component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Compare is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for feature-sections, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Enable interactive before/after comparisons through draggable slider",
-    "Showcase transformations, improvements, or differences compellingly",
-    "Increase user engagement through hands-on comparison exploration",
-    "Support visual storytelling for portfolios, edits, and improvements",
-    "Provide intuitive comparison interface requiring no explanation"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Renders two images or content layers in identical alignment",
-    "Provides draggable slider handle for revealing/hiding content",
-    "Tracks drag position smoothly for fluid comparison experience",
-    "Supports both horizontal and vertical comparison orientations",
-    "Displays optional before/after labels for clarity",
-    "Maintains image alignment during slider movement",
-    "Responds to touch, mouse, and keyboard interactions"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
-  "visualCharacteristics": [
-    "Clear before/after visual separation with slider divider",
-    "Draggable handle providing obvious interaction affordance",
-    "Smooth, responsive slider movement feeling natural",
-    "Professional presentation suitable for any comparison context",
-    "Optional labels and styling for brand alignment",
-    "Clean, focused design emphasizing comparison content"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "beginner",
   "designTone": [
     "modern"

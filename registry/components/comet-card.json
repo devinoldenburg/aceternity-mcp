@@ -11,31 +11,20 @@
     "content",
     "showcase"
   ],
-  "summary": "A dynamic card component featuring a comet-like trailing effect on hover, with glowing animations and motion that creates a sense of speed and energy for engaging content presentation.",
-  "detailedDescription": "The Comet Card component creates an exciting, energetic hover effect inspired by comets streaking through space - when users interact with the card, a glowing trail follows the cursor or animates across the surface, creating a sense of motion and speed. This distinctive effect combines gradient animations, blur filters, and strategic opacity transitions to simulate the luminous tail of a comet. The card typically features a dark background that makes the glowing effect pop, with bright colors (often blues, purples, or cyans) creating the comet trail. The animation can be triggered by hover, cursor movement across the card, or run as a continuous subtle effect. Visual elements include the glowing trail, subtle particle effects, and smooth transitions that make the card feel alive and responsive. Perfect for gaming interfaces, tech product showcases, creative portfolios, or any context where conveying energy, speed, and dynamism enhances the message. The effect creates memorable micro-interactions that users notice and appreciate, adding polish and personality to card-based layouts.",
+  "summary": "A Comet Card card component for showcasing features, testimonials, and product content with visual polish.",
+  "detailedDescription": "Comet Card is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create energetic, comet-inspired hover effects with glowing trails",
-    "Convey speed, motion, and dynamism through visual animation",
-    "Generate memorable micro-interactions that delight users",
-    "Add distinctive personality to card-based interfaces",
-    "Support gaming, tech, or creative contexts with energetic aesthetics"
+    "Group related content into digestible visual blocks",
+    "Highlight features, testimonials, or product capabilities",
+    "Increase engagement through interaction and motion"
   ],
   "behavior": [
-    "Generates glowing comet trail effect on hover or cursor movement",
-    "Animates gradient and blur filters creating luminous tail appearance",
-    "Tracks cursor position for interactive trail following",
-    "Applies smooth opacity transitions for natural fade effects",
-    "Uses GPU-accelerated animations for smooth performance",
-    "Features dark backgrounds maximizing glow visibility",
-    "Returns smoothly to rest state when interaction ends"
+    "Responds to pointer hover and movement with visual feedback"
   ],
   "visualCharacteristics": [
-    "Glowing comet trail creating sense of motion and speed",
-    "Energetic, dynamic appearance with luminous effects",
-    "Dark backgrounds with bright, vibrant accent colors",
-    "Smooth, fluid animations feeling responsive and alive",
-    "Distinctive, memorable aesthetic standing out from standard cards",
-    "Gaming and tech-forward visual language"
+    "Structured",
+    "Content-focused",
+    "Interactive"
   ],
   "difficulty": "beginner",
   "designTone": [

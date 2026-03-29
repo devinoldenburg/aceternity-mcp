@@ -9,28 +9,21 @@
     "form",
     "input"
   ],
-  "summary": "An input field with radial gradient border hover effect that follows mouse position.",
-  "detailedDescription": "Input creates a form input with interactive border highlight using Framer Motion. A motion.div wrapper tracks mouse position via useMotionValue (mouseX/mouseY), calculating offset from element's getBoundingClientRect. On hover enter, visible state triggers radial gradient background that expands from 0px to 100px radius at cursor position. The gradient uses blue-500 (#3b82f6) fading to transparent at 80%, creating glowing border effect. Input itself has gray-50 background (dark: zinc-800), h-10 height, rounded-md corners, and shadow-input. Focus shows 2px ring (neutral-400 light, neutral-600 dark). Dark mode includes subtle outer shadow. Transition duration 400ms for smooth hover on/off. The effect creates premium feel by highlighting input border nearest cursor, guiding attention to active field. Ideal for signup forms, search bars, or any input where enhanced visual feedback improves user experience.",
+  "summary": "A Input form component that improves data entry UX with clear states and modern interactions.",
+  "detailedDescription": "Input is a reusable form/input component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for forms, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Provide glowing border highlight on hover",
-    "Track mouse position for gradient placement",
-    "Enhance form inputs with premium feel"
+    "Improve clarity and confidence while entering information",
+    "Provide interactive feedback during form completion",
+    "Increase conversion for signup and contact flows"
   ],
   "behavior": [
-    "Tracks mouse position with motion values",
-    "Expands radial gradient on hover enter",
-    "Positions gradient at cursor location",
-    "Applies blue glow to border area",
-    "Smooth 400ms transition duration",
-    "Standard input focus ring behavior"
+    "Supports interaction states for typing, focus, submit, or upload"
   ],
   "visualCharacteristics": [
-    "Gray input with rounded corners",
-    "Blue radial gradient border glow",
-    "100px hover effect radius",
-    "Shadow effects for depth",
-    "Dark mode compatible styling",
-    "Mouse-following highlight"
+    "Utility-first",
+    "Conversion-oriented",
+    "State-driven",
+    "Subtle"
   ],
   "difficulty": "beginner",
   "designTone": [

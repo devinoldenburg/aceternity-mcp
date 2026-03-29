@@ -11,32 +11,17 @@
     "container",
     "scroll"
   ],
-  "summary": "A scroll-driven animation component that transforms and animates container contents as users scroll, creating engaging narrative experiences through scroll-triggered motion and reveals.",
-  "detailedDescription": "The Container Scroll Animation component creates captivating scroll-based experiences by animating container contents as users scroll through the page. This component transforms passive scrolling into an active storytelling mechanism, where content reveals, transforms, and moves in response to scroll position. Typical effects include cards that scale and rotate into view, text that fades and slides into position, images that parallax at different speeds, or complex sequences where multiple elements animate in choreographed patterns. The component uses Intersection Observer and scroll position tracking to trigger animations at precise moments, ensuring smooth, jank-free performance. Animation timing is carefully tuned to feel natural at various scroll speeds. Perfect for landing pages, product showcases, storytelling experiences, or any context where scroll-driven animation enhances narrative flow and user engagement. The component supports both subtle, professional animations and bold, dramatic sequences depending on design requirements.",
+  "summary": "A reusable Container Scroll Animation component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Container Scroll Animation is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Transform scrolling into engaging narrative experiences through animation",
-    "Create scroll-triggered reveals and transformations for content",
-    "Enhance storytelling with choreographed animation sequences",
-    "Increase engagement by making scrolling an active interaction",
-    "Support both subtle professional and dramatic bold animation styles"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks scroll position and triggers animations at defined thresholds",
-    "Uses Intersection Observer for efficient scroll detection",
-    "Animates container contents with scale, rotation, translation, and opacity",
-    "Supports complex multi-element choreographed animation sequences",
-    "Maintains smooth 60fps performance through optimized scroll handling",
-    "Provides configurable animation timing and easing curves",
-    "Respects reduced-motion preferences for accessibility"
+    "Reacts to scroll progress with transition or reveal effects"
   ],
-  "visualCharacteristics": [
-    "Dynamic, scroll-responsive animations creating living interfaces",
-    "Smooth, choreographed motion feeling intentional and polished",
-    "Progressive content reveals building anticipation and interest",
-    "Configurable from subtle enhancements to dramatic sequences",
-    "Professional execution enhancing narrative flow",
-    "Engaging visual experience rewarding scroll exploration"
-  ],
+  "visualCharacteristics": [],
   "difficulty": "intermediate",
   "designTone": [
     "modern"

@@ -45,11 +45,14 @@ This helps your AI make informed decisions about which components fit your desig
 # Install the package
 pip install aceternity-mcp
 
-# Run the universal installer (interactive)
+# Run the interactive setup wizard (recommended for first-time users)
+aceternity-mcp install
+
+# Or use the legacy installer
 aceternity-mcp-install
 
 # Or configure all tools automatically
-aceternity-mcp-install --non-interactive
+aceternity-mcp install --non-interactive
 ```
 
 **What the installer does:**
@@ -57,6 +60,42 @@ aceternity-mcp-install --non-interactive
 2. Configures your AI tools automatically
 3. Verifies the installation
 4. Shows you next steps
+
+## CLI Commands
+
+The `aceternity-mcp` command provides a powerful CLI for managing your installation:
+
+| Command | Description |
+|---------|-------------|
+| `aceternity-mcp install` | Run interactive setup wizard |
+| `aceternity-mcp update` | Check for and install updates |
+| `aceternity-mcp repair` | Fix common installation issues |
+| `aceternity-mcp status` | Show installation health and status |
+| `aceternity-mcp diagnose` | Run diagnostics (JSON output) |
+| `aceternity-mcp --version` | Show version information |
+| `aceternity-mcp --help` | Show help message |
+
+**Examples:**
+
+```bash
+# Check for updates
+aceternity-mcp update
+
+# Fix installation issues
+aceternity-mcp repair
+
+# Repair only registry
+aceternity-mcp repair --registry
+
+# Check installation status
+aceternity-mcp status
+
+# Detailed status with client configs
+aceternity-mcp status --verbose
+
+# Run diagnostics
+aceternity-mcp diagnose
+```
 
 ### Development Installation
 
@@ -73,6 +112,18 @@ python scripts/sync_registry.py
 
 # Configure your AI tools
 python -m aceternity_mcp.install
+```
+
+### Running the MCP Server
+
+To run the MCP server directly (for manual configuration):
+
+```bash
+# Using the server command
+aceternity-mcp-server
+
+# Or using the legacy command
+aceternity-mcp-server
 ```
 
 ### Manual Configuration
@@ -225,6 +276,23 @@ pipx reinstall aceternity-mcp
 ```
 
 > **Note**: The registry is bundled with the package, so running `sync_registry.py` is only needed if you want to update to the latest components from Aceternity UI.
+
+### CLI Development
+
+The CLI provides management commands for end users:
+
+```bash
+# Test CLI commands
+aceternity-mcp --help
+aceternity-mcp status
+aceternity-mcp diagnose
+
+# Test update check
+aceternity-mcp update --non-interactive
+
+# Test repair functionality
+aceternity-mcp repair --non-interactive
+```
 
 ## Supported AI Tools
 

@@ -13,28 +13,20 @@
     "showcase",
     "tooltip"
   ],
-  "summary": "A tooltip component that follows cursor position with smart viewport boundary detection and smooth animations.",
-  "detailedDescription": "Tooltip Card implements a cursor-following tooltip that displays content near the mouse pointer while intelligently avoiding viewport boundaries. The component tracks mouse position relative to its container and calculates optimal tooltip placement using viewport dimensions. When the tooltip would extend beyond the right edge, it flips to appear left of the cursor; if it would go off the left edge, it positions at the container's left boundary. Similar logic applies vertically - the tooltip flips above the cursor if it would extend below the viewport, or above if it would go off the top. The tooltip uses Framer Motion's AnimatePresence for smooth enter/exit animations, with height calculated from scrollHeight for accurate sizing. Content is constrained to a minimum width of 15rem (240px) and positioned absolutely with 12px offset from cursor. The component handles both mouse and touch interactions, resetting positions on mouse leave. This creates a polished tooltip experience ideal for contextual help, preview cards, or inline documentation that needs to remain visible without obscuring content.",
+  "summary": "A Tooltip Card card component for showcasing features, testimonials, and product content with visual polish.",
+  "detailedDescription": "Tooltip Card is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display contextual information near cursor position",
-    "Prevent tooltip overflow with smart boundary detection",
-    "Provide smooth animated tooltip transitions"
+    "Group related content into digestible visual blocks",
+    "Highlight features, testimonials, or product capabilities",
+    "Increase engagement through interaction and motion"
   ],
   "behavior": [
-    "Tracks mouse position relative to container",
-    "Calculates optimal position based on viewport boundaries",
-    "Flips tooltip direction when approaching edges",
-    "Animates height from 0 to content scrollHeight",
-    "Resets position on mouse leave",
-    "Handles both mouse and touch interactions"
+    "Responds to pointer hover and movement with visual feedback"
   ],
   "visualCharacteristics": [
-    "Minimum 240px width tooltip card",
-    "Follows cursor with 12px offset",
-    "Smooth enter/exit animations",
-    "Viewport-aware positioning",
-    "Absolute positioning within container",
-    "Dynamic height based on content"
+    "Structured",
+    "Content-focused",
+    "Interactive"
   ],
   "difficulty": "beginner",
   "designTone": [

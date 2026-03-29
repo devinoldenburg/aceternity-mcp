@@ -8,28 +8,18 @@
     "line",
     "moving"
   ],
-  "summary": "A scroll-driven SVG line animation where a blue stroke draws downward as users scroll through content.",
-  "detailedDescription": "Moving Line creates a vertical SVG line (1px wide, 1567px tall) that animates based on scroll progress. The component uses Framer Motion's useScroll hook tracking from 'end end' to 'start start' offset, converting scroll position to pathLength value (1 to 0). A spring animation (stiffness: 500, damping: 100) smooths the pathLength transition over 14s easeInOut. The SVG contains two paths: a static gradient stroke (blue #3879E7 fading from transparent at top to solid at bottom) and an animated solid blue path (var(--blue-500), 3px strokeWidth, round strokeLinecap). As users scroll, the animated path appears to draw downward from top to bottom. The line is positioned left of content columns (flex row with 10-unit gap), with dummy content blocks demonstrating the effect. This creates a visual progress indicator perfect for timelines, step-by-step guides, or long-form content where showing scroll progression enhances navigation and engagement.",
+  "summary": "A reusable Moving Line component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Moving Line is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Visualize scroll progress with animated line drawing",
-    "Create vertical timeline accent markers",
-    "Guide users through long-form content"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks scroll position from end to start",
-    "Animates SVG pathLength from 1 to 0",
-    "Applies spring smoothing to animation",
-    "Draws blue line downward on scroll",
-    "Uses 14s easeInOut transition",
-    "Positions line beside content columns"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Thin vertical SVG line (1px wide)",
-    "Blue gradient static background stroke",
-    "Solid blue animated foreground stroke",
-    "Rounded line caps",
-    "Draws from top to bottom",
-    "Spring-smoothed motion"
+    "Subtle"
   ],
   "difficulty": "beginner",
   "designTone": [

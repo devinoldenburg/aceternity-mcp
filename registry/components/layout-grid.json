@@ -8,28 +8,18 @@
     "grid",
     "layout"
   ],
-  "summary": "A masonry-style grid where cards expand to fill half the layout when clicked using Framer Motion layout animations.",
-  "detailedDescription": "Layout Grid creates an interactive gallery where cards animate between grid and expanded states using Framer Motion's layoutId shared element transitions. The component accepts an array of cards with id, content, className, and thumbnail properties. Clicking a card triggers a three-state system: null (no selection), lastSelected (previous selection), and selected (current selection). The selected card uses layoutId='card-{id}' to animate from its grid position to a centered overlay position (h-1/2, w-full/md:w-1/2, z-50) with rounded-lg styling. Image elements use separate layoutId='image-{id}-image' for smooth image transitions. When expanded, cards display their content with a dark overlay (60% opacity black) and animated content that slides up from y:100 with fade-in. A backdrop div with pointer-events-auto when selected provides click-outside-to-close functionality, animating opacity from 0 to 0.3. The grid uses responsive col-spans (1 col mobile, 3 cols desktop) with gap-4 spacing. This creates a polished lightbox-like gallery experience ideal for portfolios, image showcases, or any grid where items need elegant expansion animations.",
+  "summary": "A reusable Layout Grid component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
+  "detailedDescription": "Layout Grid is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Display image grids with expand-on-click interaction",
-    "Animate cards between grid and expanded states",
-    "Create lightbox-like gallery experience"
+    "Add a reusable presentational building block to UI flows",
+    "Improve consistency across pages and sections",
+    "Accelerate implementation with an install-ready component"
   ],
   "behavior": [
-    "Tracks selected and lastSelected card states",
-    "Animates selected card to centered overlay position",
-    "Uses layoutId for shared element transitions",
-    "Displays content overlay with dark background",
-    "Slides content up from bottom on expand",
-    "Closes on backdrop click with opacity animation"
+    "Provides composable UI behavior with optional animation and styling controls"
   ],
   "visualCharacteristics": [
-    "Responsive grid (1/3 columns)",
-    "Expanded card covers half viewport",
-    "Smooth image and card transitions",
-    "Dark overlay on expanded content",
-    "Rounded corners on all cards",
-    "Backdrop opacity animation"
+    "Subtle"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -12,31 +12,20 @@
     "navbar",
     "navigation"
   ],
-  "summary": "A sleek, floating navigation bar that appears to hover above page content with subtle shadows, blur effects, and smooth scroll-responsive behavior for modern, airy interface designs.",
-  "detailedDescription": "The Floating Navbar component creates a refined navigation experience by appearing to float above the page content rather than being fixed to the top edge. This design approach adds depth and visual lightness to interfaces, making navigation feel less imposing while maintaining constant accessibility. The navbar typically features a subtle drop shadow that creates the floating illusion, optional backdrop blur that frosts content passing underneath, and smooth transitions that respond to scroll position. On scroll down, the navbar can hide or minimize to maximize content space; on scroll up, it reveals for easy navigation access. The floating treatment includes careful attention to z-index management, ensuring the navbar stays above all content without creating stacking context issues. Perfect for modern SaaS applications, content-focused sites, portfolios, or any interface where clean, airy navigation enhances the overall aesthetic. The component supports standard navigation patterns including logo placement, nav links, dropdown menus, and action buttons, all arranged in a flexible, responsive layout.",
+  "summary": "A Floating Navbar navigation component for responsive headers, sidebars, and interaction-friendly layout flows.",
+  "detailedDescription": "Floating Navbar is a reusable navigation component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navbars, navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Create airy, modern navigation that floats above content",
-    "Provide scroll-responsive behavior hiding/showing based on direction",
-    "Add depth and visual lightness through floating treatment",
-    "Support standard navigation patterns with flexible layout",
-    "Maintain navigation accessibility while minimizing visual weight"
+    "Provide clear wayfinding across pages and sections",
+    "Support responsive navigation patterns on desktop and mobile",
+    "Improve information architecture and scanning"
   ],
   "behavior": [
-    "Floats above content with subtle shadow creating depth illusion",
-    "Optionally applies backdrop blur frosting content underneath",
-    "Responds to scroll direction (hide down, show up)",
-    "Maintains proper z-index stacking above all page content",
-    "Supports responsive layout adapting to different screen sizes",
-    "Smoothly transitions between states with polished animations",
-    "Provides accessible navigation with keyboard support"
+    "Handles navigation state changes with responsive layout behavior"
   ],
   "visualCharacteristics": [
-    "Floating appearance with shadow-based depth illusion",
-    "Clean, airy aesthetic reducing visual weight",
-    "Optional backdrop blur creating frosted glass effect",
-    "Smooth scroll-responsive transitions",
-    "Modern, minimal design suitable for contemporary interfaces",
-    "Flexible layout supporting various navigation structures"
+    "Layout-critical",
+    "Functional",
+    "Adaptive"
   ],
   "difficulty": "beginner",
   "designTone": [

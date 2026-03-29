@@ -12,28 +12,21 @@
     "placeholders",
     "vanish"
   ],
-  "summary": "An input field with cycling placeholder text and particle vanish animation when submitting.",
-  "detailedDescription": "Placeholders And Vanish Input creates an engaging form input with animated placeholder cycling and particle dispersion on submit. The placeholder text rotates through provided array every 3 seconds, pausing when tab is hidden (visibilitychange handler). On submit, the input value is converted to canvas pixel data (800x800), extracting non-white pixels into particle array. Each particle has x/y position, radius (1px), and RGBA color. The animate function disperses particles rightward with random x-velocity (+1 or -1), shrinking radius until 0, creating vanish effect. Particles left of position threshold remain static. After animation completes, input clears and resets. The canvas uses 2x font-size for crisp text rendering. Animation uses requestAnimationFrame for smooth 60fps playback. This creates memorable form interactions ideal for search inputs, email signup, or any field where delightful submission animation enhances user experience and provides clear feedback that input was processed.",
+  "summary": "A Placeholders And Vanish Input form component that improves data entry UX with clear states and modern interactions.",
+  "detailedDescription": "Placeholders And Vanish Input is a reusable form/input component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for forms, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
   "purpose": [
-    "Cycle through placeholder suggestions automatically",
-    "Animate input text dispersing into particles on submit",
-    "Provide engaging form submission feedback"
+    "Improve clarity and confidence while entering information",
+    "Provide interactive feedback during form completion",
+    "Increase conversion for signup and contact flows"
   ],
   "behavior": [
-    "Rotates placeholder text every 3 seconds",
-    "Pauses animation when tab hidden",
-    "Converts input to canvas pixel data",
-    "Extracts non-white pixels as particles",
-    "Disperses particles rightward with random motion",
-    "Shrinks particle radius to zero for vanish"
+    "Supports interaction states for typing, focus, submit, or upload"
   ],
   "visualCharacteristics": [
-    "Standard input with cycling placeholder",
-    "Particle dispersion animation on submit",
-    "Text breaks into colored dots",
-    "Dots scatter and fade away",
-    "Smooth 60fps canvas animation",
-    "Clears input after animation completes"
+    "Utility-first",
+    "Conversion-oriented",
+    "State-driven",
+    "Subtle"
   ],
   "difficulty": "beginner",
   "designTone": [
