@@ -265,7 +265,7 @@ def sync_registry(api_key: str | None = None) -> bool:
 
 
 def configure_client(
-    client_name: str, mcp_command: str, mcp_args: list[str], cwd: str
+    client_name: str, mcp_command: str, mcp_args: list[str], cwd: str | None = None
 ) -> bool:
     """Configure a specific MCP client."""
     client = SUPPORTED_CLIENTS[client_name]
@@ -274,6 +274,52 @@ def configure_client(
 
     if not config_path:
         print_error(f"Cannot determine config path for {client['name']}")
+        return False
+
+    print_info(f"Configuring {client['name']}...")
+    print_info(f"Config path: {config_path}")
+
+    # Load existing config
+    config = {}
+    if config_path.exists():
+        try:
+            with open(config_path, "r", encoding="utf-8") as f:
+                config = json.load(f)
+        except (json.JSONDecodeError, IOError) as e:
+            print_warning(f"Could not parse existing config: {e}")
+            config = {}
+
+    # Ensure the configs key exists
+    if config_key not in config:
+        config[config_key] = {}
+
+    # Determine server name based on config key format
+    if config_key == "mcp_servers":
+        server_name = "aceternity_ui"
+    else:
+        server_name = "aceternity-ui"
+
+    # Create server configuration (only include cwd if provided)
+    server_config = {
+        "command": mcp_command,
+        "args": mcp_args,
+    }
+    if cwd:
+        server_config["cwd"] = cwd
+
+    # Add to config
+    config[config_key][server_name] = server_config
+
+    # Save config
+    try:
+        config_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(config_path, "w", encoding="utf-8") as f:
+            json.dump(config, f, indent=2, ensure_ascii=False)
+
+        print_success(f"{client['name']} configured at {config_path}")
+        return True
+    except IOError as e:
+        print_error(f"Failed to write config: {e}")
         return False
 
     print_info(f"Configuring {client['name']}...")
@@ -323,29 +369,22 @@ def configure_client(
 
 
 def configure_all_clients(mcp_command: str = "aceternity-mcp") -> dict[str, bool]:
-    """Configure all supported MCP clients."""
+    """Configure all supported MCP clients.
+
+    When installed via pipx, no cwd is needed as the command is on PATH.
+    """
     results = {}
 
     print_section("Configuring AI Tools")
 
-    # Get the directory where aceternity-mcp is installed
-    try:
-        import aceternity_mcp
-
-        install_dir = Path(aceternity_mcp.__file__).parent.parent.parent
-        cwd = str(install_dir)
-        print_info(f"MCP installed in: {install_dir}")
-    except ImportError:
-        cwd = str(Path.cwd())
-        print_warning("Could not determine install directory, using cwd")
-
+    # No cwd needed when installed via pipx - command is on PATH
     # Configure each client
     for client_name in SUPPORTED_CLIENTS:
         results[client_name] = configure_client(
             client_name=client_name,
             mcp_command=mcp_command,
             mcp_args=[],
-            cwd=cwd,
+            cwd=None,  # No cwd needed for pipx installations
         )
 
     return results
