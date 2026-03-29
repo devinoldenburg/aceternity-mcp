@@ -38,12 +38,16 @@ dependencies = ["mcp>=1.0.0"]
 
 [project.scripts]
 aceternity-mcp = "aceternity_mcp.server:main"
+aceternity-mcp-install = "aceternity_mcp.install:main"
 
 [project.urls]
 Homepage = "https://github.com/devinoldenburg/aceternity-mcp"
 Repository = "https://github.com/devinoldenburg/aceternity-mcp"
 Issues = "https://github.com/devinoldenburg/aceternity-mcp/issues"
 Documentation = "https://github.com/devinoldenburg/aceternity-mcp#readme"
+
+[project.entry-points."mcp.server"]
+aceternity-mcp = "aceternity_mcp.server:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/aceternity_mcp"]
