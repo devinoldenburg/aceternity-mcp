@@ -403,13 +403,23 @@ def verify_installation() -> bool:
     """Verify the MCP server installation."""
     print_section("Verifying Installation")
 
+    # Check CLI
     success, output = run_command(["aceternity-mcp", "--help"])
+    cli_ok = success
 
-    if success:
-        print_success("MCP server is accessible and working")
+    # Check server
+    success, output = run_command(["aceternity-mcp-server", "--help"])
+    server_ok = success
+
+    if cli_ok and server_ok:
+        print_success("MCP CLI and server are accessible")
+        print_info("Server command: aceternity-mcp-server")
         return True
     else:
-        print_error(f"MCP server not accessible: {output}")
+        if not cli_ok:
+            print_error("MCP CLI not accessible")
+        if not server_ok:
+            print_error("MCP server not accessible")
         return False
 
 

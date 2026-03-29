@@ -42,6 +42,7 @@ dependencies = ["mcp>=1.0.0"]
 aceternity-mcp = "aceternity_mcp.cli:main"
 aceternity-mcp-server = "aceternity_mcp.server:main"
 aceternity-mcp-install = "aceternity_mcp.install:main"
+aceternity-mcp-uninstall = "aceternity_mcp.uninstall:main"
 
 [project.urls]
 Homepage = "https://github.com/devinoldenburg/aceternity-mcp"

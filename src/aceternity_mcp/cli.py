@@ -623,6 +623,11 @@ def main() -> int:
         print_help()
         return 0
 
+    elif command in ("uninstall", "remove"):
+        from .uninstall import main as uninstall_main
+
+        return uninstall_main()
+
     else:
         print_error(f"Unknown command: {command}")
         print_info("Run 'aceternity-mcp --help' for available commands")
@@ -641,6 +646,7 @@ def print_help() -> None:
         ("repair", "Fix common installation issues", "aceternity-mcp repair"),
         ("status", "Show installation status and health", "aceternity-mcp status"),
         ("diagnose", "Run diagnostics and output JSON", "aceternity-mcp diagnose"),
+        ("uninstall", "Remove from all AI tools", "aceternity-mcp uninstall"),
         ("--version", "Show version information", "aceternity-mcp --version"),
         ("--help", "Show this help message", "aceternity-mcp --help"),
     ]
