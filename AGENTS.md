@@ -1,93 +1,93 @@
 # AGENTS.md - Automated Quality Assurance System
 
-## 🛡️ Pre-Commit & Pre-Push Validation Pipeline
+## Pre-Commit & Pre-Push Validation Pipeline
 
-This project enforces **STRICT** quality gates that MUST pass before any code can be committed or pushed.
-
----
-
-## 📋 Pre-Commit Checks (Run Automatically)
-
-Before ANY commit is accepted, the following checks run automatically:
-
-### 1. **Code Formatting**
-- ✅ **Ruff Format**: Ensures consistent code style
-- ✅ **Line Length**: Max 88 characters
-- ✅ **Import Sorting**: Automatic organization
-
-### 2. **Linting & Static Analysis**
-- ✅ **Ruff Linter**: Catches errors, bugs, and style issues
-- ✅ **PyUpgrade**: Ensures modern Python syntax
-- ✅ **Security Checks**: Detects security vulnerabilities
-
-### 3. **Type Checking**
-- ✅ **MyPy**: Strict static type checking
-- ✅ **Type Coverage**: All functions must be typed
-- ✅ **No Any**: Strict avoidance of `Any` type
-
-### 4. **Code Quality**
-- ✅ **Complexity Checks**: Cyclomatic complexity limits
-- ✅ **Code Duplication**: Detects copy-paste code
-- ✅ **Best Practices**: Enforces Python best practices
+This project enforces strict quality gates that must pass before any code can be committed or pushed.
 
 ---
 
-## 🧪 Pre-Push Checks (Run Automatically)
+## Pre-Commit Checks (Run Automatically)
 
-Before ANY push to remote, ALL of these tests MUST pass:
+Before any commit is accepted, the following checks run automatically:
 
-### 1. **Unit Tests**
+### 1. Code Formatting
+- **Ruff Format**: Ensures consistent code style
+- **Line Length**: Max 88 characters
+- **Import Sorting**: Automatic organization
+
+### 2. Linting & Static Analysis
+- **Ruff Linter**: Catches errors, bugs, and style issues
+- **PyUpgrade**: Ensures modern Python syntax
+- **Security Checks**: Detects security vulnerabilities
+
+### 3. Type Checking
+- **MyPy**: Strict static type checking
+- **Type Coverage**: All functions must be typed
+- **No Any**: Strict avoidance of `Any` type
+
+### 4. Code Quality
+- **Complexity Checks**: Cyclomatic complexity limits
+- **Code Duplication**: Detects copy-paste code
+- **Best Practices**: Enforces Python best practices
+
+---
+
+## Pre-Push Checks (Run Automatically)
+
+Before any push to remote, all of these tests must pass:
+
+### 1. Unit Tests
 ```bash
 pytest tests/ -v --tb=short
 ```
-- ✅ All unit tests must pass
-- ✅ No test failures allowed
-- ✅ Test coverage must be maintained
+- All unit tests must pass
+- No test failures allowed
+- Test coverage must be maintained
 
-### 2. **Integration Tests**
+### 2. Integration Tests
 ```bash
 pytest tests/ -m integration -v
 ```
-- ✅ End-to-end functionality verified
-- ✅ Component interactions tested
+- End-to-end functionality verified
+- Component interactions tested
 
-### 3. **Coverage Validation**
+### 3. Coverage Validation
 ```bash
 pytest --cov=src/aceternity_mcp --cov-report=term-missing --cov-fail-under=80
 ```
-- ✅ Minimum 80% code coverage required
-- ✅ Missing coverage reported
+- Minimum 80% code coverage required
+- Missing coverage reported
 
-### 4. **Build Validation**
+### 4. Build Validation
 ```bash
 python -m build --wheel --sdist
 ```
-- ✅ Package builds successfully
-- ✅ No build warnings or errors
+- Package builds successfully
+- No build warnings or errors
 
-### 5. **Import Validation**
+### 5. Import Validation
 ```bash
 python -c "from aceternity_mcp import cli, server, install, uninstall"
 ```
-- ✅ All modules importable
-- ✅ No circular dependencies
+- All modules importable
+- No circular dependencies
 
-### 6. **Registry Validation**
+### 6. Registry Validation
 ```bash
 python scripts/validate_registry.py
 ```
-- ✅ All registry entries valid
-- ✅ Component schemas correct
-- ✅ No broken references
+- All registry entries valid
+- Component schemas correct
+- No broken references
 
-### 7. **Documentation Checks**
-- ✅ All public functions have docstrings
-- ✅ Type hints present
-- ✅ README up to date
+### 7. Documentation Checks
+- All public functions have docstrings
+- Type hints present
+- README up to date
 
 ---
 
-## 🚀 CI/CD Pipeline (GitHub Actions)
+## CI/CD Pipeline (GitHub Actions)
 
 On every push to any branch, GitHub Actions runs:
 
@@ -107,7 +107,7 @@ On every push to any branch, GitHub Actions runs:
 
 ---
 
-## 📦 Required Tools
+## Required Tools
 
 Install all development dependencies:
 
@@ -123,7 +123,7 @@ pip install ruff mypy pytest pytest-cov build
 
 ---
 
-## 🔧 Configuration Files
+## Configuration Files
 
 - `pyproject.toml`: Tool configurations
 - `.pre-commit-config.yaml`: Pre-commit hooks
@@ -133,20 +133,20 @@ pip install ruff mypy pytest pytest-cov build
 
 ---
 
-## ⚠️ Breaking Changes Policy
+## Breaking Changes Policy
 
 If you need to introduce a breaking change:
 
-1. ✅ Update version number (semver major)
-2. ✅ Add migration guide to README
-3. ✅ Deprecation warnings in code (if applicable)
-4. ✅ Update all affected tests
-5. ✅ Document in CHANGELOG
-6. ✅ Get explicit approval via PR review
+1. Update version number (semver major)
+2. Add migration guide to README
+3. Add deprecation warnings in code (if applicable)
+4. Update all affected tests
+5. Document in CHANGELOG
+6. Get explicit approval via PR review
 
 ---
 
-## 🐛 Bug Prevention Checklist
+## Bug Prevention Checklist
 
 Before submitting any code:
 
@@ -162,11 +162,11 @@ Before submitting any code:
 
 ---
 
-## 🎯 Quality Metrics
+## Quality Metrics
 
 | Metric | Target | Enforcement |
 |--------|--------|-------------|
-| Test Coverage | ≥80% | Pre-push block |
+| Test Coverage | >=80% | Pre-push block |
 | Type Coverage | 100% | MyPy strict |
 | Lint Errors | 0 | Pre-commit block |
 | Build Warnings | 0 | CI block |
@@ -174,7 +174,7 @@ Before submitting any code:
 
 ---
 
-## 📞 Emergency Override
+## Emergency Override
 
 In rare cases, you may need to bypass checks:
 
@@ -186,11 +186,11 @@ git commit --no-verify -m "message"
 git push --no-verify
 ```
 
-⚠️ **WARNING**: Bypassing checks will result in immediate CI failure and should only be done in exceptional circumstances with team approval.
+**WARNING**: Bypassing checks will result in immediate CI failure and should only be done in exceptional circumstances with team approval.
 
 ---
 
-## 🔄 Continuous Improvement
+## Continuous Improvement
 
 This quality system evolves. To suggest improvements:
 
@@ -199,4 +199,4 @@ This quality system evolves. To suggest improvements:
 3. Implement via PR
 4. Update this document
 
-**Remember**: These checks exist to help you write better code, not to slow you down. Catch issues early, fix them quickly, and ship with confidence! 🚀
+These checks exist to help you write better code, not to slow you down. Catch issues early, fix them quickly, and ship with confidence.
