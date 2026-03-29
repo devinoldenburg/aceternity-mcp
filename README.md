@@ -27,7 +27,7 @@ Aceternity MCP is a **pipx application** that brings the entire Aceternity UI co
 
 This helps your AI make informed decisions about which components fit your design needs.
 
-## ⚡ Quick Start (60 seconds)
+## ⚡ Quick Start
 
 ```bash
 # 1. Install pipx (one-time setup)
