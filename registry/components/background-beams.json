@@ -12,21 +12,31 @@
     "beams",
     "decorative"
   ],
-  "summary": "A reusable Background Beams background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Background Beams is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An elegant background effect featuring soft, animated light beams that create depth and atmospheric visual interest for hero sections and key content areas.",
+  "detailedDescription": "The Background Beams component creates a sophisticated atmospheric effect through softly glowing light beams that animate subtly across the background. This component adds visual depth and polish without overwhelming foreground content, making it ideal for hero sections, landing pages, and premium UI contexts. The beams feature gentle gradients that fade at the edges, creating a natural, organic appearance reminiscent of light filtering through space. Animation is slow and meditative, with beams drifting lazily to create a sense of calm motion that enhances rather than distracts. The effect uses CSS-based animations for smooth performance, maintaining 60fps playback even on mid-range devices. Color customization allows matching to brand palettes while preserving the ethereal, luminous quality. Multiple beam layers can be configured for varying density and visual complexity. Perfect for SaaS products, creative portfolios, or any context where adding subtle motion and atmospheric depth elevates the user experience. The component works particularly well in dark mode where the luminous beams create striking contrast against dark backgrounds.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Add subtle atmospheric depth to hero sections and landing pages",
+    "Create visual interest through gentle, meditative motion",
+    "Enhance perceived quality and polish of modern interfaces",
+    "Provide dynamic backgrounds that don't compete with foreground content",
+    "Support dark mode designs with luminous, glowing effects"
   ],
   "behavior": [
-    "Uses timed animation sequences for dynamic visual presence"
+    "Animates multiple light beams with slow, continuous drifting motion",
+    "Applies soft gradient fades at beam edges for natural appearance",
+    "Loops seamlessly without visible breaks or animation resets",
+    "Maintains smooth 60fps performance through CSS-based animations",
+    "Supports color customization for brand-specific styling",
+    "Configurable beam density and animation speed",
+    "Scales responsively to different viewport sizes"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Soft, glowing light beams with gradient edges",
+    "Slow, meditative animation creating calm atmosphere",
+    "Luminous quality particularly effective in dark contexts",
+    "Subtle depth perception through layered beam arrangement",
+    "Clean, modern aesthetic suitable for premium interfaces",
+    "Customizable color palettes maintaining ethereal appearance"
   ],
   "difficulty": "beginner",
   "designTone": [

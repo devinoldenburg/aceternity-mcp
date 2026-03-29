@@ -8,18 +8,28 @@
   "tags": [
     "timeline"
   ],
-  "summary": "A reusable Timeline component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Timeline is a reusable scroll interaction component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for feature-sections, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A vertical timeline component with a scroll-progress fill line and milestone entries for showcasing chronological content.",
+  "detailedDescription": "Timeline creates a scroll-driven vertical timeline with entries arranged chronologically. The component features a central vertical line (2px width) with a gradient fill that grows from top to bottom based on scroll progress using Framer Motion's useScroll and useTransform hooks. Each timeline entry consists of a sticky header on the left with a circular marker (10px with inner 4px dot) and a content section on the right. The timeline measures its own height and maps scroll position (from 10% to 50% offset) to the fill line height and opacity. The gradient line transitions from transparent through purple-500 and blue-500 to transparent, creating a glowing effect at the leading edge. The vertical line uses a mask image for soft fade at top and bottom. Desktop layout shows large titles (5xl) next to markers, while mobile shows smaller titles (2xl) above content. Entries are spaced with generous padding (pt-40 on desktop) for scroll room. This component is ideal for changelogs, journey timelines, company history, project milestones, or any chronological narrative.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Display chronological content with visual progress indicator",
+    "Showcase milestones or history with scroll-driven animations",
+    "Create engaging narrative flow through time-based content"
   ],
   "behavior": [
-    "Reacts to scroll progress with transition or reveal effects"
+    "Tracks scroll progress to animate fill line height",
+    "Fades in fill line opacity from 0 to 1 on scroll start",
+    "Uses sticky positioning for entry markers during scroll",
+    "Measures container height for accurate progress calculation",
+    "Applies gradient mask for soft line edges",
+    "Responsive layout switches between desktop/mobile arrangements"
   ],
   "visualCharacteristics": [
-    "Subtle"
+    "Vertical 2px gradient line (purple to blue)",
+    "Circular markers at each entry point",
+    "Fill line grows with scroll progress",
+    "Large bold typography for entry titles",
+    "Mask gradient fade at line top/bottom",
+    "Dark mode compatible styling"
   ],
   "difficulty": "advanced",
   "designTone": [

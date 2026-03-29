@@ -13,18 +13,31 @@
     "parallax",
     "scroll"
   ],
-  "summary": "A reusable Hero Parallax component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Hero Parallax is a reusable hero/section component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A dynamic parallax hero featuring multiple rows of product images that scroll horizontally at different speeds, creating a 3D depth effect with smooth spring physics animations.",
+  "detailedDescription": "The Hero Parallax component creates a stunning hero section where product images scroll horizontally in multiple rows as users scroll vertically. Each row moves at a different speed and direction - some rows scroll left while others scroll right - creating a convincing parallax depth effect. The component uses Framer Motion's spring physics for smooth, natural motion that feels weighty and responsive. As users scroll, the entire hero section also rotates slightly on X and Z axes, adding to the 3D illusion. The opacity fades in smoothly as scrolling begins, creating a polished entrance effect. Products are arranged in rows of 5, with automatic slicing of the product array. Perfect for showcasing product catalogs, portfolio work, client logos, or any image collection where dynamic movement enhances visual appeal. The effect creates immediate visual interest and encourages users to scroll and explore the full animation sequence.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create dynamic parallax hero with multi-directional scrolling",
+    "Showcase product collections with engaging motion",
+    "Add 3D depth through varied scroll speeds and rotations",
+    "Encourage scrolling exploration through rewarding animation",
+    "Present image collections in memorable, dynamic format"
   ],
   "behavior": [
-    "Reacts to scroll progress with transition or reveal effects"
+    "Arranges products in multiple horizontal scrolling rows",
+    "Scrolls rows at different speeds and directions",
+    "Applies spring physics for smooth, natural motion",
+    "Rotates hero section on X and Z axes during scroll",
+    "Fades in opacity smoothly as scroll begins",
+    "Tracks scroll progress with motion values",
+    "Automatically slices products into rows of 5"
   ],
   "visualCharacteristics": [
-    "Landing-page friendly"
+    "Multiple rows of images scrolling in opposite directions",
+    "3D parallax depth effect from varied scroll speeds",
+    "Smooth spring-based motion feeling natural and weighty",
+    "Dynamic rotation adding dimensional interest",
+    "Polished fade-in entrance effect",
+    "Engaging, memorable hero presentation"
   ],
   "difficulty": "advanced",
   "designTone": [

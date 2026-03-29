@@ -11,20 +11,31 @@
     "showcase",
     "stack"
   ],
-  "summary": "A Card Stack card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Card Stack is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, testimonials contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A testimonial and content showcase component featuring cards that transition in a stacked arrangement, creating an engaging carousel-like experience for displaying reviews, features, or user stories.",
+  "detailedDescription": "The Card Stack component presents content in an elegant stacked arrangement where cards transition smoothly from one to the next, creating a compact yet engaging display format. Particularly effective for testimonials, this component shows multiple pieces of content in a limited space while maintaining visual interest through smooth transitions. The stack effect creates depth perception with cards appearing layered behind one another, and transitions can include sliding, fading, or rotating animations that feel natural and polished. Navigation controls allow users to manually advance through cards, or automatic cycling can be enabled for passive viewing. Each card maintains consistent styling while supporting varied content including quotes, author information, photos, ratings, and call-to-action buttons. The component is optimized for performance with smooth GPU-accelerated transitions. Perfect for testimonial sections, case study showcases, feature highlights, or any context where presenting multiple similar content items in sequence enhances the narrative without requiring excessive vertical space.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Display multiple testimonials or content pieces in compact, space-efficient format",
+    "Create engaging sequential presentations through smooth card transitions",
+    "Showcase customer reviews, case studies, or feature highlights effectively",
+    "Provide both manual navigation and automatic cycling options for flexibility",
+    "Maintain visual interest through stacked depth and polished animations"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Arranges cards in stacked formation with visible depth layering",
+    "Transitions between cards with smooth sliding, fading, or rotating animations",
+    "Supports manual navigation through arrow buttons or pagination dots",
+    "Optionally cycles through cards automatically at configurable intervals",
+    "Maintains consistent card styling across all stack items",
+    "Uses GPU-accelerated animations for smooth 60fps transitions",
+    "Adapts stack height and card sizing responsively"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive"
+    "Stacked card arrangement creating depth through layering",
+    "Smooth, polished transitions between content items",
+    "Compact vertical footprint maximizing content density",
+    "Professional testimonial-focused aesthetic",
+    "Configurable from subtle to dynamic animation styles",
+    "Clean, readable layouts emphasizing content clarity"
   ],
   "difficulty": "beginner",
   "designTone": [

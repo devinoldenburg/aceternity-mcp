@@ -11,21 +11,28 @@
     "decorative",
     "noise"
   ],
-  "summary": "A reusable Noise Background background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Noise Background is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An animated background with moving gradient orbs and noise texture overlay for atmospheric effects.",
+  "detailedDescription": "Noise Background creates a dynamic animated background using multiple gradient layers that follow smooth spring-animated cursor movement. The component uses motion values for x/y position with spring physics (stiffness: 100, damping: 30) for fluid motion. Multiple GradientLayer components render radial gradients at calculated positions, each with configurable color, opacity, and multiplier for parallax depth effect. The useMotionTemplate creates dynamic CSS background strings updating in real-time. A noise texture overlay (configurable intensity, default 0.2) adds film grain texture. Top gradient strip uses separate transform (multiplier 0.1, offset -50) for additional depth. Animation speed controls motion velocity (default 0.1). Backdrop blur option adds frosted glass effect. The component uses requestAnimationFrame via useAnimationFrame for continuous smooth updates. Configurable gradient colors default to pink/blue/orange palette. This creates an organic, lava-lamp-like background suitable for hero sections, landing pages, or any context where flowing color gradients add visual interest without overwhelming content.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Create organic animated gradient backgrounds",
+    "Add depth with multi-layer parallax gradients",
+    "Provide atmospheric noise texture overlay"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Tracks motion values with spring smoothing",
+    "Renders multiple gradient layers at offsets",
+    "Applies noise texture overlay",
+    "Updates positions via requestAnimationFrame",
+    "Configurable color palette and speed",
+    "Optional backdrop blur effect"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Flowing radial gradient orbs",
+    "Noise grain texture overlay",
+    "Multi-layer parallax depth",
+    "Pink/blue/orange default colors",
+    "Smooth spring-animated motion",
+    "Optional top gradient strip"
   ],
   "difficulty": "beginner",
   "designTone": [

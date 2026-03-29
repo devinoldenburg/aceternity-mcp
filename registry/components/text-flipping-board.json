@@ -12,20 +12,28 @@
     "text",
     "typography"
   ],
-  "summary": "A Text Flipping Board text effect for expressive headings, highlights, and animated content emphasis.",
-  "detailedDescription": "Text Flipping Board is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A split-flap display board with 6x22 character grid showing animated flipping text with accent color highlights.",
+  "detailedDescription": "Text Flipping Board recreates vintage airport/train station split-flap displays using CSS animations. The 6-row x 22-column grid renders each character as individual FlapCell component. Characters cycle through FLAP_CHARS set (A-Z, 0-9, symbols) before landing on target. Each cell has top/bottom flap halves that rotate along horizontal axis, creating mechanical flip illusion. Accent colors (red, orange, yellow, green, blue, violet, white) randomly highlight 20% of scramble frames. Timing uses staggered delays: 30ms per column, 20ms per row, 55ms per step. Flip duration is 350ms per character. Text size clamps from 6px to 22px based on viewport. This creates nostalgic, mechanical text transition effect ideal for departure boards, retro aesthetics, or any context where physical flip animation adds character and visual interest beyond digital transitions.",
   "purpose": [
-    "Draw attention to key headlines and supporting copy",
-    "Communicate brand tone through animated typography",
-    "Increase visual rhythm in content-heavy sections"
+    "Recreate mechanical split-flap display effect",
+    "Animate text with realistic flip transitions",
+    "Add accent color highlights during animation"
   ],
   "behavior": [
-    "Uses timed animation sequences for dynamic visual presence"
+    "Cycles characters through flip sequence",
+    "Staggers timing by row and column",
+    "Applies random accent colors",
+    "Rotates flap halves on X-axis",
+    "Uses 350ms flip duration",
+    "Responsive text sizing"
   ],
   "visualCharacteristics": [
-    "Expressive",
-    "Typographic",
-    "Attention-guiding"
+    "6x22 character grid",
+    "Split-flap mechanical animation",
+    "Random color accent flashes",
+    "Vintage airport display aesthetic",
+    "Clamped font sizing",
+    "Staggered character timing"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -10,22 +10,28 @@
     "decorative",
     "scales"
   ],
-  "summary": "A reusable Scales background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Scales is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A background pattern component creating repeating linear gradient stripes at configurable angles and sizes.",
+  "detailedDescription": "Scales creates a subtle striped background pattern using CSS repeating-linear-gradient. The component renders 1px stripes with 50% transparent gaps, creating a scales-like texture. Orientation controls gradient angle: horizontal (0deg), vertical (90deg), or diagonal (315deg default). Size prop sets the pattern repeat size (default 10px). Colors use CSS custom properties - neutral-950/10 in light mode, white/10 in dark mode, with optional custom color override. The pattern uses backgroundSize for precise control. ScalesContainer wrapper provides relative positioning with z-10 content layer, allowing overlay on any background. This creates subtle texture ideal for section backgrounds, card overlays, or any context where gentle pattern adds visual interest without overwhelming content. The effect is purely decorative with no animation, providing consistent appearance across devices.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Add subtle striped texture to backgrounds",
+    "Provide configurable pattern orientation",
+    "Create visual depth through pattern overlay"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Renders repeating linear gradient pattern",
+    "Supports three orientation angles",
+    "Uses CSS custom properties for theming",
+    "Applies 10% opacity for subtlety",
+    "Wraps content with z-index layering",
+    "No animation - static decorative effect"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Subtle",
-    "Landing-page friendly"
+    "1px striped pattern with gaps",
+    "Configurable orientation (H/V/diagonal)",
+    "10% opacity neutral colors",
+    "10px default pattern size",
+    "Dark mode aware theming",
+    "Subtle texture overlay"
   ],
   "difficulty": "beginner",
   "designTone": [

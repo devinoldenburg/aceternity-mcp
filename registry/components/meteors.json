@@ -10,21 +10,28 @@
     "decorative",
     "meteors"
   ],
-  "summary": "A reusable Meteors background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Meteors is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A background component with multiple meteor streaks that fall from top with random delays and CSS animations.",
+  "detailedDescription": "Meteors creates a shower of falling stars using pure CSS animations. The component generates a configurable number of meteor elements (default 20), each positioned absolutely across an 800px horizontal range centered in the container. Meteors start 40px above the container top and fall using the 'meteor-effect' animation. Each meteor is a 0.5px rotated square (45deg) with slate-500 background and white shadow border. A ::before pseudo-element creates the tail - a 50px wide gradient line from #64748b to transparent extending left from the meteor. Animation duration is randomized between 5-10 seconds, with random delay 0-5 seconds, creating organic non-repeating patterns. The animation loops infinitely with CSS animation property. Meteors are evenly distributed horizontally using index-based positioning (idx * 800/count - 400). The component fades in over 0.5s on mount using Framer Motion. This creates a peaceful, cosmic atmosphere suitable for dark-themed backgrounds, wish-making interfaces, or any context where falling stars add magical ambiance without overwhelming foreground content.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Create falling star background atmosphere",
+    "Generate random meteor shower patterns",
+    "Add cosmic ambiance to dark backgrounds"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Generates configurable meteor count",
+    "Positions meteors across horizontal range",
+    "Applies random animation duration and delay",
+    "Loops meteor fall animations infinitely",
+    "Fades in component on mount",
+    "Uses CSS ::before for meteor tails"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Small rotated square meteors (0.5px)",
+    "50px gradient tail trails",
+    "Slate-500 with white border shadow",
+    "Evenly distributed horizontal positions",
+    "Continuous falling animation",
+    "Fades in over 0.5 seconds"
   ],
   "difficulty": "beginner",
   "designTone": [

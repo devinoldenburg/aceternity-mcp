@@ -10,21 +10,31 @@
     "gooey",
     "input"
   ],
-  "summary": "A Gooey Input form component that improves data entry UX with clear states and modern interactions.",
-  "detailedDescription": "Gooey Input is a reusable form/input component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for forms, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A playful form input component featuring gooey, liquid-like animations that create organic, blobby transitions and interactions, adding fun personality to data entry experiences.",
+  "detailedDescription": "The Gooey Input component transforms standard form inputs into playful, interactive elements with gooey, liquid-like animations. When users interact with the input - focusing, typing, or submitting - the component responds with organic, blobby transitions that feel almost alive. The gooey effect is achieved through SVG filters or clever CSS blur/contrast combinations that make elements appear to merge and separate like liquid droplets. Visual feedback includes the input border appearing to stretch and flow, submit buttons that morph organically on click, and success states that bubble up satisfyingly. The effect maintains full functionality while adding delightful personality to otherwise mundane form interactions. Perfect for playful brand identities, creative portfolios, apps targeting younger audiences, or any context where adding fun, unexpected interactions to forms enhances engagement. The component balances whimsy with usability, ensuring the gooey effects enhance rather than impede the core data entry function.",
   "purpose": [
-    "Improve clarity and confidence while entering information",
-    "Provide interactive feedback during form completion",
-    "Increase conversion for signup and contact flows"
+    "Transform mundane form inputs with playful gooey animations",
+    "Add organic, liquid-like personality to data entry",
+    "Create delightful micro-interactions during form use",
+    "Support playful, fun brand identities through interaction design",
+    "Balance whimsy with usability maintaining core function"
   ],
   "behavior": [
-    "Supports interaction states for typing, focus, submit, or upload"
+    "Applies gooey SVG filters creating liquid appearance",
+    "Animates input borders stretching and flowing on focus",
+    "Morphs buttons organically on click interactions",
+    "Creates bubbling success states after submission",
+    "Maintains full form functionality despite visual effects",
+    "Responds to typing, focus, and submit states",
+    "Uses blur/contrast techniques for gooey illusion"
   ],
   "visualCharacteristics": [
-    "Utility-first",
-    "Conversion-oriented",
-    "State-driven",
-    "Subtle"
+    "Organic, liquid-like animations feeling alive",
+    "Playful, blobby transitions during interactions",
+    "Stretching, flowing borders suggesting viscosity",
+    "Satisfying, bubbly feedback on actions",
+    "Fun, whimsical aesthetic adding personality",
+    "Delightful effects enhancing form engagement"
   ],
   "difficulty": "beginner",
   "designTone": [

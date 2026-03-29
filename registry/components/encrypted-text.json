@@ -11,20 +11,31 @@
     "text",
     "typography"
   ],
-  "summary": "A Encrypted Text text effect for expressive headings, highlights, and animated content emphasis.",
-  "detailedDescription": "Encrypted Text is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A cyberpunk-inspired text effect that simulates decryption by rapidly cycling through random characters before revealing the final text, creating a high-tech, mysterious visual moment.",
+  "detailedDescription": "The Encrypted Text component creates a captivating decryption effect inspired by cyberpunk and hacker aesthetics. When triggered (on page load, scroll into view, or hover), the text initially appears as rapidly cycling random characters - numbers, symbols, and letters - that gradually resolve into the final readable text. This creates a moment of mystery and revelation that feels like watching data decrypt in real-time. The effect uses character scrambling algorithms that progressively lock in correct characters from left to right or based on configurable patterns. Animation speed, scramble intensity, and trigger conditions are all customizable. The visual effect evokes themes of technology, security, data, and digital transformation. Perfect for tech product launches, cybersecurity contexts, data-focused brands, or any design wanting to convey cutting-edge technology and digital sophistication. The effect creates memorable micro-interactions that users notice and appreciate, adding personality and thematic reinforcement to technical content.",
   "purpose": [
-    "Draw attention to key headlines and supporting copy",
-    "Communicate brand tone through animated typography",
-    "Increase visual rhythm in content-heavy sections"
+    "Create cyberpunk-inspired decryption text animations",
+    "Convey themes of technology, security, and digital transformation",
+    "Generate memorable reveal moments through character scrambling",
+    "Support tech-focused and cybersecurity brand identities",
+    "Add mysterious, high-tech personality to text content"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Displays random scrambling characters before revealing final text",
+    "Progressively locks in correct characters during decryption",
+    "Triggers on page load, scroll into view, or hover interaction",
+    "Animates character cycling at configurable speeds",
+    "Supports various scramble patterns and reveal sequences",
+    "Maintains text accessibility with semantic HTML structure",
+    "Returns to scrambled state on re-trigger if configured"
   ],
   "visualCharacteristics": [
-    "Expressive",
-    "Typographic",
-    "Attention-guiding"
+    "Rapidly cycling random characters creating scramble effect",
+    "Progressive reveal building anticipation and interest",
+    "Cyberpunk, hacker-inspired aesthetic",
+    "High-tech, mysterious visual quality",
+    "Memorable animation creating thematic reinforcement",
+    "Digital, data-driven appearance suitable for tech contexts"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -11,20 +11,31 @@
     "text",
     "typography"
   ],
-  "summary": "A Colourful Text text effect for expressive headings, highlights, and animated content emphasis.",
-  "detailedDescription": "Colourful Text is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A vibrant text effect component that applies animated gradient colors to typography, creating eye-catching, dynamic text that shifts through hues for memorable visual impact.",
+  "detailedDescription": "The Colourful Text component brings typography to life through animated gradient colors that flow through text characters, creating vibrant, attention-grabbing visual effects. This component uses CSS background-clip with gradient animations to apply shifting colors that move through the text, creating a mesmerizing effect that draws the eye. The gradient can cycle through multiple colors, creating smooth transitions that feel organic and fluid. Animation speeds are configurable from slow, subtle shifts to rapid, energetic color changes. The effect works particularly well for headlines, call-to-action text, logos, or any typography that needs to stand out dramatically. The component maintains text selectability and accessibility despite the animated visual treatment. Performance is optimized through GPU-accelerated CSS animations, ensuring smooth color transitions without impacting page performance. Perfect for creative portfolios, marketing landing pages, product launches, or any context where bold, memorable typography creates impact. The effect pairs well with dark backgrounds where the vibrant colors achieve maximum contrast and visual pop.",
   "purpose": [
-    "Draw attention to key headlines and supporting copy",
-    "Communicate brand tone through animated typography",
-    "Increase visual rhythm in content-heavy sections"
+    "Create eye-catching, vibrant text effects with animated gradient colors",
+    "Draw immediate attention to headlines, CTAs, or key messaging",
+    "Add dynamic, living quality to typography through color motion",
+    "Generate memorable visual impact for brand-forward designs",
+    "Support creative, bold design directions with colorful expression"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Applies gradient colors to text using background-clip technique",
+    "Animates gradient position creating flowing color transitions",
+    "Cycles through multiple colors with smooth hue transitions",
+    "Maintains text selectability despite animated visual treatment",
+    "Uses GPU-accelerated CSS for smooth 60fps color animations",
+    "Configurable animation speed, direction, and color palette",
+    "Preserves accessibility with proper contrast and semantic markup"
   ],
   "visualCharacteristics": [
-    "Expressive",
-    "Typographic",
-    "Attention-guiding"
+    "Vibrant, flowing gradient colors moving through text characters",
+    "Dynamic, living typography with continuous color motion",
+    "High-impact visual effect demanding attention",
+    "Smooth color transitions creating mesmerizing quality",
+    "Bold, creative aesthetic suitable for standout designs",
+    "Maximum visual pop against dark backgrounds"
   ],
   "difficulty": "beginner",
   "designTone": [

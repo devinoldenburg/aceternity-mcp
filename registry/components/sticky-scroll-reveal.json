@@ -11,17 +11,29 @@
     "scroll",
     "sticky"
   ],
-  "summary": "A reusable Sticky Scroll Reveal component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Sticky Scroll Reveal is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A scroll-driven component that displays content items sequentially with a sticky preview panel and color-changing backgrounds.",
+  "detailedDescription": "Sticky Scroll Reveal creates an interactive scroll experience where content items are revealed sequentially as the user scrolls. The component uses Framer Motion's useScroll hook to track scroll progress within a scrollable container, mapping scroll position to active card indices. As users scroll, the component calculates which content item is closest based on breakpoint positions (dividing scroll range into equal segments per item). The active item triggers two visual changes: the background color cycles through a predefined array of dark colors (slate-900, black, neutral-900), and a sticky preview panel on the right displays the active item's content. Text content (titles and descriptions) fades in/out based on active state - active items show at full opacity while inactive items dim to 30%. The preview panel uses a sticky position to remain visible while scrolling, with a configurable gradient background that also cycles through an array based on active index. This creates an engaging storytelling experience perfect for feature showcases, product highlights, or step-by-step narratives.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create scroll-driven content reveal sequences",
+    "Display feature highlights with sticky visual previews",
+    "Guide users through sequential content narratives"
   ],
   "behavior": [
-    "Reacts to scroll progress with transition or reveal effects"
+    "Tracks scroll progress using Framer Motion useScroll",
+    "Calculates active item based on scroll position breakpoints",
+    "Cycles background colors through predefined array",
+    "Updates sticky preview panel content on active change",
+    "Fades text opacity based on active/inactive state",
+    "Uses sticky positioning for persistent preview panel"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Scrollable left column with text content",
+    "Sticky right panel showing active content preview",
+    "Background color shifts between dark tones",
+    "Active items at full opacity, inactive at 30%",
+    "Gradient backgrounds cycle with content",
+    "Rounded container with generous padding"
+  ],
   "difficulty": "intermediate",
   "designTone": [
     "modern"

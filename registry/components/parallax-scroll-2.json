@@ -11,17 +11,29 @@
     "parallax",
     "scroll"
   ],
-  "summary": "A reusable Parallax Scroll 2 component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Parallax Scroll 2 is a reusable scroll interaction component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A three-column image grid with parallax scroll effects that transform and rotate images as users scroll.",
+  "detailedDescription": "Parallax Scroll 2 creates a responsive image gallery with three columns that apply different parallax transformations based on scroll position. The component divides images into three equal parts, displaying each part in a vertical column. The first and third columns apply scroll-based transformations using Framer Motion's useScroll and useTransform hooks - the first column translates upward and leftward while rotating counter-clockwise, while the third column translates upward and rightward while rotating clockwise. The middle column remains static, creating visual contrast. All transformations are tied to scroll progress within a scrollable container with a 40rem height. Images are displayed as 320px tall cards with rounded corners and object-fit styling. The layout uses a max-width 5xl container with generous padding (py-40, px-10) and 10-unit gaps between columns. This creates a dynamic gallery experience where images appear to move and rotate at different rates as users scroll, adding depth and visual interest to image showcases or portfolios.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Display image galleries with dynamic scroll-based animations",
+    "Create visual depth through differential parallax movement",
+    "Showcase portfolios or product images with engaging motion"
   ],
   "behavior": [
-    "Reacts to scroll progress with transition or reveal effects"
+    "Divides images into three columns with equal distribution",
+    "Applies scroll-based Y translation to first and third columns",
+    "Rotates first column counter-clockwise and third column clockwise during scroll",
+    "Translates first column leftward and third column rightward",
+    "Keeps middle column static for visual contrast",
+    "Uses scroll container offset for parallax calculations"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Three-column responsive grid layout",
+    "Rounded image cards (320px height)",
+    "Outer columns rotate and translate on scroll",
+    "Center column remains stationary",
+    "Generous vertical padding for scroll space",
+    "Dark mode compatible styling"
+  ],
   "difficulty": "advanced",
   "designTone": [
     "modern"

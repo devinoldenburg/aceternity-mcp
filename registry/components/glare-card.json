@@ -11,20 +11,31 @@
     "glare",
     "showcase"
   ],
-  "summary": "A Glare Card card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Glare Card is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A sophisticated card component featuring a dynamic glare effect that simulates light reflecting off a glossy surface, with the glare position responding to cursor movement for realistic interactive feedback.",
+  "detailedDescription": "The Glare Card component creates a convincing illusion of light reflecting off a glossy, reflective card surface through a dynamic glare effect that responds to cursor position. As users move their mouse over the card, a bright gradient glare tracks the cursor, simulating how light would reflect off a physical glossy surface like a photograph or laminated card. The effect uses radial gradients with careful opacity control to create the realistic glare appearance. The glare intensity, size, and falloff are configurable to achieve anything from subtle sheen to bold glossy reflection. Combined with subtle 3D transforms, the card can also tilt slightly toward the cursor, enhancing the physical illusion. The effect includes smooth transitions that prevent the glare from feeling jittery or mechanical. Perfect for product showcases, photo portfolios, premium content cards, or any context where adding tactile, physical realism through light simulation enhances perceived quality. The glare effect creates an immediate impression of polish and attention to detail that elevates standard card presentations.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Simulate realistic light glare reflecting off glossy card surfaces",
+    "Create tactile, physical illusion through light reflection",
+    "Respond to cursor movement with dynamic glare positioning",
+    "Add premium polish through sophisticated visual effects",
+    "Enhance perceived quality with realistic light simulation"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Tracks cursor position over card surface",
+    "Positions radial gradient glare at cursor location",
+    "Simulates light reflection off glossy physical surface",
+    "Optionally tilts card toward cursor for 3D effect",
+    "Applies smooth interpolation preventing jittery motion",
+    "Configurable glare intensity, size, and falloff",
+    "Returns smoothly to neutral when cursor exits"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive"
+    "Dynamic glare tracking cursor like light reflection",
+    "Glossy, reflective surface appearance",
+    "Realistic light simulation creating physical illusion",
+    "Smooth, polished motion quality",
+    "Premium aesthetic suggesting high-quality materials",
+    "Sophisticated effect elevating standard card presentations"
   ],
   "difficulty": "beginner",
   "designTone": [

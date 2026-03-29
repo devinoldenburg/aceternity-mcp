@@ -11,21 +11,31 @@
     "decorative",
     "gradient"
   ],
-  "summary": "A reusable Background Gradient background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Background Gradient is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A versatile gradient background component that creates smooth color transitions and depth for modern interfaces, supporting both static and animated gradient effects.",
+  "detailedDescription": "The Background Gradient component provides a foundational visual effect used throughout modern interface design - smooth, pleasing color transitions that add depth and visual interest without complexity. This component supports both static gradient backgrounds for clean, professional appearances and animated gradients that subtly shift colors over time for dynamic visual appeal. The gradient can be configured in multiple directions (linear, radial, conic) and supports multi-stop color definitions for complex transitions. Color blending is carefully tuned to avoid banding artifacts, ensuring smooth transitions even on displays with limited color depth. The component includes options for gradient angle, position, and spread, allowing precise control over the visual effect. Animated variants use slow, subtle color shifts that create a living, breathing quality without becoming distracting. Perfect for hero sections, card backgrounds, button states, or any context where color transitions enhance the design. The component integrates seamlessly with Tailwind CSS utility classes while providing additional flexibility for custom gradient definitions. Performance is optimized through CSS-native gradients, requiring no JavaScript animation for basic functionality.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Provide foundational gradient backgrounds for modern interface design",
+    "Create visual depth and interest through smooth color transitions",
+    "Support both static professional and dynamic animated gradient styles",
+    "Enable precise gradient control with angle, position, and color stops",
+    "Integrate seamlessly with Tailwind CSS while extending gradient capabilities"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Renders smooth gradient transitions using CSS native gradient functions",
+    "Supports linear, radial, and conic gradient types",
+    "Animates color positions and hues for dynamic gradient effects",
+    "Prevents color banding through careful gradient interpolation",
+    "Allows multi-stop color definitions for complex transitions",
+    "Responds to configuration for angle, direction, and color values",
+    "Maintains performance through CSS-only gradient rendering"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Smooth, banding-free color transitions",
+    "Clean, professional appearance suitable for any context",
+    "Versatile styling from subtle to bold color combinations",
+    "Optional subtle animation creating living, dynamic quality",
+    "Directional control supporting horizontal, vertical, diagonal, and radial patterns",
+    "Modern aesthetic that enhances perceived design quality"
   ],
   "difficulty": "beginner",
   "designTone": [

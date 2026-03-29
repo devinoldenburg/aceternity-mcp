@@ -11,18 +11,28 @@
     "shooting",
     "stars"
   ],
-  "summary": "A reusable Shooting Stars component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Shooting Stars is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A background component that generates random shooting stars with customizable speed, color, and spawn timing.",
+  "detailedDescription": "Shooting Stars creates an animated background effect with streaks of light that shoot across the screen from random edge positions. Each shooting star spawns at a random point along one of the four screen edges and travels diagonally across the viewport at a configurable speed. The stars use SVG rendering with customizable width, height, and colors for both the star body and trail. The component uses requestAnimationFrame for smooth animation, updating star positions based on their angle and speed values. Stars scale up as they travel, creating a sense of depth and perspective. When stars move off-screen, they are removed and new ones spawn after random delays within configurable min/max ranges. The shooting star angles are determined by their spawn edge (45° from top, 135° from right, 225° from bottom, 315° from left). This creates a dynamic, ever-changing background that adds motion and visual interest without overwhelming foreground content. Ideal for hero sections, landing pages, or any context where a subtle cosmic atmosphere enhances the design.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create dynamic animated background with moving light streaks",
+    "Add subtle motion and depth to page backgrounds",
+    "Generate organic, non-repeating visual interest"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Spawns shooting stars from random edge positions",
+    "Animates stars diagonally across viewport using requestAnimationFrame",
+    "Scales stars proportionally to distance traveled",
+    "Removes stars when they exit screen bounds",
+    "Randomizes spawn timing between min/max delay values",
+    "Randomizes speed between configurable range"
   ],
   "visualCharacteristics": [
-    "Landing-page friendly"
+    "Diagonal light streaks crossing the screen",
+    "Stars grow larger as they travel (perspective effect)",
+    "Customizable star and trail colors",
+    "Random spawn points from all four edges",
+    "Continuous, non-looping organic motion",
+    "Full-width absolute positioning over content"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -11,17 +11,32 @@
     "code",
     "typography"
   ],
-  "summary": "A reusable Code Block component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Code Block is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A polished code display component with syntax highlighting, line numbers, copy functionality, and optional animations for presenting code snippets, tutorials, and documentation examples beautifully.",
+  "detailedDescription": "The Code Block component transforms plain code snippets into beautifully formatted, syntax-highlighted presentations suitable for documentation, tutorials, blogs, and developer-focused content. Built on react-syntax-highlighter, this component supports numerous programming languages with accurate syntax highlighting that makes code scannable and readable. Features include optional line numbers for easy reference, a copy-to-clipboard button for user convenience, language labels identifying the code type, and customizable themes matching light or dark mode interfaces. The component can include subtle animations like fade-in reveals or typing effects for engaging presentations. Code blocks support horizontal scrolling for long lines while maintaining layout integrity. Styling options include rounded corners, shadows, borders, and background treatments that elevate code from functional to visually appealing. Perfect for technical documentation, developer blogs, educational content, API references, or any context where presenting code clearly and attractively enhances comprehension and engagement. The component respects accessibility with proper semantic markup and keyboard-navigable copy buttons.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Present code snippets with accurate syntax highlighting for readability",
+    "Enhance technical documentation and tutorials with polished code displays",
+    "Provide copy-to-clipboard functionality for user convenience",
+    "Support multiple programming languages with appropriate highlighting",
+    "Make code visually appealing while maintaining clarity and accuracy"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Applies syntax highlighting based on detected or specified language",
+    "Displays optional line numbers for code reference and discussion",
+    "Provides copy-to-clipboard button with visual feedback on success",
+    "Shows language label identifying code type for context",
+    "Enables horizontal scrolling for lines exceeding container width",
+    "Supports optional reveal or typing animations for engagement",
+    "Maintains proper code formatting and indentation"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Clean, readable syntax highlighting with customizable color themes",
+    "Professional code presentation suitable for documentation",
+    "Optional line numbers and language labels for clarity",
+    "Polished styling with borders, shadows, and backgrounds",
+    "Light and dark mode support for interface consistency",
+    "Accessible design with proper contrast and keyboard navigation"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern",

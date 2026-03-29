@@ -9,18 +9,32 @@
     "hover",
     "tooltip"
   ],
-  "summary": "A reusable Animated Tooltip component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Animated Tooltip is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An interactive tooltip component that follows cursor movement with smooth animations, revealing contextual information, images, or rich content on hover.",
+  "detailedDescription": "The Animated Tooltip component elevates traditional hover tooltips into an engaging, dynamic interaction that reveals contextual information with fluid motion. Unlike static tooltips that simply appear, this component tracks cursor movement and animates into position, creating a more polished and intentional feel. The tooltip can display various content types including text, images, icons, or even complex nested components, making it versatile for different use cases. The signature feature is its mouse-following behavior - the tooltip position updates smoothly as the cursor moves, with configurable offset distances to prevent overlap with the trigger element. Animation typically combines fade-in effects with subtle scale or slide transforms for a natural appearance. The component includes intelligent positioning logic that detects viewport edges and adjusts placement to keep tooltips fully visible. Perfect for providing additional context, showing preview content, explaining features, or revealing supplementary information without cluttering the interface. The component respects accessibility standards by supporting keyboard focus states and screen reader announcements, ensuring the information is available to all users regardless of interaction method.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Provide contextual information and explanations without permanent interface clutter",
+    "Reveal additional details, previews, or supplementary content on demand",
+    "Enhance UX by making help text and explanations available exactly when needed",
+    "Create engaging micro-interactions that feel responsive and polished",
+    "Support both simple text tooltips and rich content with images or components"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback",
-    "Uses timed animation sequences for dynamic visual presence"
+    "Appears smoothly on hover or focus with configurable animation timing",
+    "Follows cursor movement with smooth position updates and easing",
+    "Intelligently detects viewport edges and adjusts placement to remain visible",
+    "Supports multiple positioning options (top, bottom, left, right, auto)",
+    "Maintains visibility while cursor remains on trigger or tooltip itself",
+    "Dismisses smoothly when cursor exits both trigger and tooltip areas",
+    "Supports keyboard navigation and screen reader accessibility"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Smooth, fluid animations that feel responsive and intentional",
+    "Clean, readable design with appropriate contrast and typography",
+    "Flexible content area supporting text, images, and complex layouts",
+    "Subtle shadows or borders for clear visual separation from background",
+    "Configurable styling to match brand identity and design system",
+    "Responsive positioning that adapts to available viewport space"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

@@ -11,20 +11,31 @@
     "text",
     "typography"
   ],
-  "summary": "A Canvas Text text effect for expressive headings, highlights, and animated content emphasis.",
-  "detailedDescription": "Canvas Text is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for text-effects, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A dynamic text rendering component using HTML5 canvas for high-performance animated typography effects including particle text, wave distortions, and interactive character animations.",
+  "detailedDescription": "The Canvas Text component leverages HTML5 canvas rendering to create sophisticated text animations that would be performance-prohibitive with standard DOM elements. This approach enables each character or even individual pixels of text to be manipulated independently, opening possibilities for particle effects, wave distortions, liquid animations, and interactive responses to cursor movement. The component can render text that appears to dissolve into particles, flow like water, respond to mouse proximity, or transition through various visual states. Canvas rendering ensures smooth 60fps animation even with complex effects applied to lengthy text strings. The component maintains text accessibility through hidden semantic HTML that screen readers can access while the visual presentation happens on canvas. Visual customization includes font selection, particle sizes, animation speeds, interaction sensitivity, and color treatments. Perfect for hero headlines, creative portfolios, experimental designs, or any context where typography becomes the primary visual feature. The effect creates memorable, shareable moments that can significantly enhance brand recall and user engagement.",
   "purpose": [
-    "Draw attention to key headlines and supporting copy",
-    "Communicate brand tone through animated typography",
-    "Increase visual rhythm in content-heavy sections"
+    "Create high-performance animated typography using canvas rendering",
+    "Enable complex text effects including particles, waves, and distortions",
+    "Generate memorable visual moments where typography is the hero",
+    "Support interactive text that responds to user cursor or touch",
+    "Maintain animation performance even with complex character-level effects"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Renders text on HTML5 canvas for pixel-level character manipulation",
+    "Supports particle effects where text dissolves into animated points",
+    "Creates wave and distortion animations affecting character positions",
+    "Responds to cursor proximity with interactive character movements",
+    "Maintains smooth 60fps animation through efficient canvas rendering",
+    "Provides hidden semantic HTML for screen reader accessibility",
+    "Customizable fonts, effects, speeds, and interaction parameters"
   ],
   "visualCharacteristics": [
-    "Expressive",
-    "Typographic",
-    "Attention-guiding"
+    "Dynamic, animated typography beyond static text capabilities",
+    "Particle effects creating ethereal, dissolving text appearances",
+    "Fluid wave distortions giving text organic, liquid quality",
+    "Interactive responses to user proximity creating engagement",
+    "High-impact visual statements suitable for hero treatments",
+    "Experimental, creative aesthetic pushing typography boundaries"
   ],
   "difficulty": "intermediate",
   "designTone": [

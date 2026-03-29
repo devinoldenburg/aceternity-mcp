@@ -13,21 +13,31 @@
     "decorative",
     "gradient"
   ],
-  "summary": "A reusable Background Gradient Animation background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Background Gradient Animation is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A dynamic animated gradient background featuring continuously shifting colors that create a mesmerizing, fluid visual effect for modern, engaging interfaces.",
+  "detailedDescription": "The Background Gradient Animation component transforms static gradients into living, breathing visual experiences through continuous, smooth color transitions. This component creates an ever-changing background that maintains visual interest over extended periods without becoming repetitive or distracting. The animation system interpolates between multiple color stops, creating fluid transitions that feel organic rather than mechanical. Colors shift slowly through hue, saturation, and brightness values, producing a hypnotic effect that draws the eye without demanding focused attention. The component uses GPU-accelerated CSS animations for smooth 60fps playback, ensuring the gradient flows seamlessly without stutter or visible frame drops. Multiple animation presets are available, ranging from subtle shifts within a single color family to bold transitions across the color spectrum. The effect is particularly effective for hero sections, landing pages, and creative portfolios where creating an emotional, atmospheric connection enhances user engagement. Customization includes animation speed, color palettes, gradient direction, and intensity controls. The component works especially well in combination with overlay content that benefits from a dynamic but non-distracting background.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Create continuously evolving backgrounds that maintain long-term visual interest",
+    "Add dynamic, living quality to interfaces through fluid color transitions",
+    "Generate emotional, atmospheric connections with users through color motion",
+    "Provide engaging hero sections that capture attention without overwhelming content",
+    "Support creative and brand-forward designs with bold, memorable visuals"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Animates gradient color stops through smooth hue and saturation transitions",
+    "Interpolates between multiple colors for fluid, organic appearance",
+    "Maintains continuous loop without visible breaks or resets",
+    "Uses GPU-accelerated CSS animations for smooth 60fps performance",
+    "Supports multiple animation presets from subtle to bold transitions",
+    "Configurable animation speed, color palettes, and intensity",
+    "Adapts to container size while maintaining gradient quality"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Fluid, continuously shifting color transitions",
+    "Organic, non-mechanical animation quality",
+    "Hypnotic, mesmerizing effect that draws attention",
+    "Smooth gradients without banding or artifacts",
+    "Dynamic appearance that feels alive and responsive",
+    "Customizable from subtle ambient shifts to bold color journeys"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -11,20 +11,28 @@
     "showcase",
     "wobble"
   ],
-  "summary": "A Wobble Card card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Wobble Card is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A card component that tilts and translates based on mouse position with a subtle noise texture overlay.",
+  "detailedDescription": "Wobble Card creates an interactive 3D-tilting card effect that responds to mouse movement. The component calculates mouse position relative to card center, dividing by 20 to create subtle offset values (typically ±10px range). On hover, the outer container translates to the calculated position while the inner content translates in the opposite direction and scales to 1.03, creating a parallax depth effect. The card features a radial gradient background (white at 50% opacity fading to transparent from top) with sophisticated multi-layer shadows for depth. A noise texture overlay (noise.webp at 30% size, 10% opacity) with radial mask adds analog film grain texture. Transform transitions use 0.1s ease-out for responsive following. The card has indigo-800 background with rounded-2xl corners and overflow-hidden clipping. Content is padded generously (py-20, px-4-10) for comfortable spacing. This creates a playful, tactile card interaction ideal for feature cards, testimonials, or any content that benefits from dimensional hover effects that feel physical and responsive.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Create 3D parallax tilt effect on mouse hover",
+    "Add tactile, physical-feeling card interactions",
+    "Enhance cards with noise texture and depth"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Calculates mouse offset from card center",
+    "Translates outer container toward mouse position",
+    "Counter-translates inner content for parallax",
+    "Scales inner content to 1.03 on hover",
+    "Applies noise texture overlay with radial mask",
+    "Uses 0.1s transition for smooth following"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive"
+    "Indigo-800 rounded card background",
+    "Radial gradient from top (white to transparent)",
+    "Multi-layer drop shadows for depth",
+    "Subtle noise texture overlay",
+    "3D parallax tilt on hover",
+    "Smooth mouse-following motion"
   ],
   "difficulty": "beginner",
   "designTone": [

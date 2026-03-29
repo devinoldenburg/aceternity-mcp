@@ -11,20 +11,28 @@
     "typewriter",
     "typography"
   ],
-  "summary": "A Typewriter Effect text effect for expressive headings, highlights, and animated content emphasis.",
-  "detailedDescription": "Typewriter Effect is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A text component that animates text appearing letter-by-letter with a blinking cursor, simulating typing.",
+  "detailedDescription": "Typewriter Effect creates a realistic typing animation where text appears character by character with staggered timing. The component splits each word into individual characters and wraps them in motion spans that animate from hidden/transparent to visible inline-block elements. Using Framer Motion's useAnimate hook and stagger timing, each letter appears with a 0.1 second delay, creating a natural typing rhythm. A blinking cursor (blue rectangular bar) animates continuously with opacity pulsing to simulate a real text cursor. The animation only triggers when the component comes into view using useInView detection. Text scales responsively from base size on mobile to 5xl on large screens with bold typography. The component accepts an array of word objects, each with text and optional className for per-word styling customization. This effect is ideal for hero headings, code-related content, terminal-style interfaces, or any context where a typing metaphor enhances the message.",
   "purpose": [
-    "Draw attention to key headlines and supporting copy",
-    "Communicate brand tone through animated typography",
-    "Increase visual rhythm in content-heavy sections"
+    "Simulate realistic typing animation for text content",
+    "Create engaging text reveals that capture attention",
+    "Add terminal or code-editor aesthetic to interfaces"
   ],
   "behavior": [
-    "Uses timed animation sequences for dynamic visual presence"
+    "Animates letters individually with staggered 0.1s delays",
+    "Triggers animation only when component enters viewport",
+    "Displays continuous blinking cursor at text end",
+    "Splits words into character arrays for granular animation",
+    "Transitions letters from hidden to inline-block with opacity fade",
+    "Supports per-word className customization"
   ],
   "visualCharacteristics": [
-    "Expressive",
-    "Typographic",
-    "Attention-guiding"
+    "Bold responsive typography (base to 5xl)",
+    "Blue blinking cursor bar at text end",
+    "Letters appear sequentially left-to-right",
+    "Center-aligned text layout",
+    "Dark text on light or light text on dark",
+    "Smooth opacity transitions for each character"
   ],
   "difficulty": "beginner",
   "designTone": [

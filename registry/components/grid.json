@@ -7,18 +7,31 @@
   "tags": [
     "grid"
   ],
-  "summary": "A reusable Grid component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Grid is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A background grid pattern component creating a subtle dot or line grid with radial gradient fade, perfect for technical, developer-focused interfaces and dark-themed designs.",
+  "detailedDescription": "The Grid component creates a refined background pattern featuring a precise grid of dots or lines that fade toward the edges through a radial gradient mask. This effect produces a technical, architectural aesthetic reminiscent of blueprint paper or graph paper. The grid uses CSS mask-image with radial-gradient to create the fade effect, making the center more visible while edges dissolve into the background. The component works particularly well in dark mode with light grid lines, creating strong contrast and visual interest without overwhelming foreground content. Grid spacing, line thickness, and opacity are customizable to achieve anything from subtle texture to bold statement backgrounds. Perfect for developer tools, SaaS dashboards, technical documentation, or any context where conveying precision, structure, and technical sophistication enhances the brand message. The effect adds visual depth to otherwise flat backgrounds while maintaining excellent readability for overlaid content.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create technical, structured background patterns with grid visuals",
+    "Add subtle depth and texture to flat backgrounds",
+    "Convey precision and technical sophistication",
+    "Support developer-focused and technical brand identities",
+    "Provide visual interest without overwhelming content"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Renders precise grid pattern using CSS background utilities",
+    "Applies radial gradient mask creating center-focused fade",
+    "Maintains subtle, non-distracting presence",
+    "Works in both light and dark mode contexts",
+    "Customizable grid density, colors, and opacity",
+    "Provides depth through gradient fade effect",
+    "Scales responsively to container size"
   ],
   "visualCharacteristics": [
-    "Subtle"
+    "Precise grid pattern creating technical appearance",
+    "Radial gradient fade from center to edges",
+    "Subtle, architectural aesthetic",
+    "Excellent contrast in dark mode contexts",
+    "Blueprint or graph paper visual reference",
+    "Professional, structured background treatment"
   ],
   "difficulty": "beginner",
   "designTone": [

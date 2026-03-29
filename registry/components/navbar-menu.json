@@ -11,20 +11,28 @@
     "navbar",
     "navigation"
   ],
-  "summary": "A Navbar Menu navigation component for responsive headers, sidebars, and interaction-friendly layout flows.",
-  "detailedDescription": "Navbar Menu is a reusable navigation component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navbars, navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A hover-activated navigation menu with spring-animated dropdown panels and layout transition effects.",
+  "detailedDescription": "Navbar Menu creates an interactive navigation bar with hover-activated dropdown panels using Framer Motion. The Menu component provides a rounded-full container with shadow-input, white/dark background, and border styling. MenuItem components trigger dropdowns on mouseEnter, with layoutId='active' enabling smooth shared element transitions between menu items. The dropdown panel uses spring physics (mass: 0.5, damping: 11.5, stiffness: 100) for enter animations - starting at opacity 0, scale 0.85, y: 10 and animating to full visibility. Position is absolute at top + 1.2rem, centered with -translate-x-1/2. The panel features rounded-2xl corners, backdrop-blur-sm, and shadow-xl for depth. ProductItem subcomponent displays product cards with 140x70 images, title, and description in horizontal layout. HoveredLink provides styled link transitions. The nav resets state on mouseLeave. This creates polished mega-menu navigation ideal for product showcases, documentation sites, or e-commerce where rich hover previews enhance navigation.",
   "purpose": [
-    "Provide clear wayfinding across pages and sections",
-    "Support responsive navigation patterns on desktop and mobile",
-    "Improve information architecture and scanning"
+    "Create hover-activated navigation dropdowns",
+    "Display rich product previews in menus",
+    "Animate menu transitions with spring physics"
   ],
   "behavior": [
-    "Handles navigation state changes with responsive layout behavior"
+    "Activates dropdowns on mouseEnter",
+    "Uses layoutId for shared element transitions",
+    "Animates panel with spring physics",
+    "Centers dropdown below trigger",
+    "Resets on mouseLeave",
+    "Supports product card subcomponents"
   ],
   "visualCharacteristics": [
-    "Layout-critical",
-    "Functional",
-    "Adaptive"
+    "Rounded-full nav container",
+    "Spring-animated dropdown panels",
+    "Backdrop blur with shadow",
+    "Product cards with images",
+    "Smooth layout transitions",
+    "Dark/light mode styling"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -9,18 +9,31 @@
     "dither",
     "shader"
   ],
-  "summary": "A reusable Dither Shader component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Dither Shader is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A WebGL-powered shader effect creating retro dithering patterns and pixelated visual treatments for images and backgrounds, evoking nostalgic 8-bit and early computer graphics aesthetics.",
+  "detailedDescription": "The Dither Shader component brings retro computing aesthetics to modern interfaces through WebGL-powered dithering effects that transform images and backgrounds into pixelated, pattern-based visuals. Dithering is a technique from early computing where limited color palettes were simulated through patterns of dots, creating the illusion of additional colors and gradients. This component recreates that aesthetic with modern precision and control. The shader processes images in real-time, applying various dithering patterns (Floyd-Steinberg, ordered, random) that can be animated or static. Visual parameters include pattern density, color palette size, animation speed, and pattern type. The effect creates a distinctive, nostalgic appearance reminiscent of 8-bit games, early computer graphics, and retro terminals. Perfect for gaming interfaces, retro-themed designs, creative portfolios, or any context where evoking nostalgia and technical creativity adds value. The WebGL implementation ensures smooth performance even with complex dithering calculations, maintaining 60fps on modern devices.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create retro dithering effects evoking 8-bit and early computer graphics",
+    "Transform images with nostalgic pixelated pattern treatments",
+    "Support retro-themed designs with authentic vintage aesthetics",
+    "Add distinctive visual personality through shader-based effects",
+    "Evoke nostalgia and technical creativity in visual presentation"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Processes images through WebGL shaders for real-time dithering",
+    "Applies various dithering patterns including Floyd-Steinberg and ordered",
+    "Animates dithering patterns for dynamic visual effects",
+    "Allows adjustment of pattern density and color palette size",
+    "Maintains smooth 60fps performance through GPU acceleration",
+    "Supports static or animated dithering modes",
+    "Processes any image or video content dynamically"
   ],
   "visualCharacteristics": [
-    "Visually dominant"
+    "Retro, pixelated appearance with characteristic dithering patterns",
+    "Nostalgic 8-bit aesthetic from early computing era",
+    "Distinctive dot patterns creating color illusions",
+    "Animated options for dynamic, living retro effects",
+    "Technical, creative appearance appealing to developers and gamers",
+    "Unique visual treatment standing out from conventional imagery"
   ],
   "difficulty": "intermediate",
   "designTone": [

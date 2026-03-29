@@ -12,20 +12,28 @@
     "navigation",
     "resizable"
   ],
-  "summary": "A Resizable Navbar navigation component for responsive headers, sidebars, and interaction-friendly layout flows.",
-  "detailedDescription": "Resizable Navbar is a reusable navigation component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for navbars, navigation contexts where clear visual hierarchy matters. Visually, it feels subtle and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A scroll-aware navigation bar that shrinks width and adds backdrop blur when scrolling down the page.",
+  "detailedDescription": "Resizable Navbar creates an intelligent navigation system that responds to scroll position. The Navbar component tracks scrollY using Framer Motion's useScroll hook with 'start start' to 'end start' offset. When scroll exceeds 100px, visible state triggers NavBody transformation: width shrinks from 100% to 40%, backdrop-filter applies blur(10px), boxShadow adds multi-layer depth, and y translates 20px down. Spring animation (stiffness: 200, damping: 50) smooths transitions. The NavBody has 800px minWidth constraint, rounded-full styling, and hidden/flex breakpoints (hidden mobile, flex lg+). Background transitions from transparent to white/80 (dark: neutral-950/80). The system uses React.Children.map to clone children with visible prop, enabling coordinated child animations. Mobile nav support via IconMenu2/IconX toggles. NavItems render horizontal link lists with hover states. This creates adaptive navigation that maximizes screen real estate at top, then condenses to compact floating bar on scroll - ideal for long-form content, documentation, or landing pages where navigation should be prominent initially then recede.",
   "purpose": [
-    "Provide clear wayfinding across pages and sections",
-    "Support responsive navigation patterns on desktop and mobile",
-    "Improve information architecture and scanning"
+    "Shrink navigation width on scroll",
+    "Add backdrop blur when scrolling",
+    "Provide adaptive responsive navigation"
   ],
   "behavior": [
-    "Handles navigation state changes with responsive layout behavior"
+    "Tracks scrollY position with offset",
+    "Triggers visible state at 100px scroll",
+    "Animates width from 100% to 40%",
+    "Applies backdrop blur and shadow",
+    "Translates navbar down 20px",
+    "Clones children with visible prop"
   ],
   "visualCharacteristics": [
-    "Layout-critical",
-    "Functional",
-    "Adaptive"
+    "Rounded-full navbar container",
+    "Shrinks to 40% width on scroll",
+    "Frosted glass backdrop blur",
+    "Multi-layer drop shadow",
+    "Responsive hide/show breakpoints",
+    "Spring-smoothed transitions"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -9,17 +9,29 @@
     "buttons",
     "tailwindcss"
   ],
-  "summary": "A reusable Tailwind CSS Buttons component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Tailwind CSS Buttons is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cta, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A card-style button container with dot pattern background and clipboard icon on hover.",
+  "detailedDescription": "Tailwind CSS Buttons (ButtonsCard) creates a card-style button container with interactive hover effects. The component has h-60 height, full width, white background (dark: black), rounded-xl corners, and subtle border (neutral-100 light, white/20 dark). On hover, border intensifies to neutral-200. Background features dot pattern (black/[0.1] light, white/[0.1] dark) using absolute inset-0 positioning. Clipboard icon (Tabler Icons) appears at top-right on hover with 200ms transition. Content sits at relative z-40 for proper layering. The card uses overflow-hidden for clipped corners and flex center alignment for content. onClick handler enables button functionality. This creates polished, tactile button cards ideal for component galleries, feature selections, or any context where card-style buttons with subtle hover feedback enhance interaction clarity.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create card-style clickable buttons",
+    "Show clipboard icon on hover",
+    "Display dot pattern background"
   ],
   "behavior": [
-    "Supports interaction states for typing, focus, submit, or upload"
+    "Intensifies border on hover",
+    "Reveals clipboard icon on hover",
+    "Handles click events",
+    "Uses flex center alignment",
+    "Applies overflow-hidden clipping",
+    "Layers content with z-index"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "240px tall card container",
+    "Rounded-xl corners",
+    "Subtle dot pattern background",
+    "Clipboard icon top-right",
+    "Border hover intensification",
+    "Dark/light mode variants"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

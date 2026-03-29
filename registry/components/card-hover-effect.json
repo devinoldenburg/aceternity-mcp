@@ -13,20 +13,31 @@
     "hover",
     "showcase"
   ],
-  "summary": "A Card Hover Effect card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Card Hover Effect is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An interactive card component that responds to hover with sophisticated visual transformations including lifts, shadows, borders, and content reveals for engaging content presentation.",
+  "detailedDescription": "The Card Hover Effect component transforms static cards into interactive elements that respond elegantly to user hover interactions. This component excels at creating rewarding micro-interactions that make interfaces feel responsive and polished. When users hover over a card, multiple visual changes occur in harmony - the card may lift slightly with translateY transforms, shadows deepen and expand to simulate elevation, borders or glows appear to highlight the active state, and content elements may shift or reveal additional information. These transitions are carefully choreographed with appropriate timing and easing to feel natural rather than mechanical. The component supports various hover styles from subtle professional effects suitable for enterprise contexts to bold, dramatic transformations for creative portfolios. Performance is optimized through CSS transforms and will-change properties, ensuring smooth 60fps animations even with multiple cards on screen. Perfect for product cards, feature grids, testimonial displays, portfolio items, or any card-based layout where adding interactive polish enhances user engagement and perceived quality.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Transform static cards into interactive elements that reward user exploration",
+    "Create polished micro-interactions that enhance perceived interface quality",
+    "Provide visual feedback that clearly indicates interactive card elements",
+    "Support various hover styles from subtle professional to bold dramatic effects",
+    "Enhance user engagement through responsive, satisfying hover interactions"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Detects hover state and triggers coordinated visual transformations",
+    "Applies translateY lift effect simulating physical elevation",
+    "Deepens and expands shadows to reinforce depth perception",
+    "Reveals borders, glows, or highlights on hover activation",
+    "Optionally reveals additional content or shifts existing elements",
+    "Uses CSS transforms for smooth 60fps hover transitions",
+    "Returns smoothly to rest state when hover ends"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive"
+    "Dynamic visual transformation on hover creating interactive feedback",
+    "Lifted appearance with enhanced shadows suggesting physical elevation",
+    "Smooth, choreographed transitions feeling natural and responsive",
+    "Configurable from subtle professional to bold dramatic effects",
+    "Clear interactive affordance indicating clickable card elements",
+    "Polished, premium appearance enhancing overall interface quality"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -10,17 +10,29 @@
     "parallax",
     "scroll"
   ],
-  "summary": "A reusable Parallax Scroll component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Parallax Scroll is a reusable scroll interaction component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A three-column image grid with scroll-based parallax where columns move at different vertical speeds.",
+  "detailedDescription": "Parallax Scroll creates a scrollable image gallery with three columns that move at different rates during scroll. The component uses Framer Motion's useScroll hook tracking container scroll from 'start start' to 'end start'. Three transform values are created: first column translates -200px (upward), second column translates +200px (downward), third column translates -200px (upward). Images are divided equally into three parts using Math.ceil(length/3). Each column applies its transform via motion.div style prop. Images display as 320px tall with object-cover and object-left-top positioning for consistent cropping. The grid uses responsive breakpoints (1 col mobile, 2 cols tablet, 3 cols desktop) with 10-unit gaps and generous padding (py-40, px-10). Container has fixed 40rem height with overflow-y-auto for scroll behavior. This creates a dynamic gallery where images appear to float at different speeds, adding depth and visual interest to portfolios, product showcases, or any image-heavy section.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Display image galleries with differential scroll speeds",
+    "Create parallax depth through varied column movement",
+    "Showcase images with engaging scroll interaction"
   ],
   "behavior": [
-    "Reacts to scroll progress with transition or reveal effects"
+    "Tracks container scroll progress",
+    "Applies different Y translations per column",
+    "Divides images into three equal groups",
+    "First and third columns move up, middle moves down",
+    "Uses object-cover for consistent image cropping",
+    "Responsive column layout by breakpoint"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Three-column responsive grid",
+    "320px tall rounded images",
+    "Outer columns move up on scroll",
+    "Middle column moves down",
+    "Generous vertical padding",
+    "Object-left-top image positioning"
+  ],
   "difficulty": "advanced",
   "designTone": [
     "modern"

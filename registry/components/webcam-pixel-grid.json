@@ -10,18 +10,28 @@
     "pixel",
     "webcam"
   ],
-  "summary": "A reusable Webcam Pixel Grid component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Webcam Pixel Grid is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An interactive webcam visualization that renders real-time video as an elevated 3D pixel grid with motion detection.",
+  "detailedDescription": "Webcam Pixel Grid captures live webcam feed and renders it as a grid of 3D elevated cells (default 64x48) using canvas rendering. The component accesses webcam via getUserMedia API, processes video frames to extract pixel colors, and calculates motion by comparing consecutive frames. Each cell's elevation is determined by motion intensity - more movement creates higher elevation with smooth transitions using lerp smoothing (default 0.1 factor). The component supports two color modes: 'webcam' uses actual pixel colors from the feed, while 'monochrome' applies a single configurable color. Visual customization includes gap ratio between cells, border color/opacity, background color, mirror mode, and invert colors option. Motion sensitivity (0-1) controls how responsive elevation is to movement. The rendering pipeline uses three canvases: video element for webcam input, processing canvas for frame analysis, and display canvas for final pixel grid output. Elevation is rendered using canvas transformations with configurable max elevation (default 15px). Error handling includes callbacks for webcam access denial. This creates an interactive, reactive visualization perfect for music visualizers, motion-activated displays, or creative webcam effects.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Visualize webcam feed as 3D elevated pixel grid",
+    "Detect and display motion through cell elevation",
+    "Create interactive real-time video art installations"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Requests webcam access via getUserMedia API",
+    "Compares consecutive frames for motion detection",
+    "Calculates cell elevation based on motion intensity",
+    "Applies smoothing to elevation transitions",
+    "Supports color mode switching (webcam/monochrome)",
+    "Renders grid with configurable gap and borders"
   ],
   "visualCharacteristics": [
-    "Subtle"
+    "3D elevated cells responding to motion",
+    "Configurable grid density (default 64x48)",
+    "Actual pixel colors or monochrome mode",
+    "Smooth elevation transitions",
+    "Optional cell borders with opacity",
+    "Dark background with glowing cells"
   ],
   "difficulty": "intermediate",
   "designTone": [

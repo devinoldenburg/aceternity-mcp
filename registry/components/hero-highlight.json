@@ -11,18 +11,31 @@
     "highlight",
     "landing"
   ],
-  "summary": "A reusable Hero Highlight component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Hero Highlight is a reusable hero/section component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cta, hero-sections contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An interactive hero section featuring a mouse-following spotlight effect with dot pattern backgrounds that change color on hover, creating an engaging, responsive first impression.",
+  "detailedDescription": "The Hero Highlight component creates an interactive hero experience where a spotlight effect follows the mouse cursor across a dot pattern background. The component uses motion values to track mouse position, creating a subtle illuminated area that reveals a different colored dot pattern underneath. The background features SVG dot patterns that change from neutral gray to vibrant indigo when the spotlight passes over them, creating an engaging, responsive interaction. The effect works in both light and dark modes with appropriate color adjustments. This creates a playful yet professional interaction that rewards user exploration and keeps visitors engaged. Perfect for hero sections, landing pages, or any context where adding subtle interactivity enhances the first impression. The component balances visual interest with readability, ensuring the spotlight effect enhances rather than distracts from the main content message.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create interactive hero sections with mouse-following spotlight",
+    "Engage visitors through responsive hover interactions",
+    "Add subtle playfulness to professional hero designs",
+    "Reward user exploration with visual feedback",
+    "Balance visual interest with content readability"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Tracks mouse position using motion values",
+    "Creates spotlight effect following cursor movement",
+    "Changes dot pattern colors when spotlight passes over",
+    "Supports both light and dark mode themes",
+    "Uses SVG patterns for crisp, scalable graphics",
+    "Maintains smooth 60fps interaction tracking",
+    "Provides subtle, non-distracting visual feedback"
   ],
   "visualCharacteristics": [
-    "Landing-page friendly"
+    "Mouse-following spotlight creating interactive focal point",
+    "Dot pattern background changing colors on interaction",
+    "Subtle, refined visual effect",
+    "Playful yet professional aesthetic",
+    "Excellent dark and light mode support",
+    "Engaging, responsive hero presentation"
   ],
   "difficulty": "beginner",
   "designTone": [

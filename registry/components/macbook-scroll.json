@@ -10,17 +10,29 @@
     "macbook",
     "scroll"
   ],
-  "summary": "A reusable Macbook Scroll component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Macbook Scroll is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A scroll-driven MacBook laptop animation where the screen lid opens and scales as users scroll down the page.",
+  "detailedDescription": "Macbook Scroll creates an interactive MacBook Pro replica that animates based on scroll progress. The component requires 200vh minimum height for scroll room, with content scaling down (35% mobile, 50% tablet, 100% desktop) for responsive viewing. Scroll tracking (start to end-start offset) drives multiple transforms: scaleX (1.2 to 1.5), scaleY (0.6 to 1.5), rotate (-28deg to 0), and translate (0 to 1500px). The lid component uses CSS 3D transforms with perspective(800px) and rotateX(-25deg) for realistic screen angle. The base features keyboard area with speaker grilles (dot grids on sides), keypad center, and trackpad. A gradient overlay fades the bottom for scroll hint. Title text animates with translateY (0 to 100) and opacity fade (1 to 0) as scroll progresses. The screen displays optional src image with gradient overlay. Colors use gray-200 for base, #272729 for dark mode, #010101 for screen bezel. Icons from Tabler represent keyboard keys, speakers, and trackpad. This creates an engaging product showcase perfect for app landing pages, portfolio pieces, or any context where demonstrating software on a realistic device enhances presentation.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Showcase applications within realistic MacBook frame",
+    "Create scroll-driven lid opening animation",
+    "Provide impressive product presentation device"
   ],
   "behavior": [
-    "Reacts to scroll progress with transition or reveal effects"
+    "Tracks scroll progress for transform animations",
+    "Scales MacBook from small to full size on scroll",
+    "Rotates lid from -28deg to flat (0deg)",
+    "Translates content downward during scroll",
+    "Fades title text opacity with scroll",
+    "Detects mobile for adjusted scale values"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Realistic MacBook Pro design",
+    "Screen lid with 3D perspective transform",
+    "Speaker grille dot patterns",
+    "Keyboard and trackpad details",
+    "Gradient fade at base bottom",
+    "Responsive scale (35%-100%)"
+  ],
   "difficulty": "intermediate",
   "designTone": [
     "modern"

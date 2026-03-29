@@ -11,21 +11,31 @@
     "boxes",
     "decorative"
   ],
-  "summary": "A reusable Background Boxes background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Background Boxes is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A geometric background effect featuring animated rectangular boxes that create structured visual interest through motion and depth for modern, technical interfaces.",
+  "detailedDescription": "The Background Boxes component generates a structured, geometric background pattern using animated rectangular shapes that move and interact in subtle ways. This effect creates visual interest through organized motion rather than organic flow, making it particularly suitable for technical products, dashboards, and data-focused interfaces. The boxes vary in size and opacity, creating a sense of depth and layering that adds complexity without chaos. Animation patterns include slow drifting, fading in and out, and occasional position shifts that keep the background feeling alive. The geometric nature provides a more structured, systematic aesthetic compared to organic background effects, appealing to audiences that appreciate order and precision. Performance is optimized through CSS transforms and opacity transitions, ensuring smooth animation even with multiple boxes. Customization includes box sizes, density, animation speed, color schemes, and opacity ranges. The component works well for B2B SaaS products, analytics platforms, developer tools, or any context where conveying structure and systematic thinking aligns with brand values. The effect can be subtle enough for content-heavy pages or intensified for hero sections and landing pages.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Create structured, geometric backgrounds for technical and data-focused interfaces",
+    "Add visual complexity through organized, systematic motion patterns",
+    "Convey precision and order through geometric visual language",
+    "Provide dynamic backgrounds that maintain professional appearance",
+    "Support B2B and enterprise contexts with clean, structured aesthetics"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Generates multiple rectangular boxes with varying sizes and positions",
+    "Animates boxes with slow drifting, fading, and position shift patterns",
+    "Creates depth perception through opacity and layering variations",
+    "Maintains continuous motion without repetitive or mechanical feel",
+    "Optimizes performance through CSS transforms and opacity transitions",
+    "Supports customization of box density, speed, and visual styling",
+    "Adapts responsively to different container sizes and aspect ratios"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Geometric, structured appearance with rectangular elements",
+    "Organized motion patterns creating systematic visual rhythm",
+    "Layered depth through varying opacity and box sizes",
+    "Clean, professional aesthetic suitable for enterprise contexts",
+    "Subtle animation that maintains attention without distraction",
+    "Customizable density from sparse to complex arrangements"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -9,17 +9,29 @@
     "canvas",
     "pixelated"
   ],
-  "summary": "A reusable Pixelated Canvas component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Pixelated Canvas is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An interactive pixelated image renderer with mouse-driven distortion effects and configurable dot patterns.",
+  "detailedDescription": "Pixelated Canvas renders images as grids of sampled dots with extensive interactive distortion effects. The component samples source images at configurable cell sizes (default 3px), creating dot arrays with position, color, and drop state. Interactive mode tracks mouse position with smoothed follow (default 0.2 factor), applying distortion within configurable radius (80px). Three distortion modes exist: 'repel' pushes dots away, 'attract' pulls toward cursor, 'swirl' creates rotational flow. Distortion strength controls offset magnitude (default 3px). Dropout feature randomly removes low-contrast dots based on strength (0.4 default) for artistic effect. Additional features include grayscale conversion, tint color overlay with strength control, jitter animation (random motion near cursor), sample averaging for smoother colors, and FPS capping for performance. Shape options include circles or squares with configurable scale (0.9 default). Responsive mode adapts to container size. This creates retro pixel-art aesthetic with modern interactive distortion, ideal for artistic image displays, creative portfolios, or any context where stylized image rendering enhances visual appeal.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Render images as stylized pixel dot grids",
+    "Apply interactive mouse-driven distortion",
+    "Create retro pixel-art aesthetic effects"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Samples image at regular cell intervals",
+    "Tracks smoothed mouse position for interaction",
+    "Applies distortion based on mode (repel/attract/swirl)",
+    "Randomly drops dots based on contrast threshold",
+    "Supports tint overlay and grayscale conversion",
+    "Animates jitter near cursor position"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Grid of colored dots representing image",
+    "Configurable dot shape (circle/square)",
+    "Mouse-driven distortion ripple effect",
+    "Retro pixelated appearance",
+    "Optional tint color overlay",
+    "Dynamic dropout for artistic effect"
+  ],
   "difficulty": "intermediate",
   "designTone": [
     "modern"

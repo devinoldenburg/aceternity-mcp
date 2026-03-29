@@ -11,18 +11,31 @@
     "glowing",
     "stars"
   ],
-  "summary": "A reusable Glowing Stars component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Glowing Stars is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A mesmerizing background featuring twinkling, glowing stars that drift slowly across a dark canvas, creating a peaceful, night-sky atmosphere perfect for calming, dreamy interfaces.",
+  "detailedDescription": "The Glowing Stars component recreates the serene beauty of a starry night sky through animated glowing points of light that twinkle and drift across the background. Each star is rendered as a soft, luminous point with varying sizes and brightness levels, creating natural depth perception. The twinkling effect uses subtle opacity and scale animations that mimic how stars appear to flicker in the night sky. Stars drift slowly, creating gentle motion that feels peaceful rather than distracting. The component includes configurable star density, size ranges, twinkle speeds, and drift patterns. Color options range from classic white/yellow stars to fantasy purple, blue, or multi-color treatments. Perfect for wellness apps, meditation interfaces, bedtime-related products, creative portfolios, or any context where creating a calm, dreamy, or magical atmosphere enhances the user experience. The effect works particularly well in dark mode contexts where the glowing stars achieve maximum luminosity and contrast against deep backgrounds.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Recreate serene starry night sky atmosphere with twinkling stars",
+    "Create calm, dreamy backgrounds for peaceful interfaces",
+    "Add gentle, non-distracting motion through drifting stars",
+    "Support wellness, meditation, or sleep-related contexts",
+    "Generate magical, ethereal visual experiences"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Renders multiple stars with varying sizes and brightness",
+    "Animates stars with subtle twinkle (opacity/scale) effects",
+    "Drifts stars slowly across background for gentle motion",
+    "Creates depth through size and brightness variation",
+    "Maintains smooth performance with efficient rendering",
+    "Supports configurable density, speed, and colors",
+    "Loops seamlessly without visible breaks"
   ],
   "visualCharacteristics": [
-    "Landing-page friendly"
+    "Soft, glowing star points creating night sky appearance",
+    "Subtle twinkle animation mimicking real star behavior",
+    "Gentle drift creating peaceful, non-distracting motion",
+    "Depth perception through varied star sizes",
+    "Serene, dreamy atmosphere suitable for calming contexts",
+    "Maximum visual impact against dark backgrounds"
   ],
   "difficulty": "beginner",
   "designTone": [

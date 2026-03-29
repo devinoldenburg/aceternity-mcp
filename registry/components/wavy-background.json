@@ -11,21 +11,28 @@
     "decorative",
     "wavy"
   ],
-  "summary": "A reusable Wavy Background background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Wavy Background is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A canvas-based wavy line background using 3D simplex noise to generate animated multi-color sine waves.",
+  "detailedDescription": "Wavy Background renders animated wavy lines on canvas using 3D simplex noise for organic motion. The component draws 5 parallel waves across the canvas width, each with a different color from a configurable array (default: cyan, indigo, purple, pink, teal). Noise is sampled at x/800 position with offset per wave (0.3 * i) and time component (nt) that increments based on speed setting (slow: 0.001, fast: 0.002). Wave y-position is calculated as noise value * 100, centered at 50% canvas height. Lines are drawn with 50px width (configurable) and 0.5 opacity (configurable), with CSS blur filter applied (default 10px) for soft, glowing appearance. The canvas auto-resizes on window resize, maintaining full viewport coverage. Animation runs via requestAnimationFrame loop that clears canvas, fills with background color (default black), and redraws all waves each frame. The blur creates overlapping color blends where waves intersect, producing aurora-like effects. This component is ideal for hero backgrounds, music visualizations, or any context where flowing, colorful waves add atmospheric motion without overwhelming content.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Create flowing wavy line backgrounds with noise animation",
+    "Generate multi-color wave patterns with soft blur",
+    "Provide organic motion for atmospheric backgrounds"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Samples 3D simplex noise for wave height calculation",
+    "Draws 5 parallel waves with different colors",
+    "Increments time component for continuous animation",
+    "Applies CSS blur filter for soft glow effect",
+    "Auto-resizes canvas on window resize",
+    "Configurable speed, opacity, and wave width"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Multi-color wavy horizontal lines",
+    "Soft blurred edges from CSS filter",
+    "Organic noise-driven wave motion",
+    "Default cyan-to-teal color palette",
+    "50% vertical centering",
+    "Overlapping color blends from blur"
   ],
   "difficulty": "beginner",
   "designTone": [

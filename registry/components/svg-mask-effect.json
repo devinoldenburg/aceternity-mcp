@@ -9,17 +9,29 @@
     "mask",
     "svg"
   ],
-  "summary": "A reusable SVG Mask Effect component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "SVG Mask Effect is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A full-screen component with a mouse-following mask that reveals text when hovering with an expanding reveal area.",
+  "detailedDescription": "SVG Mask Effect creates an interactive full-screen experience where a mask follows the mouse cursor, revealing content underneath as it moves. The component uses CSS mask-image with an SVG mask that repeats at a configurable size (default 40px). On hover, the mask size expands from a small initial size to a much larger reveal size (default 600px), creating a spotlight-like effect that shows more of the underlying content. The background color transitions between white and slate-900 on hover using Framer Motion's animate. Mouse position is tracked via event listeners and used to update the mask position in real-time with smooth transitions. The component displays two layers of content - children text that appears within the masked area with a semi-transparent overlay, and revealText that sits underneath fully visible. When hovering, the mask follows the cursor with a brief delay for smooth tracking. This creates an engaging discovery interaction where users explore content by moving their cursor across the screen, perfect for dramatic reveals, interactive storytelling, or attention-grabbing hero sections.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create interactive reveal effects controlled by mouse movement",
+    "Enable exploratory content discovery through cursor interaction",
+    "Add dramatic visual interest to full-screen sections"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Tracks mouse position and updates mask location in real-time",
+    "Expands mask size on hover enter, contracts on leave",
+    "Transitions background color between light and dark on hover",
+    "Uses CSS mask-image for content reveal effect",
+    "Applies smooth easing to mask position and size changes",
+    "Displays different content layers for masked and revealed states"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Full-screen interactive area",
+    "Circular mask follows cursor position",
+    "Mask expands dramatically on hover",
+    "Background color shifts on interaction",
+    "Semi-transparent overlay in masked region",
+    "Text reveals progressively as mask moves"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

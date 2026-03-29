@@ -11,17 +11,29 @@
     "multi",
     "step"
   ],
-  "summary": "A Multi Step Loader loader component for communicating progress and improving perceived responsiveness.",
-  "detailedDescription": "Multi Step Loader is a reusable loader component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, loaders contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A full-screen loader displaying multiple loading steps that complete sequentially with checkmark animations.",
+  "detailedDescription": "Multi Step Loader creates a full-screen overlay loader that displays a sequence of loading steps with progress indication. The component uses useState to track current step (0 to length-1) and useEffect with configurable duration (default 2000ms) to advance through steps automatically. Each step shows a checkmark icon - outlined for pending steps, filled for completed steps, with the current step highlighted in lime-500. Steps are vertically stacked with 40px spacing, animating y-position based on current value. Opacity decreases with distance from current step (1 - distance * 0.2). The loader uses AnimatePresence for fade in/out (opacity 0 to 1), with backdrop-blur-2xl for frosted glass effect. A radial gradient mask (900px at center, transparent 30%, white) creates soft edge vignette. Loop mode cycles back to start after final step; non-loop mode stops at last step. This component is ideal for multi-stage processes like file uploads, onboarding flows, data migrations, or any sequential operation where showing progress through stages improves user experience and reduces perceived wait time.",
   "purpose": [
-    "Set user expectations during asynchronous operations",
-    "Reduce perceived waiting time with meaningful feedback",
-    "Maintain visual continuity between loading and loaded states"
+    "Display sequential loading progress through stages",
+    "Provide visual feedback for multi-step operations",
+    "Reduce perceived wait time with step indicators"
   ],
   "behavior": [
-    "Uses timed animation sequences for dynamic visual presence"
+    "Advances through steps at configurable intervals",
+    "Highlights current step with lime-500 color",
+    "Shows filled checkmarks for completed steps",
+    "Animates step list y-position with progress",
+    "Fades opacity based on distance from current",
+    "Loops or stops based on configuration"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Full-screen fixed overlay",
+    "Backdrop blur frosted glass effect",
+    "Vertical step list with checkmarks",
+    "Lime-500 current step highlight",
+    "Radial gradient edge mask",
+    "Dark/light mode compatible"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

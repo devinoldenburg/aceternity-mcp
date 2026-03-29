@@ -12,21 +12,31 @@
     "dotted",
     "glow"
   ],
-  "summary": "A reusable Dotted Glow Background background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Dotted Glow Background is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A sophisticated background featuring a grid of glowing dots that create depth and technological ambiance, perfect for modern tech-focused interfaces and data visualization contexts.",
+  "detailedDescription": "The Dotted Glow Background component creates a refined, technological aesthetic through a precisely arranged grid of glowing dots that pulse subtly with light. This effect evokes digital interfaces, data visualizations, and futuristic technology themes. Each dot in the grid emits a soft glow that can pulse or shimmer, creating a sense of depth and dimensionality. The regular grid pattern provides structure while the glowing effect adds organic life, balancing order with visual interest. Dot size, spacing, glow intensity, and animation speed are all customizable to achieve anything from subtle texture to bold statement backgrounds. The component uses efficient CSS or canvas rendering to maintain smooth performance even with hundreds of dots. Perfect for SaaS dashboards, tech product landing pages, data visualization contexts, developer tools, or any interface where conveying precision and technology is important. The effect works particularly well in dark mode where the glowing dots achieve maximum luminosity and contrast.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Create technological, data-driven backgrounds with glowing dot grids",
+    "Convey precision, structure, and technical sophistication",
+    "Add subtle depth and dimensionality through dot-based patterns",
+    "Support tech-focused and developer-oriented brand identities",
+    "Provide structured visual interest without overwhelming content"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Renders precise grid of dots with configurable spacing and size",
+    "Applies glowing effects to dots with soft gradient halos",
+    "Animates dots with subtle pulsing or shimmering patterns",
+    "Maintains smooth performance with efficient rendering",
+    "Supports customization of dot density, glow intensity, and colors",
+    "Creates depth perception through layered glow effects",
+    "Adapts responsively to different container sizes"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Precise grid pattern creating structured, technological appearance",
+    "Soft glowing dots adding organic life to geometric arrangement",
+    "Subtle pulsing animation creating living, breathing quality",
+    "Depth perception through layered glow and dot sizing",
+    "Technical, data-driven aesthetic suitable for tech contexts",
+    "Customizable from subtle texture to bold visual statement"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -9,18 +9,28 @@
     "landing",
     "spotlight"
   ],
-  "summary": "A reusable Spotlight component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Spotlight is a reusable hero/section component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An SVG-based spotlight overlay component that creates an animated elliptical glow effect for hero sections.",
+  "detailedDescription": "Spotlight is an SVG overlay component that creates a dramatic elliptical spotlight effect using Gaussian blur filters. The component renders a large ellipse (1924px radius) with a fill opacity of 0.21, positioned at an angle using a transform matrix. The ellipse is filtered through a Gaussian blur with a 151px standard deviation, creating a soft, diffused glow. The SVG is sized at 169% height and 138% width (84% on large screens) to ensure full coverage, and uses the 'animate-spotlight' CSS class for entrance animation. The spotlight fill color is configurable via props, defaulting to white. The component uses pointer-events-none to allow interaction with content underneath, and positions itself absolutely with z-index 1. This creates a subtle atmospheric lighting effect that draws attention to hero content without overwhelming the text or interactive elements. Best used as a decorative layer in hero sections to add depth and visual interest.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Add atmospheric lighting effects to hero sections",
+    "Create visual depth with soft elliptical glows",
+    "Enhance hero content with subtle decorative illumination"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Renders as absolute positioned SVG overlay",
+    "Applies Gaussian blur filter to elliptical shape",
+    "Animates in via CSS animate-spotlight class",
+    "Uses configurable fill color for customization",
+    "Allows pointer events to pass through to content below",
+    "Scales responsively based on screen size"
   ],
   "visualCharacteristics": [
-    "Landing-page friendly"
+    "Soft elliptical glow with blur effect",
+    "Angled positioning via transform matrix",
+    "Subtle 21% opacity fill",
+    "Large-scale coverage (169% height)",
+    "Responsive width adjustment",
+    "Decorative atmospheric layer"
   ],
   "difficulty": "beginner",
   "designTone": [

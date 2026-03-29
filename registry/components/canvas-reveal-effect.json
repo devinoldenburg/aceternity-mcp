@@ -11,17 +11,32 @@
     "effect",
     "reveal"
   ],
-  "summary": "A reusable Canvas Reveal Effect component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Canvas Reveal Effect is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for scroll-effects, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A sophisticated canvas-based reveal effect that progressively unveils content through animated particle, pixel, or mask transitions triggered by scroll position or interaction.",
+  "detailedDescription": "The Canvas Reveal Effect component creates stunning content reveal animations using HTML5 canvas for precise pixel-level control over the transition. Unlike simple CSS fades or slides, this effect can progressively reveal content through various sophisticated patterns - dissolving particles, expanding circles, scanning lines, or custom mask animations. The canvas-based approach enables complex visual effects that would be impossible or performant-prohibitive with DOM elements alone. The reveal can be triggered by scroll position (revealing content as users scroll into view), timed sequences, or user interactions like clicks or hovers. The component carefully manages canvas rendering to maintain smooth 60fps animation even during complex reveal sequences. Visual customization includes reveal pattern, animation duration, particle sizes, colors, and easing curves. Perfect for hero sections, feature reveals, product showcases, or any context where dramatic, memorable content transitions enhance the narrative flow. The effect works particularly well for storytelling experiences where controlling the pace and manner of content revelation supports the overall message.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create dramatic, memorable content reveal animations using canvas rendering",
+    "Progressively unveil content through sophisticated particle or mask transitions",
+    "Support narrative-driven experiences by controlling content revelation timing",
+    "Enable complex visual effects impossible with standard CSS transitions",
+    "Enhance storytelling through controlled, intentional content reveals"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Renders reveal animations on HTML5 canvas for pixel-level control",
+    "Supports multiple reveal patterns including particles, circles, scans, and masks",
+    "Triggers reveals based on scroll position, timing, or user interaction",
+    "Manages canvas rendering for smooth 60fps animation performance",
+    "Progressively reveals underlying content through animated transitions",
+    "Customizable reveal patterns, speeds, and visual styling",
+    "Gracefully degrades to simple reveal if canvas unsupported"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Sophisticated canvas-based reveal patterns beyond simple fades",
+    "Progressive content unveiling creating anticipation and interest",
+    "Smooth, fluid animations maintaining visual quality throughout",
+    "Dramatic, memorable transitions suitable for hero moments",
+    "Customizable patterns supporting various aesthetic preferences",
+    "Professional execution enhancing perceived production value"
+  ],
   "difficulty": "intermediate",
   "designTone": [
     "modern"

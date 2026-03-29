@@ -10,22 +10,28 @@
     "decorative",
     "vortex"
   ],
-  "summary": "A reusable Vortex background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Vortex is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels visually dominant and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A canvas-based particle vortex with 3D simplex noise-driven flow fields and hue-cycling particles.",
+  "detailedDescription": "Vortex creates a mesmerizing particle system using canvas rendering with 3D simplex noise for organic motion. The component initializes 700 particles (configurable) with properties stored in a Float32Array for performance. Each particle has position, velocity, life, TTL, speed, radius, and hue values. Motion is driven by 3D noise sampling at each particle's position with time-based z-offset, creating flowing vortex patterns. Particles move according to noise-derived angles (cos/sin), with velocity lerped toward noise direction at 0.5 factor for smooth turns. The color system uses configurable base hue (default 220, blue) with 100-unit range for variation, cycling through HSL space. Particles spawn across canvas width with y-variation (default ±100px from center), live for 50-200 frames, and have radius 1-3px. The render loop clears with configurable background color, draws particles with fade-in/out lifecycle, applies glow effects, and renders to screen. Animation runs via requestAnimationFrame with continuous noise evaluation. This creates a hypnotic, fluid particle vortex suitable for hero backgrounds, music visualizations, or any context requiring organic, flowing motion.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Generate organic particle flow with noise-driven motion",
+    "Create hypnotic vortex backgrounds with hue cycling",
+    "Provide high-performance canvas particle animation"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Initializes particles with random positions and properties",
+    "Updates particle velocity using 3D simplex noise",
+    "Lerps velocity toward noise direction for smooth flow",
+    "Cycles particle hues through configurable range",
+    "Manages particle lifecycle with fade in/out",
+    "Renders with glow effects via canvas filters"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Visually dominant",
-    "Landing-page friendly"
+    "Flowing particle streams driven by noise",
+    "Hue-cycling colors (default blue-purple range)",
+    "Organic vortex/swirl patterns",
+    "Particle size variation (1-3px radius)",
+    "Smooth velocity transitions",
+    "Full-canvas coverage with configurable background"
   ],
   "difficulty": "beginner",
   "designTone": [

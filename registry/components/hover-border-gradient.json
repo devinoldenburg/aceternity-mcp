@@ -10,17 +10,29 @@
     "gradient",
     "hover"
   ],
-  "summary": "A reusable Hover Border Gradient component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Hover Border Gradient is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A button component with rotating radial gradient border that cycles through sides when not hovered.",
+  "detailedDescription": "Hover Border Gradient creates a button with animated border highlight using radial gradients. The component cycles through four border positions (TOP, LEFT, BOTTOM, RIGHT) every second when not hovered, creating rotating highlight effect. Each position uses specific radial-gradient: TOP/BOTTOM use 20.7% height at 50% center, LEFT/RIGHT use 16.6% width at 50% edge. On hover, cycling stops and gradient locks to hover position. Inner button has black background (dark: white) with white text, rounded-full corners, and p-px border container. The outer container uses bg-black/20 (dark: white/20) with hover:bg-black/10 transition. Duration prop controls rotation speed (default 1s), clockwise prop reverses direction. This creates eye-catching border animation ideal for CTAs, navigation buttons, or any context where animated border draws attention without overwhelming content.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create rotating border highlight animation",
+    "Lock gradient position on hover",
+    "Draw attention with moving border effect"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Cycles through 4 border positions",
+    "Uses radial gradients per side",
+    "Stops rotation on hover",
+    "Configurable rotation duration",
+    "Supports clockwise/counterclockwise",
+    "Applies hover background transition"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Rounded-full button container",
+    "White radial gradient border",
+    "Rotating highlight effect",
+    "Black/dark background options",
+    "1 second default cycle time",
+    "Subtle hover state change"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

@@ -9,17 +9,29 @@
     "button",
     "stateful"
   ],
-  "summary": "A reusable Stateful Button component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Stateful Button is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cta, forms contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A button component with animated loading and success states that transitions through loader spinner to checkmark.",
+  "detailedDescription": "Stateful Button provides a multi-state button experience with smooth Framer Motion animations between idle, loading, and success states. The button contains three elements: a loader (animated spinner), a checkmark icon, and the button text span. On click, the component triggers a sequential animation: first, the loader expands from 0px to 20px width with scale 1, then after the onClick handler completes, the loader contracts back to 0px while the checkmark expands to 20px width. The checkmark remains visible for 2 seconds before contracting back to 0px, returning the button to its idle state. All animations use Framer Motion's useAnimate hook with layout animations for smooth size transitions. The button features a green background (green-500) with white text, rounded-full corners, and hover ring effects. The layout prop on motion.button and inner div ensures smooth size changes as elements appear/disappear. This component is ideal for form submissions, save actions, or any context where visual feedback on operation progress and completion enhances user experience.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Provide clear visual feedback during async operations",
+    "Animate through loading to success confirmation states",
+    "Enhance button interactions with polished motion"
   ],
   "behavior": [
-    "Supports interaction states for typing, focus, submit, or upload"
+    "Animates loader expansion on click initiation",
+    "Executes user onClick handler during loading state",
+    "Transitions from loader to checkmark on completion",
+    "Auto-hides checkmark after 2 second delay",
+    "Uses layout animations for smooth size transitions",
+    "Maintains button text visibility throughout states"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Green rounded button with white text",
+    "Loader spinner appears during processing",
+    "Checkmark icon indicates success completion",
+    "Hover ring effect with green accent",
+    "Smooth width transitions between states",
+    "Minimum 120px width maintains layout stability"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

@@ -9,18 +9,28 @@
     "lamp",
     "landing"
   ],
-  "summary": "A reusable Lamp component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Lamp is a reusable hero/section component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A hero component with conic gradient light beams emanating from center, creating a lamp-like spotlight effect.",
+  "detailedDescription": "Lamp Container creates a dramatic hero section with layered conic gradient light effects that resemble a lamp or spotlight. The component features two mirrored conic gradients - left side gradients from cyan-500 at 70deg to transparent, right side from 290deg to cyan-500. Both gradients animate width from 15rem to 30rem on view with 0.8s duration. Masked divs create sharp edges on the gradients using linear gradient masks (to_top, to_left, to_right). Multiple blur layers add depth: a 48px tall scale-x-150 blur at top, 10% opacity backdrop-blur layer, 36px cyan-500 rounded-full blur (50% opacity), and a 64px cyan-400 blur that animates width from 8rem to 16rem. A thin 0.5px cyan-400 line (30rem wide) animates across the center. Content is positioned at z-50, translated -80 units up from center, with children fading in from y:100. The container uses slate-950 background with min-h-screen height. This creates a theatrical spotlight effect perfect for product launches, hero announcements, or any content requiring dramatic illuminated presentation.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create dramatic spotlight hero sections",
+    "Illuminate content with conic gradient beams",
+    "Add theatrical lighting effects to presentations"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Animates conic gradient width on view",
+    "Layers multiple blur elements for depth",
+    "Uses mask images for gradient clipping",
+    "Translates content upward for positioning",
+    "Fades in content with y-axis animation",
+    "Mirrors gradient directions left/right"
   ],
   "visualCharacteristics": [
-    "Landing-page friendly"
+    "Cyan conic gradient light beams",
+    "Multiple blur layers (24-64px)",
+    "Central horizontal glow line",
+    "Dark slate-950 background",
+    "Theatrical spotlight appearance",
+    "Smooth width animations"
   ],
   "difficulty": "beginner",
   "designTone": [

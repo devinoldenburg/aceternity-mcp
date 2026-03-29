@@ -14,18 +14,28 @@
     "parallax",
     "scroll"
   ],
-  "summary": "A reusable Parallax Hero Images component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Parallax Hero Images is a reusable hero/section component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for hero-sections, scroll-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A hero component with multiple images arranged around edges that respond to mouse movement with parallax depth.",
+  "detailedDescription": "Parallax Hero Images creates an immersive hero layout with up to 8 images positioned around screen edges (top-left, top-right, mid-left, mid-right, bottom-left, bottom-right, far-left, far-right). Each image has configurable depth values (0.2-0.9) controlling parallax intensity. The component tracks mouse position normalized to -1 to 1 range, applying spring-smoothed motion (damping: 25, stiffness: 120) to reduce jitter. Images transform based on depth * mouse position, creating layered 3D parallax effect. Two variant modes exist: 'default' prioritizes corner images with higher depth, 'edge-focus' emphasizes side images. Positions use percentage-based top/left/right values (2-8% from edges). Staggered animation delays (0.12s per image) create sequential entrance. Images use absolute positioning with object-cover for full coverage. The effect works best with high-quality imagery and creates depth without scroll interaction - purely mouse-driven. This component is ideal for portfolio heroes, product showcases, or any context where floating image collage with responsive parallax creates engaging visual hierarchy.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Create parallax image collage responding to mouse",
+    "Arrange images around screen edges with depth",
+    "Provide immersive hero visual experience"
   ],
   "behavior": [
-    "Reacts to scroll progress with transition or reveal effects"
+    "Tracks normalized mouse position (-1 to 1)",
+    "Applies spring smoothing to motion values",
+    "Transforms images based on depth * position",
+    "Supports two depth variant configurations",
+    "Staggers image entrance animations",
+    "Uses absolute edge positioning"
   ],
   "visualCharacteristics": [
-    "Landing-page friendly"
+    "8 images positioned at screen edges",
+    "3D parallax depth on mouse movement",
+    "Percentage-based edge positioning",
+    "Spring-smoothed motion response",
+    "Sequential entrance with delays",
+    "Object-cover image fitting"
   ],
   "difficulty": "advanced",
   "designTone": [

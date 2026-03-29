@@ -11,20 +11,31 @@
     "typography",
     "words"
   ],
-  "summary": "A Flip Words text effect for expressive headings, highlights, and animated content emphasis.",
-  "detailedDescription": "Flip Words is a reusable text effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, text-effects contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A dynamic text animation component that flips words vertically like a slot machine or flip-clock, creating engaging headline transitions that cycle through multiple terms or messages.",
+  "detailedDescription": "The Flip Words component creates eye-catching text animations where words flip vertically to reveal new terms, similar to classic flip-clocks or slot machine reels. This effect is perfect for headlines that want to communicate multiple related concepts, value propositions, or keywords in a compact, engaging format. Each word flip is a smooth 3D rotation around the X-axis, with careful timing that creates a satisfying mechanical feel. The component can cycle through an array of words automatically at set intervals, or trigger flips on specific events. Visual polish includes proper perspective for 3D effect, shadow hints during flip motion, and smooth easing curves that feel weighty and deliberate. The animation can flip single words or multiple words simultaneously for more dramatic effect. Perfect for hero headlines, value proposition sections, tagline rotators, or any context where communicating multiple concepts through animated text enhances the message. The effect creates movement that draws attention while the compact format saves space compared to displaying all words statically.",
   "purpose": [
-    "Draw attention to key headlines and supporting copy",
-    "Communicate brand tone through animated typography",
-    "Increase visual rhythm in content-heavy sections"
+    "Create engaging headline animations flipping through multiple words",
+    "Communicate multiple concepts or value propositions compactly",
+    "Draw attention to key messaging through dynamic motion",
+    "Save space compared to static multi-word displays",
+    "Add satisfying mechanical feel through 3D flip animations"
   ],
   "behavior": [
-    "Uses timed animation sequences for dynamic visual presence"
+    "Animates words with vertical 3D flip rotation around X-axis",
+    "Cycles through word arrays at configurable intervals",
+    "Triggers flips automatically or on specific events",
+    "Applies proper perspective for convincing 3D effect",
+    "Uses smooth easing curves creating weighty, deliberate motion",
+    "Supports single or multiple simultaneous word flips",
+    "Maintains text accessibility with semantic structure"
   ],
   "visualCharacteristics": [
-    "Expressive",
-    "Typographic",
-    "Attention-guiding"
+    "Vertical 3D flip animation resembling flip-clock or slots",
+    "Mechanical, satisfying motion with weighty feel",
+    "Dynamic headlines drawing immediate attention",
+    "Compact format cycling through multiple terms",
+    "Smooth, polished transitions with proper perspective",
+    "Engaging animation enhancing message delivery"
   ],
   "difficulty": "beginner",
   "designTone": [

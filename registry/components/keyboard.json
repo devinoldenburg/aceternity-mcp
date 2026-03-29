@@ -7,17 +7,29 @@
   "tags": [
     "keyboard"
   ],
-  "summary": "A reusable Keyboard component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Keyboard is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An interactive virtual keyboard with authentic key sounds that visualizes typing in real-time.",
+  "detailedDescription": "Keyboard renders a full QWERTY keyboard layout with interactive key visualization and authentic mechanical keyboard sounds. Each key has mapped sound sprite coordinates (startMs, durationMs) from audio files for keydown and keyup events. The component uses Web Audio API for low-latency sound playback. Visual feedback highlights pressed keys with motion animations. Layout includes function row (F1-F12), number row, QWERTY rows, modifier keys (Shift, Ctrl, Alt, CapsLock), and navigation cluster. Tabler Icons represent special keys (volume, brightness, microphone, search, world, command). The keyboard responds to both physical key presses and mouse/touch interaction. Sound definitions cover full 100+ key layout with unique tones per key for realistic typing experience. This creates immersive typing visualization ideal for typing tutorials, keyboard shortcut guides, accessibility tools, or any context where showing keyboard input enhances user understanding.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Visualize keyboard input with key highlights",
+    "Play authentic mechanical key sounds",
+    "Display virtual keyboard for reference"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Maps physical keys to visual highlights",
+    "Plays key-specific sounds on press/release",
+    "Uses Web Audio API for low latency",
+    "Supports mouse/touch key activation",
+    "Displays full QWERTY layout",
+    "Includes function and modifier keys"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Full-size QWERTY keyboard layout",
+    "Highlighted keys on press",
+    "Icon indicators for special keys",
+    "Realistic key proportions",
+    "Sound visualization feedback",
+    "Dark/light mode styling"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

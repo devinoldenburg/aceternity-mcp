@@ -13,20 +13,28 @@
     "moving",
     "showcase"
   ],
-  "summary": "A Infinite Moving Cards card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Infinite Moving Cards is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An auto-scrolling horizontal card carousel that clones content for seamless infinite loop animation.",
+  "detailedDescription": "Infinite Moving Cards creates a continuous horizontal scroll of testimonial cards using CSS custom properties and animation. The component clones each card item and appends to scroller, creating seamless loop effect. Direction prop controls animation-direction CSS variable ('forwards' for left, 'reverse' for right). Speed prop sets animation-duration (fast: 20s, normal: 40s, slow: 80s). Pause-on-hover stops animation via animation-play-state:paused. Container uses mask-image linear gradient (transparent → white 20% → white 80% → transparent) for fade edges. Cards have 350px width (450px md+), rounded-2xl corners, border with gradient background (light: #fafafa to #f5f5f5, dark: #27272a to #18181b). Content displays quote, name, and title in blockquote structure. The effect creates endless testimonial stream ideal for social proof sections, review showcases, or any context where continuous content flow demonstrates abundance and credibility.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Create seamless infinite horizontal scroll",
+    "Display testimonials or reviews continuously",
+    "Support configurable speed and direction"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Clones card items for seamless loop",
+    "Animates via CSS custom properties",
+    "Supports left/right direction",
+    "Configurable speed (20s/40s/80s)",
+    "Pauses on hover when enabled",
+    "Applies edge fade masks"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive"
+    "Horizontal scrolling card row",
+    "Rounded-2xl card styling",
+    "Gradient card backgrounds",
+    "Fade edges from mask gradient",
+    "Continuous seamless loop",
+    "Responsive card widths"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -13,21 +13,27 @@
     "showcase",
     "spotlight"
   ],
-  "summary": "A Card Spotlight card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Card Spotlight is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, hero-sections contexts where clear visual hierarchy matters. Visually, it feels visually dominant and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A card component with a mouse-tracking spotlight effect that reveals an animated grid pattern on hover.",
+  "detailedDescription": "Card Spotlight creates an interactive card with a radial gradient spotlight that follows the mouse cursor position. The component uses Framer Motion's useMotionValue to track mouse coordinates relative to the card, creating a spotlight mask that reveals a CanvasRevealEffect with animated dots when hovering. The spotlight uses a radial gradient mask image that positions a circle at the mouse X/Y coordinates, with the radius configurable via props. When hovering, the CanvasRevealEffect displays animated blue and purple dots that create a subtle particle reveal effect. The card features a dark border and background by default, with smooth opacity transitions for the spotlight overlay. This effect is ideal for feature cards, pricing cards, or any content that benefits from interactive hover states that draw attention to specific areas based on cursor position.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Create interactive hover effects that respond to mouse position",
+    "Highlight card content with a dynamic spotlight reveal",
+    "Add visual depth through layered gradient and particle effects"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Tracks mouse position using motion values for real-time spotlight following",
+    "Reveals spotlight overlay with opacity transition on hover enter/leave",
+    "Displays CanvasRevealEffect animated dots only when actively hovering",
+    "Uses radial gradient mask to create soft-edged circular spotlight",
+    "Supports customizable radius, color, and child content"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive",
-    "Landing-page friendly"
+    "Dark card with subtle border",
+    "Radial spotlight follows cursor position",
+    "Animated dot grid reveals in spotlight area",
+    "Blue and purple color gradient particles",
+    "Smooth opacity transitions",
+    "Rounded corners with inset glow effect"
   ],
   "difficulty": "beginner",
   "designTone": [

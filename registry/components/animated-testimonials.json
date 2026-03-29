@@ -9,17 +9,32 @@
     "animated",
     "testimonials"
   ],
-  "summary": "A reusable Animated Testimonials component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "Animated Testimonials is a reusable UI component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, testimonials contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An engaging testimonials carousel component with automatic rotation, smooth transitions, and visual effects that showcase customer feedback, reviews, and social proof dynamically.",
+  "detailedDescription": "The Animated Testimonials component transforms static customer feedback into a dynamic, engaging showcase that automatically rotates through multiple testimonials. This component is specifically designed to build trust and credibility by presenting social proof in an visually appealing, space-efficient format. The carousel features smooth transitions between testimonials, typically using fade, slide, or scale animations that maintain visual continuity. Automatic rotation ensures all testimonials get visibility without requiring user interaction, though manual navigation controls are usually provided for users who want to explore at their own pace. Each testimonial card can include customer photos, names, titles, company logos, ratings, and the testimonial text itself, all arranged in a clean, readable layout. The component often includes subtle motion effects like slow zooms, pans, or background animations that keep the display feeling alive and engaging. Perfect for landing pages, product pages, or any context where customer validation influences decision-making. The component is responsive and adapts layout appropriately for different screen sizes, ensuring testimonials remain readable and impactful on mobile devices. Customization options include rotation speed, transition style, card design, and the number of visible testimonials.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Showcase customer testimonials and reviews in an engaging, space-efficient format",
+    "Build trust and credibility through dynamic social proof presentation",
+    "Highlight multiple customer success stories without overwhelming page space",
+    "Increase conversion rates by strategically displaying validation at key decision points",
+    "Create visually appealing content that maintains user interest through motion"
   ],
   "behavior": [
-    "Uses timed animation sequences for dynamic visual presence"
+    "Automatically rotates through testimonials at configurable intervals",
+    "Applies smooth transition animations between testimonial changes",
+    "Provides manual navigation controls (arrows, dots) for user-directed browsing",
+    "Optionally pauses rotation on hover to allow content inspection",
+    "Supports swipe gestures for touch-based navigation on mobile devices",
+    "Maintains consistent timing and pacing for predictable, comfortable viewing",
+    "Adapts layout and sizing responsively for different screen dimensions"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Smooth, continuous rotation creating dynamic, living content display",
+    "Clean, readable typography optimized for testimonial content",
+    "Professional card layouts with photo, text, and attribution areas",
+    "Subtle motion effects that maintain engagement without distraction",
+    "Customizable styling to match brand identity and page design",
+    "Responsive design ensuring readability across all device sizes"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

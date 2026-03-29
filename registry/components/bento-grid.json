@@ -11,21 +11,31 @@
     "grid",
     "showcase"
   ],
-  "summary": "A Bento Grid card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Bento Grid is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, feature-sections contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A versatile grid layout component inspired by Japanese bento boxes, featuring modular cards of varying sizes arranged in an aesthetically pleasing, responsive composition for showcasing diverse content.",
+  "detailedDescription": "The Bento Grid component creates sophisticated content layouts through a modular grid system inspired by traditional Japanese bento boxes - compartmentalized containers where each section holds different items. This design approach has become immensely popular in modern UI for its ability to present diverse content types in a cohesive, visually appealing arrangement. The grid supports cards of varying sizes and aspect ratios, allowing designers to create visual hierarchy through size variation while maintaining overall harmony. Each cell in the grid can contain different content types - images, text, videos, metrics, or interactive elements - while the unified grid structure keeps everything organized and scannable. The component uses CSS Grid for responsive behavior, automatically reflowing content for different screen sizes while preserving the bento aesthetic. Optional hover effects, subtle animations, and visual polish elevate the basic grid into an engaging experience. Perfect for feature showcases, dashboard layouts, portfolio grids, product comparisons, or any context where presenting multiple content types in an organized, visually interesting format enhances communication and user engagement.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Organize diverse content types into cohesive, visually appealing grid layouts",
+    "Create visual hierarchy through varied card sizes within unified grid structure",
+    "Present feature showcases, portfolios, or dashboards with bento-box aesthetics",
+    "Enable responsive layouts that maintain visual integrity across device sizes",
+    "Facilitate content scanning through organized, compartmentalized presentation"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Arranges content cards in modular grid with varying sizes and positions",
+    "Uses CSS Grid for responsive reflow across different screen sizes",
+    "Maintains visual harmony despite varied card dimensions and content types",
+    "Supports optional hover effects and subtle animations for engagement",
+    "Preserves aspect ratios and proportions during responsive scaling",
+    "Allows flexible content placement within grid cells",
+    "Adapts grid density and card sizes based on available space"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive",
-    "Subtle"
+    "Modular grid layout with varied card sizes creating visual rhythm",
+    "Clean, organized appearance inspired by Japanese bento box aesthetics",
+    "Visual hierarchy established through strategic size variations",
+    "Cohesive structure unifying diverse content types",
+    "Modern, contemporary aesthetic popular in tech and design contexts",
+    "Responsive design maintaining bento appearance at all breakpoints"
   ],
   "difficulty": "beginner",
   "designTone": [

@@ -10,17 +10,29 @@
     "map",
     "world"
   ],
-  "summary": "A reusable World Map component for React and Next.js projects using Tailwind CSS and modern interaction patterns.",
-  "detailedDescription": "World Map is a reusable visualization component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for layout, visualization contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It can be used with little or no motion when a quieter presentation is required. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An interactive world map with animated curved paths connecting geographic coordinates with pulsing endpoint markers.",
+  "detailedDescription": "World Map displays a dotted world map using the dotted-map library, with animated curved paths connecting start and end coordinates. The map renders as an SVG with configurable dot radius and colors that adapt to light/dark themes. Each path uses Framer Motion to animate pathLength from 0 to 1, creating a drawing effect with staggered delays for multiple routes. Paths use a gradient stroke that fades at both ends for a polished look. Endpoint markers are displayed as circles with expanding ripple animations - the outer circle grows from radius 2 to 8 while fading out, creating a pulsing effect. The component projects latitude/longitude coordinates to SVG x/y positions using a Mercator-like projection, and creates curved paths using quadratic Bezier curves with control points positioned above the midpoint. The map features a gradient mask overlay that fades the top and bottom edges for visual depth. This component is ideal for showing flight routes, data connections, global presence, or any geographic relationships between locations.",
   "purpose": [
-    "Add a reusable presentational building block to UI flows",
-    "Improve consistency across pages and sections",
-    "Accelerate implementation with an install-ready component"
+    "Visualize geographic connections between multiple locations",
+    "Display animated routes with drawing path effects",
+    "Show global presence or network connectivity"
   ],
   "behavior": [
-    "Provides composable UI behavior with optional animation and styling controls"
+    "Animates path drawing from 0 to 100% length on mount",
+    "Displays pulsing circle ripples at start and end points",
+    "Creates curved Bezier paths between coordinate pairs",
+    "Adapts map colors based on light/dark theme",
+    "Projects lat/lng coordinates to SVG viewport positions",
+    "Staggers animation delays for multiple path sequences"
   ],
-  "visualCharacteristics": [],
+  "visualCharacteristics": [
+    "Dotted map grid with diagonal pattern",
+    "Curved gradient paths between locations",
+    "Pulsing circular markers at endpoints",
+    "Gradient fade mask at top and bottom edges",
+    "Theme-aware colors (white dots on dark or dark dots on light)",
+    "2:1 aspect ratio responsive container"
+  ],
   "difficulty": "beginner",
   "designTone": [
     "modern"

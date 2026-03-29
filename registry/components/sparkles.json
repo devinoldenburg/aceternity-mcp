@@ -11,21 +11,28 @@
     "decorative",
     "sparkles"
   ],
-  "summary": "A reusable Sparkles background effect that adds depth, focus, and atmosphere to modern UI sections.",
-  "detailedDescription": "Sparkles is a reusable background effect designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for backgrounds, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "A particle background component using tsParticles that creates floating sparkle particles with customizable appearance and behavior.",
+  "detailedDescription": "Sparkles Core implements a sophisticated particle system using the tsParticles library to create floating sparkle effects. The component initializes the particles engine with the slim package for optimized bundle size, then renders a Particles component with extensive configuration options. Particles are configured with customizable size ranges (minSize to maxSize), speed, color, and density. The system supports click interactions to push particles and hover interactions for repulsion behavior. Particles have bounce physics with configurable horizontal and vertical values, collision detection settings, and opacity animations. The component uses Framer Motion to fade in the particle container once initialization completes, creating a smooth entrance effect. Background color is configurable, with a default deep blue. The particle system runs at 120 FPS for smooth animation and automatically handles window resizing. This creates a magical, atmospheric background suitable for hero sections, feature highlights, or any context where floating particles add visual enchantment without overwhelming the primary content.",
   "purpose": [
-    "Create visual atmosphere around hero and CTA content",
-    "Guide user attention without changing structural layout",
-    "Improve perceived polish for premium landing pages"
+    "Generate animated particle backgrounds with sparkle effects",
+    "Add magical atmosphere to hero and feature sections",
+    "Provide interactive particle responses to user input"
   ],
   "behavior": [
-    "Uses timed animation sequences for dynamic visual presence"
+    "Initializes tsParticles engine with configurable options",
+    "Animates particles with customizable speed and size variation",
+    "Responds to clicks by pushing particles away",
+    "Optionally repulses particles on hover",
+    "Fades in particle container after initialization",
+    "Handles window resize events automatically"
   ],
   "visualCharacteristics": [
-    "Atmospheric",
-    "Layered",
-    "Decorative",
-    "Landing-page friendly"
+    "Floating particles with varying sizes and opacity",
+    "Configurable particle colors and background",
+    "Smooth 120 FPS particle motion",
+    "Particles react to mouse interactions",
+    "Gentle fade-in entrance animation",
+    "Full coverage background positioning"
   ],
   "difficulty": "beginner",
   "designTone": [

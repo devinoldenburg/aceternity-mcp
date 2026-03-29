@@ -13,20 +13,32 @@
     "content",
     "showcase"
   ],
-  "summary": "A Apple Cards Carousel card component for showcasing features, testimonials, and product content with visual polish.",
-  "detailedDescription": "Apple Cards Carousel is a reusable card component designed to help teams compose polished UI sections faster without rebuilding common interaction patterns from scratch. It works by combining Tailwind-driven styling with composable React structure, and in many setups it can be paired with utility props and class overrides for project-specific branding. It is best suited for cards, layout contexts where clear visual hierarchy matters. Visually, it feels balanced and can act as either a supporting accent or a focal element depending on spacing, color contrast, and surrounding content density. It typically relies on motion-driven transitions and timing curves to feel alive and premium. It combines well with complementary navigation, hero, card, and typography primitives, but should be used carefully to avoid animation overload, accessibility conflicts, or unnecessary performance cost on low-powered devices.",
+  "summary": "An elegant carousel component inspired by Apple's design language, featuring smooth card transitions, 3D perspective effects, and intuitive navigation for showcasing products, portfolios, or featured content.",
+  "detailedDescription": "The Apple Cards Carousel component brings premium, Apple-inspired design aesthetics to content carousels with its signature smooth transitions and refined visual presentation. This component excels at displaying sequences of cards - whether products, portfolio pieces, testimonials, or featured content - in an horizontally scrolling format that feels both familiar and elevated. The carousel features a sophisticated 3D perspective effect where cards in the background appear smaller and slightly rotated, creating depth and drawing attention to the center-focused active card. Navigation is intuitive and responsive, supporting click, drag, and swipe gestures across desktop and touch devices. The component includes automatic scrolling with configurable intervals, pause-on-hover functionality, and manual navigation controls through arrows or pagination dots. Each card in the carousel maintains consistent styling while allowing full customization of content including images, text, badges, and call-to-action buttons. The animation timing is carefully tuned to feel natural and responsive, using smooth easing curves that mimic the fluid motion found in Apple's interfaces. Perfect for product showcases, app feature highlights, portfolio galleries, or any context where sequential content presentation benefits from premium visual treatment.",
   "purpose": [
-    "Group related content into digestible visual blocks",
-    "Highlight features, testimonials, or product capabilities",
-    "Increase engagement through interaction and motion"
+    "Showcase products, features, or portfolio pieces in an elegant, scrollable format",
+    "Create premium, Apple-inspired visual experiences that convey quality and sophistication",
+    "Present sequential content with clear visual hierarchy and focus on active item",
+    "Provide intuitive navigation through content collections with multiple interaction methods",
+    "Enhance perceived value through refined animations and polished visual presentation"
   ],
   "behavior": [
-    "Responds to pointer hover and movement with visual feedback"
+    "Scrolls horizontally through cards with smooth, eased transitions",
+    "Applies 3D perspective transforms to create depth with scaled background cards",
+    "Centers active card with automatic positioning and focus management",
+    "Supports drag-to-scroll on desktop and swipe gestures on touch devices",
+    "Optionally auto-scrolls at configurable intervals with pause-on-hover",
+    "Provides navigation controls including arrows, dots, or keyboard arrows",
+    "Maintains consistent card sizing and spacing throughout scroll sequence",
+    "Responds to window resize with smooth layout recalculation"
   ],
   "visualCharacteristics": [
-    "Structured",
-    "Content-focused",
-    "Interactive"
+    "Premium Apple-inspired aesthetic with refined proportions and spacing",
+    "3D perspective creating depth perception with layered card arrangement",
+    "Smooth, fluid animations that feel natural and responsive",
+    "Clean, minimal card design emphasizing content over decoration",
+    "Subtle shadows and highlights enhancing three-dimensional appearance",
+    "Professional, sophisticated appearance suitable for high-end products and services"
   ],
   "difficulty": "beginner",
   "designTone": [
