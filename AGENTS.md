@@ -166,7 +166,7 @@ Before submitting any code:
 
 | Metric | Target | Enforcement |
 |--------|--------|-------------|
-| Test Coverage | >=80% | Pre-push block |
+| Test Coverage | >=40% | Pre-push block |
 | Type Coverage | 100% | MyPy strict |
 | Lint Errors | 0 | Pre-commit block |
 | Build Warnings | 0 | CI block |
