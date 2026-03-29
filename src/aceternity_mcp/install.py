@@ -277,3 +277,20 @@ def main() -> int:
 
 if __name__ == "__main__":
     sys.exit(main())
+
+
+# ============================================================================
+# Prerequisites Check (for CLI)
+# ============================================================================
+def check_prerequisites() -> dict[str, bool]:
+    """Check system prerequisites."""
+    results = {}
+
+    version = sys.version_info
+    python_ok = version.major == 3 and version.minor >= 10
+    results["python"] = python_ok
+
+    success, _ = run_command(["npx", "--version"])
+    results["npx"] = success
+
+    return results
