@@ -1,59 +1,21 @@
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[project]
-name = "aceternity-mcp"
-version = "1.2.0"
-description = "A pipx application for Aceternity UI components - MCP server with CLI for discovery, recommendations, and installation."
-readme = "README.md"
-license = { text = "MIT" }
-requires-python = ">=3.10"
-authors = [{ name = "Aceternity MCP Contributors" }]
-keywords = [
-    "mcp",
-    "aceternity",
-    "ui",
-    "components",
-    "registry",
-    "shadcn",
-    "react",
-    "nextjs",
-    "tailwind",
-    "framer-motion",
-    "pipx",
-    "cli",
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-v",
+    "--tb=short",
+    "--strict-markers",
+    "-ra",
+    "--color=yes",
 ]
-classifiers = [
-    "Development Status :: 4 - Beta",
-    "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
-    "Topic :: Software Development :: Libraries",
-    "Topic :: Software Development :: User Interfaces",
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests",
 ]
-dependencies = ["mcp>=1.0.0"]
-
-[project.scripts]
-aceternity-mcp = "aceternity_mcp.cli:main"
-aceternity-mcp-server = "aceternity_mcp.server:main"
-aceternity-mcp-install = "aceternity_mcp.install:main"
-
-[project.urls]
-Homepage = "https://github.com/devinoldenburg/aceternity-mcp"
-Repository = "https://github.com/devinoldenburg/aceternity-mcp"
-Issues = "https://github.com/devinoldenburg/aceternity-mcp/issues"
-Documentation = "https://github.com/devinoldenburg/aceternity-mcp#readme"
-
-[project.entry-points."mcp.server"]
-aceternity-mcp = "aceternity_mcp.server:main"
-
-[tool.hatch.build.targets.wheel]
-packages = ["src/aceternity_mcp"]
-
-[tool.hatch.build.targets.wheel.shared-data]
-"registry" = "share/aceternity-mcp/registry"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
