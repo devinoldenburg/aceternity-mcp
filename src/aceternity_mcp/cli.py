@@ -148,16 +148,9 @@ class RepairManager:
 
         try:
             import aceternity_mcp
+            from aceternity_mcp.registry import _find_registry_dir
 
-            pkg_path = Path(aceternity_mcp.__file__).parent
-            registry_path = (
-                pkg_path.parent.parent / "share" / "aceternity-mcp" / "registry"
-            )
-
-            if not registry_path.exists():
-                result["status"] = "missing"
-                result["details"] = "Registry directory not found"
-                return result
+            registry_path = _find_registry_dir()
 
             index_file = registry_path / "index.json"
             if not index_file.exists():
