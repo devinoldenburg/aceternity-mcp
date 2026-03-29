@@ -1,5 +1,6 @@
 """Tests for installer functionality."""
 
+import sys
 from pathlib import Path
 
 import pytest
@@ -175,6 +176,37 @@ class TestRunCommand:
         success, output = run_command_func(["pwd"], cwd=Path.home())
         assert success is True
         assert str(Path.home()) in output
+
+    def test_run_command_timeout(self, run_command_func):
+        """Test timeout handling for long-running command."""
+        success, output = run_command_func(
+            [sys.executable, "-c", "import time; time.sleep(2)"],
+            timeout=0.1,
+        )
+        assert success is False
+        assert "timed out" in output.lower()
+
+
+class TestVerifyInstallation:
+    """Test installer verification behavior."""
+
+    def test_verify_installation_uses_server_path_lookup(self, monkeypatch):
+        """Test verification succeeds when CLI works and server command exists."""
+        from aceternity_mcp import install
+
+        monkeypatch.setattr(install, "run_command", lambda *args, **kwargs: (True, ""))
+        monkeypatch.setattr(install.shutil, "which", lambda _cmd: "/usr/local/bin/fake")
+
+        assert install.verify_installation() is True
+
+    def test_verify_installation_fails_when_server_missing(self, monkeypatch):
+        """Test verification fails when server command is missing from PATH."""
+        from aceternity_mcp import install
+
+        monkeypatch.setattr(install, "run_command", lambda *args, **kwargs: (True, ""))
+        monkeypatch.setattr(install.shutil, "which", lambda _cmd: None)
+
+        assert install.verify_installation() is False
 
 
 class TestInstallerIntegration:

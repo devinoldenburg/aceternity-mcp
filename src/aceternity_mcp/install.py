@@ -7,6 +7,7 @@ import json
 import os
 import platform
 import re
+import shutil
 import subprocess  # nosec B404
 import sys
 from pathlib import Path
@@ -234,18 +235,20 @@ def verify_installation() -> bool:
     """Verify the MCP server installation."""
     print_section("Verifying Installation")
 
-    cli_ok, _ = run_command(["aceternity-mcp", "--help"])
-    server_ok, _ = run_command(["aceternity-mcp-server", "--help"])
+    cli_ok, cli_output = run_command(["aceternity-mcp", "--help"], timeout=8)
+    server_path = shutil.which("aceternity-mcp-server")
+    server_ok = server_path is not None
 
     if cli_ok and server_ok:
         print_success("MCP CLI and server are accessible")
-        print_info("Server command: aceternity-mcp-server")
+        print_info(f"Server command: {server_path}")
         return True
     else:
         if not cli_ok:
-            print_error("MCP CLI not accessible")
+            details = cli_output.strip() if cli_output else "unknown error"
+            print_error(f"MCP CLI not accessible: {details}")
         if not server_ok:
-            print_error("MCP server not accessible")
+            print_error("MCP server command not found on PATH")
         return False
 
 
@@ -299,15 +302,26 @@ def print_warning(message: str) -> None:
 
 
 def run_command(
-    command: list[str], cwd: Path | None = None, capture: bool = True
+    command: list[str],
+    cwd: Path | None = None,
+    capture: bool = True,
+    timeout: float | None = None,
 ) -> tuple[bool, str]:
     try:
         result = subprocess.run(  # nosec B603
-            command, cwd=cwd, capture_output=capture, text=True, check=False
+            command,
+            cwd=cwd,
+            capture_output=capture,
+            text=True,
+            check=False,
+            timeout=timeout,
         )
         return result.returncode == 0, (
             result.stdout + result.stderr
         ) if capture else ""
+    except subprocess.TimeoutExpired:
+        timeout_value = timeout if timeout is not None else "configured"
+        return False, f"Command timed out after {timeout_value}s"
     except FileNotFoundError as e:
         return False, f"Command not found: {e}"
     except Exception as e:

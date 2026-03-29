@@ -213,6 +213,19 @@ class TestCLIRepair:
         assert result.returncode == 0 or result.returncode == 1
 
 
+class TestRepairManager:
+    """Test direct repair manager behavior."""
+
+    def test_repair_registry_uses_bundled_sync(self, monkeypatch):
+        """Registry repair should succeed when bundled sync check succeeds."""
+        from aceternity_mcp import cli
+
+        monkeypatch.setattr(cli, "sync_registry", lambda _api_key=None: True)
+
+        manager = cli.RepairManager()
+        assert manager.repair_registry() is True
+
+
 class TestCLIFlags:
     """Test CLI flag parsing."""
 

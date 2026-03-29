@@ -26,6 +26,7 @@ from .install import (
     print_success,
     print_warning,
     run_command,
+    sync_registry,
     verify_installation,
 )
 
@@ -264,32 +265,15 @@ class RepairManager:
         }
 
     def repair_registry(self) -> bool:
-        """Repair registry by re-syncing."""
-        print_info("Syncing registry from Aceternity UI...")
+        """Repair registry by verifying bundled registry availability."""
+        print_info("Checking bundled registry...")
 
-        script_locations = [
-            Path(__file__).parent.parent.parent / "scripts" / "sync_registry.py",
-            Path(__file__).parent / "scripts" / "sync_registry.py",
-        ]
-
-        sync_script = None
-        for loc in script_locations:
-            if loc.exists():
-                sync_script = loc
-                break
-
-        if not sync_script:
-            print_error("Cannot find sync_registry.py script")
-            return False
-
-        success, output = run_command([sys.executable, str(sync_script)])
-
-        if success:
-            print_success("Registry synced successfully")
+        if sync_registry():
+            print_success("Registry is available")
             return True
-        else:
-            print_error(f"Sync failed: {output}")
-            return False
+
+        print_error("Registry check failed")
+        return False
 
     def repair_client_config(self, client_name: str) -> bool:
         """Repair a specific client configuration."""
