@@ -2,9 +2,8 @@
 """Universal installer for Aceternity MCP Server.
 
 This is a universal, cross-platform Python installer that:
-1. Syncs the component registry from Aceternity UI
-2. Configures all supported AI tools (Cursor, Claude Code, Cline, Windsurf, OpenCode)
-3. Verifies the installation
+1. Configures all supported AI tools (Cursor, Claude Code, Cline, Windsurf, OpenCode)
+2. Verifies the installation
 
 Run via: aceternity-mcp-install
 Or: python -m aceternity_mcp.install
@@ -39,28 +38,16 @@ class Colors:
 
 
 # ============================================================================
-# Supported AI Tools Configuration
+# Supported AI Tools Configuration - CORRECT PATHS
 # ============================================================================
 SUPPORTED_CLIENTS = {
     "cursor": {
         "name": "Cursor",
         "config_paths": [
             "~/.cursor/mcp.json",
-            "~/.cursor/mcp_settings.json",
         ],
         "config_key": "mcpServers",
         "description": "Cursor IDE - AI-first code editor",
-        "platform": "all",
-    },
-    "claude": {
-        "name": "Claude Desktop",
-        "config_paths": [
-            "~/Library/Application Support/Claude/claude_desktop_config.json",  # macOS
-            "%APPDATA%/Claude/claude_desktop_config.json",  # Windows
-            "~/.config/claude/claude_desktop_config.json",  # Linux
-        ],
-        "config_key": "mcpServers",
-        "description": "Claude Desktop App",
         "platform": "all",
     },
     "claude-code": {
@@ -95,6 +82,7 @@ SUPPORTED_CLIENTS = {
         "name": "OpenCode",
         "config_paths": [
             "~/.opencode/mcp.json",
+            "~/.config/opencode/mcp.json",
         ],
         "config_key": "mcpServers",
         "description": "OpenCode AI Assistant",
@@ -155,11 +143,8 @@ def get_platform() -> str:
 def expand_path(path: str) -> Path | None:
     """Expand ~ and environment variables in a path."""
     try:
-        # Handle Windows environment variables
         if os.name == "nt":
             path = os.path.expandvars(path)
-
-        # Expand ~ to home directory
         expanded = os.path.expanduser(path)
         return Path(expanded).resolve()
     except Exception:
@@ -172,7 +157,7 @@ def find_config_file(config_paths: list[str]) -> Path | None:
         expanded = expand_path(path)
         if expanded and expanded.exists():
             return expanded
-
+    
     # If none exist, return the first path for creation
     if config_paths:
         return expand_path(config_paths[0])
@@ -203,7 +188,6 @@ def check_prerequisites() -> dict[str, bool]:
     """Check system prerequisites."""
     results = {}
 
-    # Check Python version
     version = sys.version_info
     python_ok = version.major == 3 and version.minor >= 10
     results["python"] = python_ok
@@ -212,7 +196,6 @@ def check_prerequisites() -> dict[str, bool]:
     else:
         print_error(f"Python 3.10+ required (found {version.major}.{version.minor})")
 
-    # Check npx
     success, _ = run_command(["npx", "--version"])
     results["npx"] = success
     if success:
@@ -226,49 +209,6 @@ def check_prerequisites() -> dict[str, bool]:
 # ============================================================================
 # Installation Functions
 # ============================================================================
-def sync_registry(api_key: str | None = None) -> bool:
-    """Sync the component registry from Aceternity UI.
-
-    Note: The registry is bundled with the pipx package, so sync is optional.
-    Only needed for development or to get the latest components.
-    """
-    print_section("Syncing Component Registry")
-    print_info("Note: Registry is bundled with the package. Sync is optional.")
-
-    # Try to find sync_registry.py script
-    script_locations = [
-        Path(__file__).parent.parent.parent / "scripts" / "sync_registry.py",
-        Path(__file__).parent / "scripts" / "sync_registry.py",
-        Path.cwd() / "scripts" / "sync_registry.py",
-    ]
-
-    sync_script = None
-    for loc in script_locations:
-        if loc.exists():
-            sync_script = loc
-            break
-
-    if not sync_script:
-        print_info("Registry already bundled (106 components)")
-        print_info("Skipping sync (only needed for development)")
-        return True
-
-    command = [sys.executable, str(sync_script)]
-    if api_key:
-        command.extend(["--api-key", api_key])
-
-    print_info("Fetching components from Aceternity UI...")
-
-    success, output = run_command(command)
-
-    if success:
-        print_success(output)
-        return True
-    else:
-        print_error(f"Sync failed: {output}")
-        return False
-
-
 def configure_client(
     client_name: str, mcp_command: str, mcp_args: list[str], cwd: str | None = None
 ) -> bool:
@@ -294,7 +234,7 @@ def configure_client(
             print_warning(f"Could not parse existing config: {e}")
             config = {}
 
-    # Ensure the configs key exists
+    # Ensure the config key exists
     if config_key not in config:
         config[config_key] = {}
 
@@ -327,57 +267,10 @@ def configure_client(
         print_error(f"Failed to write config: {e}")
         return False
 
-    print_info(f"Configuring {client['name']}...")
-    print_info(f"Config path: {config_path}")
 
-    # Load existing config
-    config = {}
-    if config_path.exists():
-        try:
-            with open(config_path, "r", encoding="utf-8") as f:
-                config = json.load(f)
-        except (json.JSONDecodeError, IOError) as e:
-            print_warning(f"Could not parse existing config: {e}")
-            config = {}
-
-    # Ensure the config key exists
-    if config_key not in config:
-        config[config_key] = {}
-
-    # Determine server name based on config key format
-    if config_key == "mcp_servers":
-        server_name = "aceternity_ui"
-    else:
-        server_name = "aceternity-ui"
-
-    # Create server configuration
-    server_config = {
-        "command": mcp_command,
-        "args": mcp_args,
-        "cwd": cwd,
-    }
-
-    # Add to config
-    config[config_key][server_name] = server_config
-
-    # Save config
-    try:
-        config_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(config_path, "w", encoding="utf-8") as f:
-            json.dump(config, f, indent=2, ensure_ascii=False)
-
-        print_success(f"{client['name']} configured at {config_path}")
-        return True
-    except IOError as e:
-        print_error(f"Failed to write config: {e}")
-        return False
-
-
-def configure_all_clients(
-    mcp_command: str = "aceternity-mcp-server",
-) -> dict[str, bool]:
+def configure_all_clients(mcp_command: str = "aceternity-mcp-server") -> dict[str, bool]:
     """Configure all supported MCP clients.
-
+    
     Uses aceternity-mcp-server (the MCP server) by default, not the CLI.
     When installed via pipx, no cwd is needed as the command is on PATH.
     """
@@ -387,13 +280,12 @@ def configure_all_clients(
     print_info(f"Configuring MCP server: {mcp_command}")
 
     # No cwd needed when installed via pipx - command is on PATH
-    # Configure each client
     for client_name in SUPPORTED_CLIENTS:
         results[client_name] = configure_client(
             client_name=client_name,
             mcp_command=mcp_command,
             mcp_args=[],
-            cwd=None,  # No cwd needed for pipx installations
+            cwd=None,
         )
 
     return results
@@ -403,11 +295,9 @@ def verify_installation() -> bool:
     """Verify the MCP server installation."""
     print_section("Verifying Installation")
 
-    # Check CLI
     success, output = run_command(["aceternity-mcp", "--help"])
     cli_ok = success
 
-    # Check server
     success, output = run_command(["aceternity-mcp-server", "--help"])
     server_ok = success
 
@@ -421,145 +311,6 @@ def verify_installation() -> bool:
         if not server_ok:
             print_error("MCP server not accessible")
         return False
-
-
-def get_api_key() -> str | None:
-    """Get API key from environment or prompt user."""
-    # Check environment variable first
-    api_key = os.environ.get("ACETERNITY_API_KEY")
-    if api_key:
-        print_info("API key found in environment variable")
-        return api_key
-
-    # Check if running in non-interactive mode
-    if not sys.stdin.isatty():
-        print_info("Running in non-interactive mode, skipping API key")
-        return None
-
-    # Prompt user
-    print("\n" + "=" * 60)
-    print("Aceternity UI API Key (Optional)")
-    print("=" * 60)
-    print("\nThe API key is optional and used for authenticated registry access.")
-    print("It is NOT stored on disk and only used during sync operations.")
-    print("\nPress Enter to skip or enter your API key:")
-
-    try:
-        # Try getpass for hidden input
-        try:
-            import getpass
-
-            api_key = getpass.getpass("API key: ").strip()
-        except Exception:
-            # Fallback to regular input
-            api_key = input("API key: ").strip()
-
-        if api_key:
-            print_success("API key provided")
-            return api_key
-        else:
-            print_info("No API key provided (using public registry)")
-            return None
-    except (EOFError, KeyboardInterrupt):
-        print("\n")
-        print_info("No API key provided (using public registry)")
-        return None
-
-
-def select_clients() -> list[str]:
-    """Let user select which clients to configure."""
-    if not sys.stdin.isatty():
-        # Non-interactive mode - configure all
-        return list(SUPPORTED_CLIENTS.keys())
-
-    print("\n" + "=" * 60)
-    print("Select AI Tools to Configure")
-    print("=" * 60)
-    print("\nAvailable AI tools:")
-
-    clients = list(SUPPORTED_CLIENTS.keys())
-    for i, client_name in enumerate(clients, 1):
-        client = SUPPORTED_CLIENTS[client_name]
-        print(
-            f"  {Colors.BOLD}{i}{Colors.RESET}. {client['name']} - {client['description']}"
-        )
-
-    print(f"\n  {Colors.BOLD}A{Colors.RESET}. Configure ALL tools")
-    print(f"  {Colors.BOLD}N{Colors.RESET}. Skip configuration")
-
-    print("\nEnter your choice (e.g., '1,3' or 'A' or 'N'):", end=" ")
-
-    try:
-        choice = input().strip().upper()
-
-        if choice == "A":
-            print_success("Configuring all AI tools")
-            return clients
-        elif choice == "N":
-            print_info("Skipping client configuration")
-            return []
-        else:
-            selected = []
-            for num in choice.split(","):
-                num = num.strip()
-                if num.isdigit():
-                    idx = int(num) - 1
-                    if 0 <= idx < len(clients):
-                        selected.append(clients[idx])
-
-            if selected:
-                names = [SUPPORTED_CLIENTS[c]["name"] for c in selected]
-                print_success(f"Selected: {', '.join(names)}")
-                return selected
-            else:
-                print_warning("No valid selection, configuring all tools")
-                return clients
-
-    except (EOFError, KeyboardInterrupt):
-        print("\n")
-        print_info("Configuring all tools by default")
-        return clients
-
-
-def print_summary(results: dict[str, Any]) -> None:
-    """Print installation summary."""
-    print("\n" + "=" * 60)
-    print("Installation Summary")
-    print("=" * 60)
-
-    if results.get("registry_synced"):
-        print_success("Registry synced")
-    else:
-        print_error("Registry sync failed (can run manually later)")
-
-    if results.get("verified"):
-        print_success("Installation verified")
-    else:
-        print_warning("Verification failed")
-
-    client_results = results.get("clients", {})
-    if client_results:
-        print("\nAI Tool Configuration:")
-        for client_name, success in client_results.items():
-            name = SUPPORTED_CLIENTS[client_name]["name"]
-            if success:
-                print_success(f"{name} configured")
-            else:
-                print_warning(
-                    f"{name} - config file not found (will create on first launch)"
-                )
-
-    print("\n" + "=" * 60)
-    print("Next Steps")
-    print("=" * 60)
-    print("\n1. Restart your AI tools to load the new MCP configuration")
-    print("\n2. Try these example prompts:")
-    print("   • 'Show me subtle background effects for landing pages'")
-    print("   • 'Recommend a navbar + hero combination'")
-    print("   • 'Install Spotlight component and show dependencies'")
-    print("\n3. Update registry anytime:")
-    print("   aceternity-mcp-install --sync-only")
-    print("\n")
 
 
 # ============================================================================
@@ -578,65 +329,38 @@ def main() -> int:
         f"Python: {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
     )
 
-    # Parse command line arguments
     args = sys.argv[1:]
+    non_interactive = "--non-interactive" in args or "-y" in args
 
-    sync_only = "--sync-only" in args
-    api_key = None
-    selected_clients = None
-
-    # Extract API key if provided
-    for i, arg in enumerate(args):
-        if arg == "--api-key" and i + 1 < len(args):
-            api_key = args[i + 1]
-        elif arg == "--clients" and i + 1 < len(args):
-            selected_clients = args[i + 1].split(",")
-
-    # Check prerequisites
-    print_section("Checking Prerequisites")
-    prereqs = check_prerequisites()
-
-    if not all(prereqs.values()):
-        print_error("\nSome prerequisites are missing.")
-        if not sys.stdin.isatty():
-            print_info("Continuing in non-interactive mode...")
-        else:
-            response = input("\nContinue anyway? (y/n): ").strip().lower()
-            if response not in ("y", "yes"):
-                return 1
-
-    # Get API key (unless sync-only mode)
-    if not sync_only and api_key is None:
-        api_key = get_api_key()
-
-    # Select clients (unless sync-only mode)
-    if not sync_only and selected_clients is None:
-        selected_clients = select_clients()
-
-    # Sync registry
-    if not sync_registry(api_key):
-        print_warning("Registry sync failed, continuing...")
-
-    if sync_only:
-        print_success("Registry sync complete!")
-        return 0
+    if not sys.stdin.isatty():
+        non_interactive = True
 
     # Configure clients
-    client_results = {}
-    if selected_clients:
-        client_results = configure_all_clients()
+    configure_all_clients()
 
     # Verify installation
     verified = verify_installation()
 
     # Print summary
-    print_summary(
-        {
-            "registry_synced": True,
-            "verified": verified,
-            "clients": client_results,
-        }
-    )
+    print("\n" + "=" * 60)
+    print("Installation Summary")
+    print("=" * 60)
+
+    if verified:
+        print_success("Installation verified successfully!")
+    else:
+        print_warning("Verification failed")
+
+    print("\n⚠️  IMPORTANT: Restart your AI tools to load the MCP server!")
+    print("\nRestart these tools now:")
+    print("  • OpenCode - Quit and reopen")
+    print("  • Cursor - Restart the application")
+    print("  • Claude Code - Restart or run: claude")
+    print("  • Cline - Reload VS Code window")
+    print("  • Windsurf - Restart the application")
+
+    print("\nAfter restarting, the MCP server will be available!")
+    print()
 
     return 0 if verified else 1
 
