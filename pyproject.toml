@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aceternity-mcp"
-version = "1.5.0"
+version = "1.6.0"
 description = "A pipx application for Aceternity UI components - MCP server with CLI for discovery, recommendations, and installation."
 readme = "README.md"
 license = { text = "MIT" }
@@ -94,4 +94,20 @@ exclude_lines = [
     "raise NotImplementedError",
     "if __name__ == .__main__.:",
     "if TYPE_CHECKING:",
+]
+
+[tool.bandit]
+exclude_dirs = ["tests", "scripts"]
+skips = ["B101"]  # Skip assert checks
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.3.0",
+    "mypy>=1.8.0",
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "build>=1.0.0",
+    "bandit>=1.7.0",
+    "pre-commit>=3.6.0",
+    "types-all>=1.0.0",
 ]

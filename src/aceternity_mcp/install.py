@@ -5,11 +5,25 @@ from __future__ import annotations
 
 import json
 import os
+import platform
 import re
 import subprocess
 import sys
 from pathlib import Path
 from typing import Any
+
+
+def get_platform() -> str:
+    """Detect the current operating system."""
+    system = platform.system().lower()
+    if system == "darwin":
+        return "macos"
+    elif system == "windows":
+        return "windows"
+    elif system == "linux":
+        return "linux"
+    else:
+        return "unknown"
 
 
 class Colors:
@@ -20,37 +34,39 @@ class Colors:
     BLUE = "\033[34m"
     CYAN = "\033[36m"
     RED = "\033[31m"
+    DIM = "\033[2m"
 
 
 SUPPORTED_CLIENTS = {
     "cursor": {
         "name": "Cursor",
-        "mcp_json_path": "~/.cursor/mcp.json",
+        "config_paths": ["~/.cursor/mcp.json"],
         "config_key": "mcpServers",
         "description": "Cursor IDE",
     },
     "claude-code": {
         "name": "Claude Code CLI",
-        "mcp_json_path": "~/.claude/mcp.json",
+        "config_paths": ["~/.claude/mcp.json"],
         "config_key": "mcpServers",
         "description": "Claude Code CLI",
     },
     "cline": {
         "name": "Cline",
-        "mcp_json_path": "~/.vscode/extensions/saoudrizwan.claude-dev-*/settings/cline_mcp_settings.json",
+        "config_paths": [
+            "~/.vscode/extensions/saoudrizwan.claude-dev-*/settings/cline_mcp_settings.json"
+        ],
         "config_key": "mcpServers",
         "description": "Cline VS Code Extension",
     },
     "windsurf": {
         "name": "Windsurf",
-        "mcp_json_path": "~/.codeium/windsurf/mcp_config.json",
+        "config_paths": ["~/.codeium/windsurf/mcp_config.json"],
         "config_key": "mcp_servers",
         "description": "Windsurf IDE",
     },
     "opencode": {
         "name": "OpenCode",
-        "mcp_json_path": "~/.opencode/mcp.json",
-        "main_config_path": "~/.config/opencode/opencode.jsonc",
+        "config_paths": ["~/.opencode/mcp.json", "~/.config/opencode/opencode.jsonc"],
         "config_key": "mcpServers",
         "description": "OpenCode AI Assistant",
     },
@@ -90,7 +106,7 @@ def expand_path(path: str) -> Path:
 def configure_opencode_main_config() -> bool:
     """Configure OpenCode's main opencode.jsonc file."""
     config_path = expand_path("~/.config/opencode/opencode.jsonc")
-    
+
     if not config_path.exists():
         print_info(f"OpenCode main config not found: {config_path}")
         return False
@@ -109,17 +125,17 @@ def configure_opencode_main_config() -> bool:
         # Look for "mcp": { pattern
         mcp_pattern = r'("mcp"\s*:\s*\{)'
         match = re.search(mcp_pattern, content)
-        
+
         if match:
             # Insert after "mcp": {
             insert_pos = match.end()
             new_entry = '\n    "aceternity-ui": {\n      "type": "local",\n      "command": ["aceternity-mcp-server"],\n      "enabled": true\n    },'
             new_content = content[:insert_pos] + new_entry + content[insert_pos:]
-            
+
             # Write back
             with open(config_path, "w", encoding="utf-8") as f:
                 f.write(new_content)
-            
+
             print_success("OpenCode: Configured in opencode.jsonc")
             return True
         else:
@@ -131,10 +147,12 @@ def configure_opencode_main_config() -> bool:
         return False
 
 
-def configure_mcp_json(client_name: str, mcp_command: str = "aceternity-mcp-server") -> bool:
+def configure_mcp_json(
+    client_name: str, mcp_command: str = "aceternity-mcp-server"
+) -> bool:
     """Configure a standard mcp.json file for a client."""
     client = SUPPORTED_CLIENTS[client_name]
-    config_path = expand_path(client["mcp_json_path"])
+    config_path = expand_path(client["config_paths"][0])
     config_key = client["config_key"]
 
     print_info(f"Configuring {client['name']}...")
@@ -181,7 +199,9 @@ def configure_mcp_json(client_name: str, mcp_command: str = "aceternity-mcp-serv
         return False
 
 
-def configure_all_clients(mcp_command: str = "aceternity-mcp-server") -> dict[str, bool]:
+def configure_all_clients(
+    mcp_command: str = "aceternity-mcp-server",
+) -> dict[str, bool]:
     """Configure all supported MCP clients."""
     results = {}
 
@@ -190,7 +210,7 @@ def configure_all_clients(mcp_command: str = "aceternity-mcp-server") -> dict[st
 
     for client_name in SUPPORTED_CLIENTS:
         client = SUPPORTED_CLIENTS[client_name]
-        
+
         # For OpenCode, configure BOTH locations
         if client_name == "opencode":
             # Configure main config (opencode.jsonc)
@@ -209,19 +229,24 @@ def verify_installation() -> bool:
     """Verify the MCP server installation."""
     print_section("Verifying Installation")
 
-    cli_ok, _ = subprocess.run(
-        ["aceternity-mcp", "--help"],
-        capture_output=True,
-        text=True,
-        check=False
-    ).returncode == 0, ""
+    cli_ok, _ = (
+        subprocess.run(
+            ["aceternity-mcp", "--help"], capture_output=True, text=True, check=False
+        ).returncode
+        == 0,
+        "",
+    )
 
-    server_ok, _ = subprocess.run(
-        ["aceternity-mcp-server", "--help"],
-        capture_output=True,
-        text=True,
-        check=False
-    ).returncode == 0, ""
+    server_ok, _ = (
+        subprocess.run(
+            ["aceternity-mcp-server", "--help"],
+            capture_output=True,
+            text=True,
+            check=False,
+        ).returncode
+        == 0,
+        "",
+    )
 
     if cli_ok and server_ok:
         print_success("MCP CLI and server are accessible")
@@ -283,14 +308,22 @@ if __name__ == "__main__":
 def print_warning(message: str) -> None:
     print(f"{Colors.YELLOW}⚠ {message}{Colors.RESET}")
 
-def run_command(command: list[str], cwd: Path | None = None, capture: bool = True) -> tuple[bool, str]:
+
+def run_command(
+    command: list[str], cwd: Path | None = None, capture: bool = True
+) -> tuple[bool, str]:
     try:
-        result = subprocess.run(command, cwd=cwd, capture_output=capture, text=True, check=False)
-        return result.returncode == 0, (result.stdout + result.stderr) if capture else ""
+        result = subprocess.run(
+            command, cwd=cwd, capture_output=capture, text=True, check=False
+        )
+        return result.returncode == 0, (
+            result.stdout + result.stderr
+        ) if capture else ""
     except FileNotFoundError as e:
         return False, f"Command not found: {e}"
     except Exception as e:
         return False, str(e)
+
 
 def check_prerequisites() -> dict[str, bool]:
     results = {}
@@ -299,6 +332,7 @@ def check_prerequisites() -> dict[str, bool]:
     results["npx"], _ = run_command(["npx", "--version"])
     return results
 
+
 def find_config_file(config_paths: list[str]) -> Path | None:
     for path in config_paths:
         expanded = expand_path(path)
@@ -306,10 +340,12 @@ def find_config_file(config_paths: list[str]) -> Path | None:
             return expanded
     return expand_path(config_paths[0]) if config_paths else None
 
+
 def select_clients() -> list[str]:
     if not sys.stdin.isatty():
         return list(SUPPORTED_CLIENTS.keys())
     return list(SUPPORTED_CLIENTS.keys())
+
 
 def sync_registry(api_key: str | None = None) -> bool:
     print_info("Registry is bundled. Sync skipped.")

@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import logging
+from typing import Any
 
 from mcp.server.fastmcp import FastMCP
 
@@ -67,7 +68,7 @@ def _ensure_loaded() -> None:
 # ---------------------------------------------------------------------------
 
 
-def _component_summary(comp: AceternityComponent) -> dict:
+def _component_summary(comp: AceternityComponent) -> dict[str, Any]:
     """Return a compact summary dict for listings."""
     return {
         "slug": comp.slug,
@@ -79,7 +80,7 @@ def _component_summary(comp: AceternityComponent) -> dict:
     }
 
 
-def _component_full(comp: AceternityComponent) -> dict:
+def _component_full(comp: AceternityComponent) -> dict[str, Any]:
     """Return the complete component dict."""
     return comp.to_dict()
 
@@ -295,7 +296,7 @@ def recommend_combination(
         include_pro=include_pro,
     )
 
-    output: dict = {"description": description, "sections": {}}
+    output: dict[str, Any] = {"description": description, "sections": {}}
     for section, recs in combo.items():
         output["sections"][section] = [
             {
@@ -364,7 +365,21 @@ def install_component(slug: str) -> str:
     if comp is None:
         return json.dumps({"error": f"Component '{slug}' not found"})
 
-    result = {
+    steps: list[str] = [
+        f"1. Run: {comp.install_command}",
+        "2. Import the component into your React/Next.js file",
+        "3. Ensure Tailwind CSS is configured in your project",
+    ]
+
+    if comp.compatibility.framer_motion:
+        steps.append(
+            "4. Ensure Framer Motion (motion) is installed: npm install motion"
+        )
+    if comp.dependencies:
+        deps_str = " ".join(comp.dependencies)
+        steps.append(f"5. Verify dependencies are present: {deps_str}")
+
+    result: dict[str, Any] = {
         "slug": comp.slug,
         "name": comp.name,
         "installCommand": comp.install_command,
@@ -372,20 +387,8 @@ def install_component(slug: str) -> str:
         "docsUrl": comp.docs_url,
         "dependencies": comp.dependencies,
         "compatibility": comp.compatibility.to_dict(),
-        "steps": [
-            f"1. Run: {comp.install_command}",
-            "2. Import the component into your React/Next.js file",
-            "3. Ensure Tailwind CSS is configured in your project",
-        ],
+        "steps": steps,
     }
-
-    if comp.compatibility.framer_motion:
-        result["steps"].append(
-            "4. Ensure Framer Motion (motion) is installed: npm install motion"
-        )
-    if comp.dependencies:
-        deps_str = " ".join(comp.dependencies)
-        result["steps"].append(f"5. Verify dependencies are present: {deps_str}")
 
     return json.dumps(result, indent=2)
 

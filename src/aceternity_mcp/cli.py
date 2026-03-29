@@ -61,7 +61,8 @@ def get_latest_version() -> str | None:
         )
         with urllib.request.urlopen(req, timeout=5) as response:
             data = json.loads(response.read())
-            return data.get("info", {}).get("version")
+            version = data.get("info", {}).get("version")
+            return str(version) if version else None
     except Exception:
         return None
 
@@ -203,7 +204,7 @@ class RepairManager:
                 "config_path": None,
             }
 
-            config_path = find_config_file(client_info["config_paths"])
+            config_path = find_config_file(list(client_info["config_paths"]))
             if config_path:
                 result["config_path"] = str(config_path)
                 if config_path.exists():

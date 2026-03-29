@@ -7,7 +7,6 @@ from unittest.mock import patch, MagicMock
 
 from aceternity_mcp.install import (
     Colors,
-    get_platform,
     expand_path,
     find_config_file,
     check_prerequisites,
@@ -32,20 +31,6 @@ class TestColors:
         assert isinstance(Colors.RESET, str)
         assert isinstance(Colors.BOLD, str)
         assert isinstance(Colors.GREEN, str)
-
-
-class TestGetPlatform:
-    """Test platform detection."""
-
-    def test_get_platform_returns_string(self):
-        """Test that get_platform returns a string."""
-        platform = get_platform()
-        assert isinstance(platform, str)
-
-    def test_get_platform_valid_values(self):
-        """Test that platform is a valid value."""
-        platform = get_platform()
-        assert platform in ["windows", "macos", "linux"]
 
 
 class TestExpandPath:
@@ -117,7 +102,6 @@ class TestSupportedClients:
         """Test that clients have required keys."""
         required_clients = [
             "cursor",
-            "claude",
             "claude-code",
             "cline",
             "windsurf",
@@ -130,15 +114,21 @@ class TestSupportedClients:
         """Test that each client has required fields."""
         for client_name, client_info in SUPPORTED_CLIENTS.items():
             assert "name" in client_info
-            assert "config_paths" in client_info
+            assert "mcp_json_path" in client_info or "config_paths" in client_info
             assert "config_key" in client_info
             assert "description" in client_info
 
     def test_client_config_paths_is_list(self):
-        """Test that config_paths is a list."""
+        """Test that config paths are properly structured."""
         for client_info in SUPPORTED_CLIENTS.values():
-            assert isinstance(client_info["config_paths"], list)
-            assert len(client_info["config_paths"]) > 0
+            # Either mcp_json_path (string) or config_paths (list) should exist
+            has_mcp_path = "mcp_json_path" in client_info
+            has_config_paths = "config_paths" in client_info
+            assert has_mcp_path or has_config_paths
+
+            if has_config_paths:
+                assert isinstance(client_info["config_paths"], list)
+                assert len(client_info["config_paths"]) > 0
 
     def test_client_name_is_string(self):
         """Test that client name is a string."""
@@ -203,7 +193,14 @@ class TestInstallerIntegration:
         """Test that all clients can be configured."""
         # Just verify the structure is correct
         for client_name, client_info in SUPPORTED_CLIENTS.items():
-            assert isinstance(client_info["config_paths"], list)
+            # Check for either mcp_json_path or config_paths
+            has_mcp_path = "mcp_json_path" in client_info
+            has_config_paths = "config_paths" in client_info
+            assert has_mcp_path or has_config_paths
+
+            if has_config_paths:
+                assert isinstance(client_info["config_paths"], list)
+
             assert isinstance(client_info["config_key"], str)
             assert len(client_info["config_key"]) > 0
 

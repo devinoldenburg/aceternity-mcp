@@ -7,10 +7,11 @@ for specific project types, page sections, and design goals.
 from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Any
 
 from .models import AceternityComponent
 from .registry import Registry
-from .search import SearchEngine, _tokenise, _text_relevance
+from .search import _tokenise, _text_relevance
 
 
 # ---------------------------------------------------------------------------
@@ -34,7 +35,7 @@ class Recommendation:
 # Each archetype defines which scoring dimensions matter most and which
 # categories / tags are preferred.
 
-_ARCHETYPES: dict[str, dict] = {
+_ARCHETYPES: dict[str, dict[str, Any]] = {
     "saas-landing": {
         "description": "SaaS or product landing page",
         "preferred_categories": [
