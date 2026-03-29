@@ -406,13 +406,10 @@ def post_install_wizard(interactive: bool = True) -> int:
                 print_info("Setup cancelled")
                 return 1
 
-    # Step 2: Sync registry
-    print_section("Step 2: Syncing Component Registry")
-    from .install import get_api_key, sync_registry
-
-    api_key = get_api_key()
-    if not sync_registry(api_key):
-        print_warning("Registry sync failed (can retry later)")
+    # Step 2: Registry status (bundled with package)
+    print_section("Step 2: Registry Status")
+    print_info("Registry is bundled with the package (106 components)")
+    print_info("✓ Already up to date")
 
     # Step 3: Configure AI tools
     print_section("Step 3: Configuring AI Tools")

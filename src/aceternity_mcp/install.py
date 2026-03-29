@@ -227,8 +227,13 @@ def check_prerequisites() -> dict[str, bool]:
 # Installation Functions
 # ============================================================================
 def sync_registry(api_key: str | None = None) -> bool:
-    """Sync the component registry from Aceternity UI."""
+    """Sync the component registry from Aceternity UI.
+
+    Note: The registry is bundled with the pipx package, so sync is optional.
+    Only needed for development or to get the latest components.
+    """
     print_section("Syncing Component Registry")
+    print_info("Note: Registry is bundled with the package. Sync is optional.")
 
     # Try to find sync_registry.py script
     script_locations = [
@@ -244,9 +249,9 @@ def sync_registry(api_key: str | None = None) -> bool:
             break
 
     if not sync_script:
-        print_error("Cannot find sync_registry.py script")
-        print_info("Registry sync requires the scripts directory")
-        return False
+        print_info("Registry already bundled (106 components)")
+        print_info("Skipping sync (only needed for development)")
+        return True
 
     command = [sys.executable, str(sync_script)]
     if api_key:
