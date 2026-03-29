@@ -41,9 +41,12 @@ def _find_registry_dir() -> Path:
         return cwd_candidate
 
     # pipx/shared-data location: <venv>/share/aceternity-mcp/registry
-    # Navigate from site-packages to venv root
+    # Structure: venv/lib/pythonX.Y/site-packages/aceternity_mcp
+    #            venv/share/aceternity-mcp/registry
     site_packages = pkg_dir.parent  # site-packages/
-    venv_root = site_packages.parent.parent  # venv root (lib/pythonX.Y -> lib -> venv)
+    lib_dir = site_packages.parent  # lib/pythonX.Y
+    lib_parent = lib_dir.parent  # lib
+    venv_root = lib_parent.parent  # venv root
     pipx_candidate = venv_root / "share" / "aceternity-mcp" / "registry"
     if pipx_candidate.is_dir():
         return pipx_candidate
