@@ -23,26 +23,16 @@ def _find_registry_dir() -> Path:
     """Walk upward from this file to find the ``registry/`` directory.
 
     Search order:
-      1. Sibling of the package directory (source checkout)
-      2. ``$PWD/registry``
-      3. Installed shared-data location (hatch installs to share/)
-      4. pipx shared-data location
+      1. Installed shared-data location (pipx/hatch installs to share/)
+      2. Sibling of the package directory (source checkout)
+      3. ``$PWD/registry``
     """
-    # Source checkout: repo_root/registry
     pkg_dir = Path(__file__).resolve().parent  # src/aceternity_mcp/
-    repo_root = pkg_dir.parent.parent  # repo root
-    candidate = repo_root / "registry"
-    if candidate.is_dir():
-        return candidate
-
-    # CWD fallback
-    cwd_candidate = Path.cwd() / "registry"
-    if cwd_candidate.is_dir():
-        return cwd_candidate
 
     # pipx/shared-data location: <venv>/share/aceternity-mcp/registry
     # Structure: venv/lib/pythonX.Y/site-packages/aceternity_mcp
     #            venv/share/aceternity-mcp/registry
+    # Check this FIRST to prefer installed location over source
     site_packages = pkg_dir.parent  # site-packages/
     lib_dir = site_packages.parent  # lib/pythonX.Y
     lib_parent = lib_dir.parent  # lib
@@ -50,6 +40,19 @@ def _find_registry_dir() -> Path:
     pipx_candidate = venv_root / "share" / "aceternity-mcp" / "registry"
     if pipx_candidate.is_dir():
         return pipx_candidate
+
+    # Source checkout: repo_root/registry (only if not in site-packages)
+    # Check if we're actually in a source checkout by looking for .git
+    repo_root = pkg_dir.parent.parent  # repo root
+    if (repo_root / ".git").exists() or (repo_root / "pyproject.toml").exists():
+        candidate = repo_root / "registry"
+        if candidate.is_dir():
+            return candidate
+
+    # CWD fallback
+    cwd_candidate = Path.cwd() / "registry"
+    if cwd_candidate.is_dir():
+        return cwd_candidate
 
     raise FileNotFoundError(
         "Cannot locate the registry/ directory.  "
