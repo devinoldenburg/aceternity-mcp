@@ -30,7 +30,6 @@ import datetime as dt
 import json
 import re
 import subprocess
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -57,8 +56,9 @@ def _run_json(command: list[str]) -> dict[str, Any]:
         check=True,
         capture_output=True,
         text=True,
+        shell=False,
     )
-    return json.loads(proc.stdout)
+    return json.loads(proc.stdout)  # type: ignore[no-any-return]
 
 
 def _slug_to_name(slug: str) -> str:
@@ -701,20 +701,25 @@ def _build_component_entry(slug: str) -> dict[str, Any]:
     name = _slug_to_name(slug)
     categories = _infer_categories(slug)
 
-    # Category refinements
-    if any(k in slug for k in ["pricing", "plan", "tier", "billing"]):
-        if "pricing" not in categories:
-            categories.append("pricing")
-    if any(k in slug for k in ["testimonial", "testimonials", "card-stack"]):
-        if "testimonials" not in categories:
-            categories.append("testimonials")
+    if (
+        any(k in slug for k in ["pricing", "plan", "tier", "billing"])
+        and "pricing" not in categories
+    ):
+        categories.append("pricing")
+    if (
+        any(k in slug for k in ["testimonial", "testimonials", "card-stack"])
+        and "testimonials" not in categories
+    ):
+        categories.append("testimonials")
     if "navbar" in slug and "navbars" not in categories:
         categories.append("navbars")
     if "sidebar" in slug and "sidebars" not in categories:
         categories.append("sidebars")
-    if any(k in slug for k in ["cta", "button", "stateful", "cover"]):
-        if "cta" not in categories:
-            categories.append("cta")
+    if (
+        any(k in slug for k in ["cta", "button", "stateful", "cover"])
+        and "cta" not in categories
+    ):
+        categories.append("cta")
     categories = sorted(set(categories))
 
     tags = _infer_tags(slug, categories)

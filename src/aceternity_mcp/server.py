@@ -21,14 +21,16 @@ from __future__ import annotations
 
 import json
 import logging
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from mcp.server.fastmcp import FastMCP
 
-from .models import AceternityComponent
 from .recommender import Recommender
 from .registry import Registry
 from .search import SearchEngine
+
+if TYPE_CHECKING:
+    from .models import AceternityComponent
 
 # ---------------------------------------------------------------------------
 # Bootstrap

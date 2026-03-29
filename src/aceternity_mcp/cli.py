@@ -10,7 +10,9 @@ import json
 import os
 import shutil
 import sys
-from datetime import datetime
+import urllib.error
+import urllib.request
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -52,16 +54,17 @@ def get_current_version() -> str:
 def get_latest_version() -> str | None:
     """Get the latest version from PyPI."""
     try:
-        import urllib.request
-
         req = urllib.request.Request(
             "https://pypi.org/pypi/aceternity-mcp/json",
             headers={"User-Agent": "aceternity-mcp-cli"},
         )
-        with urllib.request.urlopen(req, timeout=5) as response:  # nosec B310
-            data = json.loads(response.read())
-            version = data.get("info", {}).get("version")
-            return str(version) if version else None
+        try:
+            with urllib.request.urlopen(req, timeout=5) as response:
+                data = json.loads(response.read())
+                version = data.get("info", {}).get("version")
+                return str(version) if version else None
+        except urllib.error.URLError:
+            return None
     except Exception:
         return None
 
@@ -97,9 +100,8 @@ def perform_update(interactive: bool = True) -> bool:
         if update_info["latest"]:
             print_success(f"Already on latest version ({update_info['latest']})")
             return True
-        else:
-            print_warning("Could not check for updates")
-            print_info("Attempting upgrade anyway...")
+        print_warning("Could not check for updates")
+        print_info("Attempting upgrade anyway...")
 
     if update_info["available"]:
         print_info(f"Latest version: {update_info['latest']}")
@@ -125,10 +127,9 @@ def perform_update(interactive: bool = True) -> bool:
         print_success("Update completed successfully!")
         print_info("Please restart your AI tools to apply the update.")
         return True
-    else:
-        print_error(f"Update failed: {output}")
-        print_info("Try running: pip install --upgrade aceternity-mcp")
-        return False
+    print_error(f"Update failed: {output}")
+    print_info("Try running: pip install --upgrade aceternity-mcp")
+    return False
 
 
 # ============================================================================
@@ -157,7 +158,7 @@ class RepairManager:
                 result["details"] = "index.json not found"
                 return result
 
-            with open(index_file, "r", encoding="utf-8") as f:
+            with index_file.open(encoding="utf-8") as f:
                 data = json.load(f)
 
             if "components" not in data or len(data["components"]) == 0:
@@ -190,11 +191,11 @@ class RepairManager:
 
     def check_client_configs(self) -> list[dict[str, Any]]:
         """Check MCP client configurations."""
-        from .install import SUPPORTED_CLIENTS
+        from aceternity_mcp.install import SUPPORTED_CLIENTS
 
         results = []
 
-        for client_name, client_info in SUPPORTED_CLIENTS.items():
+        for _client_name, client_info in SUPPORTED_CLIENTS.items():
             result = {
                 "name": client_info["name"],
                 "status": "unknown",
@@ -207,7 +208,7 @@ class RepairManager:
                 result["config_path"] = str(config_path)
                 if config_path.exists():
                     try:
-                        with open(config_path, "r", encoding="utf-8") as f:
+                        with config_path.open(encoding="utf-8") as f:
                             config = json.load(f)
 
                         config_key = client_info["config_key"]
@@ -261,7 +262,7 @@ class RepairManager:
             "mcp_command": self.check_mcp_command(),
             "python": self.check_python_path(),
             "client_configs": self.check_client_configs(),
-            "timestamp": datetime.now().isoformat(),
+            "timestamp": datetime.now(tz=timezone.utc).isoformat(),
         }
 
     def repair_registry(self) -> bool:
@@ -277,7 +278,7 @@ class RepairManager:
 
     def repair_client_config(self, client_name: str) -> bool:
         """Repair a specific client configuration."""
-        from .install import SUPPORTED_CLIENTS
+        from aceternity_mcp.install import SUPPORTED_CLIENTS
 
         if client_name not in SUPPORTED_CLIENTS:
             print_error(f"Unknown client: {client_name}")
@@ -292,9 +293,8 @@ class RepairManager:
         if success:
             print_success(f"{SUPPORTED_CLIENTS[client_name]['name']} repaired")
             return True
-        else:
-            print_error(f"Failed to repair {SUPPORTED_CLIENTS[client_name]['name']}")
-            return False
+        print_error(f"Failed to repair {SUPPORTED_CLIENTS[client_name]['name']}")
+        return False
 
     def repair_all_configs(self) -> dict[str, bool]:
         """Repair all client configurations."""
@@ -312,7 +312,7 @@ class RepairManager:
 
             for py_file in pkg_path.glob("*.py"):
                 if not os.access(py_file, os.R_OK):
-                    os.chmod(py_file, 0o644)
+                    py_file.chmod(0o644)
                     print_info(f"Fixed read permissions on {py_file.name}")
 
             print_success("Permissions verified")
@@ -322,7 +322,7 @@ class RepairManager:
             return False
 
     def run_repairs(
-        self, repair_type: str = "all", interactive: bool = True
+        self, repair_type: str = "all", _interactive: bool = True
     ) -> dict[str, Any]:
         """Run repair operations."""
         print_section("Running Repairs")
@@ -395,7 +395,7 @@ def post_install_wizard(interactive: bool = True) -> int:
 
     # Step 3: Configure AI tools
     print_section("Step 3: Configuring AI Tools")
-    from .install import select_clients
+    from aceternity_mcp.install import select_clients
 
     selected = select_clients()
 
@@ -444,7 +444,7 @@ def post_install_wizard(interactive: bool = True) -> int:
 
 def run_non_interactive_setup() -> int:
     """Run setup in non-interactive mode."""
-    from .install import sync_registry
+    from aceternity_mcp.install import sync_registry
 
     print_info("Syncing registry...")
     sync_registry()
@@ -456,9 +456,8 @@ def run_non_interactive_setup() -> int:
     if verify_installation():
         print_success("Setup completed successfully!")
         return 0
-    else:
-        print_warning("Setup completed with warnings")
-        return 1
+    print_warning("Setup completed with warnings")
+    return 1
 
 
 # ============================================================================
@@ -551,7 +550,7 @@ def main() -> int:
     if command in ("update", "upgrade", "up"):
         return 0 if perform_update(interactive) else 1
 
-    elif command in ("repair", "fix"):
+    if command in ("repair", "fix"):
         print_header("Aceternity MCP Repair Tool")
 
         repair_type = "all"
@@ -582,37 +581,36 @@ def main() -> int:
 
         return 0 if not results["repairs_failed"] else 1
 
-    elif command in ("install", "setup", "init", "post-install"):
+    if command in ("install", "setup", "init", "post-install"):
         return post_install_wizard(interactive)
 
-    elif command in ("status", "info", "health"):
+    if command in ("status", "info", "health"):
         show_status(verbose)
         return 0
 
-    elif command in ("diagnose", "check"):
+    if command in ("diagnose", "check"):
         print_header("Aceternity MCP Diagnostics")
         manager = RepairManager()
         diagnosis = manager.diagnose()
         print(json.dumps(diagnosis, indent=2))
         return 0
 
-    elif command in ("--version", "-v", "version"):
+    if command in ("--version", "-v", "version"):
         print(get_current_version())
         return 0
 
-    elif command in ("--help", "-h", "help"):
+    if command in ("--help", "-h", "help"):
         print_help()
         return 0
 
-    elif command in ("uninstall", "remove"):
-        from .uninstall import main as uninstall_main
+    if command in ("uninstall", "remove"):
+        from aceternity_mcp.uninstall import main as uninstall_main
 
         return uninstall_main()
 
-    else:
-        print_error(f"Unknown command: {command}")
-        print_info("Run 'aceternity-mcp --help' for available commands")
-        return 1
+    print_error(f"Unknown command: {command}")
+    print_info("Run 'aceternity-mcp --help' for available commands")
+    return 1
 
 
 def print_help() -> None:

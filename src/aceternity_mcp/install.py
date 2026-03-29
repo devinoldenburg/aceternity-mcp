@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import json
-import os
 import platform
 import re
 import shutil
@@ -18,12 +17,11 @@ def get_platform() -> str:
     system = platform.system().lower()
     if system == "darwin":
         return "macos"
-    elif system == "windows":
+    if system == "windows":
         return "windows"
-    elif system == "linux":
+    if system == "linux":
         return "linux"
-    else:
-        return "unknown"
+    return "unknown"
 
 
 class Colors:
@@ -100,7 +98,7 @@ def print_info(message: str) -> None:
 
 
 def expand_path(path: str) -> Path:
-    return Path(os.path.expanduser(path)).resolve()
+    return Path(path).expanduser().resolve()
 
 
 def configure_opencode_main_config() -> bool:
@@ -113,7 +111,7 @@ def configure_opencode_main_config() -> bool:
 
     try:
         # Read the file
-        with open(config_path, "r", encoding="utf-8") as f:
+        with config_path.open(encoding="utf-8") as f:
             content = f.read()
 
         # Check if aceternity-ui already exists
@@ -139,14 +137,13 @@ def configure_opencode_main_config() -> bool:
             new_content = content[:insert_pos] + new_entry + content[insert_pos:]
 
             # Write back
-            with open(config_path, "w", encoding="utf-8") as f:
+            with config_path.open("w", encoding="utf-8") as f:
                 f.write(new_content)
 
             print_success("OpenCode: Configured in opencode.jsonc")
             return True
-        else:
-            print_error("OpenCode: Could not find 'mcp' section in opencode.jsonc")
-            return False
+        print_error("OpenCode: Could not find 'mcp' section in opencode.jsonc")
+        return False
 
     except Exception as e:
         print_error(f"OpenCode: Failed to update opencode.jsonc: {e}")
@@ -168,9 +165,9 @@ def configure_mcp_json(
     config = {}
     if config_path.exists():
         try:
-            with open(config_path, "r", encoding="utf-8") as f:
+            with config_path.open(encoding="utf-8") as f:
                 config = json.load(f)
-        except (json.JSONDecodeError, IOError):
+        except (OSError, json.JSONDecodeError):
             config = {}
 
     # Ensure the config key exists
@@ -178,10 +175,7 @@ def configure_mcp_json(
         config[config_key] = {}
 
     # Determine server name
-    if config_key == "mcp_servers":
-        server_name = "aceternity_ui"
-    else:
-        server_name = "aceternity-ui"
+    server_name = "aceternity_ui" if config_key == "mcp_servers" else "aceternity-ui"
 
     # Create server configuration
     server_config = {
@@ -195,12 +189,12 @@ def configure_mcp_json(
     # Save config
     try:
         config_path.parent.mkdir(parents=True, exist_ok=True)
-        with open(config_path, "w", encoding="utf-8") as f:
+        with config_path.open("w", encoding="utf-8") as f:
             json.dump(config, f, indent=2, ensure_ascii=False)
 
         print_success(f"{client['name']} configured at {config_path}")
         return True
-    except IOError as e:
+    except OSError as e:
         print_error(f"Failed to write config: {e}")
         return False
 
@@ -215,8 +209,6 @@ def configure_all_clients(
     print_info(f"Configuring MCP server: {mcp_command}")
 
     for client_name in SUPPORTED_CLIENTS:
-        SUPPORTED_CLIENTS[client_name]
-
         # For OpenCode, configure BOTH locations
         if client_name == "opencode":
             # Configure main config (opencode.jsonc)
@@ -243,13 +235,12 @@ def verify_installation() -> bool:
         print_success("MCP CLI and server are accessible")
         print_info(f"Server command: {server_path}")
         return True
-    else:
-        if not cli_ok:
-            details = cli_output.strip() if cli_output else "unknown error"
-            print_error(f"MCP CLI not accessible: {details}")
-        if not server_ok:
-            print_error("MCP server command not found on PATH")
-        return False
+    if not cli_ok:
+        details = cli_output.strip() if cli_output else "unknown error"
+        print_error(f"MCP CLI not accessible: {details}")
+    if not server_ok:
+        print_error("MCP server command not found on PATH")
+    return False
 
 
 def main() -> int:
@@ -350,6 +341,6 @@ def select_clients() -> list[str]:
     return list(SUPPORTED_CLIENTS.keys())
 
 
-def sync_registry(api_key: str | None = None) -> bool:
+def sync_registry(_api_key: str | None = None) -> bool:
     print_info("Registry is bundled. Sync skipped.")
     return True

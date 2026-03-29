@@ -7,11 +7,13 @@ for specific project types, page sections, and design goals.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
-from .models import AceternityComponent
-from .registry import Registry
 from .search import _text_relevance, _tokenise
+
+if TYPE_CHECKING:
+    from .models import AceternityComponent
+    from .registry import Registry
 
 # ---------------------------------------------------------------------------
 # Recommendation result
@@ -239,7 +241,7 @@ class Recommender:
                 reasons.append(f"Category match: {', '.join(cat_overlap)}")
 
             # Tag affinity
-            tag_overlap = preferred_tags.intersection(set(t.lower() for t in comp.tags))
+            tag_overlap = preferred_tags.intersection({t.lower() for t in comp.tags})
             if tag_overlap:
                 fit += len(tag_overlap) * 1.0
                 reasons.append(f"Tag match: {', '.join(tag_overlap)}")
@@ -270,7 +272,7 @@ class Recommender:
         self,
         description: str,
         *,
-        max_results: int = 8,
+        _max_results: int = 8,
         include_pro: bool = True,
     ) -> dict[str, list[Recommendation]]:
         """Recommend a full page combination: navbar, hero, features, etc.

@@ -27,7 +27,12 @@ def print_header(text: str) -> None:
 def run_command(command: list[str], cwd: Path | None = None) -> int:
     """Run a command and return exit code."""
     try:
-        result = subprocess.run(command, cwd=cwd, check=False)
+        result = subprocess.run(
+            command,
+            cwd=cwd,
+            check=False,
+            shell=False,
+        )
         return result.returncode
     except KeyboardInterrupt:
         print("\n\nTests interrupted by user")
@@ -40,8 +45,7 @@ def run_command(command: list[str], cwd: Path | None = None) -> int:
 def check_prerequisites() -> bool:
     """Check if pytest is installed."""
     try:
-        import pytest  # noqa: F401
-
+        __import__("pytest")
         return True
     except ImportError:
         print("pytest not found. Installing...")
@@ -204,18 +208,17 @@ Examples:
     # Run tests based on options
     if args.test_path:
         return run_specific_test(args.test_path, args.verbose)
-    elif args.cli:
+    if args.cli:
         return run_cli_tests()
-    elif args.registry:
+    if args.registry:
         return run_registry_tests()
-    elif args.server:
+    if args.server:
         return run_server_tests()
-    elif args.quick:
+    if args.quick:
         return run_quick_tests()
-    elif args.coverage:
+    if args.coverage:
         return run_with_coverage()
-    else:
-        return run_all_tests(args.verbose)
+    return run_all_tests(args.verbose)
 
 
 if __name__ == "__main__":

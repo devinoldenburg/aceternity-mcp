@@ -201,7 +201,7 @@ class TestRegistryIndex:
         """Test that index.json is valid JSON."""
         registry_dir = _find_registry_dir()
         index_file = registry_dir / "index.json"
-        with open(index_file, "r", encoding="utf-8") as f:
+        with open(index_file, encoding="utf-8") as f:
             data = json.load(f)
         assert isinstance(data, dict)
 
@@ -209,7 +209,7 @@ class TestRegistryIndex:
         """Test that index contains components."""
         registry_dir = _find_registry_dir()
         index_file = registry_dir / "index.json"
-        with open(index_file, "r", encoding="utf-8") as f:
+        with open(index_file, encoding="utf-8") as f:
             data = json.load(f)
         assert "components" in data
         assert len(data["components"]) > 0
@@ -218,7 +218,7 @@ class TestRegistryIndex:
         """Test that index contains categories."""
         registry_dir = _find_registry_dir()
         index_file = registry_dir / "index.json"
-        with open(index_file, "r", encoding="utf-8") as f:
+        with open(index_file, encoding="utf-8") as f:
             data = json.load(f)
         assert "categories" in data
         assert len(data["categories"]) > 0
@@ -233,7 +233,7 @@ class TestRegistryComponents:
         components_dir = registry_dir / "components"
 
         for component_file in components_dir.glob("*.json"):
-            with open(component_file, "r", encoding="utf-8") as f:
+            with open(component_file, encoding="utf-8") as f:
                 data = json.load(f)
             assert "slug" in data
             assert "name" in data
@@ -246,7 +246,7 @@ class TestRegistryComponents:
 
         component_files = list(components_dir.glob("*.json"))[:5]  # Test first 5
         for component_file in component_files:
-            with open(component_file, "r", encoding="utf-8") as f:
+            with open(component_file, encoding="utf-8") as f:
                 data = json.load(f)
             # Check both possible field names
             has_desc = "detailedDescription" in data or "description" in data
@@ -264,7 +264,7 @@ class TestRegistryCategories:
         categories_dir = registry_dir / "categories"
 
         for category_file in categories_dir.glob("*.json"):
-            with open(category_file, "r", encoding="utf-8") as f:
+            with open(category_file, encoding="utf-8") as f:
                 data = json.load(f)
             assert "slug" in data
             assert "name" in data
@@ -276,7 +276,7 @@ class TestRegistryCategories:
 
         category_files = list(categories_dir.glob("*.json"))[:5]  # Test first 5
         for category_file in category_files:
-            with open(category_file, "r", encoding="utf-8") as f:
+            with open(category_file, encoding="utf-8") as f:
                 data = json.load(f)
             # Check for either component_slugs or components
             has_components = "component_slugs" in data or "components" in data

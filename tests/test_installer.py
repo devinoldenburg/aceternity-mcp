@@ -44,10 +44,9 @@ class TestExpandPath:
 
     def test_expand_absolute_path(self):
         """Test expanding absolute path."""
-        result = expand_path("/tmp/test")
+        result = expand_path(str(Path.home()))
         assert result is not None
-        # Path may be resolved to /private/tmp on macOS
-        assert "tmp/test" in str(result)
+        assert str(Path.home()) in str(result)
 
     def test_expand_none_path(self):
         """Test expanding invalid path."""
@@ -112,7 +111,7 @@ class TestSupportedClients:
 
     def test_client_has_required_fields(self):
         """Test that each client has required fields."""
-        for client_name, client_info in SUPPORTED_CLIENTS.items():
+        for _client_name, client_info in SUPPORTED_CLIENTS.items():
             assert "name" in client_info
             assert "mcp_json_path" in client_info or "config_paths" in client_info
             assert "config_key" in client_info
@@ -168,7 +167,7 @@ class TestRunCommand:
 
     def test_run_command_failure(self, run_command_func):
         """Test running a failing command."""
-        success, output = run_command_func(["nonexistent-command-12345"])
+        success, _output = run_command_func(["nonexistent-command-12345"])
         assert success is False
 
     def test_run_command_with_cwd(self, run_command_func):
@@ -192,19 +191,23 @@ class TestVerifyInstallation:
 
     def test_verify_installation_uses_server_path_lookup(self, monkeypatch):
         """Test verification succeeds when CLI works and server command exists."""
+        import shutil as shutil_module
+
         from aceternity_mcp import install
 
         monkeypatch.setattr(install, "run_command", lambda *args, **kwargs: (True, ""))
-        monkeypatch.setattr(install.shutil, "which", lambda _cmd: "/usr/local/bin/fake")
+        monkeypatch.setattr(shutil_module, "which", lambda _cmd: "/usr/local/bin/fake")
 
         assert install.verify_installation() is True
 
     def test_verify_installation_fails_when_server_missing(self, monkeypatch):
         """Test verification fails when server command is missing from PATH."""
+        import shutil as shutil_module
+
         from aceternity_mcp import install
 
         monkeypatch.setattr(install, "run_command", lambda *args, **kwargs: (True, ""))
-        monkeypatch.setattr(install.shutil, "which", lambda _cmd: None)
+        monkeypatch.setattr(shutil_module, "which", lambda _cmd: None)
 
         assert install.verify_installation() is False
 
@@ -215,7 +218,7 @@ class TestInstallerIntegration:
     def test_all_clients_configurable(self):
         """Test that all clients can be configured."""
         # Just verify the structure is correct
-        for client_name, client_info in SUPPORTED_CLIENTS.items():
+        for _client_name, client_info in SUPPORTED_CLIENTS.items():
             # Check for either mcp_json_path or config_paths
             has_mcp_path = "mcp_json_path" in client_info
             has_config_paths = "config_paths" in client_info

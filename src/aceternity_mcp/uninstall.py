@@ -11,7 +11,9 @@ Usage:
 from __future__ import annotations
 
 import json
+import logging
 import sys
+from pathlib import Path
 
 from .install import (
     SUPPORTED_CLIENTS,
@@ -23,6 +25,8 @@ from .install import (
     print_success,
     print_warning,
 )
+
+logger = logging.getLogger(__name__)
 
 
 def remove_from_client(client_name: str) -> bool:
@@ -38,7 +42,7 @@ def remove_from_client(client_name: str) -> bool:
     print_info(f"Removing from {client['name']}...")
 
     try:
-        with open(config_path, "r", encoding="utf-8") as f:
+        with Path(config_path).open(encoding="utf-8") as f:
             config = json.load(f)
 
         # Determine server name
@@ -52,16 +56,15 @@ def remove_from_client(client_name: str) -> bool:
             del config[config_key][server_name]
 
             # Save updated config
-            with open(config_path, "w", encoding="utf-8") as f:
+            with Path(config_path).open("w", encoding="utf-8") as f:
                 json.dump(config, f, indent=2, ensure_ascii=False)
 
             print_success(f"Removed from {client['name']}")
             return True
-        else:
-            print_info(f"{client['name']}: Aceternity MCP not configured")
-            return True
+        print_info(f"{client['name']}: Aceternity MCP not configured")
+        return True
 
-    except (json.JSONDecodeError, IOError) as e:
+    except (OSError, json.JSONDecodeError) as e:
         print_error(f"Failed to update {client['name']}: {e}")
         return False
 
@@ -83,23 +86,22 @@ def verify_removal() -> bool:
     print_section("Verifying Removal")
 
     all_removed = True
-    for client_name, client_info in SUPPORTED_CLIENTS.items():
+    for _client_name, client_info in SUPPORTED_CLIENTS.items():
         config_path = find_config_file(list(client_info["config_paths"]))
         if config_path and config_path.exists():
             try:
-                with open(config_path, "r", encoding="utf-8") as f:
+                with open(config_path, encoding="utf-8") as f:
                     config = json.load(f)
 
                 config_key = client_info["config_key"]
-                if config_key in config:
-                    if (
-                        "aceternity-ui" in config[config_key]
-                        or "aceternity_ui" in config[config_key]
-                    ):
-                        print_error(f"{client_info['name']}: Still configured!")
-                        all_removed = False
-            except Exception:  # nosec B110
-                pass
+                if config_key in config and (
+                    "aceternity-ui" in config[config_key]
+                    or "aceternity_ui" in config[config_key]
+                ):
+                    print_error(f"{client_info['name']}: Still configured!")
+                    all_removed = False
+            except Exception:
+                logger.debug("Failed to check config", exc_info=True)
 
     if all_removed:
         print_success("MCP server removed from all tools")
@@ -132,9 +134,8 @@ def main() -> int:
         print("\nNote: The aceternity-mcp package is still installed.")
         print("To completely remove: pipx uninstall aceternity-mcp")
         return 0
-    else:
-        print_warning("Some tools could not be updated")
-        return 1
+    print_warning("Some tools could not be updated")
+    return 1
 
 
 if __name__ == "__main__":

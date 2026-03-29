@@ -1,0 +1,16 @@
+include README.md
+include LICENSE
+include pyproject.toml
+recursive-include src *.py
+recursive-include registry *.json
+recursive-include scripts *.py
+global-exclude .venv*
+global-exclude __pycache__
+global-exclude *.pyc
+global-exclude .git
+global-exclude .github
+global-exclude tests
+global-exclude .pytest_cache
+global-exclude .mypy_cache
+global-exclude .ruff_cache
+global-exclude .coverage

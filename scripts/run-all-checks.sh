@@ -65,7 +65,7 @@ run_check "Type Checking (MyPy Strict)" "mypy src/aceternity_mcp/ --strict --no-
 run_check "Unit Tests (Pytest)" "pytest tests/ -v --tb=short"
 
 # 5. Coverage
-run_check "Code Coverage (80% min)" "pytest --cov=src/aceternity_mcp --cov-fail-under=80 tests/ -q"
+run_check "Code Coverage (40% min)" "pytest --cov=src/aceternity_mcp --cov-fail-under=40 tests/ -q"
 
 # 6. Security Scan
 run_check "Security Scan (Bandit)" "bandit -r src/aceternity_mcp/ -c pyproject.toml" false

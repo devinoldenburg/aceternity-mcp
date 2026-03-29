@@ -29,10 +29,6 @@ def _find_registry_dir() -> Path:
     """
     pkg_dir = Path(__file__).resolve().parent  # src/aceternity_mcp/
 
-    # pipx/shared-data location: <venv>/share/aceternity-mcp/registry
-    # Structure: venv/lib/pythonX.Y/site-packages/aceternity_mcp
-    #            venv/share/aceternity-mcp/registry
-    # Check this FIRST to prefer installed location over source
     site_packages = pkg_dir.parent  # site-packages/
     lib_dir = site_packages.parent  # lib/pythonX.Y
     lib_parent = lib_dir.parent  # lib

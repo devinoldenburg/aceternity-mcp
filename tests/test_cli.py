@@ -14,6 +14,7 @@ class TestCLIHelp:
             [sys.executable, "-m", "aceternity_mcp.cli", "--help"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
         assert "install" in result.stdout
@@ -28,6 +29,7 @@ class TestCLIHelp:
             [sys.executable, "-m", "aceternity_mcp.cli", "-h"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
         assert "Aceternity MCP CLI" in result.stdout
@@ -42,6 +44,7 @@ class TestCLIVersion:
             [sys.executable, "-m", "aceternity_mcp.cli", "--version"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
         # Version should be a semantic version string
@@ -54,6 +57,7 @@ class TestCLIVersion:
             [sys.executable, "-m", "aceternity_mcp.cli", "-v"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
 
@@ -67,6 +71,7 @@ class TestCLIStatus:
             [sys.executable, "-m", "aceternity_mcp.cli", "status"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
         assert "Version Information" in result.stdout
@@ -79,6 +84,7 @@ class TestCLIStatus:
             [sys.executable, "-m", "aceternity_mcp.cli", "status", "--verbose"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
         assert "Client Configurations" in result.stdout or "Platform" in result.stdout
@@ -93,6 +99,7 @@ class TestCLIDiagnose:
             [sys.executable, "-m", "aceternity_mcp.cli", "diagnose"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
 
@@ -116,6 +123,7 @@ class TestCLIDiagnose:
             [sys.executable, "-m", "aceternity_mcp.cli", "diagnose"],
             capture_output=True,
             text=True,
+            check=False,
         )
         # Find JSON in output (skip colored header)
         lines = result.stdout.split("\n")
@@ -138,6 +146,7 @@ class TestCLIUnknownCommand:
             [sys.executable, "-m", "aceternity_mcp.cli", "unknown-command"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 1
         assert "Unknown command" in result.stdout or "unknown-command" in result.stdout
@@ -159,10 +168,9 @@ class TestCLIInstall:
             capture_output=True,
             text=True,
             timeout=60,
+            check=False,
         )
-        assert (
-            result.returncode == 0 or result.returncode == 1
-        )  # May fail if npx not available
+        assert result.returncode in {0, 1}  # May fail if npx not available
         assert "Post-Install" in result.stdout or "Setup" in result.stdout
 
 
@@ -176,6 +184,7 @@ class TestCLIUpdate:
             capture_output=True,
             text=True,
             timeout=30,
+            check=False,
         )
         # Update may succeed or fail depending on PyPI availability
         assert "version" in result.stdout.lower() or "update" in result.stdout.lower()
@@ -191,8 +200,9 @@ class TestCLIRepair:
             capture_output=True,
             text=True,
             timeout=60,
+            check=False,
         )
-        assert result.returncode == 0 or result.returncode == 1
+        assert result.returncode in {0, 1}
         assert "Repair" in result.stdout or "repair" in result.stdout.lower()
 
     def test_repair_registry_flag(self):
@@ -209,8 +219,9 @@ class TestCLIRepair:
             capture_output=True,
             text=True,
             timeout=60,
+            check=False,
         )
-        assert result.returncode == 0 or result.returncode == 1
+        assert result.returncode in {0, 1}
 
 
 class TestRepairManager:
@@ -235,6 +246,7 @@ class TestCLIFlags:
             [sys.executable, "-m", "aceternity_mcp.cli", "status", "-v"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
 
@@ -244,6 +256,7 @@ class TestCLIFlags:
             [sys.executable, "-m", "aceternity_mcp.cli", "status", "-y"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
 
@@ -253,6 +266,7 @@ class TestCLIFlags:
             [sys.executable, "-m", "aceternity_mcp.cli", "-v"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
 
@@ -266,6 +280,7 @@ class TestCLIColors:
             [sys.executable, "-m", "aceternity_mcp.cli", "--help"],
             capture_output=True,
             text=True,
+            check=False,
         )
         # ANSI escape codes should be present
         assert "\033[" in result.stdout or "RESET" in result.stdout
@@ -280,6 +295,7 @@ class TestCLIEntryPoints:
             [sys.executable, "-m", "aceternity_mcp.cli", "--version"],
             capture_output=True,
             text=True,
+            check=False,
         )
         assert result.returncode == 0
 
@@ -291,9 +307,10 @@ class TestCLIEntryPoints:
             capture_output=True,
             text=True,
             timeout=5,
+            check=False,
         )
         # Server may not have --help, but should not crash immediately
-        assert result.returncode == 0 or result.returncode == 2
+        assert result.returncode in {0, 2}
 
     def test_install_module(self):
         """Test running installer as python -m aceternity_mcp.install."""
@@ -302,6 +319,7 @@ class TestCLIEntryPoints:
             capture_output=True,
             text=True,
             timeout=10,
+            check=False,
         )
         # Installer runs interactactively by default
         assert result.returncode == 0 or "Aceternity MCP" in result.stdout

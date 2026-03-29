@@ -8,9 +8,11 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from typing import TYPE_CHECKING
 
-from .models import AceternityComponent
-from .registry import Registry
+if TYPE_CHECKING:
+    from .models import AceternityComponent
+    from .registry import Registry
 
 # ---------------------------------------------------------------------------
 # Search result wrapper
@@ -90,8 +92,8 @@ class SearchEngine:
             # Apply hard filters first
             if category and category not in comp.category:
                 continue
-            if tags and not set(t.lower() for t in tags).intersection(
-                set(t.lower() for t in comp.tags)
+            if tags and not {t.lower() for t in tags}.intersection(
+                {t.lower() for t in comp.tags}
             ):
                 continue
 
@@ -133,18 +135,17 @@ class SearchEngine:
         When *match_all* is True every tag must be present; otherwise any
         single tag match is sufficient.
         """
-        tag_set = set(t.lower() for t in tags)
+        tag_set = {t.lower() for t in tags}
         out: list[AceternityComponent] = []
         for comp in self._registry.all_components():
             if not include_pro and comp.is_pro:
                 continue
-            comp_tags = set(t.lower() for t in comp.tags)
+            comp_tags = {t.lower() for t in comp.tags}
             if match_all:
                 if tag_set.issubset(comp_tags):
                     out.append(comp)
-            else:
-                if tag_set.intersection(comp_tags):
-                    out.append(comp)
+            elif tag_set.intersection(comp_tags):
+                out.append(comp)
         return sorted(out, key=lambda c: c.name)
 
     def filter_by_scores(
