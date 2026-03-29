@@ -80,6 +80,11 @@ def print_error(message: str) -> None:
 
 
 def print_info(message: str) -> None:
+
+
+def print_warning(message: str) -> None:
+    """Print a warning message."""
+    print(f"{Colors.YELLOW}⚠ {message}{Colors.RESET}")
     print(f"{Colors.CYAN}→ {message}{Colors.RESET}")
 
 
