@@ -92,10 +92,36 @@ echo ""
 echo "📦 BUILD VALIDATION"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 if python -m pip show build > /dev/null 2>&1; then
+    # Build can mutate registry timestamps; preserve tracked metadata files.
+    REGISTRY_INDEX_FILE="registry/index.json"
+    REGISTRY_RAW_FILE="registry/raw/components.json"
+    REGISTRY_INDEX_BACKUP=""
+    REGISTRY_RAW_BACKUP=""
+
+    if [ -f "$REGISTRY_INDEX_FILE" ]; then
+        REGISTRY_INDEX_BACKUP=$(mktemp)
+        cp "$REGISTRY_INDEX_FILE" "$REGISTRY_INDEX_BACKUP"
+    fi
+
+    if [ -f "$REGISTRY_RAW_FILE" ]; then
+        REGISTRY_RAW_BACKUP=$(mktemp)
+        cp "$REGISTRY_RAW_FILE" "$REGISTRY_RAW_BACKUP"
+    fi
+
     rm -rf dist/
     run_check "Build Wheel" "python -m build --wheel --outdir dist/" || true
     run_check "Build Source" "python -m build --sdist --outdir dist/" || true
     rm -rf dist/
+
+    if [ -n "$REGISTRY_INDEX_BACKUP" ]; then
+        cp "$REGISTRY_INDEX_BACKUP" "$REGISTRY_INDEX_FILE"
+        rm -f "$REGISTRY_INDEX_BACKUP"
+    fi
+
+    if [ -n "$REGISTRY_RAW_BACKUP" ]; then
+        cp "$REGISTRY_RAW_BACKUP" "$REGISTRY_RAW_FILE"
+        rm -f "$REGISTRY_RAW_BACKUP"
+    fi
 else
     echo -e "${YELLOW}⏭️  Skipped (install: pip install build)${NC}"
 fi
