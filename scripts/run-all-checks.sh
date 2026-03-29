@@ -23,13 +23,13 @@ run_check() {
     local name=$1
     local command=$2
     local critical=${3:-true}
-    
+
     TOTAL_CHECKS=$((TOTAL_CHECKS + 1))
     echo ""
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo -e "${BLUE}⏳ CHECK $TOTAL_CHECKS: $name${NC}"
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-    
+
     if eval "$command" > /tmp/check_output_$$.txt 2>&1; then
         echo -e "${GREEN}✅ PASSED${NC}"
         PASSED_CHECKS=$((PASSED_CHECKS + 1))

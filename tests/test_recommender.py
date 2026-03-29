@@ -1,8 +1,9 @@
 """Tests for recommender functionality."""
 
 import pytest
-from aceternity_mcp.registry import Registry
+
 from aceternity_mcp.recommender import Recommender
+from aceternity_mcp.registry import Registry
 
 
 class TestRecommender:

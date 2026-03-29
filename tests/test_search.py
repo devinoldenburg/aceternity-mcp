@@ -1,6 +1,7 @@
 """Tests for search functionality."""
 
 import pytest
+
 from aceternity_mcp.registry import Registry
 from aceternity_mcp.search import SearchEngine
 

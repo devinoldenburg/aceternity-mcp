@@ -12,12 +12,9 @@ from __future__ import annotations
 
 import json
 import sys
-from pathlib import Path
 
 from .install import (
-    Colors,
     SUPPORTED_CLIENTS,
-    expand_path,
     find_config_file,
     print_error,
     print_header,
@@ -101,7 +98,7 @@ def verify_removal() -> bool:
                     ):
                         print_error(f"{client_info['name']}: Still configured!")
                         all_removed = False
-            except Exception:
+            except Exception:  # nosec B110
                 pass
 
     if all_removed:

@@ -1,22 +1,18 @@
 """Tests for MCP server tools."""
 
 import json
-import pytest
-from unittest.mock import patch, MagicMock
 
-from aceternity_mcp.registry import Registry
 from aceternity_mcp.server import (
-    list_components,
-    list_categories,
-    search_components,
-    get_component,
-    get_category,
-    recommend_components,
-    recommend_combination,
-    match_components_to_project,
-    install_component,
     filter_by_scores,
-    _ensure_loaded,
+    get_category,
+    get_component,
+    install_component,
+    list_categories,
+    list_components,
+    match_components_to_project,
+    recommend_combination,
+    recommend_components,
+    search_components,
 )
 
 

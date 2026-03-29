@@ -62,17 +62,17 @@ python -m build
 
 if [ $? -eq 0 ]; then
     echo -e "${GREEN}✓${NC} Package built successfully"
-    
+
     # Show built files
     echo ""
     echo "Built distributions:"
     ls -lh dist/
-    
+
     # Verify metadata
     echo ""
     echo "Verifying package metadata..."
     twine check dist/*
-    
+
     if [ $? -eq 0 ]; then
         echo -e "${GREEN}✓${NC} Package metadata is valid"
     else

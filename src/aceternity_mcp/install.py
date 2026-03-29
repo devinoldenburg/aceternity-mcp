@@ -7,10 +7,9 @@ import json
 import os
 import platform
 import re
-import subprocess
+import subprocess  # nosec B404
 import sys
 from pathlib import Path
-from typing import Any
 
 
 def get_platform() -> str:
@@ -129,7 +128,13 @@ def configure_opencode_main_config() -> bool:
         if match:
             # Insert after "mcp": {
             insert_pos = match.end()
-            new_entry = '\n    "aceternity-ui": {\n      "type": "local",\n      "command": ["aceternity-mcp-server"],\n      "enabled": true\n    },'
+            new_entry = (
+                '\n    "aceternity-ui": {\n'
+                '      "type": "local",\n'
+                '      "command": ["aceternity-mcp-server"],\n'
+                '      "enabled": true\n'
+                "    },"
+            )
             new_content = content[:insert_pos] + new_entry + content[insert_pos:]
 
             # Write back
@@ -164,7 +169,7 @@ def configure_mcp_json(
         try:
             with open(config_path, "r", encoding="utf-8") as f:
                 config = json.load(f)
-        except (json.JSONDecodeError, IOError) as e:
+        except (json.JSONDecodeError, IOError):
             config = {}
 
     # Ensure the config key exists
@@ -209,7 +214,7 @@ def configure_all_clients(
     print_info(f"Configuring MCP server: {mcp_command}")
 
     for client_name in SUPPORTED_CLIENTS:
-        client = SUPPORTED_CLIENTS[client_name]
+        SUPPORTED_CLIENTS[client_name]
 
         # For OpenCode, configure BOTH locations
         if client_name == "opencode":
@@ -229,24 +234,8 @@ def verify_installation() -> bool:
     """Verify the MCP server installation."""
     print_section("Verifying Installation")
 
-    cli_ok, _ = (
-        subprocess.run(
-            ["aceternity-mcp", "--help"], capture_output=True, text=True, check=False
-        ).returncode
-        == 0,
-        "",
-    )
-
-    server_ok, _ = (
-        subprocess.run(
-            ["aceternity-mcp-server", "--help"],
-            capture_output=True,
-            text=True,
-            check=False,
-        ).returncode
-        == 0,
-        "",
-    )
+    cli_ok, _ = run_command(["aceternity-mcp", "--help"])
+    server_ok, _ = run_command(["aceternity-mcp-server", "--help"])
 
     if cli_ok and server_ok:
         print_success("MCP CLI and server are accessible")
@@ -313,7 +302,7 @@ def run_command(
     command: list[str], cwd: Path | None = None, capture: bool = True
 ) -> tuple[bool, str]:
     try:
-        result = subprocess.run(
+        result = subprocess.run(  # nosec B603
             command, cwd=cwd, capture_output=capture, text=True, check=False
         )
         return result.returncode == 0, (

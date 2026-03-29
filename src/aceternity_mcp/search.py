@@ -12,7 +12,6 @@ from dataclasses import dataclass
 from .models import AceternityComponent
 from .registry import Registry
 
-
 # ---------------------------------------------------------------------------
 # Search result wrapper
 # ---------------------------------------------------------------------------

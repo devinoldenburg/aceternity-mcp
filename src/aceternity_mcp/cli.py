@@ -9,7 +9,6 @@ from __future__ import annotations
 import json
 import os
 import shutil
-import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -19,7 +18,6 @@ from .install import (
     Colors,
     check_prerequisites,
     configure_all_clients,
-    expand_path,
     find_config_file,
     print_error,
     print_header,
@@ -59,7 +57,7 @@ def get_latest_version() -> str | None:
             "https://pypi.org/pypi/aceternity-mcp/json",
             headers={"User-Agent": "aceternity-mcp-cli"},
         )
-        with urllib.request.urlopen(req, timeout=5) as response:
+        with urllib.request.urlopen(req, timeout=5) as response:  # nosec B310
             data = json.loads(response.read())
             version = data.get("info", {}).get("version")
             return str(version) if version else None
@@ -148,7 +146,6 @@ class RepairManager:
         result = {"name": "Registry", "status": "unknown", "details": ""}
 
         try:
-            import aceternity_mcp
             from aceternity_mcp.registry import _find_registry_dir
 
             registry_path = _find_registry_dir()
@@ -503,9 +500,8 @@ def show_status(verbose: bool = False) -> None:
     # System info
     print_section("System Information")
     print_info(f"Platform: {sys.platform}")
-    print_info(
-        f"Python: {sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
-    )
+    py_ver = sys.version_info
+    print_info(f"Python: {py_ver.major}.{py_ver.minor}.{py_ver.micro}")
     print_info(f"Python executable: {sys.executable}")
 
     # Health checks

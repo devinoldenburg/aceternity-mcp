@@ -1,8 +1,8 @@
 """Test configuration and fixtures."""
 
-import pytest
-import sys
 from pathlib import Path
+
+import pytest
 
 
 @pytest.fixture(scope="session")

@@ -1,16 +1,15 @@
 """Tests for installer functionality."""
 
-import json
-import pytest
 from pathlib import Path
-from unittest.mock import patch, MagicMock
+
+import pytest
 
 from aceternity_mcp.install import (
+    SUPPORTED_CLIENTS,
     Colors,
+    check_prerequisites,
     expand_path,
     find_config_file,
-    check_prerequisites,
-    SUPPORTED_CLIENTS,
 )
 
 
@@ -142,15 +141,7 @@ class TestInstallerFunctions:
 
     def test_import_install_functions(self):
         """Test that install functions can be imported."""
-        from aceternity_mcp.install import (
-            print_header,
-            print_section,
-            print_success,
-            print_error,
-            print_info,
-            print_warning,
-            run_command,
-        )
+        from aceternity_mcp.install import print_header, print_section, print_success
 
         # Just testing imports work
         assert callable(print_header)

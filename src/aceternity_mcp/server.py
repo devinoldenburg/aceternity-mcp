@@ -101,8 +101,8 @@ def list_components(
     each component (slug, name, category, tags, summary).
 
     Args:
-        category: Optional category slug to filter by (e.g. "hero-sections", "backgrounds")
-        include_pro: Whether to include pro-only components (default: True)
+        category: Optional category slug (e.g. "hero-sections")
+        include_pro: Include pro-only components (default: True)
     """
     _ensure_loaded()
     if category:
@@ -153,7 +153,7 @@ def search_components(
     relevance.
 
     Args:
-        query: Free-text search query (e.g. "animated hero background", "subtle dark card effect")
+        query: Search query (e.g. "animated hero", "dark card")
         category: Optional category slug to narrow results
         tags: Optional comma-separated tags to filter by
         max_results: Max results to return (default 15)
@@ -322,7 +322,7 @@ def match_components_to_project(
     components and returns more results for full project planning.
 
     Args:
-        project_description: Full project description (e.g. "Building a fintech dashboard with dark mode, sidebar navigation, data cards, and a marketing landing page")
+        project_description: Project description (e.g. "dashboard with dark mode")
         max_results: Number of results (default 15)
         include_pro: Include pro components (default True)
     """

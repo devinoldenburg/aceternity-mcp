@@ -1,12 +1,10 @@
 """Tests for registry loading and management."""
 
 import json
+
 import pytest
-from pathlib import Path
-from unittest.mock import patch, MagicMock
 
 from aceternity_mcp.registry import Registry, _find_registry_dir
-from aceternity_mcp.models import AceternityComponent, Category
 
 
 class TestFindRegistryDir:

@@ -11,8 +11,7 @@ from typing import Any
 
 from .models import AceternityComponent
 from .registry import Registry
-from .search import _tokenise, _text_relevance
-
+from .search import _text_relevance, _tokenise
 
 # ---------------------------------------------------------------------------
 # Recommendation result
