@@ -41,18 +41,33 @@ This helps your AI make informed decisions about which components fit your desig
 
 ### Install from PyPI (Recommended)
 
+**Option 1: Using pipx (Recommended - isolated environment)**
 ```bash
-# Install the package
-pip install aceternity-mcp
+# Install pipx if you don't have it
+brew install pipx
+pipx ensurepath
 
-# Run the interactive setup wizard (recommended for first-time users)
+# Install aceternity-mcp
+pipx install aceternity-mcp
+
+# Run the interactive setup wizard
 aceternity-mcp install
-
-# Or use the legacy installer
-aceternity-mcp-install
 
 # Or configure all tools automatically
 aceternity-mcp install --non-interactive
+```
+
+**Option 2: Using pip (with virtual environment)**
+```bash
+# Create a virtual environment
+python3 -m venv ~/.local/aceternity-mcp
+source ~/.local/aceternity-mcp/bin/activate
+
+# Install the package
+pip install aceternity-mcp
+
+# Run the interactive setup wizard
+aceternity-mcp install
 ```
 
 **What the installer does:**
