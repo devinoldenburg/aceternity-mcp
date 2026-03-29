@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "aceternity-mcp"
-version = "1.0.0"
+version = "1.0.1"
 description = "An MCP server that exposes a structured registry of Aceternity UI components with rich descriptions, search, recommendations, and installation workflows."
 readme = "README.md"
 license = { text = "MIT" }
