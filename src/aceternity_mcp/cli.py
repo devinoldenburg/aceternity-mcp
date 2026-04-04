@@ -422,6 +422,7 @@ def post_install_wizard(interactive: bool = True) -> int:
     print_section("You're All Set!")
     print("\n⚠️  IMPORTANT: Restart your AI tools to load the MCP server!")
     print("\nRestart these tools now:")
+    print("  • Claude Desktop - Quit and reopen the app")
     print("  • OpenCode - Quit and reopen")
     print("  • Cursor - Restart the application")
     print("  • Claude Code - Restart or run: claude")

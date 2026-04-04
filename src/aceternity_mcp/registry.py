@@ -8,11 +8,19 @@ server startup and kept in memory for the lifetime of the process.
 from __future__ import annotations
 
 import logging
+import sys
 from pathlib import Path
 
 from .models import AceternityComponent, Category
 
 logger = logging.getLogger(__name__)
+
+# Ensure this module's logger also targets stderr explicitly
+if not logger.handlers:
+    _rh = logging.StreamHandler(sys.stderr)
+    _rh.setFormatter(logging.Formatter("%(levelname)s %(name)s: %(message)s"))
+    logger.addHandler(_rh)
+    logger.propagate = True
 
 # ---------------------------------------------------------------------------
 # Locate the registry directory
@@ -77,7 +85,7 @@ class Registry:
         if registry_dir is None:
             registry_dir = _find_registry_dir()
 
-        logger.info("Loading registry from %s", registry_dir)
+        logger.debug("Loading registry from %s", registry_dir)
 
         # Load components
         components_dir = registry_dir / "components"
@@ -100,7 +108,7 @@ class Registry:
                     logger.warning("Failed to load category %s", path, exc_info=True)
 
         self._loaded = True
-        logger.info(
+        logger.debug(
             "Registry loaded: %d components, %d categories",
             len(self._components),
             len(self._categories),

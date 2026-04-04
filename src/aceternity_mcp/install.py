@@ -36,6 +36,16 @@ class Colors:
 
 
 SUPPORTED_CLIENTS = {
+    "claude-desktop": {
+        "name": "Claude Desktop",
+        "config_paths": [
+            "~/Library/Application Support/Claude/claude_desktop_config.json",
+            "~/.config/Claude/claude_desktop_config.json",
+            "%APPDATA%/Claude/claude_desktop_config.json",
+        ],
+        "config_key": "mcpServers",
+        "description": "Claude Desktop App",
+    },
     "cursor": {
         "name": "Cursor",
         "config_paths": ["~/.cursor/mcp.json"],
@@ -271,6 +281,7 @@ def main() -> int:
 
     print("\n⚠️  IMPORTANT: Restart your AI tools to load the MCP server!")
     print("\nRestart these tools now:")
+    print("  • Claude Desktop - Quit and reopen the app")
     print("  • OpenCode - Quit and reopen")
     print("  • Cursor - Restart the application")
     print("  • Claude Code - Restart or run: claude")

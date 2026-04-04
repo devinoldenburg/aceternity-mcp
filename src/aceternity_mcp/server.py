@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import logging
+import sys
 from typing import TYPE_CHECKING, Any
 
 from mcp.server.fastmcp import FastMCP
@@ -36,7 +37,12 @@ if TYPE_CHECKING:
 # Bootstrap
 # ---------------------------------------------------------------------------
 
-logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+# CRITICAL: MCP stdio transport uses stdout exclusively for JSON-RPC messages.
+# ALL logging MUST go to stderr and be suppressed to WARNING+ level to avoid
+# polluting the JSON-RPC channel with non-JSON text.
+_handler = logging.StreamHandler(sys.stderr)
+_handler.setFormatter(logging.Formatter("%(levelname)s %(name)s: %(message)s"))
+logging.basicConfig(level=logging.WARNING, handlers=[_handler])
 logger = logging.getLogger(__name__)
 
 mcp = FastMCP(
@@ -460,12 +466,17 @@ def filter_by_scores(
 
 
 def main() -> None:
-    """Run the MCP server over stdio."""
+    """Run the MCP server over stdio.
+
+    IMPORTANT: Nothing must be written to stdout except JSON-RPC messages.
+    All diagnostic output goes to stderr at debug level only.
+    """
     _ensure_loaded()
-    logger.info(
-        "Aceternity MCP server ready — %d components, %d categories",
-        _registry.component_count,
-        _registry.category_count,
+    # Use stderr directly for startup message (never stdout)
+    print(
+        f"Aceternity MCP server ready -- {_registry.component_count} components, "
+        f"{_registry.category_count} categories",
+        file=sys.stderr,
     )
     mcp.run(transport="stdio")
 

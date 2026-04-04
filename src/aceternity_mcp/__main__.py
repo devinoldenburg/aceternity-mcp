@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
-"""Allow running the installer as: python -m aceternity_mcp.install"""
+"""Run the Aceternity MCP server: python -m aceternity_mcp"""
 
-import sys
-
-from .install import main
+from .server import main
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
