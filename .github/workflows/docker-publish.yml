@@ -6,11 +6,12 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_IMAGE: devinoldenburg/aceternity-mcp
   GHCR_IMAGE: ghcr.io/devinoldenburg/aceternity-mcp
+  DOCKER_IMAGE: devinoldenburg/aceternity-mcp
 
 jobs:
-  docker:
+  ghcr:
+    name: Push to GitHub Container Registry
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -23,13 +24,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v3
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-
-      - name: Log in to GitHub Container Registry
+      - name: Log in to ghcr.io
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
@@ -41,9 +36,64 @@ jobs:
         run: |
           VERSION=${GITHUB_REF#refs/tags/v}
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Version: $VERSION"
 
-      - name: Build and push to Docker Hub + ghcr.io
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64,linux/arm64
+          tags: |
+            ${{ env.GHCR_IMAGE }}:latest
+            ${{ env.GHCR_IMAGE }}:${{ steps.version.outputs.version }}
+          labels: |
+            org.opencontainers.image.title=aceternity-mcp
+            org.opencontainers.image.description=MCP server for Aceternity UI components
+            org.opencontainers.image.version=${{ steps.version.outputs.version }}
+            org.opencontainers.image.source=https://github.com/devinoldenburg/aceternity-mcp
+            org.opencontainers.image.licenses=MIT
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  dockerhub:
+    name: Push to Docker Hub
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check Docker Hub credentials
+        id: check
+        run: |
+          if [ -n "${{ secrets.DOCKERHUB_USERNAME }}" ] && [ -n "${{ secrets.DOCKERHUB_TOKEN }}" ]; then
+            echo "has_creds=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_creds=false" >> $GITHUB_OUTPUT
+            echo "::warning::Skipping Docker Hub push - DOCKERHUB_USERNAME or DOCKERHUB_TOKEN not set"
+          fi
+
+      - name: Checkout code
+        if: steps.check.outputs.has_creds == 'true'
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        if: steps.check.outputs.has_creds == 'true'
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Docker Hub
+        if: steps.check.outputs.has_creds == 'true'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Extract version from tag
+        if: steps.check.outputs.has_creds == 'true'
+        id: version
+        run: |
+          VERSION=${GITHUB_REF#refs/tags/v}
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: Build and push
+        if: steps.check.outputs.has_creds == 'true'
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -52,8 +102,6 @@ jobs:
           tags: |
             ${{ env.DOCKER_IMAGE }}:latest
             ${{ env.DOCKER_IMAGE }}:${{ steps.version.outputs.version }}
-            ${{ env.GHCR_IMAGE }}:latest
-            ${{ env.GHCR_IMAGE }}:${{ steps.version.outputs.version }}
           labels: |
             org.opencontainers.image.title=aceternity-mcp
             org.opencontainers.image.description=MCP server for Aceternity UI components
