@@ -140,6 +140,137 @@ class TestMatchToProject:
         assert all(len(r.reasons) > 0 for r in recs)
 
 
+class TestGeneratePageLayout:
+    """Test page layout generation."""
+
+    @pytest.fixture
+    def recommender(self):
+        """Create a recommender instance."""
+        registry = Registry()
+        registry.load()
+        return Recommender(registry)
+
+    def test_generate_landing_layout(self, recommender):
+        """Test generating a landing page layout."""
+        layout = recommender.generate_page_layout("startup landing page")
+        assert layout.page_type == "landing"
+        assert len(layout.sections) > 0
+        assert layout.total_components > 0
+
+    def test_generate_dashboard_layout(self, recommender):
+        """Test generating a dashboard layout."""
+        layout = recommender.generate_page_layout("admin dashboard")
+        assert layout.page_type == "dashboard"
+        assert len(layout.sections) > 0
+
+    def test_generate_portfolio_layout(self, recommender):
+        """Test generating a portfolio layout."""
+        layout = recommender.generate_page_layout("creative portfolio showcase")
+        assert layout.page_type == "portfolio"
+        assert len(layout.sections) > 0
+
+    def test_generate_saas_layout(self, recommender):
+        """Test generating a SaaS page layout."""
+        layout = recommender.generate_page_layout("SaaS platform product page")
+        assert layout.page_type == "saas"
+        assert len(layout.sections) > 0
+
+    def test_generate_ecommerce_layout(self, recommender):
+        """Test generating an e-commerce layout."""
+        layout = recommender.generate_page_layout("online store e-commerce")
+        assert layout.page_type == "ecommerce"
+        assert len(layout.sections) > 0
+
+    def test_generate_blog_layout(self, recommender):
+        """Test generating a blog layout."""
+        layout = recommender.generate_page_layout("developer blog articles")
+        assert layout.page_type == "blog"
+        assert len(layout.sections) > 0
+
+    def test_generate_docs_layout(self, recommender):
+        """Test generating a documentation layout."""
+        layout = recommender.generate_page_layout("API documentation site")
+        assert layout.page_type == "documentation"
+        assert len(layout.sections) > 0
+
+    def test_explicit_page_type(self, recommender):
+        """Test explicit page type override."""
+        layout = recommender.generate_page_layout(
+            "some random page", page_type="dashboard"
+        )
+        assert layout.page_type == "dashboard"
+
+    def test_layout_has_install_commands(self, recommender):
+        """Test that layout includes install commands."""
+        layout = recommender.generate_page_layout("landing page")
+        assert len(layout.install_commands) > 0
+        assert all(cmd.startswith("npx") for cmd in layout.install_commands)
+
+    def test_layout_has_dependencies(self, recommender):
+        """Test that layout aggregates dependencies."""
+        layout = recommender.generate_page_layout("SaaS landing page")
+        assert len(layout.all_dependencies) > 0
+
+    def test_layout_has_performance_estimate(self, recommender):
+        """Test that layout has performance estimate."""
+        layout = recommender.generate_page_layout("landing page")
+        assert layout.estimated_performance in (
+            "lightweight",
+            "moderate",
+            "heavy",
+            "very heavy",
+        )
+
+    def test_layout_sections_have_priority(self, recommender):
+        """Test that sections have priority levels."""
+        layout = recommender.generate_page_layout("landing page")
+        for sec in layout.sections:
+            assert sec.priority in (1, 2, 3)
+
+    def test_layout_no_duplicate_components(self, recommender):
+        """Test that components are not repeated across sections."""
+        layout = recommender.generate_page_layout("SaaS landing page")
+        slugs = []
+        for sec in layout.sections:
+            for rec in sec.components:
+                slugs.append(rec.component.slug)
+        assert len(slugs) == len(set(slugs))
+
+    def test_layout_sections_have_components(self, recommender):
+        """Test that most sections have at least one component."""
+        layout = recommender.generate_page_layout("landing page")
+        sections_with_comps = sum(1 for s in layout.sections if len(s.components) > 0)
+        assert sections_with_comps >= len(layout.sections) // 2
+
+    def test_layout_include_pro(self, recommender):
+        """Test include_pro parameter."""
+        layout_with = recommender.generate_page_layout("landing page", include_pro=True)
+        layout_without = recommender.generate_page_layout(
+            "landing page", include_pro=False
+        )
+        assert layout_without.total_components <= layout_with.total_components
+
+    def test_components_per_section(self, recommender):
+        """Test components_per_section parameter."""
+        layout = recommender.generate_page_layout(
+            "landing page", components_per_section=1
+        )
+        for sec in layout.sections:
+            assert len(sec.components) <= 1
+
+    def test_available_page_types(self):
+        """Test available_page_types returns valid types."""
+        types = Recommender.available_page_types()
+        assert isinstance(types, dict)
+        assert "landing" in types
+        assert "dashboard" in types
+        assert "portfolio" in types
+        assert "saas" in types
+        assert "ecommerce" in types
+        assert "blog" in types
+        assert "documentation" in types
+
+
 class TestRecommenderScoring:
     """Test recommender scoring logic."""
 

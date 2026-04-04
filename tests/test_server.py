@@ -4,6 +4,7 @@ import json
 
 from aceternity_mcp.server import (
     filter_by_scores,
+    generate_page_layout,
     get_category,
     get_component,
     install_component,
@@ -260,6 +261,84 @@ class TestFilterByScores:
         )
         data = json.loads(result)
         assert "total" in data
+
+
+class TestGeneratePageLayout:
+    """Test generate_page_layout tool."""
+
+    def test_generate_basic(self):
+        """Test basic page layout generation."""
+        result = generate_page_layout("SaaS landing page with dark theme")
+        data = json.loads(result)
+        assert "pageType" in data
+        assert "sections" in data
+        assert "totalComponents" in data
+        assert "installCommands" in data
+        assert "allDependencies" in data
+        assert data["totalComponents"] > 0
+
+    def test_generate_with_page_type(self):
+        """Test layout with explicit page type."""
+        result = generate_page_layout("my page", page_type="dashboard")
+        data = json.loads(result)
+        assert data["pageType"] == "dashboard"
+
+    def test_generate_sections_structure(self):
+        """Test that sections have proper structure."""
+        result = generate_page_layout("portfolio website")
+        data = json.loads(result)
+        for sec in data["sections"]:
+            assert "name" in sec
+            assert "role" in sec
+            assert "description" in sec
+            assert "priority" in sec
+            assert "components" in sec
+            assert sec["priority"] in ("essential", "recommended", "optional")
+
+    def test_generate_components_have_install(self):
+        """Test that components include install commands."""
+        result = generate_page_layout("landing page")
+        data = json.loads(result)
+        for sec in data["sections"]:
+            for comp in sec["components"]:
+                assert "installCommand" in comp
+                assert "fitScore" in comp
+                assert "slug" in comp
+
+    def test_generate_has_dependencies(self):
+        """Test that layout includes aggregated dependencies."""
+        result = generate_page_layout("SaaS product page")
+        data = json.loads(result)
+        assert isinstance(data["allDependencies"], list)
+        assert len(data["allDependencies"]) > 0
+
+    def test_generate_performance_estimate(self):
+        """Test that layout has performance estimate."""
+        result = generate_page_layout("landing page")
+        data = json.loads(result)
+        assert data["estimatedPerformance"] in (
+            "lightweight",
+            "moderate",
+            "heavy",
+            "very heavy",
+        )
+
+    def test_generate_no_duplicate_slugs(self):
+        """Test that no component appears in multiple sections."""
+        result = generate_page_layout("SaaS landing page")
+        data = json.loads(result)
+        slugs = []
+        for sec in data["sections"]:
+            for comp in sec["components"]:
+                slugs.append(comp["slug"])
+        assert len(slugs) == len(set(slugs))
+
+    def test_generate_components_per_section(self):
+        """Test components_per_section parameter."""
+        result = generate_page_layout("landing page", components_per_section=1)
+        data = json.loads(result)
+        for sec in data["sections"]:
+            assert len(sec["components"]) <= 1
 
 
 class TestComponentSummary:

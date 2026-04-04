@@ -15,6 +15,7 @@ Tools exposed:
   - match_components_to_project  Project-level matching
   - install_component      Installation command and steps
   - filter_by_scores       Filter by numeric scoring thresholds
+  - generate_page_layout   Generate a complete page layout
 """
 
 from __future__ import annotations
@@ -458,6 +459,90 @@ def filter_by_scores(
         "components": [_component_summary(c) for c in comps],
     }
     return json.dumps(result, indent=2)
+
+
+@mcp.tool()
+def generate_page_layout(
+    page_description: str,
+    page_type: str | None = None,
+    include_pro: bool = True,
+    components_per_section: int = 2,
+) -> str:
+    """Generate a complete page layout with component recommendations.
+
+    Analyses the description to detect the page type, selects the best
+    template, and fills each section with recommended components.
+    Returns an ordered layout with install commands and dependency summary.
+
+    Supported page types (auto-detected if not specified):
+      - landing:       Conversion-focused landing page
+      - saas:          SaaS product marketing page
+      - dashboard:     Data-rich admin dashboard
+      - portfolio:     Creative portfolio or showcase
+      - ecommerce:     E-commerce product store
+      - blog:          Blog or content publication
+      - documentation: Documentation or knowledge base
+
+    Example descriptions:
+      - "premium AI SaaS product page with dark theme"
+      - "fintech dashboard with analytics and charts"
+      - "designer portfolio with 3D effects"
+      - "online clothing store with product grid"
+      - "developer blog with code examples"
+
+    Args:
+        page_description: Free-text description of the page to build
+        page_type: Explicit page type (auto-detected if omitted)
+        include_pro: Include pro components (default True)
+        components_per_section: Components per section (default 2)
+    """
+    _ensure_loaded()
+    assert _recommender is not None
+
+    layout = _recommender.generate_page_layout(
+        page_description,
+        page_type=page_type,
+        include_pro=include_pro,
+        components_per_section=components_per_section,
+    )
+
+    sections_out: list[dict[str, Any]] = []
+    for sec in layout.sections:
+        sections_out.append(
+            {
+                "name": sec.name,
+                "role": sec.role,
+                "description": sec.description,
+                "priority": (
+                    "essential"
+                    if sec.priority == 1
+                    else "recommended"
+                    if sec.priority == 2
+                    else "optional"
+                ),
+                "components": [
+                    {
+                        "fitScore": r.fit_score,
+                        "reasons": r.reasons,
+                        "installCommand": r.component.install_command,
+                        **_component_summary(r.component),
+                    }
+                    for r in sec.components
+                ],
+            }
+        )
+
+    output: dict[str, Any] = {
+        "pageType": layout.page_type,
+        "pageDescription": layout.description,
+        "totalComponents": layout.total_components,
+        "estimatedPerformance": layout.estimated_performance,
+        "sections": sections_out,
+        "allDependencies": layout.all_dependencies,
+        "installCommands": layout.install_commands,
+    }
+
+    return json.dumps(output, indent=2)
 
 
 # ---------------------------------------------------------------------------
