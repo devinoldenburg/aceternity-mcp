@@ -1,12 +1,12 @@
 {
   "name": "aceternity-mcp",
-  "version": "1.8.1",
+  "version": "1.9.1",
   "description": "MCP server for Aceternity UI components - discover, explore, and install 106 components from your AI assistant",
   "bin": {
-    "aceternity-mcp-server": "./bin/cli.js"
+    "aceternity-mcp-server": "bin/cli.js"
   },
   "scripts": {
-    "postinstall": "node ./bin/postinstall.js"
+    "postinstall": "node bin/postinstall.js"
   },
   "keywords": [
     "mcp",
@@ -26,7 +26,7 @@
   "homepage": "https://github.com/devinoldenburg/aceternity-mcp",
   "repository": {
     "type": "git",
-    "url": "https://github.com/devinoldenburg/aceternity-mcp.git"
+    "url": "git+https://github.com/devinoldenburg/aceternity-mcp.git"
   },
   "bugs": {
     "url": "https://github.com/devinoldenburg/aceternity-mcp/issues"
@@ -38,5 +38,8 @@
     "darwin",
     "linux",
     "win32"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
