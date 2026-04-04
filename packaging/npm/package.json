@@ -1,6 +1,6 @@
 {
   "name": "aceternity-mcp",
-  "version": "1.9.1",
+  "version": "1.9.3",
   "description": "MCP server for Aceternity UI components - discover, explore, and install 106 components from your AI assistant",
   "bin": {
     "aceternity-mcp-server": "bin/cli.js"
