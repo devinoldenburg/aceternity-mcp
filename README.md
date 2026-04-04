@@ -2,178 +2,84 @@
 
 # Aceternity MCP
 
-**A Model Context Protocol server for Aceternity UI components**
+**Model Context Protocol server for Aceternity UI components**
 
-Discover, explore, and install 106 Aceternity UI components directly from your AI assistant. Get intelligent recommendations, detailed metadata, and installation instructions.
+Discover, search, and install 106 Aceternity UI components from your AI assistant. Generate full page layouts, get context-aware recommendations, and install everything with a single command.
 
-[![PyPI - Version](https://img.shields.io/pypi/v/aceternity-mcp.svg)](https://pypi.org/project/aceternity-mcp/)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/aceternity-mcp.svg)](https://www.python.org/downloads/)
+[![PyPI](https://img.shields.io/pypi/v/aceternity-mcp.svg)](https://pypi.org/project/aceternity-mcp/)
+[![npm](https://img.shields.io/npm/v/aceternity-mcp.svg)](https://www.npmjs.com/package/aceternity-mcp)
+[![Python](https://img.shields.io/pypi/pyversions/aceternity-mcp.svg)](https://www.python.org/downloads/)
 [![MCP](https://img.shields.io/badge/MCP-Compliant-1f6feb)](https://modelcontextprotocol.io/)
 [![License](https://img.shields.io/github/license/devinoldenburg/aceternity-mcp)](./LICENSE)
+[![Tests](https://img.shields.io/badge/tests-172%20passed-brightgreen)]()
 
 </div>
 
 ---
 
-## What is Aceternity MCP?
-
-Aceternity MCP is a **pipx application** that brings the Aceternity UI component library to your AI assistant through the Model Context Protocol. Your AI gets access to rich metadata including:
-
-- **Detailed descriptions** for each component
-- **Visual characteristics** and behavior patterns
-- **Use case recommendations** and compatibility info
-- **Installation commands** and dependencies
-- **Scoring metrics** for animation intensity, customization level, and performance impact
-
-This helps your AI make informed decisions about which components fit your design needs.
-
-## ⚡ Quick Start
+## Install
 
 ```bash
-# 1. Install pipx (one-time setup)
-brew install pipx
-pipx ensurepath
-
-# 2. Install Aceternity MCP
 pipx install aceternity-mcp
-
-# 3. Run the interactive setup
 aceternity-mcp install
 ```
 
-**That's it!** You're ready to use Aceternity MCP with your AI assistant.
+Restart your AI tool. Done.
 
-## 🎯 CLI Commands
+## What It Does
 
-Aceternity MCP provides a command-line interface for management:
+Your AI assistant gets 11 tools for working with Aceternity UI:
 
-| Command | Description |
-|---------|-------------|
-| `aceternity-mcp install` | Run interactive setup wizard |
-| `aceternity-mcp update` | Check for and install updates |
-| `aceternity-mcp repair` | Fix common installation issues |
-| `aceternity-mcp status` | Show installation health |
-| `aceternity-mcp diagnose` | Run diagnostics (JSON output) |
-| `aceternity-mcp uninstall` | Remove from all AI tools |
-| `aceternity-mcp --version` | Show version |
-| `aceternity-mcp --help` | Show help |
-
-**Command aliases:**
-- Update: `update`, `upgrade`, `up`
-- Repair: `repair`, `fix`
-- Install: `install`, `setup`, `init`, `post-install`
-- Status: `status`, `info`, `health`
-- Diagnose: `diagnose`, `check`
-- Uninstall: `uninstall`, `remove`
-
-### Examples
-
-```bash
-# Check installation status
-aceternity-mcp status
-
-# Update to latest version
-aceternity-mcp update
-
-# Fix issues with registry or configs
-aceternity-mcp repair
-
-# Get detailed diagnostics
-aceternity-mcp diagnose
-
-# Repair only the registry
-aceternity-mcp repair --registry
-
-# Remove from all AI tools
-aceternity-mcp uninstall
-```
-
-## 🤖 Configure Your AI Tool
-
-After running `aceternity-mcp install`, the tool automatically configures your AI assistants. Manual configuration is also supported:
-
-**Cursor** (`~/.cursor/mcp.json`):
-```json
-{
-  "mcpServers": {
-    "aceternity-ui": {
-      "command": "aceternity-mcp-server",
-      "args": []
-    }
-  }
-}
-```
-
-**Claude Code** (`~/.claude/mcp.json`):
-```json
-{
-  "mcpServers": {
-    "aceternity-ui": {
-      "command": "aceternity-mcp-server",
-      "args": []
-    }
-  }
-}
-```
-
-**Cline** (VS Code extension settings):
-```json
-{
-  "mcpServers": {
-    "aceternity-ui": {
-      "command": "aceternity-mcp-server",
-      "args": []
-    }
-  }
-}
-```
-
-**Windsurf** (`~/.codeium/windsurf/mcp_config.json`):
-```json
-{
-  "mcp_servers": {
-    "aceternity_ui": {
-      "command": "aceternity-mcp-server",
-      "args": []
-    }
-  }
-}
-```
-
-**OpenCode** (`~/.opencode/mcp.json`):
-```json
-{
-  "mcpServers": {
-    "aceternity-ui": {
-      "command": "aceternity-mcp-server",
-      "args": []
-    }
-  }
-}
-```
-
-> **Note**: After configuration, restart your AI tool to load the new MCP server.
-
-## 🛠️ Available MCP Tools
-
-Once configured, your AI assistant can use these tools:
-
-| Tool | Description |
+| Tool | What it does |
 |------|-------------|
-| `list_components` | List all available components |
-| `list_categories` | Show component categories |
-| `search_components` | Search by name, description, or tags |
-| `get_component` | Get detailed component information |
+| `generate_page_layout` | Generate a full page layout with sections, components, and install commands |
+| `search_components` | Full-text search across names, descriptions, tags, categories |
+| `recommend_components` | Get recommendations for a use case or design goal |
+| `recommend_combination` | Get component suggestions for each page section |
+| `match_components_to_project` | Match components to a whole project description |
+| `list_components` | List all 106 components with optional filters |
+| `list_categories` | Show all 17 categories with component counts |
+| `get_component` | Get full metadata for a single component |
 | `get_category` | Get all components in a category |
-| `recommend_components` | Get recommendations for your use case |
-| `recommend_combination` | Suggest complementary components |
-| `match_components_to_project` | Match components to your project type |
-| `install_component` | Install a component with dependencies |
-| `filter_by_scores` | Filter by visual/animation intensity |
+| `install_component` | Get install command, dependencies, and setup steps |
+| `filter_by_scores` | Filter by visual intensity, animation, performance, etc. |
 
-## 💬 Example Prompts
+## Page Layout Generator
 
-Try these with your AI assistant:
+The standout feature. Ask your AI to generate a complete page layout and it returns:
+
+- Ordered sections with recommended components for each role
+- Design tone detection (dark, premium, modern, minimal, etc.)
+- Section-specific scoring using 17 role profiles
+- De-duplicated components across sections
+- Implementation notes for every section
+- Batch install command for all components at once
+- Performance estimate and dependency summary
+
+**7 page types:** landing, saas, dashboard, portfolio, ecommerce, blog, documentation
+
+**Example prompts:**
+
+```
+"Generate a page layout for a dark premium AI SaaS landing page"
+"Build me a fintech dashboard layout with analytics"
+"Create a portfolio page with 3D effects and scroll animations"
+"Design an e-commerce store layout for a clothing brand"
+```
+
+**Scoring signals per component:**
+
+| Signal | Description |
+|---|---|
+| Section-role category match | 17 role profiles with preferred categories |
+| Section-role tag match | Role-specific tag boosting |
+| Section score weights | Tuned dimension weights per role |
+| Archetype context | Page-level scoring (SaaS, dashboard, portfolio, etc.) |
+| Text relevance | User description keyword matching |
+| Design tone coherence | Boosts components matching detected tones |
+| Dependency reuse | Bonus for shared npm dependencies |
+
+## Example Prompts
 
 ```
 "Show me subtle dark background effects with low performance impact"
@@ -182,332 +88,185 @@ Try these with your AI assistant:
 "Give me low-motion components suitable for a dashboard"
 "Install Spotlight and show me what dependencies are needed"
 "What components work well for dark mode dashboards?"
-"Show me animated text effects that aren't too distracting"
+"Search for animated text effects"
+"Filter components with visual intensity above 7 and low performance impact"
 ```
 
-## 📦 Installation
+## Supported AI Tools
 
-### Prerequisites
+| Tool | Auto-configured |
+|------|----------------|
+| Claude Desktop | Yes |
+| Claude Code CLI | Yes |
+| Cursor | Yes |
+| Cline (VS Code) | Yes |
+| Windsurf | Yes |
+| OpenCode | Yes |
 
-- **Python 3.10+** (required)
-- **pipx** (recommended installation method)
+Run `aceternity-mcp install` and all detected tools are configured automatically.
 
-### Step 1: Install pipx
+### Manual Configuration
 
-```bash
-# macOS
-brew install pipx
-pipx ensurepath
+All tools use the same server command:
 
-# Linux
-python3 -m pip install --user pipx
-pipx ensurepath
-
-# Windows
-pip install pipx
-pipx ensurepath
+```json
+{
+  "mcpServers": {
+    "aceternity-ui": {
+      "command": "aceternity-mcp-server",
+      "args": []
+    }
+  }
+}
 ```
 
-### Step 2: Install Aceternity MCP
+| Tool | Config file |
+|------|------------|
+| Cursor | `~/.cursor/mcp.json` |
+| Claude Code | `~/.claude/mcp.json` |
+| Cline | VS Code extension settings |
+| Windsurf | `~/.codeium/windsurf/mcp_config.json` (uses `mcp_servers` / `aceternity_ui`) |
+| OpenCode | `~/.opencode/mcp.json` |
+
+## CLI Commands
+
+| Command | Description |
+|---------|-------------|
+| `aceternity-mcp install` | Interactive setup wizard |
+| `aceternity-mcp status` | Show installation health |
+| `aceternity-mcp update` | Check for and install updates |
+| `aceternity-mcp repair` | Fix registry, configs, or permissions |
+| `aceternity-mcp diagnose` | Output JSON diagnostics |
+| `aceternity-mcp uninstall` | Remove from all AI tools |
+| `aceternity-mcp --version` | Show version |
 
 ```bash
-pipx install aceternity-mcp
-```
-
-### Step 3: Run Setup
-
-```bash
-# Interactive setup (recommended)
-aceternity-mcp install
-
-# Or configure all tools automatically
-aceternity-mcp install --non-interactive
-```
-
-### What the Installer Does
-
-1. ✅ Configures all supported AI tools automatically
-2. ✅ Verifies the MCP server installation
-3. ✅ Provides restart instructions for each tool
-4. ✅ Shows next steps and usage examples
-
-The component registry (106 components) is bundled with the package during installation via pipx.
-
-## 🔧 Management Commands
-
-### Check Status
-
-```bash
-aceternity-mcp status
-```
-
-Shows:
-- Current version and update availability
-- System information (platform, Python version)
-- Health checks (registry, MCP command, Python)
-- Client configuration status for supported AI tools
-
-### Update
-
-```bash
-# Check and install updates
-aceternity-mcp update
-
-# Non-interactive update
-aceternity-mcp update --non-interactive
-```
-
-### Repair
-
-```bash
-# Fix all common issues
-aceternity-mcp repair
-
-# Repair only registry
+# Repair only the registry
 aceternity-mcp repair --registry
 
 # Repair only client configs
 aceternity-mcp repair --configs
 
-# Fix file permissions
-aceternity-mcp repair --permissions
+# Non-interactive update
+aceternity-mcp update -y
 ```
 
-**Repair options:**
-- `--registry` or `-r`: Repair only the component registry
-- `--configs` or `-c`: Repair only AI tool configurations
-- `--permissions` or `-p`: Fix file permissions
+## Alternative Install Methods
 
-### Diagnostics
+### Docker
 
 ```bash
-# Get JSON diagnostics
-aceternity-mcp diagnose
-
-# Verbose output
-aceternity-mcp status --verbose
+docker pull ghcr.io/devinoldenburg/aceternity-mcp
+docker run -i ghcr.io/devinoldenburg/aceternity-mcp
 ```
 
-### Uninstall
+### npm (wrapper)
 
 ```bash
-# Remove from all AI tools
-aceternity-mcp uninstall
+npx aceternity-mcp-server
 ```
 
-Removes MCP server configuration from all supported AI tools. Note: This does not uninstall the pipx package itself. To completely remove:
+Requires the Python package installed separately (`pipx install aceternity-mcp`).
+
+### pip
 
 ```bash
-pipx uninstall aceternity-mcp
+pip install aceternity-mcp
 ```
 
-## 📚 Architecture
-
-**Package installation location** (pipx):
-```
-~/.local/pipx/venvs/aceternity-mcp/
-├── bin/
-│   ├── aceternity-mcp         # CLI management commands
-│   ├── aceternity-mcp-server  # MCP server executable
-│   └── aceternity-mcp-install # Legacy installer script
-└── lib/python3.X/site-packages/aceternity_mcp/
-    ├── __init__.py            # Package initialization
-    ├── cli.py                 # CLI implementation (677 lines)
-    ├── server.py              # MCP server with tools (469 lines)
-    ├── install.py             # Installation wizard
-    ├── uninstall.py           # Uninstallation utility
-    ├── models.py              # Data models
-    ├── registry.py            # Registry loader
-    ├── search.py              # Search engine
-    └── recommender.py         # Recommendation engine
-```
-
-**Bundled registry** (installed to):
-```
-~/.local/pipx/venvs/aceternity-mcp/share/aceternity-mcp/registry/
-├── index.json                 # Master component index
-├── components/                # 106 component metadata files
-│   ├── 3d-globe.json
-│   ├── 3d-pin.json
-│   ├── animated-tooltip.json
-│   └── ... (103 more)
-└── categories/                # 17 category definitions
-    ├── backgrounds.json
-    ├── cards.json
-    └── ... (15 more)
-```
-
-**Source repository structure**:
-```
-aceternity-mcp/
-├── src/aceternity_mcp/        # Python package source
-├── registry/                  # Component registry (source)
-│   ├── components/            # 106 component JSON files
-│   ├── categories/            # 17 category JSON files
-│   └── index.json             # Generated index
-├── scripts/                   # Maintenance scripts
-│   ├── sync_registry.py       # Sync from Aceternity UI
-│   └── validate_registry.py   # Validate registry schema
-├── tests/                     # Test suite
-└── pyproject.toml             # Package configuration
-```
-
-## 🧑‍💻 Development
-
-### Clone and Install Locally
+### From source
 
 ```bash
 git clone https://github.com/devinoldenburg/aceternity-mcp.git
 cd aceternity-mcp
-
-# Install your local version with pipx
 pipx install .
-
-# Or install in editable mode for development
-pipx inject aceternity-mcp --pip-args "-e ."
 ```
 
-### Validate Registry
+## Component Registry
+
+106 components across 17 categories:
+
+| Category | Count | Examples |
+|----------|-------|---------|
+| Backgrounds | 18 | Aurora, Beams, Grid, Spotlight, Vortex |
+| Cards | 15 | 3D Card, Card Hover, Expandable Card |
+| Text Effects | 13 | Typewriter, Text Generate, Gradient Text |
+| Scroll Effects | 11 | Parallax, Scroll Reveal, Tracing Beam |
+| Visualization | 9 | Globe, World Map, SVG Mask |
+| Hero Sections | 8 | Hero Parallax, Spotlight, Lamp Effect |
+| Navigation | 7 | Floating Dock, Navbar Menu |
+| Layout | 81 | Bento Grid, Container Scroll, Timeline |
+| Forms | 6 | Input, Placeholders, Multi-Step |
+| 3D Effects | 5 | 3D Card, 3D Pin, Globe |
+
+Each component includes: detailed description, purpose, behavior, visual characteristics, design tone, difficulty level, dependencies, install command, compatibility flags, and 7 scoring dimensions.
+
+## Scoring Dimensions
+
+Every component is rated 1-10 on:
+
+| Dimension | What it measures |
+|-----------|-----------------|
+| Visual Intensity | How visually dominant (1 = subtle, 10 = dramatic) |
+| Animation Intensity | Amount of motion (1 = static, 10 = heavy animation) |
+| Layout Importance | Structural criticality (1 = decorative, 10 = essential) |
+| Customization Ease | Flexibility (1 = rigid, 10 = very configurable) |
+| Landing Page Fit | Suitability for landing pages |
+| Dashboard Fit | Suitability for dashboards |
+| Performance Impact | Runtime cost (1 = lightweight, 10 = heavy) |
+
+## Development
 
 ```bash
-# Compile check
-python -m compileall src scripts
+git clone https://github.com/devinoldenburg/aceternity-mcp.git
+cd aceternity-mcp
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"
 
-# Validate registry schema
+# Run tests
+pytest tests/ -v
+
+# Lint + type check
+ruff check src/ tests/
+mypy src/aceternity_mcp/ tests/
+
+# Validate registry
 python scripts/validate_registry.py
 ```
 
-### Update Component Registry
+### Quality
 
-```bash
-# Sync latest components from Aceternity UI
-python scripts/sync_registry.py
+- 172 tests, 9 archetypes, 17 section role profiles, 7 page templates
+- ruff lint + format, mypy strict, bandit security scan
+- CI: quality gates on every push, auto-publish on release
 
-# Reinstall to bundle updated registry
-pipx reinstall aceternity-mcp
-```
+## Security
 
-The `sync_registry.py` script fetches component data from the Aceternity UI website and generates the registry JSON files. No API key is required.
+- **Metadata only**: No Aceternity source code, documentation, or images in this repository
+- **No secrets**: No API keys or credentials
+- **Isolated**: pipx provides sandboxed virtual environments
+- **Install commands**: Point to Aceternity's official `@aceternity` shadcn registry
 
-### Run Tests
+## Troubleshooting
 
-```bash
-# Run test suite
-python -m pytest tests/
+**Command not found** -- Run `pipx ensurepath` and restart your terminal.
 
-# Or use the test runner script
-python scripts/run_tests.py
+**Registry not found** -- Run `aceternity-mcp repair` or `pipx reinstall aceternity-mcp`.
 
-# Test CLI commands manually
-aceternity-mcp --help
-aceternity-mcp status
-aceternity-mcp diagnose
+**MCP server not connecting** -- Run `aceternity-mcp diagnose` and check the output. Repair configs with `aceternity-mcp repair --configs`.
 
-# Test MCP server
-aceternity-mcp-server
-```
+**Update issues** -- Run `pipx upgrade aceternity-mcp` or `pipx reinstall aceternity-mcp`.
 
-### Package Structure
+## License
 
-- **src/aceternity_mcp/**: Main Python package
-  - `server.py`: MCP server exposing tools to AI assistants
-  - `cli.py`: Command-line interface for management
-  - `install.py`: Interactive installation wizard
-  - `uninstall.py`: Removal utility
-  - `registry.py`: Registry loading and management
-  - `search.py`: Component search engine
-  - `recommender.py`: Recommendation logic
-  - `models.py`: Data models for components
+MIT -- see [LICENSE](./LICENSE).
 
-- **registry/**: Component metadata (106 components, 17 categories)
-- **scripts/**: Maintenance and sync utilities
-- **tests/**: Test suite for all functionality
+## Links
 
-## 🌐 Supported AI Tools
-
-| Tool | Config File | Configuration Key |
-|------|-------------|-------------------|
-| Cursor | `~/.cursor/mcp.json` | `mcpServers` |
-| Claude Code CLI | `~/.claude/mcp.json` | `mcpServers` |
-| Cline (VS Code) | `~/.vscode/extensions/saoudrizwan.claude-dev-*/settings/cline_mcp_settings.json` | `mcpServers` |
-| Windsurf | `~/.codeium/windsurf/mcp_config.json` | `mcp_servers` |
-| OpenCode | `~/.opencode/mcp.json` or `~/.config/opencode/opencode.jsonc` | `mcpServers` |
-
-**Notes:**
-- All tools use the same MCP server command: `aceternity-mcp-server`
-- Windsurf uses snake_case (`mcp_servers`) instead of camelCase (`mcpServers`)
-- OpenCode supports both user-level and global configuration files
-- Cline configuration is managed through VS Code extension settings
-
-## 🔒 Security
-
-- **No secrets in repository**: No API keys, credentials, or sensitive data committed
-- **Optional API usage**: Registry sync operations don't require authentication
-- **Isolated execution**: pipx provides sandboxed virtual environments
-- **Metadata only**: Repository contains component descriptions and metadata, not source code
-- **Local configuration**: AI tool configs stored in user's home directory (~/.config/)
-
-## ❓ Troubleshooting
-
-### Command Not Found
-
-```bash
-# Ensure pipx is in your PATH
-pipx ensurepath
-
-# Restart your terminal
-# Or reload shell configuration
-source ~/.zshrc  # or ~/.bashrc
-```
-
-### Registry Not Found
-
-```bash
-# Repair the installation
-aceternity-mcp repair
-
-# Or reinstall
-pipx reinstall aceternity-mcp
-```
-
-### MCP Server Not Working
-
-```bash
-# Check status
-aceternity-mcp status
-
-# Get diagnostics
-aceternity-mcp diagnose
-
-# Repair configs
-aceternity-mcp repair --configs
-```
-
-### Update Issues
-
-```bash
-# Force upgrade
-pipx upgrade aceternity-mcp
-
-# Or reinstall
-pipx reinstall aceternity-mcp
-```
-
-## 📝 Contributing
-
-Contributions are welcome! Please see:
-- [Contributing Guide](./CONTRIBUTING.md)
-- [Code of Conduct](./CODE_OF_CONDUCT.md)
-- [Security Policy](./SECURITY.md)
-
-## 📄 License
-
-MIT License - see [LICENSE](./LICENSE) for details.
-
-## 🔗 Links
-
-- [PyPI Package](https://pypi.org/project/aceternity-mcp/)
-- [GitHub Repository](https://github.com/devinoldenburg/aceternity-mcp)
-- [Issue Tracker](https://github.com/devinoldenburg/aceternity-mcp/issues)
+- [PyPI](https://pypi.org/project/aceternity-mcp/)
+- [npm](https://www.npmjs.com/package/aceternity-mcp)
+- [Docker (ghcr.io)](https://github.com/devinoldenburg/aceternity-mcp/pkgs/container/aceternity-mcp)
+- [GitHub](https://github.com/devinoldenburg/aceternity-mcp)
+- [Issues](https://github.com/devinoldenburg/aceternity-mcp/issues)
 - [Model Context Protocol](https://modelcontextprotocol.io/)
 - [Aceternity UI](https://ui.aceternity.com/)
