@@ -275,6 +275,9 @@ class TestGeneratePageLayout:
         assert "totalComponents" in data
         assert "installCommands" in data
         assert "allDependencies" in data
+        assert "batchInstall" in data
+        assert "detectedTheme" in data
+        assert "designTones" in data
         assert data["totalComponents"] > 0
 
     def test_generate_with_page_type(self):
@@ -292,6 +295,7 @@ class TestGeneratePageLayout:
             assert "role" in sec
             assert "description" in sec
             assert "priority" in sec
+            assert "buildOrder" in sec
             assert "components" in sec
             assert sec["priority"] in ("essential", "recommended", "optional")
 
@@ -304,6 +308,9 @@ class TestGeneratePageLayout:
                 assert "installCommand" in comp
                 assert "fitScore" in comp
                 assert "slug" in comp
+                assert "difficulty" in comp
+                assert "designTone" in comp
+                assert "performanceImpact" in comp
 
     def test_generate_has_dependencies(self):
         """Test that layout includes aggregated dependencies."""
@@ -311,6 +318,7 @@ class TestGeneratePageLayout:
         data = json.loads(result)
         assert isinstance(data["allDependencies"], list)
         assert len(data["allDependencies"]) > 0
+        assert data["uniqueDependencies"] > 0
 
     def test_generate_performance_estimate(self):
         """Test that layout has performance estimate."""
@@ -339,6 +347,26 @@ class TestGeneratePageLayout:
         data = json.loads(result)
         for sec in data["sections"]:
             assert len(sec["components"]) <= 1
+
+    def test_generate_batch_install(self):
+        """Test batch install command is present."""
+        result = generate_page_layout("SaaS landing page")
+        data = json.loads(result)
+        assert data["batchInstall"].startswith("npx shadcn@latest add")
+
+    def test_generate_design_tone_detection(self):
+        """Test design tone detection in output."""
+        result = generate_page_layout("dark premium modern SaaS")
+        data = json.loads(result)
+        assert "dark" in data["designTones"]
+        assert "premium" in data["designTones"]
+
+    def test_generate_implementation_notes(self):
+        """Test implementation notes in sections."""
+        result = generate_page_layout("SaaS landing page")
+        data = json.loads(result)
+        notes = [s.get("implementationNote") for s in data["sections"]]
+        assert any(n for n in notes if n)
 
 
 class TestComponentSummary:

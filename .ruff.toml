@@ -59,7 +59,7 @@ ignore = [
 "src/aceternity_mcp/server.py" = ["PLW0603"]
 "src/aceternity_mcp/uninstall.py" = ["S110", "PTH123"]
 "src/aceternity_mcp/registry.py" = ["ERA001"]
-"src/aceternity_mcp/recommender.py" = ["ARG002"]
+"src/aceternity_mcp/recommender.py" = ["ARG002", "E501"]
 
 [lint.isort]
 known-first-party = ["aceternity_mcp"]

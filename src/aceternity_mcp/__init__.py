@@ -4,4 +4,4 @@ A structured registry of Aceternity UI components with rich descriptions,
 search, recommendations, and installation workflows exposed through MCP.
 """
 
-__version__ = "2.0.0"
+__version__ = "2.1.0"

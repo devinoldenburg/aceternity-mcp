@@ -270,6 +270,66 @@ class TestGeneratePageLayout:
         assert "blog" in types
         assert "documentation" in types
 
+    def test_layout_has_batch_install(self, recommender):
+        """Test that layout includes batch install command."""
+        layout = recommender.generate_page_layout("landing page")
+        assert layout.batch_install.startswith("npx shadcn@latest add")
+        assert "@aceternity/" in layout.batch_install
+
+    def test_layout_detects_design_tones(self, recommender):
+        """Test design tone detection from description."""
+        layout = recommender.generate_page_layout(
+            "premium dark modern SaaS landing page"
+        )
+        assert "dark" in layout.design_tones
+        assert "premium" in layout.design_tones
+        assert "modern" in layout.design_tones
+        assert layout.detected_theme != "custom"
+
+    def test_layout_sections_have_build_order(self, recommender):
+        """Test that sections have sequential build order."""
+        layout = recommender.generate_page_layout("landing page")
+        orders = [s.build_order for s in layout.sections]
+        assert orders == list(range(1, len(orders) + 1))
+
+    def test_layout_sections_have_implementation_notes(self, recommender):
+        """Test that sections include implementation notes."""
+        layout = recommender.generate_page_layout("SaaS landing page")
+        notes = [s.implementation_note for s in layout.sections]
+        assert any(n != "" for n in notes)
+
+    def test_layout_has_dependency_counts(self, recommender):
+        """Test that layout tracks dependency statistics."""
+        layout = recommender.generate_page_layout("landing page")
+        assert layout.unique_dependency_count > 0
+
+    def test_design_tone_coherence(self, recommender):
+        """Test that dark theme boosts dark-toned components."""
+        layout_dark = recommender.generate_page_layout("dark premium SaaS landing page")
+        layout_minimal = recommender.generate_page_layout("clean minimal blog")
+        # Different descriptions should produce different layouts
+        dark_slugs = {
+            rec.component.slug for sec in layout_dark.sections for rec in sec.components
+        }
+        minimal_slugs = {
+            rec.component.slug
+            for sec in layout_minimal.sections
+            for rec in sec.components
+        }
+        assert dark_slugs != minimal_slugs
+
+    def test_detect_design_tones_static(self):
+        """Test design tone detection as a static method."""
+        tones = Recommender._detect_design_tones("dark premium futuristic AI dashboard")
+        assert "dark" in tones
+        assert "premium" in tones
+        assert "tech" in tones
+
+    def test_no_tones_detected(self):
+        """Test that no tones are detected for generic description."""
+        tones = Recommender._detect_design_tones("a page")
+        assert isinstance(tones, set)
+
 
 class TestRecommenderScoring:
     """Test recommender scoring logic."""

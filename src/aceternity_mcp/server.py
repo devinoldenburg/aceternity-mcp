@@ -508,38 +508,47 @@ def generate_page_layout(
 
     sections_out: list[dict[str, Any]] = []
     for sec in layout.sections:
-        sections_out.append(
-            {
-                "name": sec.name,
-                "role": sec.role,
-                "description": sec.description,
-                "priority": (
-                    "essential"
-                    if sec.priority == 1
-                    else "recommended"
-                    if sec.priority == 2
-                    else "optional"
-                ),
-                "components": [
-                    {
-                        "fitScore": r.fit_score,
-                        "reasons": r.reasons,
-                        "installCommand": r.component.install_command,
-                        **_component_summary(r.component),
-                    }
-                    for r in sec.components
-                ],
-            }
-        )
+        sec_dict: dict[str, Any] = {
+            "buildOrder": sec.build_order,
+            "name": sec.name,
+            "role": sec.role,
+            "description": sec.description,
+            "priority": (
+                "essential"
+                if sec.priority == 1
+                else "recommended"
+                if sec.priority == 2
+                else "optional"
+            ),
+            "components": [
+                {
+                    "fitScore": r.fit_score,
+                    "reasons": r.reasons,
+                    "installCommand": r.component.install_command,
+                    "difficulty": r.component.difficulty,
+                    "designTone": r.component.design_tone,
+                    "performanceImpact": r.component.scores.performance_impact,
+                    **_component_summary(r.component),
+                }
+                for r in sec.components
+            ],
+        }
+        if sec.implementation_note:
+            sec_dict["implementationNote"] = sec.implementation_note
+        sections_out.append(sec_dict)
 
     output: dict[str, Any] = {
         "pageType": layout.page_type,
         "pageDescription": layout.description,
+        "detectedTheme": layout.detected_theme,
+        "designTones": layout.design_tones,
         "totalComponents": layout.total_components,
         "estimatedPerformance": layout.estimated_performance,
+        "uniqueDependencies": layout.unique_dependency_count,
         "sections": sections_out,
         "allDependencies": layout.all_dependencies,
         "installCommands": layout.install_commands,
+        "batchInstall": layout.batch_install,
     }
 
     return json.dumps(output, indent=2)
