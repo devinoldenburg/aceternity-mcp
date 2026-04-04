@@ -167,27 +167,42 @@ class SearchEngine:
             if not include_pro and comp.is_pro:
                 continue
             s = comp.scores
-            if min_visual_intensity and s.visual_intensity < min_visual_intensity:
-                continue
-            if max_visual_intensity and s.visual_intensity > max_visual_intensity:
+            if (
+                min_visual_intensity is not None
+                and s.visual_intensity < min_visual_intensity
+            ):
                 continue
             if (
-                min_animation_intensity
+                max_visual_intensity is not None
+                and s.visual_intensity > max_visual_intensity
+            ):
+                continue
+            if (
+                min_animation_intensity is not None
                 and s.animation_intensity < min_animation_intensity
             ):
                 continue
             if (
-                max_animation_intensity
+                max_animation_intensity is not None
                 and s.animation_intensity > max_animation_intensity
             ):
                 continue
-            if min_landing_page_fit and s.landing_page_fit < min_landing_page_fit:
+            if (
+                min_landing_page_fit is not None
+                and s.landing_page_fit < min_landing_page_fit
+            ):
                 continue
-            if min_dashboard_fit and s.dashboard_fit < min_dashboard_fit:
+            if min_dashboard_fit is not None and s.dashboard_fit < min_dashboard_fit:
                 continue
-            if max_performance_impact and s.performance_impact > max_performance_impact:
+            if (
+                max_performance_impact is not None
+                and s.performance_impact > max_performance_impact
+            ):
                 continue
-            if min_customization_ease and s.customization_ease < min_customization_ease:
+            if (
+                min_customization_ease is not None
+                and s.customization_ease < min_customization_ease
+            ):
                 continue
             out.append(comp)
         return sorted(out, key=lambda c: c.name)
