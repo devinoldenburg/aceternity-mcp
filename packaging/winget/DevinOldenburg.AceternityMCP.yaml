@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.defaultLocale.1.6.0.schema.json
+PackageIdentifier: DevinOldenburg.AceternityMCP
+PackageVersion: 1.8.1
+PackageName: Aceternity MCP
+Publisher: Devin Oldenburg
+License: MIT
+LicenseUrl: https://github.com/devinoldenburg/aceternity-mcp/blob/main/LICENSE
+ShortDescription: MCP server for Aceternity UI components
+Description: |-
+  A Model Context Protocol server for Aceternity UI components.
+  Discover, explore, and install 106 Aceternity UI components
+  directly from your AI assistant.
+Tags:
+  - mcp
+  - aceternity
+  - ui
+  - components
+  - ai
+  - cli
+  - python
+PackageUrl: https://github.com/devinoldenburg/aceternity-mcp
+Installers:
+  - InstallerType: portable
+    InstallerUrl: https://github.com/devinoldenburg/aceternity-mcp/releases/download/v1.8.1/aceternity_mcp-1.8.1.tar.gz
+    InstallerSha256: PLACEHOLDER_SHA256
+    Commands:
+      - aceternity-mcp
+      - aceternity-mcp-server
+ManifestType: singleton
+ManifestVersion: 1.6.0

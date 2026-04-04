@@ -1,0 +1,24 @@
+{
+  "version": "1.8.1",
+  "description": "MCP server for Aceternity UI components",
+  "homepage": "https://github.com/devinoldenburg/aceternity-mcp",
+  "license": "MIT",
+  "depends": "python",
+  "suggest": {
+    "pipx": "pipx"
+  },
+  "installer": {
+    "script": "pipx install aceternity-mcp==$version"
+  },
+  "uninstaller": {
+    "script": "pipx uninstall aceternity-mcp"
+  },
+  "bin": [],
+  "checkver": {
+    "url": "https://pypi.org/pypi/aceternity-mcp/json",
+    "jsonpath": "$.info.version"
+  },
+  "autoupdate": {
+    "url": "https://pypi.org/pypi/aceternity-mcp/json"
+  }
+}

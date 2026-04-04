@@ -1,0 +1,55 @@
+{% set name = "aceternity-mcp" %}
+{% set version = "1.8.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aceternity_mcp-{{ version }}.tar.gz
+  sha256: PLACEHOLDER_SHA256
+
+build:
+  noarch: python
+  number: 0
+  entry_points:
+    - aceternity-mcp = aceternity_mcp.cli:main
+    - aceternity-mcp-server = aceternity_mcp.server:main
+    - aceternity-mcp-install = aceternity_mcp.install:main
+    - aceternity-mcp-uninstall = aceternity_mcp.uninstall:main
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - hatchling
+  run:
+    - python >=3.10
+    - mcp >=1.0.0
+
+test:
+  imports:
+    - aceternity_mcp
+  commands:
+    - aceternity-mcp --version
+    - pip check
+  requires:
+    - pip
+
+about:
+  home: https://github.com/devinoldenburg/aceternity-mcp
+  summary: MCP server for Aceternity UI components
+  description: |
+    A Model Context Protocol server for Aceternity UI components.
+    Discover, explore, and install 106 Aceternity UI components
+    directly from your AI assistant.
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  dev_url: https://github.com/devinoldenburg/aceternity-mcp
+  doc_url: https://github.com/devinoldenburg/aceternity-mcp#readme
+
+extra:
+  recipe-maintainers:
+    - devinoldenburg

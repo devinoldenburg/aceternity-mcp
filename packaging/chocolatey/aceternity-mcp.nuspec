@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>aceternity-mcp</id>
+    <version>1.8.1</version>
+    <title>Aceternity MCP</title>
+    <authors>Devin Oldenburg</authors>
+    <owners>devinoldenburg</owners>
+    <projectUrl>https://github.com/devinoldenburg/aceternity-mcp</projectUrl>
+    <licenseUrl>https://github.com/devinoldenburg/aceternity-mcp/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>MCP server for Aceternity UI components. Discover, explore, and install 106 Aceternity UI components directly from your AI assistant.</description>
+    <summary>Model Context Protocol server for Aceternity UI components</summary>
+    <tags>mcp aceternity ui components ai cli python</tags>
+    <dependencies>
+      <dependency id="python3" version="3.10" />
+    </dependencies>
+  </metadata>
+</package>

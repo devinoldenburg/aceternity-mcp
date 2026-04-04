@@ -1,0 +1,31 @@
+name: aceternity-mcp
+version: '1.8.1'
+summary: MCP server for Aceternity UI components
+description: |
+  A Model Context Protocol server for Aceternity UI components.
+  Discover, explore, and install 106 Aceternity UI components
+  directly from your AI assistant. Get intelligent recommendations,
+  detailed metadata, and installation instructions.
+
+base: core24
+grade: stable
+confinement: strict
+
+parts:
+  aceternity-mcp:
+    plugin: python
+    source: .
+    python-packages:
+      - mcp>=1.0.0
+
+apps:
+  aceternity-mcp:
+    command: bin/aceternity-mcp
+    plugs:
+      - home
+      - network
+  aceternity-mcp-server:
+    command: bin/aceternity-mcp-server
+    plugs:
+      - home
+      - network

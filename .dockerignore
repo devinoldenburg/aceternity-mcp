@@ -1,0 +1,16 @@
+.git
+.github
+.venv
+.venv-ci
+.venv-qg
+.mypy_cache
+.pytest_cache
+.ruff_cache
+__pycache__
+*.pyc
+dist
+build
+*.egg-info
+.coverage
+htmlcov
+.DS_Store

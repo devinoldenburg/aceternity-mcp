@@ -1,0 +1,23 @@
+# Maintainer: Devin Oldenburg <devin@logicplanes.com>
+pkgname=aceternity-mcp
+pkgver=1.8.1
+pkgrel=1
+pkgdesc="MCP server for Aceternity UI components"
+arch=('any')
+url="https://github.com/devinoldenburg/aceternity-mcp"
+license=('MIT')
+depends=('python>=3.10' 'python-pip')
+makedepends=('python-build' 'python-installer' 'python-hatchling')
+source=("https://pypi.org/packages/source/a/aceternity-mcp/aceternity_mcp-${pkgver}.tar.gz")
+sha256sums=('PLACEHOLDER_SHA256')
+
+build() {
+  cd "aceternity_mcp-${pkgver}"
+  python -m build --wheel --no-isolation
+}
+
+package() {
+  cd "aceternity_mcp-${pkgver}"
+  python -m installer --destdir="${pkgdir}" dist/*.whl
+  install -Dm644 LICENSE "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE"
+}
