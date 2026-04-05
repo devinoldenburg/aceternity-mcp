@@ -1,5 +1,5 @@
 <div align="center">
-  
+
 # Aceternity MCP
 
 **Model Context Protocol server for Aceternity UI components**
